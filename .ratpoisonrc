@@ -1,0 +1,91 @@
+# ~/.ratpoisonrc
+# Brandon Amos
+
+startup_message off
+unmanage panel
+# unmanage MPlayer
+unmanage feh
+
+escape C-semicolon
+
+# Screenshot
+alias sshot exec import -window root ~/screenshots/`date +%Y%m%d_%H%M%S`.jpg && exec ratpoison -c "echo Screenshot saved!"
+definekey top C-F6 sshot
+
+# Hotkeys
+definekey top M-l exec ratpoison -c "select -" -c "gprev" -c "next"
+definekey top M-h exec ratpoison -c "select -" -c "gnext" -c "next"
+definekey top M-C-Left exchangeleft
+definekey top M-C-Right exchangeright
+definekey top M-C-Up exchangeup
+definekey top M-C-Down exchangedown
+definekey top M-Left resize -20 0
+definekey top M-Right resize 20 0
+definekey top M-Up resize 0 20
+definekey top M-Down resize 0 -20
+definekey top C-b exec ratpoison -c "echo Changing styles.." && exec sh /mnt/data/Coding/Linux/scripts/style.sh
+
+# Audio hotkeys
+definekey top C-Up exec ratpoison -c "echo $(amixer set Master playback 5%+ | grep %)" 
+definekey top C-Down exec ratpoison -c "echo $(amixer set Master playback 5%- | grep %)"
+definekey top C-Right exec exaile -n && exec /mnt/data/Coding/Linux/scripts/exaile.sh
+definekey top C-Left exec exaile -p && exec /mnt/data/Coding/Linux/scripts/exaile.sh
+bind space exec exaile -t && exec /mnt/data/Coding/Linux/scripts/exaile.sh
+bind Q exec /mnt/data/Coding/Linux/scripts/exaile.sh
+
+
+# Switch between windows
+definekey top M-j next
+definekey top M-k prev
+
+# Application bindings
+unbind c
+bind c exec urxvt -rv +sb -sl 1000 -fn "xft:Monospace:pixelsize=11,7x13" -ls -tr -sh 40
+bind g exec ratpoison -c "echo Launching Google Chromium.." && exec chromium
+bind f exec ratpoison -c "echo Launching Firefox.." && exec firefox
+bind m exec ratpoison -c "echo Launching Mirage.." && exec mirage
+bind x exec ratpoison -c "echo Launching Xournal.." && exec xournal
+bind e exec ratpoison -c "echo Launching Eclipse.." && exec eclipse
+bind t exec ratpoison -c "echo Launching Thunderbird.." && exec thunderbird
+bind b exec ratpoison -c "echo Launching Banshee.." && exec banshee
+bind C-s exec ratpoison -c "echo Launching Skype.." && exec skype
+bind C-n exec ratpoison -c "echo Launching Nautilus.." && exec nautilus
+bind C-p exec ratpoison -c "echo Launching projectM.." && exec projectM-pulseaudio
+bind C-t exec ratpoison -c "echo Launching Truecrypt.." && exec truecrypt
+bind C-a exec ratpoison -c "echo Launching Areca.." && exec areca
+bind C-k exec ratpoison -c "echo Launching Keepass.." && exec keepassx
+bind C-e exec ratpoison -c "echo Launching Exaile.." && exec exaile
+bind C-g exec ratpoison -c "echo Launching Geany.." && exec geany
+
+# Miscellaneous bindings
+bind o exec sleep 1; exec xset dpms force off
+bind C-r exec ratpoison -c "echo Rotating screen.." && exec sh /mnt/data/Coding/Linux/scripts/rotation.sh
+bind F5 restart
+bind Escape exec ratpoison -c "echo Focus inactive.."
+bind d exec ratpoison -c "echo VESA Display Power Management Signaling Enabled" && exec xset +dpms
+bind C-d exec ratpoison -c "echo VESA Display Power Management Signaling Disabled" && exec xset -dpms
+
+set winname title
+set winfmt %n %s %t
+set fgcolor Grey90
+set bgcolor #191919
+set font -*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*
+se winliststyle column
+set inputwidth 400
+set waitcursor 1
+set padding 0 14 0 0
+#set barpadding 10 5
+set barpadding 0 0
+set wingravity n
+set transgravity center
+set bargravity center
+set border 0
+set barborder 1
+set inputwidth 800
+
+exec cp /home/brandon/.conkyrc.cat /home/brandon/.conkyrc
+exec conky
+#exec feh --bg-scale /mnt/data/Pictures/Wallpaper/New/Cats/wallpaper-1068982.jpg
+exec rpws init 8 -k
+exec wmname LG3D
+exec xset r 66

@@ -1,0 +1,19 @@
+# ~/.conkyrc
+# Plain
+
+out_to_x no
+out_to_console yes
+
+update_interval 1
+
+TEXT
+Kernel: $kernel :: \
+Uptime: $uptime :: \
+CPU: $cpu% :: \
+Temp: $acpitemp°C :: \
+RAM: $memperc% :: \
+Battery: $battery_percent% :: \
+HD: $fs_used / $fs_size :: \
+Network: ${exec netcfg current}\
+${exec if [[ -z `netcfg current` ]]; then echo None; fi;} :: \
+${time %A %B %d, %Y :: %I:%M:%S %p}

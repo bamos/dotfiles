@@ -1,0 +1,26 @@
+!Xresources
+
+URxvt*transparent: true
+URxvt*shading: 44
+
+URxvt*cursorColor: #322db5
+URxvt*cursorColor2: #252525
+URxvt*foreground: #FFFFFF
+URxvt*background: #000000
+URxvt*highlightColor: #8382A1
+
+URxvt.font: xft:DejaVu Sans Mono-8
+URxvt.boldFont: xft:DejaVu Sans Mono-8:style=bold
+
+URxvt.scrollBar: true
+URxvt.scrollstyle: plain
+
+URxvt.urlLauncher: /usr/bin/chromium
+URxvt.matcher.button: 1
+URxvt.cutchars: "()*,<>[]{}|'"
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.matcher.launcher.1: /usr/bin/chromium
+URxvt.perl-ext-common: default,matcher
+
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
