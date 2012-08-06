@@ -148,3 +148,6 @@ bar {
 bindsym Control+Shift+Right exec exaile -n
 bindsym Control+Shift+Left exec exaile -p
 bindsym Control+Shift+space exec exaile -t
+
+# Rotate screen
+bindsym $mod+r exec /mnt/data/Coding/Linux/scripts/rotation.sh
