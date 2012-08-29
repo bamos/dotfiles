@@ -35,3 +35,6 @@ endfunction
  
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
+
+" Don't remap '#' to avoid smartindent problem
+:inoremap # X<BS>#
