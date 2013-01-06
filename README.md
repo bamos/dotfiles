@@ -1,13 +1,12 @@
 # Brandon Amos: dotfiles
 
-### Usage
+## Usage
 
     git clone https://github.com/bamos/dotfiles.git .dotfiles
     cd .dotfiles
     ./bootstrap.sh
 
-
-### Giants I'm standing on
+## Giants I'm standing on
  + [bradx3/dotfiles](http://github.com/bradx3/dotfiles)
  + [mathiasbynens/dotfiles](http://github.com/mathiasbynens/dotfiles)
  + [robbyrussell/oh-my-zsh](http://github.com/robbyrussell/oh-my-zsh)
