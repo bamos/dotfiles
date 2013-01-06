@@ -55,3 +55,5 @@ let @c = '€khi%~ €kd€kh'
 map <silent> , :call Co(&ft)<CR>
 
 :ab mkline =========================================================================
+
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
