@@ -4,7 +4,7 @@
 out_to_x no
 out_to_console yes
 
-update_interval 1
+update_interval 60
 
 TEXT
 Kernel: $kernel :: \
@@ -13,7 +13,9 @@ CPU: $cpu% :: \
 Temp: $acpitemp°C :: \
 RAM: $memperc% :: \
 Battery: $battery_percent% :: \
-HD: $fs_used / $fs_size :: \
+HD: ${fs_used /mnt/data} / ${fs_size /mnt/data} :: \
 Network: ${exec netcfg current}\
 ${exec if [[ -z `netcfg current` ]]; then echo None; fi;} :: \
-${time %A %B %d, %Y :: %I:%M:%S %p}
+${time %A %B %d, %Y :: %I:%M %p}
+
+# ${time %A %B %d, %Y :: %I:%M:%S %p}
