@@ -1,11 +1,7 @@
 # ~/.zshrc
 
-set -o vi
-export EDITOR=vim
-export VISUAL=vim
-
 DISABLE_AUTO_UPDATE="true"
-plugins=(git)
+plugins=(git vi-mode)
 ZSH_THEME=minimal
 
 ZSH=$HOME/.oh-my-zsh
