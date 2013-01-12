@@ -15,6 +15,7 @@ PATH+=:/usr/bin/vendor_perl
 PATH+=:/usr/bin/core_perl
 PATH+=:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
 PATH+=:~/.gem/ruby/1.9.1/bin
+PATH+=:/opt/cuda/bin
 export PATH
 
 export USE_CCACHE=1

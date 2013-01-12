@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/mnt/data/Documents/Research/SSRG/programs/parsec-3.0/pkgs/apps/raytrace'
+let g:netrw_dirhist_2='/home/brandon/screenshots'
+let g:netrw_dirhist_3='/mnt/data/Documents/Blog/_layouts'
+let g:netrw_dirhist_4='/home/brandon/.vim/autoload'
+let g:netrw_dirhist_5='/home/brandon/.vim/ftdetect'
