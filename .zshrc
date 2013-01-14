@@ -1,7 +1,7 @@
 # ~/.zshrc
 
 DISABLE_AUTO_UPDATE="true"
-plugins=(git vi-mode)
+plugins=(git)
 ZSH_THEME=minimal
 
 ZSH=$HOME/.oh-my-zsh
