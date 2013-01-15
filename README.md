@@ -1,6 +1,6 @@
 # Brandon Amos: dotfiles
 
-## Usage
+## Installation
 
     git clone git://github.com/bamos/dotfiles.git .dotfiles
     cd .dotfiles
