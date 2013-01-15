@@ -2,8 +2,10 @@
 
 ## Usage
 
-    git clone https://github.com/bamos/dotfiles.git .dotfiles
+    git clone git://github.com/bamos/dotfiles.git .dotfiles
     cd .dotfiles
+    git submodule init .oh-my-zsh
+    git submodule update
     ./bootstrap.sh
 
 ## Giants I'm standing on
