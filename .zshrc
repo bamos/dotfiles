@@ -20,3 +20,5 @@ export PATH
 
 export USE_CCACHE=1
 export CCACHE_DIR=/mnt/data/Parts/Cache
+
+alias sudo='nocorrect sudo' # Don't correct commands like .vim
