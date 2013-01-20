@@ -4,7 +4,7 @@
 
     git clone git://github.com/bamos/dotfiles.git .dotfiles
     cd .dotfiles
-    git submodule init .oh-my-zsh
+    git submodule init
     git submodule update
     ./bootstrap.sh
 

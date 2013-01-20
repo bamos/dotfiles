@@ -12,8 +12,10 @@ export CCACHE_DIR=/mnt/data/Parts/Cache
 alias h='hostname'
 alias sudo='nocorrect sudo ' # Otherwise, `sudo vim` autocorrects
 alias gcl='git clone'
+alias dotup='git --git-dir=$HOME/.dotfiles/.git pull'
 alias up='yaourt -Syua'
 alias y='yaourt'
+alias xa='xrandr --auto'
 
 # Zenburn-esque ls colors
 LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31'

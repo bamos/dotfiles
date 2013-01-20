@@ -1,4 +1,11 @@
 #!/bin/bash
+#
+# bootstrap.sh
+# Symbolically link dot files to the files in this directory,
+# optionally backing up existing dot files.
+#
+# Brandon Amos
+# 2013.01.20
 
 function echo_l1 { echo "    $@"; }
 function echo_l2 { echo_l1 "    $@"; }

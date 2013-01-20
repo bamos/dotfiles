@@ -10,6 +10,7 @@ bindsym $mod+e exec dmenu_run
 bindsym $mod+r exec /mnt/data/Coding/Linux/scripts/rotation.sh
 bindsym $mod+q exec sleep 2 && exec xset dpms force off;
 bindsym $mod+Shift+q exec sudo pm-suspend
+bindsym $mod+t exec thunderbird
 
 # Exaile/Sound
 bindsym Control+Shift+Right exec exaile -n
