@@ -16,6 +16,7 @@ xsetroot -cursor_name left_ptr
 
 # Set up the keyboard
 setxkbmap dvorak
+
 xmodmap ~/.Xmodmap
 xset r 66 # Make the remapped capslock repeat
 numlockx &
@@ -39,4 +40,5 @@ xinput --set-prop --type=int --format=8  "SynPS/2 Synaptics TouchPad" "Synaptics
 #exec ratpoison
 #exec xmonad
 #exec ck-launch-session startlxde
-exec ck-launch-session dbus-launch i3
+# exec dbus-launch i3
+exec i3 -V >> ~/.i3/i3log 2>&1

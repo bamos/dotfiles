@@ -13,9 +13,7 @@ CPU: $cpu% :: \
 Temp: $acpitemp°C :: \
 RAM: $memperc% :: \
 Battery: $battery_percent% :: \
-HD: ${fs_used /mnt/data} / ${fs_size /mnt/data} :: \
+HD: ${fs_used /} / ${fs_size /} :: \
 Network: ${exec netcfg current}\
 ${exec if [[ -z `netcfg current` ]]; then echo None; fi;} :: \
 ${time %A %B %d, %Y :: %I:%M %p}
-
-# ${time %A %B %d, %Y :: %I:%M:%S %p}

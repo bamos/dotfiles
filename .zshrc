@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 export USE_CCACHE=1
 export CCACHE_DIR=/mnt/data/Parts/Cache
 
+alias 0='cd +0'
 alias h='hostname'
 alias sudo='nocorrect sudo ' # Otherwise, `sudo vim` autocorrects
 alias gcl='git clone'
@@ -16,6 +17,9 @@ alias dotup='git --git-dir=$HOME/.dotfiles/.git pull'
 alias up='yaourt -Syua'
 alias y='yaourt'
 alias xa='xrandr --auto'
+alias c='clear'
+alias vt='sudo netcfg VT-Wireless'
+alias vtd='sudo netcfg VT-Dorm-Wired'
 
 # Zenburn-esque ls colors
 LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31'
