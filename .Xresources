@@ -9,8 +9,10 @@ URxvt*foreground: #FFFFFF
 URxvt*background: #000000
 URxvt*highlightColor: #8382A1
 
-URxvt.font: xft:DejaVu Sans Mono-10
-URxvt.boldFont: xft:DejaVu Sans Mono-10:style=bold
+!URxvt.font: xft:DejaVu Sans Mono-10
+!URxvt.boldFont: xft:DejaVu Sans Mono-10:style=bold
+URxvt*font: xft:Terminus
+URxvt*boldFont: xft:Terminus
 
 URxvt.scrollBar: true
 URxvt.scrollstyle: plain

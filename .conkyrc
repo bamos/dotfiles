@@ -7,10 +7,8 @@ out_to_console yes
 update_interval 60
 
 TEXT
-Kernel: $kernel :: \
-Uptime: $uptime :: \
+$kernel :: \
 CPU: $cpu% :: \
-Temp: $acpitemp°C :: \
 RAM: $memperc% :: \
 Battery: $battery_percent% :: \
 HD: ${fs_used /} / ${fs_size /} :: \

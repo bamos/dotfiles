@@ -18,8 +18,9 @@ alias up='yaourt -Syua'
 alias y='yaourt'
 alias xa='xrandr --auto'
 alias c='clear'
-alias vt='sudo netcfg VT-Wireless'
+alias vtw='sudo netcfg VT-Wireless'
 alias vtd='sudo netcfg VT-Dorm-Wired'
+alias na='sudo netcfg -a'
 
 # Zenburn-esque ls colors
 LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31'

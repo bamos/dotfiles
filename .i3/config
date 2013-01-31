@@ -7,7 +7,7 @@ exec feh --bg-scale ~/Pictures/Wallpaper/New/Cats/wallpaper-1068982.jpg
 # Program Management
 bindsym $mod+Shift+quotedbl kill
 bindsym $mod+e exec dmenu_run
-bindsym $mod+r exec /mnt/data/Coding/Linux/scripts/rotation.sh
+bindsym $mod+r exec rotation.sh
 bindsym $mod+q exec sleep 2 && exec xset dpms force off;
 bindsym $mod+Shift+q exec sudo pm-suspend
 bindsym $mod+t exec thunderbird
@@ -38,7 +38,7 @@ floating_modifier $mod
 
 # Terminals
 bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec xterm -C
+bindsym $mod+Shift+Return exec uxterm -C
 # Focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down

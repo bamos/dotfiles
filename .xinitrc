@@ -34,6 +34,8 @@ xinput --set-prop --type=int --format=32 "SynPS/2 Synaptics TouchPad" "Synaptics
 xinput --set-prop --type=int --format=32 "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Width" 8
 xinput --set-prop --type=int --format=8  "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 0
 
+export LOCALE='en_US.UTF-8'
+
 #exec ck-launch-session gnome-session
 #exec ck-launch-session gnome-session-cinnamon
 #exec startxfce4
