@@ -43,4 +43,5 @@ export LOCALE='en_US.UTF-8'
 #exec xmonad
 #exec ck-launch-session startlxde
 # exec dbus-launch i3
-exec i3 -V >> ~/.i3/i3log 2>&1
+#exec i3 -V >> ~/.i3/i3log 2>&1
+exec i3
