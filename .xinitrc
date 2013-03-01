@@ -30,11 +30,16 @@ fi
 xrdb ~/.Xresources
 
 # Set up the touchpad
-xinput --set-prop --type=int --format=32 "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Pressure" 4
-xinput --set-prop --type=int --format=32 "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Width" 8
-xinput --set-prop --type=int --format=8  "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 0
+xinput --set-prop --type=int --format=32 \
+    "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Pressure" 4
+xinput --set-prop --type=int --format=32 \
+    "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Width" 8
+xinput --set-prop --type=int --format=8 \
+    "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 0
 
 export LOCALE='en_US.UTF-8'
+
+redshift -l 37.22311:-80.42105 -t 5500K:3000K &
 
 #exec ck-launch-session gnome-session
 #exec ck-launch-session gnome-session-cinnamon
