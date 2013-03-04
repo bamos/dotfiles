@@ -5,7 +5,9 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set smarttab
-set number
+set number " Show line numbers.
+set nowrap " Don't wrap text.
+set mouse=a " Use mouse in all modes.
 
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
