@@ -1,6 +1,6 @@
 # ~/.zshrc
 
-[[ -f ~/.private ]] && source ~/.private
+[[ -a ~/.private ]] && source ~/.private
 
 DISABLE_AUTO_UPDATE='true'
 plugins=(git) # Git aliases
