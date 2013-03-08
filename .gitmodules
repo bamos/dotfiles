@@ -1,3 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "clang_complete"]
+	path = clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
