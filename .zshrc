@@ -2,6 +2,22 @@
 
 [[ -a ~/.private ]] && source ~/.private
 
+# http://www.zsh.org/mla/users/1999/msg00152.html
+function my_sudo {
+    while [[ $# > 0 ]]; do
+        case "$1" in
+        command) shift ; break ;;
+        nocorrect|noglob) shift ;;
+        *) break ;;
+        esac
+    done
+    if [[ $# = 0 ]]; then
+        command sudo zsh
+    else
+        noglob command sudo $@
+    fi
+}
+
 DISABLE_AUTO_UPDATE='true'
 plugins=(git) # Git aliases
 ZSH_THEME=minimal
@@ -15,7 +31,7 @@ alias 1='cd +1'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias h='hostname'
-alias sudo='nocorrect sudo ' # Otherwise, `sudo vim` autocorrects
+alias sudo='nocorrect my_sudo'
 alias gcl='git clone'
 alias dotup='git --git-dir=$HOME/.dotfiles/.git pull'
 alias up='yaourt -Syua'
