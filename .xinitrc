@@ -39,6 +39,7 @@ xinput --set-prop --type=int --format=8 \
 
 export LOCALE='en_US.UTF-8'
 
+pkill redshift
 redshift -l 37.22311:-80.42105 -t 5500K:3000K &
 
 #exec ck-launch-session gnome-session

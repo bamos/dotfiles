@@ -11,8 +11,7 @@ URxvt*highlightColor: #8382A1
 
 !URxvt.font: xft:DejaVu Sans Mono-10
 !URxvt.boldFont: xft:DejaVu Sans Mono-10:style=bold
-URxvt*font: xft:Terminus
-URxvt*boldFont: xft:Terminus
+URxvt*font: xft:Terminus-14
 
 URxvt.scrollBar: true
 URxvt.scrollstyle: plain
@@ -28,3 +27,6 @@ URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
 URxvt.iso14755_52: false
+
+xterm*background: black
+xterm*foreground: white

@@ -38,7 +38,7 @@ floating_modifier $mod
 
 # Terminals
 bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec uxterm -C
+bindsym $mod+Shift+Return exec xterm -fa "xft:Terminus"
 # Focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
