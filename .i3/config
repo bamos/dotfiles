@@ -8,7 +8,7 @@ exec feh --bg-scale ~/Pictures/Wallpaper/New/Cats/wallpaper-1068982.jpg
 bindsym $mod+Shift+quotedbl kill
 bindsym $mod+e exec dmenu_run
 bindsym $mod+r exec rotation.sh
-bindsym $mod+q exec sleep 2 && exec xset dpms force off;
+bindsym $mod+q exec sleep 1 && exec xset dpms force off;
 bindsym $mod+Shift+q exec sudo pm-suspend
 bindsym $mod+t exec thunderbird
 
