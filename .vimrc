@@ -1,13 +1,15 @@
 set nocompatible
 syntax on
 set smartindent
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set smarttab
 set number " Show line numbers.
 set nowrap " Don't wrap text.
 set mouse=a " Use mouse in all modes.
+set modeline
+set background=dark
 
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
@@ -41,6 +43,7 @@ function! ToggleSpell()
         unlet b:spell
     endif
 endfunction
+call ToggleSpell()
  
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
@@ -69,7 +72,9 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 function! AppendModeline()
   let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
           \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
-    let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-      call append(line("$"), l:modeline)
-      endfunction
-      nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
+  call append(line("$"), l:modeline)
+endfunction
+noremap <silent> <Leader>ml :call AppendModeline()<CR>
+
+let g:clang_user_options='|| exit 0'
