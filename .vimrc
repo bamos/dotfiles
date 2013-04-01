@@ -10,12 +10,16 @@ set nowrap " Don't wrap text.
 set mouse=a " Use mouse in all modes.
 set modeline
 set background=dark
+set textwidth=75
 
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set showcmd
 
 set printoptions=number:y
+
+set dir=~/.vim/tmp
+set backupdir=~/.vim/tmp
 
 set laststatus=2
 set statusline=%<%f\

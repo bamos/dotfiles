@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Wallpaper
-exec feh --bg-scale ~/Pictures/Wallpaper/New/Cats/wallpaper-1068982.jpg
+#exec feh --bg-scale ~/Pictures/Wallpaper/New/Cats/wallpaper-1068982.jpg
 
 # Program Management
 bindsym $mod+Shift+quotedbl kill
@@ -37,8 +37,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # Terminals
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec xterm -fa "xft:Terminus"
+#bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xterm -fa "xft:Terminus-12"
+bindsym $mod+Shift+Return exec xterm -fa "xft:Terminus-12"
 # Focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
