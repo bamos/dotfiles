@@ -11,12 +11,23 @@ set mouse=a " Use mouse in all modes.
 set modeline
 set background=dark
 set textwidth=75
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+
+filetype plugin indent on
 
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set showcmd
 
-set printoptions=number:y
+set printoptions=number:y,paper:letter
+set printheader=%<%f%h%m%=Page\ %N\ of\ %{line('$')/69+1}
 
 set dir=~/.vim/tmp
 set backupdir=~/.vim/tmp
@@ -47,7 +58,7 @@ function! ToggleSpell()
         unlet b:spell
     endif
 endfunction
-call ToggleSpell()
+" call ToggleSpell()
  
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
@@ -82,3 +93,12 @@ endfunction
 noremap <silent> <Leader>ml :call AppendModeline()<CR>
 
 let g:clang_user_options='|| exit 0'
+
+" Latex itemize.
+let @i = 'i\begin{itemize}\item\end{itemize}€kua '
+
+" Toggle Caps Lock with 'Ctrl-^'
+for c in range(char2nr('A'), char2nr('Z'))
+  execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
+  execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
+endfor
