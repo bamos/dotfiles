@@ -13,6 +13,9 @@ set background=dark
 set textwidth=75
 filetype off
 
+call pathogen#infect()
+let g:syntastic_check_on_open=1
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -96,6 +99,7 @@ let g:clang_user_options='|| exit 0'
 
 " Latex itemize.
 let @i = 'i\begin{itemize}\item\end{itemize}€kua '
+let @r = 'iRegards,Brandon'
 
 " Toggle Caps Lock with 'Ctrl-^'
 for c in range(char2nr('A'), char2nr('Z'))
