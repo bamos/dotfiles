@@ -1,32 +1,29 @@
-!Xresources
+! ~/.Xresources
 
-URxvt*transparent: true
-URxvt*shading: 44
+! Black and white.
+xterm*background:  #000000
+xterm*foreground:  #ffffff
 
-URxvt*cursorColor: #322db5
-URxvt*cursorColor2: #252525
-URxvt*foreground: #FFFFFF
-URxvt*background: #000000
-URxvt*highlightColor: #8382A1
+! Darkburn
+!xterm*background: #1A1817
+!xterm*foreground: #B5927D
 
-!URxvt.font: xft:DejaVu Sans Mono-10
-!URxvt.boldFont: xft:DejaVu Sans Mono-10:style=bold
-URxvt*font: xft:Terminus-14
-
-URxvt.scrollBar: true
-URxvt.scrollstyle: plain
-
-URxvt.urlLauncher: /usr/bin/chromium
-URxvt.matcher.button: 1
-URxvt.cutchars: "()*,<>[]{}|'"
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-URxvt.matcher.launcher.1: /usr/bin/chromium
-URxvt.perl-ext-common: default,matcher
-
-URxvt*keysym.Home: \033[1~
-URxvt*keysym.End: \033[4~
-
-URxvt.iso14755_52: false
-
-xterm*background: black
-xterm*foreground: white
+! Zenburn: http://git.sysphere.org/dotfiles/tree/Xdefaults
+! xterm*background:  #3f3f3f
+! xterm*foreground:  #dcdccc
+! xterm*color0:      #1E2320
+! xterm*color1:      #705050
+! xterm*color2:      #60b48a
+! xterm*color3:      #dfaf8f
+! xterm*color4:      #506070
+! xterm*color5:      #dc8cc3
+! xterm*color6:      #8cd0d3
+! xterm*color7:      #dcdccc
+! xterm*color8:      #709080
+! xterm*color9:      #dca3a3
+! xterm*color10:     #c3bf9f
+! xterm*color11:     #f0dfaf
+! xterm*color12:     #94bff3
+! xterm*color13:     #ec93d3
+! xterm*color14:     #93e0e3
+! xterm*color15:     #ffffff

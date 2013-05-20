@@ -1,4 +1,3 @@
-colorscheme desert
 set guifont=Terminus\ 12
 
 set guioptions+=b " Show horizontal scrollbar.

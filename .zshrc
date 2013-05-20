@@ -19,7 +19,7 @@ function my_sudo {
 }
 
 DISABLE_AUTO_UPDATE='true'
-plugins=(git) # Git aliases
+plugins=(vi-mode git history-substring-search)
 ZSH_THEME=minimal
 ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -40,6 +40,7 @@ alias xa='xrandr --auto'
 alias c='clear'
 alias red='pkill redshift; redshift -l 37.22311:-80.42105 -t 5500K:3000K&'
 alias m='make'
+alias z='zathura'
 
 # Zenburn-esque ls colors
 LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31'

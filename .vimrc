@@ -9,9 +9,10 @@ set number " Show line numbers.
 set nowrap " Don't wrap text.
 set mouse=a " Use mouse in all modes.
 set modeline
-set background=dark
 set textwidth=75
 filetype off
+colorscheme hemisu
+set background=dark
 
 call pathogen#infect()
 let g:syntastic_check_on_open=1
@@ -99,7 +100,7 @@ let g:clang_user_options='|| exit 0'
 
 " Latex itemize.
 let @i = 'i\begin{itemize}\item\end{itemize}€kua '
-let @r = 'iRegards,Brandon'
+let @r = 'iRegards,Brandon.'
 
 " Toggle Caps Lock with 'Ctrl-^'
 for c in range(char2nr('A'), char2nr('Z'))
