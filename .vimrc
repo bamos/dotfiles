@@ -9,20 +9,13 @@ set number " Show line numbers.
 set nowrap " Don't wrap text.
 set mouse=a " Use mouse in all modes.
 set modeline
-set textwidth=75
+"set textwidth=75
 filetype off
 colorscheme hemisu
 set background=dark
 
 call pathogen#infect()
 let g:syntastic_check_on_open=1
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
 
 filetype plugin indent on
 

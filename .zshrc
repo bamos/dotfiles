@@ -46,3 +46,5 @@ alias z='zathura'
 LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31'
 LS_COLORS+=':ln=38;5;116:ex=38;5;186'
 export LS_COLORS
+
+export EDITOR=vim
