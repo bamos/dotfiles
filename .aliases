@@ -1,0 +1,47 @@
+# ~/.alias
+
+alias c='clear'
+alias h='hostname'
+alias m='make'
+alias sudo='nocorrect sudo'
+alias xa='xrandr --auto'
+alias xax='xrandr --auto; exit'
+
+alias mu='mutt'
+alias v='vim'
+alias z='zathura'
+
+alias gcl='git clone'
+
+alias y='yaourt'
+alias up='yaourt -Syua'
+
+# Music.
+alias playdir='mplayer -shuffle -loop 0 -playlist <(find "$PWD" -type f)'
+alias pd='playdir'
+
+# Android.
+function musicToAndroid {
+  { adb devices | grep "device$" &> /dev/null } \
+    || { echo "No devices found."; return; }
+  while read SONG; do
+    echo "Syncing $SONG."
+    adb push $SONG /sdcard/music &> /dev/null
+    [[ $? != 0 ]] && echo " + Failed."
+  done < <(find $* -type f)
+}
+alias m2a='musicToAndroid'
+
+function syncepub {
+  { adb devices | grep "device$" &> /dev/null } \
+    || { echo "No devices found."; return; }
+  adb shell '[[ -d /sdcard/eBooks ]] || mkdir /sdcard/eBooks'
+  while read BOOK; do
+    echo "Syncing $BOOK."
+    adb push $BOOK /sdcard/eBooks/ &> /dev/null
+    [[ $? != 0 ]] && echo " + Failed."
+  done < <(find $* -name '*.epub')
+}
+alias se=syncepub
+
+alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
