@@ -2,6 +2,7 @@
 
 alias c='clear'
 alias h='hostname'
+alias i='curl icanhazip.com'
 alias m='make'
 alias sudo='nocorrect sudo'
 alias xa='xrandr --auto'
