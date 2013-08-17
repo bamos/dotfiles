@@ -29,7 +29,7 @@ function musicToAndroid {
     echo "Syncing $SONG."
     adb push $SONG /sdcard/music &> /dev/null
     [[ $? != 0 ]] && echo " + Failed."
-  done < <(find $* -type f)
+  done < <(find $* -type f | sort -R)
 }
 alias m2a='musicToAndroid'
 
