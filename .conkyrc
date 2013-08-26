@@ -12,6 +12,5 @@ CPU: $cpu% :: \
 RAM: $memperc% :: \
 Battery: $battery_percent% :: \
 HD: ${fs_used /} / ${fs_size /} :: \
-Network: ${exec netcfg current}\
-${exec if [[ -z `netcfg current` ]]; then echo None; fi;} :: \
+Network: ${exec netctl list | awk '/*/ {print $2}'} :: \
 ${time %A %B %d, %Y :: %I:%M %p}
