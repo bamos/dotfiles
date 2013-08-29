@@ -17,4 +17,5 @@ function rand-cd {
   FILES=$(find . -maxdepth 1 -type d | perl -lne 'print quotemeta')
   NUM_FILES=$(echo $FILES | wc -l)
   cd $(echo $FILES | xargs -n $NUM_FILES shuf -n1 -e)*
+  unset FILES NUM_FILES
 }
