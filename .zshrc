@@ -14,8 +14,8 @@ export USE_CCACHE=1; export CCACHE_DIR=~/.ccache
 export EDITOR=vim
 
 function rand-cd {
-  FILES=$(find . -maxdepth 1 -type d | perl -lne 'print quotemeta')
-  NUM_FILES=$(echo $FILES | wc -l)
-  cd $(echo $FILES | xargs -n $NUM_FILES shuf -n1 -e)*
-  unset FILES NUM_FILES
+  DIRS=$(find . -maxdepth 1 -type d | perl -lne 'print quotemeta')
+  NUM_DIRS=$(echo $DIRS | wc -l)
+  cd $(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)*
+  unset DIRS NUM_DIRS
 }
