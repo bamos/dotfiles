@@ -20,6 +20,7 @@ alias z='zathura'
 # Music.
 alias playdir='mplayer -shuffle -loop 0 -playlist <(find "$PWD" -type f)'
 alias pd='playdir'
+alias prd='play-rand-dir'
 
 # Android.
 alias m2a='musicToAndroid'
