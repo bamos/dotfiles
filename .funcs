@@ -1,10 +1,22 @@
 #!/bin/bash
 
+# Misc.
 function rand-cd {
   DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
   NUM_DIRS=$(echo $DIRS | wc -l)
   [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
   cd "$(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)"
+  unset DIRS NUM_DIRS
+}
+
+# Music.
+function play-rand-dir {
+  DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
+  NUM_DIRS=$(echo $DIRS | wc -l)
+  [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
+  cd "$(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)"
+  pd
+  cd ..
   unset DIRS NUM_DIRS
 }
 

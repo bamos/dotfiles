@@ -3,7 +3,7 @@
 
 [[ -a ~/.private ]] && source ~/.private
 [[ -a ~/.aliases ]] && source ~/.aliases
-[[ -a ~/.funcs]] && source ~/.funcs
+[[ -a ~/.funcs ]] && source ~/.funcs
 
 DISABLE_AUTO_UPDATE='true'; ZSH_THEME=minimal; ZSH=$HOME/.oh-my-zsh;
 plugins=(vi-mode git history-substring-search)
