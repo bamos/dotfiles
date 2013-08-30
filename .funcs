@@ -1,0 +1,32 @@
+#!/bin/bash
+
+function rand-cd {
+  DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
+  NUM_DIRS=$(echo $DIRS | wc -l)
+  [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
+  cd "$(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)"
+  unset DIRS NUM_DIRS
+}
+
+# Android.
+function musicToAndroid {
+  { adb devices | grep "device$" &> /dev/null } \
+    || { echo "No devices found."; return; }
+  while read SONG; do
+    echo "Syncing $SONG."
+    adb push $SONG /sdcard/music &> /dev/null
+    [[ $? != 0 ]] && echo " + Failed."
+  done < <(find $* -type f | sort -R)
+}
+
+function syncepub {
+  { adb devices | grep "device$" &> /dev/null } \
+    || { echo "No devices found."; return; }
+  adb shell '[[ -d /sdcard/eBooks ]] || mkdir /sdcard/eBooks'
+  while read BOOK; do
+    echo "Syncing $BOOK."
+    adb push $BOOK /sdcard/eBooks/ &> /dev/null
+    [[ $? != 0 ]] && echo " + Failed."
+  done < <(find $* -name '*.epub')
+}
+
