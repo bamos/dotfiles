@@ -2,6 +2,7 @@
 
 # Utilities and tools.
 alias c='clear'
+alias chax='chmod a+x'
 alias gcl='git clone'
 alias h='hostname'
 alias i='curl icanhazip.com'
