@@ -100,3 +100,5 @@ for c in range(char2nr('A'), char2nr('Z'))
   execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
   execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
 endfor
+
+nmap <F6> :w<CR>:!make<CR>

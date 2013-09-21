@@ -43,4 +43,3 @@ function syncepub {
     [[ $? != 0 ]] && echo " + Failed."
   done < <(find $* -name '*.epub')
 }
-
