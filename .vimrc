@@ -1,5 +1,6 @@
 set nocompatible
 syntax on
+set autoindent
 set smartindent
 set shiftwidth=2
 set tabstop=2
@@ -90,9 +91,13 @@ endfunction
 noremap <silent> <Leader>ml :call AppendModeline()<CR>
 
 let g:clang_user_options='|| exit 0'
+let g:clang_auto_select=1 " Automatically select the first option.
+let g:clang_close_preview=1 " Close the preview window after a selection.
 
-" Latex itemize.
+" Macros.
 let @i = 'i\begin{itemize}\item\end{itemize}€kua '
+let @p = 'wdwiDr. OBOB'
+let @f = '2wDxa,OBOB'
 let @r = 'iRegards,Brandon.'
 
 " Toggle Caps Lock with 'Ctrl-^'

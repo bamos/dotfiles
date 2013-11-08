@@ -38,8 +38,9 @@ floating_modifier $mod
 
 # Terminals
 #bindsym $mod+Return exec urxvt
-bindsym $mod+Return exec xterm -fa "xft:Terminus-12"
-bindsym $mod+Shift+Return exec xterm -fa "xft:Terminus-12"
+bindsym $mod+Return exec xterm -fa "xft:inconsolata:pixelsize=16"
+#bindsym $mod+Shift+Return exec xterm -fa "xft:Terminus-12"
+
 # Focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
