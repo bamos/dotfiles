@@ -6,12 +6,13 @@ alias chax='chmod a+x'
 alias gcl='git clone'
 alias h='hostname'
 alias i='curl icanhazip.com'
-alias libre='libreoffice'
+alias li='libreoffice'
 alias psg='ps aux | grep'
 alias rh='rehash'
 alias sudo='nocorrect sudo'
 alias xa='xrandr --auto'
 alias xax='xrandr --auto; exit'
+alias dx='dual; exit'
 
 # Programs.
 alias m='make'
@@ -31,3 +32,6 @@ alias prd='play-rand-dir'
 alias m2a='musicToAndroid'
 alias se=syncepub
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
+
+alias gsr='git svn rebase'
+alias gsd='git svn dcommit'
