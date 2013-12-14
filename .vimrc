@@ -2,8 +2,10 @@ set nocompatible
 syntax on
 set autoindent
 set smartindent
+filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
+"autocmd FileType python setlocal shiftwidth=2 tabstop=2
 set expandtab
 set smarttab
 set number " Show line numbers.
@@ -11,7 +13,7 @@ set nowrap " Don't wrap text.
 set mouse=a " Use mouse in all modes.
 set modeline
 "set textwidth=75
-filetype off
+"filetype off
 colorscheme hemisu
 set background=dark
 
