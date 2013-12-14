@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Misc.
-function rand-cd {
+rand-cd() {
   DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
   NUM_DIRS=$(echo $DIRS | wc -l)
   [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
@@ -11,8 +11,16 @@ function rand-cd {
 
 function calc { echo "scale=10; $@" | bc }
 
+# Netjoin - Block until a network connection is obtained.
+nj() {
+  while true; do
+    ping -c 1 8.8.8.8 &> /dev/null && break
+    sleep 1
+  done
+}
+
 # Music.
-function play-rand-dir {
+play-rand-dir() {
   DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
   NUM_DIRS=$(echo $DIRS | wc -l)
   [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
@@ -23,7 +31,7 @@ function play-rand-dir {
 }
 
 # Android.
-function musicToAndroid {
+musicToAndroid() {
   { adb devices | grep "device$" &> /dev/null } \
     || { echo "No devices found."; return; }
   while read SONG; do
@@ -33,7 +41,7 @@ function musicToAndroid {
   done < <(find $* -type f | sort -R)
 }
 
-function syncepub {
+syncepub() {
   { adb devices | grep "device$" &> /dev/null } \
     || { echo "No devices found."; return; }
   adb shell '[[ -d /sdcard/eBooks ]] || mkdir /sdcard/eBooks'
