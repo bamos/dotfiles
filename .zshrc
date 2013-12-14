@@ -1,11 +1,12 @@
 # ~/.zshrc
-# Brandon Amos <http://bamos.github.io>
+# Brandon Amos <http://bamos.io>
 
 [[ -a ~/.private ]] && source ~/.private
 [[ -a ~/.aliases ]] && source ~/.aliases
 [[ -a ~/.funcs ]] && source ~/.funcs
 
-DISABLE_AUTO_UPDATE='true'; ZSH_THEME=minimal; ZSH=$HOME/.oh-my-zsh;
+DISABLE_AUTO_UPDATE='true';
+ZSH_THEME=bamos_minimal; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 plugins=(vi-mode git history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
