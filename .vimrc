@@ -109,3 +109,6 @@ for c in range(char2nr('A'), char2nr('Z'))
 endfor
 
 nmap <F6> :w<CR>:!make<CR>
+
+au BufRead,BufNewFile *.thrift set filetype=thrift
+au! Syntax thrift source ~/.vim/syntax/thrift.vim
