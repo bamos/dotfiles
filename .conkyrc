@@ -7,10 +7,8 @@ out_to_console yes
 update_interval 60
 
 TEXT
-$kernel :: \
-CPU: $cpu% :: \
-RAM: $memperc% :: \
-Battery: $battery_percent% :: \
-HD: ${fs_used /} / ${fs_size /} :: \
-Network: ${exec netctl list | awk '/*/ {print $2}'} :: \
-${time %A %B %d, %Y :: %I:%M %p}
+CPU: $cpu%  \
+RAM: $memperc%  \
+Batt: $battery_percent%  \
+Net: ${exec netctl list | awk '/*/ {print $2}'}  \
+${time %a %b %d, %Y %I:%M %p}
