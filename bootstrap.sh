@@ -18,7 +18,7 @@ link_file() {
     rm -f "$ORIG"
     echo "    ...deleted"
   fi
-  ln -s "$NEW" "$ORIG" && echo_l2 "...linked"
+  ln -s "$NEW" "$ORIG" && echo "    ...linked"
 }
 
 sync_dotfiles() {
