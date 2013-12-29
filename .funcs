@@ -51,3 +51,9 @@ syncepub() {
     [[ $? != 0 ]] && echo " + Failed."
   done < <(find $* -name '*.epub')
 }
+
+# Docker.
+docker-clean() {
+  docker rm $(docker ps -a -q)
+  docker rmi $(docker images -q)
+}
