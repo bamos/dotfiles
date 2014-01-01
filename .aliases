@@ -17,7 +17,7 @@ alias dx='dual; exit'
 # Programs.
 alias m='make'
 alias mu='mutt'
-alias rsyncdir='rsync -zr'
+alias rsyncdir='rsync -azrv --progress'
 alias up='yaourt -Syua'
 alias v='vim'
 alias y='yaourt'
@@ -33,5 +33,6 @@ alias m2a='musicToAndroid'
 alias se=syncepub
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
 
+# Git.
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
