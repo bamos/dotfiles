@@ -9,7 +9,7 @@ set tabstop=2
 set expandtab
 set smarttab
 set number " Show line numbers.
-set nowrap " Don't wrap text.
+set wrap " Wrap text.
 set mouse=a " Use mouse in all modes.
 set modeline
 "set textwidth=75
@@ -112,3 +112,5 @@ nmap <F6> :w<CR>:!make<CR>
 
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au! Syntax thrift source ~/.vim/syntax/thrift.vim
+
+autocmd FileType python setlocal shiftwidth=2 tabstop=2
