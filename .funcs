@@ -57,3 +57,8 @@ docker-clean() {
   docker rm $(docker ps -a -q)
   docker rmi $(docker images -q)
 }
+
+docker-zsh() {
+  local TAG=$1
+  docker run -v /tmp:/host_tmp:rw -i -t $TAG /bin/zsh
+}
