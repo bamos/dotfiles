@@ -114,3 +114,5 @@ au BufRead,BufNewFile *.thrift set filetype=thrift
 au! Syntax thrift source ~/.vim/syntax/thrift.vim
 
 autocmd FileType python setlocal shiftwidth=2 tabstop=2
+
+:nnoremap rm : call delete(expand('%')) \| bdelete!<CR>
