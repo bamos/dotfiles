@@ -21,7 +21,8 @@ alias rsyncdir='rsync -azrv --progress'
 alias up='yaourt -Syua'
 alias v='vim'
 alias y='yaourt'
-alias yy='yaourt -S --noconfirm'
+alias ys='yaourt -S --noconfirm'
+alias yr='yaourt -R --noconfirm'
 alias z='zathura'
 
 # Music.
