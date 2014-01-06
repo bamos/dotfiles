@@ -3,8 +3,6 @@
 # Utilities and tools.
 alias c='clear'
 alias chax='chmod a+x'
-alias gcl='git clone'
-alias gu="git reset --soft 'HEAD^'"
 alias h='hostname'
 alias i='curl icanhazip.com'
 alias li='libreoffice'
@@ -37,5 +35,7 @@ alias se=syncepub
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
 
 # Git.
+alias gcl='git clone'
+alias gu="git reset --soft 'HEAD^'"
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
