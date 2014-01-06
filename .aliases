@@ -4,6 +4,7 @@
 alias c='clear'
 alias chax='chmod a+x'
 alias gcl='git clone'
+alias gu="git reset --soft 'HEAD^'"
 alias h='hostname'
 alias i='curl icanhazip.com'
 alias li='libreoffice'
