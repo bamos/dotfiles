@@ -12,6 +12,7 @@ alias sudo='nocorrect sudo'
 alias xa='xrandr --auto'
 alias xax='xrandr --auto; exit'
 alias dx='dual; exit'
+alias wget-rec='wget --recursive --page-requisites --html-extension --convert-links --no-parent'
 
 # Programs.
 alias m='make'
