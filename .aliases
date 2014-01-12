@@ -12,7 +12,14 @@ alias sudo='nocorrect sudo'
 alias xa='xrandr --auto'
 alias xax='xrandr --auto; exit'
 alias dx='dual; exit'
-alias wget-rec='wget --recursive --page-requisites --html-extension --convert-links --no-parent'
+wget-rec() {
+  wget --recursive \
+    --page-requisites \
+    --html-extension \
+    --convert-links \
+    --no-parent \
+    $*
+}
 
 # Programs.
 alias m='make'
@@ -26,7 +33,9 @@ alias yr='yaourt -R --noconfirm'
 alias z='zathura'
 
 # Music.
-alias playdir='mplayer -shuffle -loop 0 -playlist <(find "$PWD" -type f)'
+playdir() {
+  mplayer -novideo -shuffle -loop 0 -playlist <(find "$PWD" -type f)
+}
 alias pd='playdir'
 alias prd='play-rand-dir'
 
@@ -40,3 +49,11 @@ alias gcl='git clone'
 alias gu="git reset --soft 'HEAD^'"
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
+
+# Surf websites.
+surf-alias() { alias $1="nohup surf '$2' &> /dev/null &"; }
+surf-alias "td" 'https://todoist.com/app?v=189#agenda/(overdue,__7__days)'
+surf-alias "ca" 'https://google.com/calendar'
+surf-alias "gh" 'https://github.com'
+surf-alias "gma" 'https://gmail.com'
+surf-alias "ddg" 'https://duckduckgo.com'

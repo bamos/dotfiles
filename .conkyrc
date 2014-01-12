@@ -10,5 +10,4 @@ TEXT
 CPU: $cpu%  \
 RAM: $memperc%  \
 Batt: $battery_percent%  \
-Net: ${exec netctl list | awk '/*/ {print $2}'}  \
 ${time %a %b %d, %Y %I:%M %p}
