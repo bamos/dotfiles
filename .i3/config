@@ -6,7 +6,7 @@ set $mod Mod4
 
 # Program Management
 bindsym $mod+Shift+quotedbl kill
-bindsym $mod+e exec dmenu_run
+bindsym $mod+e exec dmenu_run_aliases
 bindsym $mod+r exec rotation.sh
 bindsym $mod+q exec sleep 1 && exec xset dpms force off;
 bindsym $mod+Shift+q exec sudo pm-suspend

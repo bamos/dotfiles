@@ -1,9 +1,9 @@
 # ~/.zshrc
 # Brandon Amos <http://bamos.io>
 
-[[ -a ~/.private ]] && source ~/.private
 [[ -a ~/.aliases ]] && source ~/.aliases
 [[ -a ~/.funcs ]] && source ~/.funcs
+[[ -a ~/.private ]] && source ~/.private
 
 DISABLE_AUTO_UPDATE='true';
 ZSH_THEME=bamos_minimal; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
