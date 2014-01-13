@@ -38,6 +38,7 @@ playdir() {
 }
 alias pd='playdir'
 alias prd='play-rand-dir'
+alias sync-music='rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'
 
 # Android.
 alias m2a='musicToAndroid'
