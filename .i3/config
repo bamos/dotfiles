@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Wallpaper
-#exec feh --bg-scale ~/Pictures/Wallpaper/New/Cats/wallpaper-1068982.jpg
+exec feh --bg-scale ~/docs/pics/wallpaper/arch.jpg
 
 # Program Management
 bindsym $mod+Shift+quotedbl kill
@@ -39,7 +39,7 @@ floating_modifier $mod
 # Terminals
 #bindsym $mod+Return exec urxvt
 bindsym $mod+Return exec xterm -fa "xft:inconsolata:pixelsize=16"
-#bindsym $mod+Shift+Return exec xterm -fa "xft:Terminus-12"
+#bindsym $mod+Shift+Return exec xterm -fa "xft:inconsolata:pixelsize=16"
 
 # Focus
 bindsym $mod+Left focus left

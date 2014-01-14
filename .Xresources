@@ -1,12 +1,15 @@
-! ~/.Xresources
-
 Xcursor.theme: whiteglass
 Xcursor.size: 14
 
-! Black and white.
 xterm*background:  #000000
 xterm*foreground:  #ffffff
 
-! Darkburn
-!xterm*background: #1A1817
-!xterm*foreground: #B5927D
+URxvt*.transparent: true
+URxvt*.shading: 60
+URxvt*background:  #000000
+URxvt*foreground:  #ffffff
+URxvt.font: xft:inconsolata:pixelsize=14
+URxvt.scrollstyle: plain
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/local/bin/surf
+URxvt.matcher.button: 1
