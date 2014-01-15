@@ -37,9 +37,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # Terminals
-#bindsym $mod+Return exec urxvt
-bindsym $mod+Return exec xterm -fa "xft:inconsolata:pixelsize=16"
-#bindsym $mod+Shift+Return exec xterm -fa "xft:inconsolata:pixelsize=16"
+bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec xterm -fa "xft:inconsolata:pixelsize=16"
 
 # Focus
 bindsym $mod+Left focus left

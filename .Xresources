@@ -4,12 +4,14 @@ Xcursor.size: 14
 xterm*background:  #000000
 xterm*foreground:  #ffffff
 
-URxvt*.transparent: true
-URxvt*.shading: 60
+! URxvt*.transparent: true
+! URxvt*.shading: 60
 URxvt*background:  #000000
 URxvt*foreground:  #ffffff
-URxvt.font: xft:inconsolata:pixelsize=14
+!URxvt.font: xft:inconsolata:pixelsize=15
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=tru
 URxvt.scrollstyle: plain
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/local/bin/surf
 URxvt.matcher.button: 1
+URxvt*iso14755: False
