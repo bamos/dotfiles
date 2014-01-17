@@ -20,6 +20,9 @@ wget-rec() {
     --no-parent \
     $*
 }
+alias ....='cd ../../../..'
+alias .....='cd ../../../../..'
+alias ......='cd ../../../../../..'
 
 # Programs.
 alias m='make'
