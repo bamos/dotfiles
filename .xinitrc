@@ -31,4 +31,6 @@ export LOCALE='en_US.UTF-8'
 
 dunst &
 
+stty -ixon # Disable START/STOP output control.
+
 exec i3 # -V >> ~/.i3/i3.log 2>&1
