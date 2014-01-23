@@ -62,3 +62,8 @@ docker-zsh() {
   local TAG=$1
   docker run -v /tmp:/host_tmp:rw -i -t $TAG /bin/zsh
 }
+
+# Watch.
+watch-threads() {
+  watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp
+}
