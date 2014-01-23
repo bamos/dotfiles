@@ -19,6 +19,7 @@
     git-messenger
     go-mode
     haskell-mode
+    json-mode
     lua-mode
     magit
     markdown-mode
