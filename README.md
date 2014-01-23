@@ -2,11 +2,11 @@
 
 ## Installation
 
-    git clone git://github.com/bamos/dotfiles.git .dotfiles
-    cd .dotfiles
-    git submodule init
-    git submodule update
-    ./bootstrap.sh
+```Bash
+git clone --recursive git://github.com/bamos/dotfiles.git .dotfiles
+cd .dotfiles
+./bootstrap.sh
+```
 
 ## Giants I'm standing on
  + [bbeausej](http://bit.ly/eQAQVx)
