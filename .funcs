@@ -71,3 +71,13 @@ ps-threads() {
 watch-threads() {
   watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp
 }
+
+# Allow crontab in dotfiles.
+if test -z $CRONTABCMD; then
+  export CRONTABCMD=$(which crontab)
+  crontab() {
+    if [[ $@ == "-e" ]]; then; vim ~/.crontab && $CRONTABCMD ~/.crontab
+    else; $CRONTABCMD $@; fi
+  }
+  $CRONTABCMD ~/.crontab
+fi

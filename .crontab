@@ -1,0 +1,3 @@
+0 3 * * * /home/brandon/bin/backup-remote.sh
+*/5 * * * * /home/brandon/bin/battery.sh
+0 * * * * export DISPLAY=:0.0 && /home/brandon/bin/gmail
