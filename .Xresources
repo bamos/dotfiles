@@ -12,6 +12,6 @@ URxvt*foreground:  #ffffff
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=tru
 URxvt.scrollstyle: plain
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/local/bin/surf
+URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 URxvt*iso14755: False
