@@ -112,6 +112,7 @@ nmap <F6> :w<CR>:!make<CR>
 
 au BufRead,BufNewFile *.cl set filetype=cpp
 au BufRead,BufNewFile *.thrift set filetype=thrift
+au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
 au! Syntax thrift source ~/.vim/syntax/thrift.vim
 
 autocmd FileType python setlocal shiftwidth=2 tabstop=2
