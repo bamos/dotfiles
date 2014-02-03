@@ -38,7 +38,7 @@ alias z='zathura'
 
 # Music.
 playdir() {
-  mplayer -novideo -shuffle -loop 0 -playlist <(find "$PWD" -type f)
+  mplayer -novideo -shuffle -loop 0 -playlist <(find "$PWD" -type f -follow)
 }
 alias pd='playdir'
 alias prd='play-rand-dir'
