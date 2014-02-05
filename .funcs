@@ -81,3 +81,11 @@ if test -z $CRONTABCMD; then
   }
   $CRONTABCMD ~/.crontab
 fi
+
+# Infinitely loop a set of commands.
+inf() {
+  while true; do
+    zsh -ci "source $HOME/.zshrc; $*;"
+    [[ $? == 0 ]] || exit
+  done;
+}
