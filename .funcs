@@ -65,11 +65,11 @@ docker-zsh() {
 
 # Thread functions.
 ps-threads() {
-  ps -C $1 -L -opsr,pid,ppid,lwp
+  ps -C $1 -L -opsr,pid,ppid,lwp,state
 }
 
 watch-threads() {
-  watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp
+  watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state
 }
 
 # Allow crontab in dotfiles.
