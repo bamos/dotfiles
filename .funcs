@@ -89,3 +89,10 @@ inf() {
     [[ $? == 0 ]] || return
   done;
 }
+
+# Add to the path.
+pathadd() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+    PATH="${PATH:+"$PATH:"}$1"
+  fi
+}
