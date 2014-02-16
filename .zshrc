@@ -8,7 +8,9 @@
 # Add additional directories to the path.
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
-pathadd $HOME/repos/simple-shell-scripts
+REPOS=$HOME/repos
+pathadd $REPOS/simple-shell-scripts
+pathadd $REPOS/simple-python-scripts/python3.3
 
 # oh-my-zsh initialization.
 DISABLE_AUTO_UPDATE='true';
