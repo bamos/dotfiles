@@ -5,15 +5,12 @@ set smartindent
 filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
-"autocmd FileType python setlocal shiftwidth=2 tabstop=2
 set expandtab
 set smarttab
 set number " Show line numbers.
 set wrap " Wrap text.
 set mouse=a " Use mouse in all modes.
 set modeline
-"set textwidth=75
-"filetype off
 colorscheme hemisu
 set background=dark
 
@@ -40,25 +37,24 @@ set statusline+=\ [%{getcwd()}]
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%
 
 function! ToggleLineLength()
-    if !exists("b:line")
-        match ErrorMsg '\%>75v.\+'
-        let b:line = 1
-    else
-        match none
-        unlet b:line
-    endif
+  if !exists("b:line")
+    match ErrorMsg '\%>75v.\+'
+    let b:line = 1
+  else
+    match none
+    unlet b:line
+  endif
 endfunction
 
 function! ToggleSpell()
-    if !exists("b:spell")
-        setlocal spell spelllang=en_us
-        let b:spell = 1
-    else
-        setlocal nospell
-        unlet b:spell
-    endif
+  if !exists("b:spell")
+    setlocal spell spelllang=en_us
+    let b:spell = 1
+  else
+    setlocal nospell
+    unlet b:spell
+  endif
 endfunction
-" call ToggleSpell()
  
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
@@ -68,33 +64,9 @@ imap <F3> <Esc>:call ToggleLineLength()<CR>
 " Don't remap '#' to avoid smartindent problem
 :inoremap # X<BS>#
 
-let g:localvimrc_sandbox=0
-let g:localvimrc_ask=0
-
 let @c = '€khi%~ €kd€kh'
 
-" Comments
-map <silent> , :call Co(&ft)<CR>
-
-:ab mkeline =========================================================================
-:ab mkdline -------------------------------------------------------------------------
-
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-" Append modeline after last line in buffer.
-" Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
-" files.
-function! AppendModeline()
-  let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
-          \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
-  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-  call append(line("$"), l:modeline)
-endfunction
-noremap <silent> <Leader>ml :call AppendModeline()<CR>
-
-let g:clang_user_options='|| exit 0'
-let g:clang_auto_select=1 " Automatically select the first option.
-let g:clang_close_preview=1 " Close the preview window after a selection.
 
 " Macros.
 let @i = 'i\begin{itemize}\item\end{itemize}€kua '
@@ -110,6 +82,7 @@ endfor
 
 nmap <F6> :w<CR>:!make<CR>
 
+au BufRead,BufNewFile *.pyx set filetype=python
 au BufRead,BufNewFile *.cl set filetype=cpp
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
