@@ -2,7 +2,8 @@
 set $mod Mod4
 
 # Wallpaper
-exec feh --bg-scale ~/docs/pics/wallpaper/arch.jpg
+#exec feh --bg-scale ~/docs/pics/wallpaper/arch.jpg
+exec feh --bg-scale ~/docs/pics/wallpaper/apple.jpg
 
 # Program Management
 bindsym $mod+Shift+quotedbl kill
