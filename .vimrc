@@ -82,6 +82,7 @@ endfor
 
 nmap <F6> :w<CR>:!make<CR>
 
+
 au BufRead,BufNewFile *.pyx set filetype=python
 au BufRead,BufNewFile *.cl set filetype=cpp
 au BufRead,BufNewFile *.thrift set filetype=thrift
@@ -91,3 +92,6 @@ au! Syntax thrift source ~/.vim/syntax/thrift.vim
 autocmd FileType python setlocal shiftwidth=2 tabstop=2
 
 command Rm :call delete(expand('%')) | bdelete!
+
+" Add comments with ','.
+map <silent> , :call Co(&ft)<CR>
