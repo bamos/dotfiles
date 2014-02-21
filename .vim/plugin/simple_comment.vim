@@ -3,11 +3,11 @@
 " You can easily add more langages, take a look at the .vim.
 " 
 " Uncomment this next line to use s as trigger key.
-" map <silent> s :call Co(&ft)<CR>
+" map <silent> s :call Comment(&ft)<CR>
 " 
 " boisvertmaxime@gmail.com
 
-fun! Co(ft)
+fun! Comment(ft)
   let dic = {
     \'cpp':'//',
     \'tex':'%',
