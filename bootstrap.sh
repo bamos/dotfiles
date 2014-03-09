@@ -21,21 +21,20 @@ link_file() {
   ln -s "$NEW" "$ORIG" && echo "    ...linked"
 }
 
-sync_dotfiles() {
-  echo "Symlinking..."
-  DOTFILES="$(find . -maxdepth 1 -name '.?*')" # ?* - Don't include ./.
-
-  for DOTFILE in $DOTFILES; do
-    [[ $DOTFILE != "./.git" ]] \
-      && [[ $DOTFILE != "./.gitmodules" ]] \
-      && [[ $DOTFILE != "./.gitignore" ]] \
-      && [[ ! $DOTFILE =~ swp$ ]] \
-      && link_file "$HOME/$DOTFILE" "$CHECKOUT_DIR/$DOTFILE"
-  done
-}
-
 read -p "Backup files? (y/n) " -n 1; echo
 BACKUP=$REPLY
 cd "$(dirname "${BASH_SOURCE}")"
 CHECKOUT_DIR="$PWD"
-sync_dotfiles
+
+echo "Symlinking..."
+DOTFILES="$(find . -maxdepth 1 -name '.?*')" # ?* - Don't include ./.
+
+for DOTFILE in $DOTFILES; do
+  [[ $DOTFILE != "./.git" ]] \
+    && [[ $DOTFILE != "./.gitmodules" ]] \
+    && [[ $DOTFILE != "./.gitignore" ]] \
+    && [[ ! $DOTFILE =~ swp$ ]] \
+    && link_file "$HOME/$DOTFILE" "$CHECKOUT_DIR/$DOTFILE"
+done
+
+vim +BundleInstall +qall

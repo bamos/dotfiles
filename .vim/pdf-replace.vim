@@ -8,3 +8,4 @@
 :%s/α/\\alpha/g
 :%s/β/\\beta/g
 :%s/•/\\item/g
+:%s/−/-/g
