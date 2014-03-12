@@ -31,7 +31,8 @@ alias mu='mutt'
 alias rsyncdir='rsync -azrv --progress'
 alias up='yaourt -Syua'
 alias yup='up --noconfirm'
-alias v='vim'
+alias vim='vim -p'
+alias bup='vim +BundleInstall +qall'
 alias y='yaourt'
 alias ys='yaourt -S --noconfirm'
 alias yr='yaourt -R --noconfirm'
@@ -39,7 +40,7 @@ alias z='zathura'
 
 # Music.
 playdir() {
-  mplayer -novideo -shuffle -loop 0 -playlist <(find "$PWD" -type f -follow)
+  mpv --no-video --shuffle --loop inf --playlist <(find "$PWD" -type f -follow)
 }
 alias pd='playdir'
 alias prd='play-rand-dir'
