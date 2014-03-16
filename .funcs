@@ -75,11 +75,12 @@ watch-threads() {
 # Allow crontab in dotfiles.
 if test -z $CRONTABCMD; then
   export CRONTABCMD=$(which crontab)
+  export CRONTABFILE=$HOME/.crontab.$HOST
   crontab() {
-    if [[ $@ == "-e" ]]; then; vim ~/.crontab && $CRONTABCMD ~/.crontab
+    if [[ $@ == "-e" ]]; then; vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
     else; $CRONTABCMD $@; fi
   }
-  $CRONTABCMD ~/.crontab
+  $CRONTABCMD $CRONTABFILE
 fi
 
 # Infinitely loop a set of commands.
