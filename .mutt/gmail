@@ -1,0 +1,43 @@
+# ~/.mutt/gmail
+
+# Uncomment and set the following in ~/.mutt/private.
+# set imap_user = "bdamos@vt.edu"
+# set imap_pass = "..."
+# set smtp_url = "smtp://bdamos@vt.edu@smtp.gmail.com:587/"
+# set smtp_pass = "..."
+# set from = "bdamos@vt.edu"
+# set realname = "Brandon Amos"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set include
+set sort = 'last-date-received'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+
+# Gmail-style keyboard shortcuts
+macro index,pager y \
+  "<enter-command>unset trash\n <exit><delete-message>" "Gmail archive message"
+macro index,pager gi \
+  "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga \
+  "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index,pager gs \
+  "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent messages"
+
+set pager_index_lines = 6

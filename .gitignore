@@ -1,2 +1,7 @@
 .vim/.netrwhist
 .vim/spell
+
+.mutt/private
+.mutt/contacts
+.mutt/cache
+.mutt/postponed

@@ -1,0 +1,22 @@
+# ~/.muttrc
+
+source ~/.mutt/gmail
+source ~/.mutt/crypto
+source ~/.mutt/private
+
+set editor = "vim"
+
+set postponed=~/.mutt/postponed
+set alias_file=~/.mutt/contacts
+source ~/.mutt/contacts
+set query_command= "abook --mutt-query '%s'"
+macro index,pager A "<pipe-message>abook --add-email-quiet<return>" \
+  "add the sender address to abook"
+set attribution="Hi %n,\n\n\n\nRegards,\nBrandon.\n\nOn %d, %n <%a> wrote:"
+
+bind index,pager G group-reply
+set record=/dev/null
+set delete=no
+auto_view text/html
+
+color normal default default
