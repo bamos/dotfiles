@@ -4,7 +4,7 @@ source ~/.mutt/gmail
 source ~/.mutt/crypto
 source ~/.mutt/private
 
-set editor = "vim"
+set editor = "vim +FixWhitespace"
 
 set postponed=~/.mutt/postponed
 set alias_file=~/.mutt/contacts
