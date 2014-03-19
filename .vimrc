@@ -39,11 +39,11 @@ function! ToggleSpell()
   endif
 endfunction
 
-map <silent> , :call Comment(&ft)<CR>
-nmap <F9> :source ~/.vim/pdf-replace.vim<CR>
-nmap <F6> :w<CR>:!make<CR>
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
+nnoremap <F5> :GundoToggle<CR>
+nmap <F6> :w<CR>:!make<CR>
+nmap <F7> :source ~/.vim/pdf-replace.vim<CR>
 
 " Write a file using sudo.
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
