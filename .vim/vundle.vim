@@ -24,6 +24,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'Raimondi/delimitMate'
+Bundle 'Gundo'
 
 " Syntax.
 Bundle 'derekwyatt/vim-scala'
