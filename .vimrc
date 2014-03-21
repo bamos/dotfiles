@@ -50,3 +50,10 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Delete files with ':Rm'.
 command Rm :call delete(expand('%')) | bdelete!
+
+" Folding.
+set foldmethod=manual
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
