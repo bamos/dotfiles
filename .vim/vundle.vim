@@ -17,7 +17,10 @@ Bundle 'Rename2'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'mileszs/ack.vim'
-Bundle 'garbas/snipmate.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'kien/ctrlp.vim'
