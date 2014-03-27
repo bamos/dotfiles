@@ -6,15 +6,12 @@ xsetroot -cursor_name left_ptr
 # Set up the keyboard
 setxkbmap dvorak
 setxkbmap -option terminate:ctrl_alt_bksp
-
 xmodmap ~/.Xmodmap
 xset r 66 # Make the remapped capslock repeat
-numlockx &
 
 # Set up dual monitors, if connected
-if [ `xrandr | grep -c "VGA1 connected"` == 1 ]; then
+[[ `xrandr | grep -c "VGA1 connected"` == 1 ]] && \
   xrandr --output VGA1 --right-of LVDS1
-fi
 
 # Set up the resources
 xrdb ~/.Xresources
