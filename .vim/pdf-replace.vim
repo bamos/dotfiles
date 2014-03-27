@@ -9,3 +9,4 @@
 :%s/β/\\beta/g
 :%s/•/\\item/g
 :%s/−/-/g
+:%s/×/\\times/g
