@@ -26,7 +26,7 @@ definekey top M-Down resize 0 -20
 definekey top C-b exec ratpoison -c "echo Changing styles.." && exec sh /mnt/data/Coding/Linux/scripts/style.sh
 
 # Audio hotkeys
-definekey top C-Up exec ratpoison -c "echo $(amixer set Master playback 5%+ | grep %)" 
+definekey top C-Up exec ratpoison -c "echo $(amixer set Master playback 5%+ | grep %)"
 definekey top C-Down exec ratpoison -c "echo $(amixer set Master playback 5%- | grep %)"
 definekey top C-Right exec exaile -n && exec /mnt/data/Coding/Linux/scripts/exaile.sh
 definekey top C-Left exec exaile -p && exec /mnt/data/Coding/Linux/scripts/exaile.sh
