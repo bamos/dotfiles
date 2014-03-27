@@ -1,0 +1,6 @@
+[default]
+vo=opengl-hq,opengl,xv,wayland
+ao=alsa,pulse,oss
+channels=5.1
+title="${filename}"
+gapless-audio
