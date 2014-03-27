@@ -12,7 +12,7 @@ alias rh='rehash'
 alias sudo='nocorrect sudo'
 alias xa='xrandr --auto'
 alias xax='xrandr --auto; exit'
-alias dual='vrandr --output VGA1 --right-of LVDS1 --auto'
+alias dual='xrandr --output VGA1 --right-of LVDS1 --auto'
 alias dx='dual; exit'
 wget-rec() {
   wget --recursive \
