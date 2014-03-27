@@ -9,7 +9,17 @@ rand-cd() {
   unset DIRS NUM_DIRS
 }
 
-function calc { echo "scale=10; $@" | bc }
+wget-rec() {
+  wget --recursive \
+    --page-requisites \
+    --html-extension \
+    --convert-links \
+    --no-parent \
+    $*
+}
+
+calc() { echo "scale=10; $@" | bc }
+mkdircd() { mkdir $1; cd $1; }
 
 # Netjoin - Block until a network connection is obtained.
 nj() {
@@ -64,13 +74,8 @@ docker-zsh() {
 }
 
 # Thread functions.
-ps-threads() {
-  ps -C $1 -L -opsr,pid,ppid,lwp,state
-}
-
-watch-threads() {
-  watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state
-}
+ps-threads() { ps -C $1 -L -opsr,pid,ppid,lwp,state }
+watch-threads() { watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state }
 
 # Allow crontab in dotfiles.
 if test -z $CRONTABCMD; then
@@ -86,17 +91,13 @@ fi
 # Infinitely loop a set of commands.
 inf() {
   while true; do
-    zsh -ci "source $HOME/.zshrc; $*;"
+    zsh -ci "source $HOME/.zshrc; $* ;"
     [[ $? == 0 ]] || return
   done;
 }
 
-# Add to the path.
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
     PATH="${PATH:+"$PATH:"}$1"
   fi
 }
-
-# Make directory and cd into it.
-mkdircd() { mkdir $1; cd $1; }
