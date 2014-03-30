@@ -1,10 +1,12 @@
 #!/bin/bash
 
+die() { echo $@; exit -1; }
+
 # Misc.
 rand-cd() {
   DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
   NUM_DIRS=$(echo $DIRS | wc -l)
-  [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
+  [[ $NUM_DIRS == 1 ]] && die "Error: No directories found."
   cd "$(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)"
   unset DIRS NUM_DIRS
 }
@@ -16,6 +18,12 @@ wget-rec() {
     --convert-links \
     --no-parent \
     $*
+}
+
+d2h() { # diff2html
+  TMP_FILE=$(mktemp -t hdiff.XXXX)
+  diff2html $@ > $TMP_FILE
+  chromium $TMP_FILE
 }
 
 calc() { echo "scale=10; $@" | bc }
@@ -30,6 +38,12 @@ nj() {
 }
 
 # Music.
+playdir() {
+  mpv --no-video --shuffle --loop inf \
+  --playlist <(find "$PWD" -type f -follow)
+}
+alias pd='playdir'
+
 play-rand-dir() {
   DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
   NUM_DIRS=$(echo $DIRS | wc -l)
@@ -39,6 +53,7 @@ play-rand-dir() {
   cd ..
   unset DIRS NUM_DIRS
 }
+alias prd='play-rand-dir'
 
 # Android.
 musicToAndroid() {
@@ -50,6 +65,7 @@ musicToAndroid() {
     [[ $? != 0 ]] && echo " + Failed."
   done < <(find $* -type f | sort -R)
 }
+alias m2a='musicToAndroid'
 
 syncepub() {
   { adb devices | grep "device$" &> /dev/null } \
@@ -61,6 +77,7 @@ syncepub() {
     [[ $? != 0 ]] && echo " + Failed."
   done < <(find $* -name '*.epub')
 }
+alias se='syncepub'
 
 # Docker.
 docker-clean() {

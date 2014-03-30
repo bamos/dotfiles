@@ -34,16 +34,9 @@ alias yr='yaourt -R --noconfirm'
 alias z='zathura'
 
 # Music.
-playdir() {
-  mpv --no-video --shuffle --loop inf --playlist <(find "$PWD" -type f -follow)
-}
-alias pd='playdir'
-alias prd='play-rand-dir'
 alias sync-music='rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'
 
 # Android.
-alias m2a='musicToAndroid'
-alias se=syncepub
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
 
 # Git.
@@ -51,15 +44,3 @@ alias gcl='git clone'
 alias gu="git reset --soft 'HEAD^'"
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
-
-# Surf websites.
-surf-alias() { alias $1="nohup surf -z $3 '$2' &> /dev/null &"; }
-surf-alias "td" 'https://todoist.com/app?v=189#agenda/(overdue,__7__days)' 0.9
-surf-alias "ca" 'http://google.com/calendar' 0.7
-surf-alias "gh" 'https://github.com' 0.6
-surf-alias "gma" 'https://gmail.com' 0.7
-surf-alias "voi" 'https://voice.google.com' 0.8
-surf-alias "ddg" 'https://duckduckgo.com' 0.7
-surf-alias "cl" 'http://clicky.com' 0.7
-surf-alias "a" 'https://amazon.com' 0.7
-surf-alias "b" 'https://bitbucket.org' 0.8
