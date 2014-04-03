@@ -7,6 +7,8 @@
 :%s/…/.../g
 :%s/α/\\alpha/g
 :%s/β/\\beta/g
+:%s/γ/\\gamma/g
 :%s/•/\\item/g
 :%s/−/-/g
 :%s/×/\\times/g
+:%s/∞/\\infty/g
