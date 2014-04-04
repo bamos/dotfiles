@@ -16,7 +16,6 @@ colorscheme jellybeans
 
 filetype plugin indent on
 
-runtime mappings.vim
 runtime macros.vim
 
 " Fix Python indentation.
@@ -39,16 +38,15 @@ function! ToggleSpell()
   endif
 endfunction
 
+" Key mappings.
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
 nnoremap <F5> :GundoToggle<CR>
 nmap <F6> :w<CR>:!make<CR>
 nmap <F7> :source ~/.vim/pdf-replace.vim<CR>
 
-" Write a file using sudo.
+" Commands.
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-" Delete files with ':Rm'.
 command Rm :call delete(expand('%')) | bdelete!
 
 " Folding.
