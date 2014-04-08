@@ -3,6 +3,7 @@ set nocompatible
 set shiftwidth=2 tabstop=2 expandtab
 set number wrap mouse=a
 set dir=~/.vim/tmp backupdir=~/.vim/tmp
+set t_Co=256
 
 " Vundle.
 filetype off
@@ -20,7 +21,7 @@ runtime macros.vim
 
 " Fix Python indentation.
 autocmd FileType python setlocal shiftwidth=2 tabstop=2
-let g:pymode_lint = 0
+
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
@@ -55,3 +56,6 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+
+" Use LaTeX rather than plain TeX.
+let g:tex_flavor = "latex"
