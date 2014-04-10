@@ -3,18 +3,16 @@ set nocompatible
 set shiftwidth=2 tabstop=2 expandtab
 set number wrap mouse=a
 set dir=~/.vim/tmp backupdir=~/.vim/tmp
+set ignorecase smartcase
 set t_Co=256
 
-" Vundle.
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 runtime vundle.vim
 
-" Skins.
 set background=dark
 colorscheme jellybeans
-
 filetype plugin indent on
 
 runtime macros.vim
