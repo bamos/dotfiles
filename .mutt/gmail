@@ -31,10 +31,8 @@ alternative_order text/plain text/html *
 auto_view text/html
 
 # Gmail-style keyboard shortcuts
-macro index,pager y \
-  "<enter-command>unset trash\n <exit><delete-message>" "Gmail archive message"
-macro index,pager gi \
-  "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager y "<delete-message>" "Gmail archive message"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager ga \
   "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index,pager gs \
