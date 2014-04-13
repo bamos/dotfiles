@@ -15,3 +15,5 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 termcapinfo xterm* ti@:te@
 
 startup_message off
+
+shell "zsh"
