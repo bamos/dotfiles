@@ -9,8 +9,9 @@
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
 REPOS=$HOME/repos
-pathadd $REPOS/simple-shell-scripts
-pathadd $REPOS/simple-python-scripts/python3.3
+pathadd $REPOS/shell-scripts
+pathadd $REPOS/python-scripts/python2.7
+pathadd $REPOS/python-scripts/python3
 
 # oh-my-zsh initialization.
 DISABLE_AUTO_UPDATE='true';
@@ -20,7 +21,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment variables.
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186' # Zenburn-esque.
-export USE_CCACHE=1; export CCACHE_DIR=~/.ccache
 export EDITOR=vim
 
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
