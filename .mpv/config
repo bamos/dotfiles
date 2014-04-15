@@ -4,3 +4,4 @@ ao=alsa,pulse,oss
 channels=5.1
 title="${filename}"
 gapless-audio
+msglevel=demux=no:ad=no
