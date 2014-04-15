@@ -39,7 +39,7 @@ nj() {
 
 # Music.
 playdir() {
-  mpv --no-video --shuffle --loop inf \
+  mpv --no-video --msglevel=demux=no:ad=no --shuffle --loop inf \
   --playlist <(find "$PWD" -type f -follow)
 }
 alias pd='playdir'
