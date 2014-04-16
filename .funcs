@@ -4,12 +4,12 @@ die() { echo $@; exit -1; }
 
 # Misc.
 rand-cd() {
-  DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
-  NUM_DIRS=$(echo $DIRS | wc -l)
+  local DIRS; DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
+  local NUM_DIRS=$(echo $DIRS | wc -l)
   [[ $NUM_DIRS == 1 ]] && die "Error: No directories found."
   cd "$(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)"
-  unset DIRS NUM_DIRS
 }
+alias rcd='rand-cd'
 
 wget-rec() {
   wget --recursive \
@@ -21,7 +21,7 @@ wget-rec() {
 }
 
 d2h() { # diff2html
-  TMP_FILE=$(mktemp -t hdiff.XXXX)
+  local TMP_FILE=$(mktemp -t hdiff.XXXX)
   diff2html $@ > $TMP_FILE
   chromium $TMP_FILE
 }
@@ -51,13 +51,12 @@ playdirs() {
 alias pds='playdirs'
 
 play-rand-dir() {
-  DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
-  NUM_DIRS=$(echo $DIRS | wc -l)
+  local DIRS; DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
+  local NUM_DIRS=$(echo $DIRS | wc -l)
   [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
   cd "$(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)"
   pd
   cd ..
-  unset DIRS NUM_DIRS
 }
 alias prd='play-rand-dir'
 
