@@ -40,9 +40,15 @@ nj() {
 # Music.
 playdir() {
   mpv --no-video --shuffle --loop inf \
-  --playlist <(find "$PWD" -type f -follow)
+    --playlist <(find "$PWD" -type f -follow)
 }
 alias pd='playdir'
+
+playdirs() {
+  mpv --no-video --shuffle --loop inf \
+    --playlist <(find "$@" -type f -follow -exec readlink -f {} \;)
+}
+alias pds='playdirs'
 
 play-rand-dir() {
   DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
@@ -95,8 +101,8 @@ ps-threads() { ps -C $1 -L -opsr,pid,ppid,lwp,state }
 watch-threads() { watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state }
 
 # Allow crontab in dotfiles.
-export CRONTABCMD=$(which crontab)
-export CRONTABFILE=$HOME/.crontab.$HOST
+[ -z "${CRONTABCMD+x}" ] && export CRONTABCMD=$(which crontab)
+[ -z "${CRONTABFILE+x}" ] && export CRONTABFILE=$HOME/.crontab.$HOST
 crontab() {
   if [[ $@ == "-e" ]]; then; vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
   else; $CRONTABCMD $@; fi
