@@ -13,25 +13,34 @@ fi
 IFS='
 '
 for F in $(lsof -p ${MPV_PID} -Ftn |grep -A1 ^tREG|grep ^n|sed 's/^n//g'); do
-  if test -w "$F" ; then
-    TMP_JSON=$(mktemp)
-    exiftool -json "$F" > $TMP_JSON
-    INFO=$(python <<EOF
-import json
-f=open('$TMP_JSON', 'r')
-obj=json.load(f)
-print('Hi, check out "' + obj[0]["Title"] + '" by ' + obj[0]['Artist'] + ".")
-EOF
-)
-    # Use zenity because the terminal cannot be controlled with mpv running.
-    EMAIL=$(zenity --entry --title "Email to share with?" --text '')
-    [[ -z $EMAIL ]] && die "Error: No email input."
-    CONTENT=$(zenity --entry --title "Optional message body?" --text '')
-    mutt -s "$INFO" -- $EMAIL<<EOF
-$CONTENT
-EOF
-    if [[ $? == 0 ]]; then echo "Successfully shared with '$EMAIL'."
-    else echo "Failed to share with '$EMAIL'."; fi
-    echo $INFO
+  if test -w "$F"; then
+    CURRENT_TRACK="$F"
+    break
   fi
 done
+
+[[ -z $CURRENT_TRACK ]] && die "Error: No current track found."
+
+TMP_JSON=$(mktemp -t mpv.share.XXXXX)
+exiftool -json "$CURRENT_TRACK" > $TMP_JSON
+INFO=$(python <<EOF
+import json
+f=open('$TMP_JSON', 'r')
+obj=json.load(f)[0]
+f.close()
+print('Hi, check out "' + obj["Title"] + '" by ' + obj['Artist'] + ".")
+EOF
+)
+rm -f $TMP_JSON
+
+# Use zenity because the terminal cannot be controlled with mpv running.
+EMAIL=$(zenity --entry --title "Email to share with?" --text '')
+[[ -z $EMAIL ]] && die "Error: No email input."
+CONTENT=$(zenity --entry --title "Optional message body?" --text '')
+mutt -s "$INFO" -- $EMAIL<<EOF
+$CONTENT
+EOF
+
+if [[ $? == 0 ]]; then echo "Successfully shared with '$EMAIL'."
+else echo "Failed to share with '$EMAIL'."; fi
+echo $INFO
