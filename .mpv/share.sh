@@ -1,5 +1,7 @@
 #!/bin/bash
 
+function die() { echo $*; exit -1; }
+
 # On multiuser machines, output and grep on $USER too
 MPV_PID=$(ps axo '%p %c'|grep [m]pv$|awk '{print $1}')
 
@@ -23,13 +25,13 @@ EOF
 )
     # Use zenity because the terminal cannot be controlled with mpv running.
     EMAIL=$(zenity --entry --title "Email to share with?" --text '')
-    echo | mutt -s "$INFO" -- $EMAIL
-    if [[ $? == 0 ]]; then
-      echo "Successfully shared with '$EMAIL'."
-      echo $INFO
-    else
-      echo "Failed to share with '$EMAIL'."
-      echo $INFO
-    fi
+    [[ -z $EMAIL ]] && die "Error: No email input."
+    CONTENT=$(zenity --entry --title "Optional message body?" --text '')
+    mutt -s "$INFO" -- $EMAIL<<EOF
+$CONTENT
+EOF
+    if [[ $? == 0 ]]; then echo "Successfully shared with '$EMAIL'."
+    else echo "Failed to share with '$EMAIL'."; fi
+    echo $INFO
   fi
 done
