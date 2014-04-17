@@ -38,6 +38,7 @@ alias z='zathura'
 alias sync-music='rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'
 alias remove-tags='eyeD3 --remove-all'
 alias add-tags='picard'
+alias get-tags='exiftool -json'
 
 # Android.
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
