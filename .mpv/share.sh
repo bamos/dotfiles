@@ -2,7 +2,6 @@
 
 # On multiuser machines, output and grep on $USER too
 MPV_PID=$(ps axo '%p %c'|grep [m]pv$|awk '{print $1}')
-echo $MPV_PID
 
 if [ "$(echo ${MPV_PID}|wc -w)" -ne 1 ] ; then
   echo "Error: too many mpv PIDs: \"${MPV_PID}\" ($(echo ${MPV_PID}|wc -w))"
