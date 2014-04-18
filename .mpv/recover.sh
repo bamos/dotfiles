@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# recover.sh
+# Recover a single track deleted by `delete.sh`.
+#
+# Brandon Amos <http://bamos.io>
+# 2014.04.18
 
 if test -w "/tmp/mpv-deleted" ; then
   OLD_LOC=$(cat /tmp/mpv-deleted-name)
