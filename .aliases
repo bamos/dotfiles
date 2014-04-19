@@ -20,6 +20,7 @@ alias mpvnova='mpv --no-video'
 alias ....='cd ../../../..'
 alias .....='cd ../../../../..'
 alias ......='cd ../../../../../..'
+alias grive='grive -p ~/grive'
 
 # Programs.
 alias m='make'
