@@ -10,10 +10,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/global.sh
 TRACK=$(get-current-track)
 
-[[ -z $CURRENT_TRACK ]] && die "Error: No current track found."
+[[ -z $TRACK ]] && die "Error: No current track found."
 
 TMP_JSON=$(mktemp -t mpv.share.XXXXX)
-exiftool -json "$CURRENT_TRACK" > $TMP_JSON
+exiftool -json "$TRACK" > $TMP_JSON
 INFO=$(python <<EOF
 import json
 f=open('$TMP_JSON', 'r')
