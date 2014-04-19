@@ -14,3 +14,4 @@
 :%s/×/\\times/g
 :%s/∞/\\infty/g
 :%s/≤/\\leq/g
+:%s/θ/\\theta/g
