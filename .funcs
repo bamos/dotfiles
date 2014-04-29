@@ -127,3 +127,7 @@ whiteboardCleaner() {
     -negate -normalize -blur 0x1 -channel RBG \
     -level 60%,91%,0.1 $2
 }
+
+memo() {
+  echo "$1" | mail -n -s "$1" bdamos@vt.edu
+}
