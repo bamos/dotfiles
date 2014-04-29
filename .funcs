@@ -129,5 +129,5 @@ whiteboardCleaner() {
 }
 
 memo() {
-  echo "$1" | mail -n -s "$1" bdamos@vt.edu
+  echo "$*" | mail -n -s "$*" bdamos@vt.edu
 }
