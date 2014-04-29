@@ -104,7 +104,7 @@ watch-threads() { watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state }
 [ -z "${CRONTABFILE+x}" ] && export CRONTABFILE=$HOME/.crontab.$HOST
 crontab() {
   if [[ $@ == "-e" ]]; then vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
-  else; $CRONTABCMD $@; fi
+  else $CRONTABCMD $@; fi
 }
 
 # Infinitely loop a set of commands.
