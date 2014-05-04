@@ -45,7 +45,11 @@ alias get-tags='exiftool -json'
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
 
 # Git.
+alias ga='git add'
+alias gc='git commit'
 alias gcl='git clone'
-alias gu="git reset --soft 'HEAD^'"
+alias gl='git pull'
+alias gp='git push'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
+alias gu="git reset --soft 'HEAD^'"
