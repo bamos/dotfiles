@@ -32,5 +32,5 @@ Bundle 'Gundo'
 " Syntax.
 Bundle 'derekwyatt/vim-scala'
 Bundle 'honza/dockerfile.vim'
-Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-markdown'
 Bundle 'octave.vim'
