@@ -15,7 +15,8 @@ macro index,pager A "<pipe-message>abook --add-email-quiet<return>" \
 set attribution="Hi %n,\n\n\n\nRegards,\nBrandon.\n\nOn %d, %n <%a> wrote:"
 
 bind index,pager G group-reply
-set record=/dev/null
+set copy=yes
+set record=~/.mutt/sent
 set delete=no
 auto_view text/html
 
