@@ -44,10 +44,13 @@ alias get-tags='exiftool -json'
 # Android.
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
 
-# Git.
+# Git. Prefer these to git aliases for brevity.
+# Use the GitHub wrapper `hub` if found.
+command -v hub &> /dev/null && alias git='hub'
+alias g='git'
 alias ga='git add'
 alias gc='git commit'
-alias gcl='git clone'
+alias gclo='git clone'
 alias gl='git pull'
 alias gp='git push'
 alias gsr='git svn rebase'
