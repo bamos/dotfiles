@@ -28,6 +28,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Gundo'
+Bundle 'scrooloose/nerdtree'
 
 " Syntax.
 Bundle 'derekwyatt/vim-scala'
