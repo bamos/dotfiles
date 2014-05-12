@@ -12,7 +12,7 @@ call vundle#rc()
 runtime vundle.vim
 
 set background=dark
-colorscheme jellybeans
+colorscheme lucius
 filetype plugin indent on
 
 runtime macros.vim

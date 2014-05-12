@@ -4,12 +4,8 @@ Plugin 'tpope/vim-sensible' " Sensible vim defaults.
 Plugin 'gmarik/vundle' " Plugin manager.
 
 " Colorschemes.
-Plugin 'nanotech/jellybeans.vim' " Colorful, dark.
-Plugin 'zenburn' " Low contrast color scheme for low light.
-Plugin 'darkburn' " Darker mod of zenburn.
+Plugin 'flazz/vim-colorschemes' " Large colorscheme collection.
 Plugin 'distinguished' " Dark color scheme for 256-color terminals.
-Plugin 'quanganhdo/grb256' " Dark.
-Plugin 'noahfrederick/vim-hemisu' " Dark and light variants.
 
 " Syntax highlighting.
 Plugin 'derekwyatt/vim-scala'
