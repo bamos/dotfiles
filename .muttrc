@@ -5,6 +5,7 @@ source ~/.mutt/crypto
 source ~/.mutt/private
 
 set editor = "vim +FixWhitespace"
+set edit_headers = yes
 
 set postponed=~/.mutt/postponed
 set alias_file=~/.mutt/contacts

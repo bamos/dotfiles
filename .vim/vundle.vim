@@ -29,6 +29,7 @@ Bundle 'tpope/vim-endwise.git'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Gundo'
 Bundle 'scrooloose/nerdtree'
+Bundle 'chrisbra/CheckAttach'
 
 " Syntax.
 Bundle 'derekwyatt/vim-scala'
