@@ -28,6 +28,7 @@ Plugin 'tpope/vim-commentary' " Easy commenting.
 Plugin 'tpope/vim-surround' " Quoting/parenthesizing made simple.
 Plugin 'bronson/vim-trailing-whitespace' " Mark and remove trailing whitespace.
 Plugin 'tpope/vim-endwise.git' " Add 'end' in various languages.
+Plugin 'tpope/vim-speeddating' " Increment dates and times correctly.
 
 " Misc.
 Plugin 'bling/vim-airline' " Status/tabline.
