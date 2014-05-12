@@ -1,12 +1,13 @@
 Xcursor.theme: whiteglass
 Xcursor.size: 14
 
-xterm*background: #121212
+! Use gcolor for an eyedropper.
+xterm*background: #1C1C1C
 xterm*foreground: #ffffff
 
 ! URxvt*.transparent: true
 ! URxvt*.shading: 60
-URxvt*background: #121212
+URxvt*background: #1C1C1C
 URxvt*foreground: #ffffff
 !URxvt.font: xft:inconsolata:pixelsize=15
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=tru
