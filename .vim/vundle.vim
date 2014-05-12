@@ -1,38 +1,42 @@
 " vundle.vim
 
+Plugin 'tpope/vim-sensible' " Sensible vim defaults.
+Plugin 'gmarik/vundle' " Plugin manager.
+
 " Colorschemes.
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'darkburn'
-Bundle 'distinguished'
-Bundle 'quanganhdo/grb256'
-Bundle 'noahfrederick/vim-hemisu'
-Bundle 'zenburn'
+Plugin 'nanotech/jellybeans.vim' " Colorful, dark.
+Plugin 'zenburn' " Low contrast color scheme for low light.
+Plugin 'darkburn' " Darker mod of zenburn.
+Plugin 'distinguished' " Dark color scheme for 256-color terminals.
+Plugin 'quanganhdo/grb256' " Dark.
+Plugin 'noahfrederick/vim-hemisu' " Dark and light variants.
 
-" Plugins.
-Bundle 'tpope/vim-sensible'
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'embear/vim-localvimrc'
-Bundle 'Rename2'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
-Bundle 'mileszs/ack.vim'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'Raimondi/delimitMate'
-Bundle 'Gundo'
-Bundle 'scrooloose/nerdtree'
-Bundle 'chrisbra/CheckAttach'
+" Syntax highlighting.
+Plugin 'derekwyatt/vim-scala'
+Plugin 'honza/dockerfile.vim'
+Plugin 'octave.vim'
+Plugin 'tpope/vim-markdown'
 
-" Syntax.
-Bundle 'derekwyatt/vim-scala'
-Bundle 'honza/dockerfile.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'octave.vim'
+" Snippets.
+Plugin 'MarcWeber/vim-addon-mw-utils' " Dependency.
+Plugin 'tomtom/tlib_vim' " Dependency.
+Plugin 'garbas/vim-snipmate' " Snipmate repo.
+Plugin 'honza/vim-snippets' " Default snippets.
+
+" Wrappers.
+Plugin 'mileszs/ack.vim' " ack.
+Plugin 'tpope/vim-fugitive.git' " Git.
+
+" Writing/editing helpers.
+Plugin 'tpope/vim-commentary' " Easy commenting.
+Plugin 'tpope/vim-surround' " Quoting/parenthesizing made simple.
+Plugin 'bronson/vim-trailing-whitespace' " Mark and remove trailing whitespace.
+Plugin 'tpope/vim-endwise.git' " Add 'end' in various languages.
+
+" Misc.
+Plugin 'bling/vim-airline' " Status/tabline.
+Plugin 'embear/vim-localvimrc' " Load subdirectory specific vimrc files.
+Plugin 'Rename2' " Rename the file currently being edited.
+Plugin 'tpope/vim-unimpaired' " Handy bracket mappings.
+Plugin 'scrooloose/nerdtree' " Textual filesystem navigation.
+Plugin 'chrisbra/CheckAttach' " Email attachments.
