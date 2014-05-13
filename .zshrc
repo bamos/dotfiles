@@ -4,6 +4,7 @@
 [[ -a ~/.aliases ]] && source ~/.aliases
 [[ -a ~/.funcs ]] && source ~/.funcs
 [[ -a ~/.private ]] && source ~/.private
+[[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
 
 # Add additional directories to the path.
 pathadd $HOME/bin
