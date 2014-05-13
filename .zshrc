@@ -1,6 +1,8 @@
 # ~/.zshrc
 # Brandon Amos <http://bamos.io>
 
+[[ -a ~/.funcs ]] && source ~/.funcs
+
 # Add additional directories to the path.
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
@@ -10,7 +12,6 @@ pathadd $REPOS/python-scripts/python2.7
 pathadd $REPOS/python-scripts/python3
 
 [[ -a ~/.aliases ]] && source ~/.aliases
-[[ -a ~/.funcs ]] && source ~/.funcs
 [[ -a ~/.private ]] && source ~/.private
 [[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
 
