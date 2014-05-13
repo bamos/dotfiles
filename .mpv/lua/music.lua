@@ -22,14 +22,15 @@ function restore_prev_track()
 end
 
 function mark_good()
+  -- Move the current song into a `good` directory.
   last_deleted_track = mp.get_property("path")
-  os.execute("mkdir good")
+  os.execute("mkdir -p good")
   os.execute("mv '" .. mp.get_property("path") .. "' '" .. "good" .. "'")
   print("Marked '" .. last_deleted_track .. "' as good.")
 end
 
--- http://stackoverflow.com/questions/132397
 function os.capture(cmd, raw)
+  -- http://stackoverflow.com/questions/132397
   local f = assert(io.popen(cmd, 'r'))
   local s = assert(f:read('*a'))
   f:close()
@@ -37,6 +38,12 @@ function os.capture(cmd, raw)
 end
 
 function print_info()
+  -- Print the current track's artist and title in the following format.
+  --
+  -- [music] ---------------
+  -- [music] Title: Marche Slave
+  -- [music] Artist: Tchaikovsky
+  -- [music] ---------------
   local s = os.capture(
     'exiftool -json ' .. mp.get_property("path") ..
     ' | grep \'^ *"\\(Artist\\|Title\\)\' ' ..
