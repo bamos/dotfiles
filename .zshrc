@@ -12,6 +12,7 @@ REPOS=$HOME/repos
 pathadd $REPOS/shell-scripts
 pathadd $REPOS/python-scripts/python2.7
 pathadd $REPOS/python-scripts/python3
+unset REPOS
 
 # Source external files.
 [[ -a ~/.funcs ]] && source ~/.funcs
