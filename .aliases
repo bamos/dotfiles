@@ -25,14 +25,21 @@ alias grive='grive -p ~/grive'
 alias m='make'
 alias mu='mutt'
 alias rsyncdir='rsync -azrv --progress'
-alias up='yaourt -Syua'
-alias yup='up --noconfirm'
 alias vim='vim -p'
 alias bup='vim +BundleInstall +qall'
-alias y='yaourt'
-alias ys='yaourt -S --noconfirm'
-alias yr='yaourt -R --noconfirm'
 alias z='zathura'
+LSB_RELEASE=$(lsb_release -s -i)
+if [[ $LSB_RELEASE == "Arch" ]]; then
+  alias y='yaourt'
+  alias ys='yaourt -S --noconfirm'
+  alias yr='yaourt -R --noconfirm'
+  alias up='yaourt -Syua'
+  alias yup='up --noconfirm'
+elif [[ $LSB_RELEASE == "Ubuntu" ]]; then
+  alias agi='_ apt-get install -y'
+  alias agr='_ apt-get remove -y'
+  alias aup='_ apt-get update; _ apt-get upgrade;'
+fi
 
 # Music.
 alias sync-music='rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'

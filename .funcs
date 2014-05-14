@@ -92,12 +92,6 @@ inf() {
   done;
 }
 
-pathadd() {
-  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
-    PATH="${PATH:+"$PATH:"}$1"
-  fi
-}
-
 # https://gist.github.com/lelandbatey/8677901
 whiteboardCleaner() {
   convert $1 -morphology Convolve DoG:15,100,0 \

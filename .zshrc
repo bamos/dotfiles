@@ -1,9 +1,11 @@
 # ~/.zshrc
 # Brandon Amos <http://bamos.io>
 
-[[ -a ~/.funcs ]] && source ~/.funcs
-
 # Add additional directories to the path.
+pathadd() {
+  [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
+}
+
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
 REPOS=$HOME/repos
@@ -11,21 +13,22 @@ pathadd $REPOS/shell-scripts
 pathadd $REPOS/python-scripts/python2.7
 pathadd $REPOS/python-scripts/python3
 
+# Source external files.
+[[ -a ~/.funcs ]] && source ~/.funcs
 [[ -a ~/.aliases ]] && source ~/.aliases
 [[ -a ~/.private ]] && source ~/.private
 [[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
 
-# oh-my-zsh initialization.
+# Initialize oh-my-zsh.
 DISABLE_AUTO_UPDATE='true';
 ZSH_THEME=bamos_minimal; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
+# zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
 plugins=(vi-mode git history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Environment variables.
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186' # Zenburn-esque.
 export EDITOR=vim
-
-# zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
 
 # If a pattern for filename generation has no matches,
 # delete the pattern from the argument list;
