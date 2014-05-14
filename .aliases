@@ -14,11 +14,11 @@ alias xa='xrandr --auto'
 alias xax='xrandr --auto; exit'
 alias dual='xrandr --output VGA1 --right-of LVDS1 --auto'
 alias dx='dual; exit'
-alias fixwhitespace="ack --print0 -l '[ \t]+$' | \
-  xargs -0 -n1 perl -pi -e 's/[ \t]+$//'"
-alias ....='cd ../../../..'
-alias .....='cd ../../../../..'
-alias ......='cd ../../../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
 alias grive='grive -p ~/grive'
 
 # Programs.
@@ -28,18 +28,6 @@ alias rsyncdir='rsync -azrv --progress'
 alias vim='vim -p'
 alias bup='vim +BundleInstall +qall'
 alias z='zathura'
-LSB_RELEASE=$(lsb_release -s -i)
-if [[ $LSB_RELEASE == "Arch" ]]; then
-  alias y='yaourt'
-  alias ys='yaourt -S --noconfirm'
-  alias yr='yaourt -R --noconfirm'
-  alias up='yaourt -Syua'
-  alias yup='up --noconfirm'
-elif [[ $LSB_RELEASE == "Ubuntu" ]]; then
-  alias agi='_ apt-get install -y'
-  alias agr='_ apt-get remove -y'
-  alias aup='_ apt-get update; _ apt-get upgrade;'
-fi
 
 # Music.
 alias sync-music='rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'
@@ -62,3 +50,27 @@ alias gp='git push'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
 alias gu="git reset --soft 'HEAD^'"
+
+# OS and distro-specific aliases.
+case $(uname) in
+  "Linux")
+    case $(lsb_release -s -i) in
+      "Arch")
+        alias y='yaourt'
+        alias ys='yaourt -S --noconfirm'
+        alias yr='yaourt -R --noconfirm'
+        alias up='yaourt -Syua'
+        alias yup='up --noconfirm'
+      ;;
+      "Ubuntu")
+        alias agi='_ apt-get install -y'
+        alias agr='_ apt-get remove -y'
+        alias aup='_ apt-get update; _ apt-get upgrade;'
+        alias chromium='chromium-browser'
+      ;;
+    esac
+  ;;
+  "Darwin")
+    # TODO.
+  ;;
+esac
