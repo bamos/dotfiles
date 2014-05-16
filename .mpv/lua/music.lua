@@ -34,7 +34,7 @@ function os.capture(cmd, raw)
   local f = assert(io.popen(cmd, 'r'))
   local s = assert(f:read('*a'))
   f:close()
-  return s
+  return string.sub(s, 0, -2) -- Use string.sub to trim the trailing newline.
 end
 
 function print_info()
@@ -44,17 +44,44 @@ function print_info()
   -- [music] Title: Marche Slave
   -- [music] Artist: Tchaikovsky
   -- [music] ---------------
-  local s = os.capture(
+  local info = os.capture(
     'exiftool -json ' .. mp.get_property("path") ..
     ' | grep \'^ *"\\(Artist\\|Title\\)\' ' ..
     ' | sed \'s/^ *"\\(Artist\\|Title\\)": "\\(.*\\)",$/\\1: \\2/g\'; '
   )
   print(string.rep("-", 15))
-  print(string.sub(s, 0, -2)) -- Use string.sub to trim the trailing newline.
+  print(info)
   print(string.rep("-", 15))
+end
+
+function share_info()
+  local email = os.capture(
+    'zenity --entry --title "Email to share with?" --text ""'
+  )
+  if email == "" then
+    print("Error: No email input.")
+    return
+  end
+  local content = os.capture(
+    'zenity --entry --title "Optional message body?" --text ""'
+  )
+  local artist = os.capture(
+    'exiftool -json ' .. mp.get_property("path") ..
+    ' | grep \'^ *"Artist\' ' ..
+    ' | sed \'s/^ *"Artist": "\\(.*\\)",$/\\1/g\'; '
+  )
+  local title = os.capture(
+    'exiftool -json ' .. mp.get_property("path") ..
+    ' | grep \'^ *"Title\' ' ..
+    ' | sed \'s/^ *"Title": "\\(.*\\)",$/\\1/g\'; '
+  )
+  local info = 'Hi, check out ' .. title .. ' by ' .. artist
+  os.capture("echo '" .. content .. "' | " ..
+    "mutt -s '" .. info .. "'" .. " -- '" .. email .. "'")
 end
 
 mp.add_key_binding("d", "delete_current_track", delete_current_track)
 mp.add_key_binding("r", "restore_prev_track", restore_prev_track)
 mp.add_key_binding("g", "mark_good", mark_good)
 mp.add_key_binding("i", "print_info", print_info)
+mp.add_key_binding("s", "share", share_info)
