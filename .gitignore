@@ -6,3 +6,5 @@
 .mutt/cache
 .mutt/postponed
 .mutt/sent
+
+.aria2/dht.dat
