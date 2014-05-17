@@ -1,8 +1,7 @@
 #!/bin/bash
 #
 # bootstrap.sh
-# Symbolically link dot files to the files in this directory,
-# optionally backing up existing dot files.
+# Symlink all dotfiles in this repo to $HOME.
 #
 # Brandon Amos
 # 2013.01.20
