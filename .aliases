@@ -27,6 +27,7 @@ alias mu='mutt'
 alias rsyncdir='rsync -azrv --progress'
 alias vim='vim -p'
 alias bup='vim +BundleInstall +qall'
+alias bcl='vim +BundleClean +qall'
 alias z='zathura'
 
 # Music.
