@@ -67,11 +67,14 @@ case $(uname) in
         alias agi='_ apt-get install -y'
         alias agr='_ apt-get remove -y'
         alias aup='_ apt-get update; _ apt-get upgrade;'
+        alias acs='apt-cache search'
         alias chromium='chromium-browser'
       ;;
     esac
   ;;
   "Darwin")
-    # TODO.
+    alias brupd='brew update'
+    alias brupg='brew upgrade'
+    alias bri='brew install'
   ;;
 esac
