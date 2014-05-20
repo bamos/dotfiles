@@ -35,3 +35,6 @@ export EDITOR=vim
 # delete the pattern from the argument list;
 # do not report an error unless all the patterns in a command have no matches.
 set -o CSH_NULL_GLOB
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
