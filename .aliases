@@ -76,5 +76,6 @@ case $(uname) in
     alias brupd='brew update'
     alias brupg='brew upgrade'
     alias bri='brew install'
+    alias brun='brew uninstall'
   ;;
 esac
