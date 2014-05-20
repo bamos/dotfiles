@@ -5,7 +5,6 @@ alias c='clear'
 alias chax='chmod a+x'
 alias h='hostname'
 alias i='curl icanhazip.com'
-alias less='/usr/share/vim/vim74/macros/less.sh'
 alias li='libreoffice'
 alias psg='ps aux | grep'
 alias rh='rehash'
@@ -25,7 +24,6 @@ alias grive='grive -p ~/grive'
 alias m='make'
 alias mu='mutt'
 alias rsyncdir='rsync -azrv --progress'
-alias vim='vim -p'
 alias bup='vim +BundleInstall +qall'
 alias bcl='vim +BundleClean +qall'
 alias z='zathura'
@@ -51,6 +49,17 @@ alias gp='git push'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
 alias gu="git reset --soft 'HEAD^'"
+
+# Vim aliases.
+case $(uname) in
+  "Linux")
+    alias less='/usr/share/vim/vim74/macros/less.sh'
+    alias vim='vim -p'
+  ;;
+  "Darwin")
+    alias vim='mvim -v -p'
+  ;;
+esac
 
 # OS and distro-specific aliases.
 case $(uname) in
