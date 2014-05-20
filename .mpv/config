@@ -1,7 +1,7 @@
 [default]
-vo=opengl-hq,opengl,xv,wayland
-ao=alsa,pulse,oss
-audio-channels=5.1
+#vo=opengl-hq,opengl,xv,wayland
+#ao=alsa,pulse,oss
+#audio-channels=5.1
 title="${filename}"
 gapless-audio
 msg-level=demux=no:ad=no:ffmpeg=no:ao=no
