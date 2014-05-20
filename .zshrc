@@ -33,8 +33,8 @@ export LSCOLORS='ExGxFxdxCxEgEdHbagacad'
 export EDITOR=vim
 
 # If a pattern for filename generation has no matches,
-# delete the pattern from the argument list;
-# do not report an error unless all the patterns in a command have no matches.
+# delete the pattern from the argument list.
+# Do not report an error unless all the patterns in a command have no matches.
 set -o CSH_NULL_GLOB
 
 bindkey '^[[A' history-substring-search-up
