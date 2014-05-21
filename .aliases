@@ -88,3 +88,5 @@ case $(uname) in
     alias brun='brew uninstall'
   ;;
 esac
+
+alias pw='pwgen --numerals --symbols --ambiguous 15 1'
