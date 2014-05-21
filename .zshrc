@@ -24,8 +24,12 @@ unset REPOS
 DISABLE_AUTO_UPDATE='true';
 ZSH_THEME=bamos_minimal; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
-plugins=(vi-mode git history-substring-search)
+# Comment vi-mode due to OSX bug and use `bindkey -v` for now.
+# https://github.com/robbyrussell/oh-my-zsh/issues/2189
+#plugins=(vi-mode git history-substring-search)
+plugins=(git history-substring-search)
 source $ZSH/oh-my-zsh.sh
+bindkey -v
 
 # Environment variables.
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186'
@@ -39,3 +43,6 @@ set -o CSH_NULL_GLOB
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+export ANDROID_SDK=/usr/local/Cellar/android-sdk/22.6.2
+export ANDROID_NDK=/usr/local/Cellar/android-ndk/r9d
