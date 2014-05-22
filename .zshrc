@@ -6,6 +6,7 @@ pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
 
+PATH=/usr/local/bin":$PATH" # Prefer brew packages.
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
 REPOS=$HOME/repos
@@ -24,12 +25,8 @@ unset REPOS
 DISABLE_AUTO_UPDATE='true';
 ZSH_THEME=bamos_minimal; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
-# Comment vi-mode due to OSX bug and use `bindkey -v` for now.
-# https://github.com/robbyrussell/oh-my-zsh/issues/2189
-#plugins=(vi-mode git history-substring-search)
-plugins=(git history-substring-search)
+plugins=(vi-mode git history-substring-search)
 source $ZSH/oh-my-zsh.sh
-bindkey -v
 
 # Environment variables.
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186'
