@@ -176,8 +176,8 @@ defaults write NSGlobalDomain AppleMetricUnits -bool false
 # Set the timezone; see `systemsetup -listtimezones` for other values
 systemsetup -settimezone "America/Los_Angeles" > /dev/null
 
-# Enable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool true
+# Disable auto-correct.
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
@@ -430,8 +430,8 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
-# Show Safari’s sidebar in Top Sites
-defaults write com.apple.Safari ShowSidebarInTopSites -bool true
+# Don't show Safari’s sidebar in Top Sites
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
