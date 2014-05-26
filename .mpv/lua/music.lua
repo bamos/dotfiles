@@ -47,6 +47,15 @@ function mark_good()
   print("Marked '" .. last_deleted_track .. "' as good.")
 end
 
+-- Get a field such as 'Artist' or 'Title' from the current track.
+function get_current_track_field(field)
+  return os.capture(
+    'exiftool -json ' .. mp.get_property("path") ..
+    ' | grep \'^ *"' .. field .. '\' ' ..
+    ' | sed \'s/^ *"' .. field .. '": "\\(.*\\)",$/\\1/g\'; '
+  )
+end
+
 -- Print the current track's artist and title in the following format.
 --
 -- [music] ---------------
@@ -54,13 +63,11 @@ end
 -- [music] Artist: Tchaikovsky
 -- [music] ---------------
 function print_info()
-  local info = os.capture(
-    'exiftool -json ' .. mp.get_property("path") ..
-    ' | grep \'^ *"\\(Artist\\|Title\\)\' ' ..
-    ' | sed \'s/^ *"\\(Artist\\|Title\\)": "\\(.*\\)",$/\\1: \\2/g\'; '
-  )
+  local artist = get_current_track_field("Artist")
+  local title = get_current_track_field("Title")
   print(string.rep("-", 15))
-  print(info)
+  print('Artist: ' .. artist)
+  print('Title: ' .. title)
   print(string.rep("-", 15))
 end
 
@@ -78,16 +85,8 @@ function share_info()
   local content = os.capture(
     'zenity --entry --title "Optional message body?" --text ""'
   )
-  local artist = os.capture(
-    'exiftool -json ' .. mp.get_property("path") ..
-    ' | grep \'^ *"Artist\' ' ..
-    ' | sed \'s/^ *"Artist": "\\(.*\\)",$/\\1/g\'; '
-  )
-  local title = os.capture(
-    'exiftool -json ' .. mp.get_property("path") ..
-    ' | grep \'^ *"Title\' ' ..
-    ' | sed \'s/^ *"Title": "\\(.*\\)",$/\\1/g\'; '
-  )
+  local artist = get_current_track_field("Artist")
+  local title = get_current_track_field("Title")
   local info = 'Hi, check out ' .. title .. ' by ' .. artist
   os.capture("echo '" .. content .. "' | " ..
     "mutt -s '" .. info .. "'" .. " -- '" .. email .. "'")
