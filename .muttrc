@@ -13,7 +13,8 @@ source ~/.mutt/contacts
 set query_command= "abook --mutt-query '%s'"
 macro index,pager A "<pipe-message>abook --add-email-quiet<return>" \
   "add the sender address to abook"
-set attribution="Hi %n,\n\n\n\nRegards,\nBrandon.\n\nOn %d, %n <%a> wrote:"
+#set attribution="Hi %n,\n\n\n\nRegards,\nBrandon.\n\nOn %d, %n <%a> wrote:"
+set attribution="On %d, %n <%a> wrote:"
 
 bind index,pager G group-reply
 set copy=yes
