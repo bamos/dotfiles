@@ -1,2 +1,2 @@
 * * * * * /Users/amos/bin/gmail &> /dev/null
-0 * * * * /Users/amos/repos/shell-scripts/notify-postponed.sh
+0 * * * * /Users/amos/repos/shell-scripts/notify-postponed.sh &> /dev/null
