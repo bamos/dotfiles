@@ -1,3 +1,4 @@
 [default]
 # mpv master, commit 2279f71
 msg-level=demux=no:ad=no:ffmpeg=no:ao=no
+load-unsafe-playlists
