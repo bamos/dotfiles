@@ -12,6 +12,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'honza/dockerfile.vim'
 Plugin 'octave.vim'
 Plugin 'tpope/vim-markdown'
+Plugin 'gisraptor/vim-lilypond-integrator'
 
 " Snippets.
 Plugin 'MarcWeber/vim-addon-mw-utils' " Dependency.
@@ -38,3 +39,4 @@ Plugin 'Rename2' " Rename the file currently being edited.
 Plugin 'tpope/vim-unimpaired' " Handy bracket mappings.
 Plugin 'scrooloose/nerdtree' " Textual filesystem navigation.
 Plugin 'chrisbra/CheckAttach' " Email attachments.
+Plugin 'tpope/vim-dispatch' " Asynchronous build and test dispatcher.
