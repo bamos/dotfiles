@@ -26,7 +26,6 @@ alias mu='mutt'
 alias rsyncdir='rsync -azrv --progress'
 alias bup='vim +BundleInstall +qall'
 alias bcl='vim +BundleClean +qall'
-alias z='zathura'
 
 # Music.
 alias sync-music='rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'
@@ -64,28 +63,32 @@ esac
 # OS and distro-specific aliases.
 case $(uname) in
   "Linux")
-    case $(lsb_release -s -i) in
-      "Arch")
-        alias y='yaourt'
-        alias ys='yaourt -S --noconfirm'
-        alias yr='yaourt -R --noconfirm'
-        alias up='yaourt -Syua'
-        alias yup='up --noconfirm'
-      ;;
-      "Ubuntu")
-        alias agi='_ apt-get install -y'
-        alias agr='_ apt-get remove -y'
-        alias aup='_ apt-get update; _ apt-get upgrade;'
-        alias acs='apt-cache search'
-        alias chromium='chromium-browser'
-      ;;
-    esac
+    alias z='zathura'
+    if command -v lsb_release &> /dev/null; then
+      case $(lsb_release -s -i) in
+        "Arch")
+          alias y='yaourt'
+          alias ys='yaourt -S --noconfirm'
+          alias yr='yaourt -R --noconfirm'
+          alias up='yaourt -Syua'
+          alias yup='up --noconfirm'
+        ;;
+        "Ubuntu")
+          alias agi='_ apt-get install -y'
+          alias agr='_ apt-get remove -y'
+          alias aup='_ apt-get update; _ apt-get upgrade;'
+          alias acs='apt-cache search'
+          alias chromium='chromium-browser'
+        ;;
+      esac
+    fi
   ;;
   "Darwin")
     alias brupd='brew update'
     alias brupg='brew upgrade'
     alias bri='brew install'
     alias brun='brew uninstall'
+    alias z='Skim'
   ;;
 esac
 
