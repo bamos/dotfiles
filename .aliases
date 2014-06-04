@@ -4,7 +4,7 @@
 alias c='clear'
 alias chax='chmod a+x'
 alias h='hostname'
-alias i='curl icanhazip.com'
+alias i-ext='curl icanhazip.com'
 alias li='libreoffice'
 alias psg='ps aux | grep'
 alias rh='rehash'
@@ -88,6 +88,7 @@ case $(uname) in
     alias brupg='brew upgrade'
     alias bri='brew install'
     alias brun='brew uninstall'
+    alias i-int='ipconfig getifaddr en0'
     alias z='Skim'
   ;;
 esac
