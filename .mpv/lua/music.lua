@@ -6,6 +6,7 @@ require 'os'
 require 'io'
 require 'string'
 
+
 -- Helper function to execute a command and return the output as a string.
 -- Reference: http://stackoverflow.com/questions/132397
 function os.capture(cmd, raw)
@@ -71,23 +72,41 @@ function print_info()
   print(string.rep("-", 15))
 end
 
+-- Display a prompt for user input in Linux or Mac using
+-- zenity or CocoaDialog, which must be already installed.
+uname = os.capture('uname')
+function prompt_input(title)
+  local val
+  if uname == "Linux" then
+    val = os.capture(
+      'zenity --entry --title "' .. title .. '" --text ""'
+    )
+  elseif uname == "Darwin" then
+    val = os.capture(
+      '/Applications/CocoaDialog.app/Contents/MacOS/CocoaDialog ' ..
+      'standard-inputbox ' ..
+      '--title "' .. title .. '" ' ..
+      '| tail -n 1'
+    )
+  end
+  return val
+end
+
 -- Use zenity and mutt to share the current track's information with a friend.
 -- This can be modified to send the message with any command-line email client
 -- or used to interface directly with an SMTP server.
 function share_info()
-  local email = os.capture(
-    'zenity --entry --title "Email to share with?" --text ""'
-  )
+  local email = prompt_input("Email to share with?")
   if email == "" then
     print("Error: No email input.")
     return
   end
-  local content = os.capture(
-    'zenity --entry --title "Optional message body?" --text ""'
-  )
+  local content = prompt_input("Optional message body?");
   local artist = get_current_track_field("Artist")
   local title = get_current_track_field("Title")
-  local info = 'Hi, check out ' .. title .. ' by ' .. artist
+  local info = 'Hi, check out ' .. title .. ' by ' .. artist .. '.'
+  print(email)
+  print(info)
   os.capture("echo '" .. content .. "' | " ..
     "mutt -s '" .. info .. "'" .. " -- '" .. email .. "'")
 end
