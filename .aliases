@@ -84,8 +84,7 @@ case $(uname) in
     fi
   ;;
   "Darwin")
-    alias brupd='brew update'
-    alias brupg='brew upgrade'
+    alias brup='brew update; brew upgrade'
     alias bri='brew install'
     alias brun='brew uninstall'
     alias i-int='ipconfig getifaddr en0'
