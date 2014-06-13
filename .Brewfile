@@ -10,6 +10,7 @@ cask install android-studio eclipse-java
 cask install google-chrome firefox
 cask install java
 cask install musicbrainz-picard
+cask install torbrowser
 
 install ant
 install android-ndk android-sdk
