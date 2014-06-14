@@ -11,8 +11,11 @@ playdir() {
 alias pd='playdir'
 
 playdirs() {
+  if [[ $(uname) == "Linux" ]]; then READLINK=readlink;
+  else READLINK=greadlink; fi
   mpv --no-video --shuffle --loop inf \
-    --playlist <(find "$@" -type f -follow -exec readlink -f {} \;)
+    --playlist <(find "$@" -type f -follow -exec $READLINK -f {} \;)
+  unset READLINK
 }
 alias pds='playdirs'
 
