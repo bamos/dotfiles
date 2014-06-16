@@ -13,6 +13,7 @@ Plugin 'honza/dockerfile.vim'
 Plugin 'octave.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'gisraptor/vim-lilypond-integrator'
+Plugin 'puppetlabs/puppet-syntax-vim'
 
 " Snippets.
 Plugin 'MarcWeber/vim-addon-mw-utils' " Dependency.
