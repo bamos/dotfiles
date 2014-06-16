@@ -42,4 +42,5 @@ for DOTFILE in $DOTFILES; do
     && link_file "$HOME/$DOTFILE" "$CHECKOUT_DIR/$DOTFILE"
 done
 
-vim +BundleInstall +qall
+#vim +BundleInstall +qall
+echo "Please run 'vim +BundleInstall +qall'"
