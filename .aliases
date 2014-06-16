@@ -88,6 +88,7 @@ case $(uname) in
     alias bri='brew install'
     alias brun='brew uninstall'
     alias i-int='ipconfig getifaddr en0'
+    alias less='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/Resources/vim/runtime/macros/less.sh'
     alias z='Skim'
   ;;
 esac
