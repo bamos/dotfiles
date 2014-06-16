@@ -12,7 +12,11 @@ call vundle#rc()
 runtime vundle.vim
 
 set background=dark
-colorscheme lucius
+try
+  colorscheme lucius
+catch /^Vim\%((\a\+)\)\=:E185/
+  " Don't load a color scheme.
+endtry
 filetype plugin indent on
 
 runtime macros.vim
