@@ -7,6 +7,7 @@ install massren
 tap caskroom/cask
 install brew-cask
 cask install android-studio eclipse-java
+cask install dia
 cask install google-chrome firefox
 cask install java
 cask install musicbrainz-picard
