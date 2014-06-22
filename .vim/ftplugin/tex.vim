@@ -24,7 +24,7 @@ let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode -src-specials $*'
 let g:Tex_CompileRule_ps = 'dvips -Pwww -o $*.ps $*.dvi'
 let g:Tex_CompileRule_pspdf = 'ps2pdf $*.ps'
 let g:Tex_CompileRule_dvipdf = 'dvipdfm $*.dvi'
-let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 --interaction=nonstopmode $*'
+let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 --interaction=nonstopmode -halt-on-error $*'
 
 let g:Tex_ViewRule_dvi = 'texniscope'
 let g:Tex_ViewRule_ps = 'Preview'
@@ -94,10 +94,10 @@ endfunction
 " Write, open for viewing, compile, go to the end of the quickfix, hide the
 " preview, switch back to main window
 "map <D-r> :w<cr><leader>lv<leader>ll<C-w>p:q<cr>
-map <D-r> :w<cr><leader>lv<leader>ll
-imap <D-r> <ESC><D-r>
+map <D-s> :w<cr><leader>lv<leader>ll
+imap <D-s> <ESC><D-r>
 " Inverse search
-nmap <D-S-LeftMouse> <leader>ls
+nmap <D-v> <leader>ls
 
 " ************
 
@@ -106,7 +106,7 @@ nmap <D-S-LeftMouse> <leader>ls
 "let g:Tex_CompileRule_pdf = '/usr/texbin/pdflatex --shell-escape $*'
 
 let g:Tex_Menus=0
-let g:Tex_HotKeyMappings='align*,align,bmatrix'
+" let g:Tex_HotKeyMappings='align*,align,bmatrix'
 
 " call IMAP('REQ', 'Eq.~\eqref{eq:<++>}<++>', 'tex')
 " call IMAP('REEQ', 'Eqs.~\eqref{eqs:<++>}<++>', 'tex')
@@ -129,18 +129,18 @@ let g:Tex_HotKeyMappings='align*,align,bmatrix'
 " call IMAP('`3', '\topbox{<++>}<++>', 'tex')
 
 "command-shift-1
-imap <D-!> align*<F5>
+" imap <D-!> align*<F5>
 "command-2
-imap <D-2> equation<F5>
+" imap <D-2> equation<F5>
 "command-shift-2
-imap <D-@> equation*<F5>
+" imap <D-@> equation*<F5>
 "command-3
-imap <D-3> \\ <cr>\intertext{<++>}<cr>  <++><Up><Up><C-j>
+" imap <D-3> \\ <cr>\intertext{<++>}<cr>  <++><Up><Up><C-j>
 "command-4
 "imap <D-4> itemize<F5>
 
 "convert equation* into equation with label
-map <D-4> /equation\*<CR>wxNwxa\label{eq:}<left>
+" map <D-4> /equation\*<CR>wxNwxa\label{eq:}<left>
 
 "disable folding by default
 let g:Tex_AutoFolding=0
