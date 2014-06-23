@@ -94,3 +94,5 @@ case $(uname) in
 esac
 
 alias pw='pwgen --numerals --symbols --ambiguous 15 1'
+
+alias count-frames="grep -c '^\(\\frame{\|\\begin{frame}\)'"
