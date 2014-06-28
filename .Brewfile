@@ -33,6 +33,7 @@ install netcat
 install nmap
 install pass pwgen
 install python python3
+install reattach-to-user-namespace
 install rubber
 install sbt scala
 install terminal-notifier
