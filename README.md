@@ -1,13 +1,11 @@
 # About.
-These are configuration files I use on Linux systems,
-which have been largely inspired by the repos in the
-References section.
+These are configuration files I use on Mac and Linux systems,
+which have been largely inspired by other people.
 
 # Installation.
 
-I use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
-in this repo to my home directory and install vim plugins.
-Please read and understand `bootstrap.sh` before using it.
+Use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
+in this repo to the home directory and install vim plugins.
 
 ```Bash
 git clone --recursive git://github.com/bamos/dotfiles.git .dotfiles
