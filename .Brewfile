@@ -31,6 +31,7 @@ install mpv
 install mutt
 install netcat
 install nmap
+install npm
 install pass pwgen
 install python python3
 install reattach-to-user-namespace
