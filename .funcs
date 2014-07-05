@@ -42,12 +42,15 @@ nj() {
 musicToAndroid() {
   { adb devices | grep "device$" &> /dev/null } \
     || { echo "No devices found."; return; }
+  if [[ $(uname) == "Linux" ]]; then SORT=sort;
+  else SORT=gsort; fi
   while read SONG; do
     echo "Syncing $SONG."
     #TODO - Get relative directory.
     adb push $SONG /sdcard/Music &> /dev/null
     [[ $? != 0 ]] && echo " + Failed."
-  done < <(find $* -type f | sort -R)
+  done < <(find $* -type f | $SORT -R)
+  unset SORT
 }
 alias m2a='musicToAndroid'
 
