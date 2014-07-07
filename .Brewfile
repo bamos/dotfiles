@@ -19,6 +19,7 @@ install ant
 install android-ndk android-sdk
 install aria2
 install exiftool
+install fdupes
 install ffmpeg
 install gcc gdb
 install git hub
