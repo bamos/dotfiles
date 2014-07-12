@@ -18,6 +18,7 @@ cask install torbrowser
 install ant
 install android-ndk android-sdk
 install aria2
+install dos2unix
 install exiftool
 install fdupes
 install ffmpeg
