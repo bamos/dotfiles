@@ -12,6 +12,7 @@ cask install google-chrome firefox
 cask install java
 cask install musicbrainz-picard
 cask install music-manager radiant-player
+cask install silverlight
 cask install skim
 cask install torbrowser
 
