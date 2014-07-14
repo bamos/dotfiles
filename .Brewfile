@@ -48,6 +48,7 @@ install tmux
 install tor
 install tree
 install unrar
+install watch
 install wget
 install youtube-dl
 install zsh
