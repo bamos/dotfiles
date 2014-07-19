@@ -10,7 +10,7 @@ xterm*foreground: #ffffff
 URxvt*background: #1C1C1C
 URxvt*foreground: #ffffff
 !URxvt.font: xft:inconsolata:pixelsize=15
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=tru
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=10:antialias=true:hinting=tru
 URxvt.scrollstyle: plain
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/chromium
