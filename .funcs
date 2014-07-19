@@ -42,12 +42,15 @@ nj() {
 musicToAndroid() {
   { adb devices | grep "device$" &> /dev/null } \
     || { echo "No devices found."; return; }
+  if [[ $(uname) == "Linux" ]]; then SORT=sort;
+  else SORT=gsort; fi
   while read SONG; do
     echo "Syncing $SONG."
     #TODO - Get relative directory.
     adb push $SONG /sdcard/Music &> /dev/null
     [[ $? != 0 ]] && echo " + Failed."
-  done < <(find $* -type f | sort -R)
+  done < <(find $* -type f | $SORT -R)
+  unset SORT
 }
 alias m2a='musicToAndroid'
 
@@ -84,4 +87,14 @@ inf() {
 
 memo() {
   echo "$*" | mail -n -s "$*" bamos@cmu.edu
+}
+
+lapack-install() {
+  wget http://www.netlib.org/lapack/lapack-3.5.0.tgz -O /tmp/lapack.tgz
+  tar xvfz /tmp/lapack.tgz -C ~
+  rm -f /tmp/lapack.tgz
+  cd ~/lapack-3.5.0
+  cp make.inc{.example,}
+  make -j8 lapacklib blaslib
+  ln -s $PWD/librefblas.a libblas.a
 }

@@ -20,8 +20,14 @@ link_file() {
   ln -s "$NEW" "$ORIG" && echo "    ...linked"
 }
 
-read -p "Backup files? (y/n) " -n 1; echo
-BACKUP=$REPLY
+if [[ $# == 1 ]]; then
+  [[ $1 =~ '-y' ]] && BACKUP='y'
+  [[ $1 =~ '-n' ]] && BACKUP='n'
+else
+  read -p "Backup files? (y/n) " -n 1; echo
+  BACKUP=$REPLY
+fi
+
 cd "$(dirname "${BASH_SOURCE}")"
 CHECKOUT_DIR="$PWD"
 

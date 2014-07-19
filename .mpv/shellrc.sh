@@ -2,25 +2,22 @@
 # Source this to add additional shell features for mpv.
 
 alias mpvnova='mpv --no-video'
+alias mpvshuf='mpvnova --shuffle --loop inf'
+alias mpvp='mpvshuf --playlist'
+
+playcurrentdir() {
+  mpvp <(find "$PWD" -type f -follow)
+}
+alias pcd='playcurrentdir'
 
 playdir() {
-  mpv --no-video --shuffle --loop inf \
-    --playlist <(find "$PWD" -type f -follow)
+  if [[ $# == 0 ]]; then
+    echo "playdir requires one or more directories on input."
+  else
+    if [[ $(uname) == "Linux" ]]; then READLINK=readlink;
+    else READLINK=greadlink; fi
+    mpvshuf --playlist <(find "$@" -type f -follow -exec $READLINK -f {} \;)
+    unset READLINK
+  fi
 }
 alias pd='playdir'
-
-playdirs() {
-  mpv --no-video --shuffle --loop inf \
-    --playlist <(find "$@" -type f -follow -exec readlink -f {} \;)
-}
-alias pds='playdirs'
-
-play-rand-dir() {
-  local DIRS; DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
-  local NUM_DIRS=$(echo $DIRS | wc -l)
-  [[ $NUM_DIRS == 1 ]] && echo "Warning: No directories found."
-  cd "$(echo $DIRS | xargs -n $NUM_DIRS shuf -n1 -e)"
-  pd
-  cd ..
-}
-alias prd='play-rand-dir'
