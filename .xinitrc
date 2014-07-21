@@ -28,4 +28,5 @@ export LOCALE='en_US.UTF-8'
 
 dunst &
 
-exec i3 # -V >> ~/.i3/i3.log 2>&1
+#exec i3 # -V >> ~/.i3/i3.log 2>&1
+exec enlightenment_start
