@@ -143,7 +143,7 @@ let g:Tex_Menus=0
 " map <D-4> /equation\*<CR>wxNwxa\label{eq:}<left>
 
 "disable folding by default
-"let g:Tex_AutoFolding=0
+let g:Tex_AutoFolding=0
 
 " " Run LaTeX through TexShop
 " " http://reference-man.blogspot.com/2009/01/vimtexshop-integration.html
