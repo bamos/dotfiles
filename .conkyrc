@@ -1,0 +1,13 @@
+# ~/.conkyrc
+# Plain
+
+out_to_x no
+out_to_console yes
+
+update_interval 60
+
+TEXT
+CPU: $cpu%  \
+RAM: $memperc%  \
+Batt: $battery_percent%  \
+${time %a %b %d, %Y %I:%M %p}
