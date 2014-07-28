@@ -21,7 +21,7 @@ alias ......='cd ../../../../..'
 alias grive='grive -p ~/grive'
 
 # Programs.
-alias m='make'
+alias m='make -j8'
 alias mu='mutt'
 alias rsyncdir='rsync -azrv --progress'
 alias bup='vim +BundleInstall +qall'
