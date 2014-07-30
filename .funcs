@@ -98,3 +98,10 @@ lapack-install() {
   make -j8 lapacklib blaslib
   ln -s $PWD/librefblas.a libblas.a
 }
+
+function stopwatch(){
+  local BEGIN=`gdate +%s`
+  while true; do
+   echo -ne "$(gdate -u --date @$((`gdate +%s` - $BEGIN)) +%H:%M:%S)\r";
+  done
+}
