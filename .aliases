@@ -72,6 +72,7 @@ case $(uname) in
           alias yr='yaourt -R --noconfirm'
           alias up='yaourt -Syua'
           alias yup='up --noconfirm'
+          alias i-int='ip address show wlp3s0'
         ;;
         "Ubuntu")
           alias agi='_ apt-get install -y'
