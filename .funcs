@@ -26,7 +26,6 @@ d2h() { # diff2html
   chromium $TMP_FILE
 }
 
-calc() { echo "scale=10; $@" | bc }
 mkdircd() { mkdir $1; cd $1; }
 
 # Netjoin - Block until a network connection is obtained.
