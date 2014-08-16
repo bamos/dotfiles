@@ -35,6 +35,7 @@ install macvim
 install mosh
 install mpv
 install mutt
+install ncdu
 install netcat
 install nmap
 install npm
