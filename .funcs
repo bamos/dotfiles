@@ -104,3 +104,19 @@ function stopwatch(){
    echo -ne "$(gdate -u --date @$((`gdate +%s` - $BEGIN)) +%H:%M:%S)\r";
   done
 }
+
+# https://github.com/matthewmccullough/scripts/blob/master/git-finddirty
+git-dirty() {
+  OLDIFS=$IFS; IFS=$'\n'
+
+  for gitprojpath in `find . -type d -name .git|sort|sed "s/\/\.git//"`; do
+    pushd . >/dev/null
+    cd $gitprojpath
+    isdirty=$(git status -s | grep "^.*")
+    if [ -n "$isdirty" ]; then
+      echo "DIRTY:" $gitprojpath
+    fi
+    popd >/dev/null
+  done
+  IFS=$OLDIFS
+}
