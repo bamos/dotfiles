@@ -27,6 +27,7 @@ install ant
 install android-ndk android-sdk
 install aria2
 install cloc
+install coreutils
 install dos2unix
 install exiftool
 install fdupes
