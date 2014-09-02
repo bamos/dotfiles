@@ -36,6 +36,7 @@ install gcc homebrew/dupes/gdb
 install git hub
 install gnupg gnupg2
 install heroku-toolbelt
+install imagemagick
 #install lilypond
 install lua
 install macvim
