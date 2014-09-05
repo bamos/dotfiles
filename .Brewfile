@@ -53,6 +53,7 @@ install python python3
 install reattach-to-user-namespace
 install rubber
 install sbt scala
+install sshfs
 install terminal-notifier
 install the_silver_searcher
 install timidity
