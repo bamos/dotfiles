@@ -21,6 +21,7 @@ cask install seil
 cask install silverlight
 cask install skim
 cask install torbrowser
+cask install vagrant
 cask install xquartz
 
 install ant
