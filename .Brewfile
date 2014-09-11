@@ -20,6 +20,7 @@ cask install music-manager radiant-player
 cask install seil
 cask install silverlight
 cask install skim
+cask install skype
 cask install tikz-editor
 cask install torbrowser
 cask install vagrant
