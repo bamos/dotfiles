@@ -51,8 +51,8 @@ end
 -- Get a field such as 'Artist' or 'Title' from the current track.
 function get_current_track_field(field)
   return os.capture(
-    'exiftool -json ' .. mp.get_property("path") ..
-    ' | grep \'^ *"' .. field .. '\' ' ..
+    'exiftool -json "' .. mp.get_property("path") ..
+    '" | grep \'^ *"' .. field .. '\' ' ..
     ' | sed \'s/^ *"' .. field .. '": "\\(.*\\)",$/\\1/g\'; '
   )
 end
