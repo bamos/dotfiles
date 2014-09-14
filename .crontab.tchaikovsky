@@ -1,4 +1,4 @@
 0 3 * * * /home/brandon/bin/backup-remote.sh
 */5 * * * * /home/brandon/bin/battery.sh
-0 * * * * export DISPLAY=:0.0 && /home/brandon/bin/gmail
+#0 * * * * export DISPLAY=:0.0 && /home/brandon/bin/gmail
 30 * * * * export DISPLAY=:0.0 && /home/brandon/repos/shell-scripts/notify-postponed.sh
