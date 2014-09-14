@@ -21,6 +21,7 @@ cask install seil
 cask install silverlight
 cask install skim
 cask install skype
+cask install synergy
 cask install tikz-editor
 cask install torbrowser
 cask install vagrant
