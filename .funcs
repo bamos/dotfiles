@@ -27,6 +27,7 @@ d2h() { # diff2html
 }
 
 mkdircd() { mkdir $1; cd $1; }
+alias mcd='mkdircd'
 
 # Netjoin - Block until a network connection is obtained.
 nj() {
