@@ -30,8 +30,10 @@ cask install xquartz
 install ant
 install android-ndk android-sdk
 install aria2
+install autossh
 install cloc
 install coreutils
+install cvs
 install dos2unix
 install exiftool
 install fdupes
