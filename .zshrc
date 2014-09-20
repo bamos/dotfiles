@@ -44,6 +44,3 @@ set -o CSH_NULL_GLOB
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-export ANDROID_SDK=/usr/local/Cellar/android-sdk/22.6.2
-export ANDROID_NDK=/usr/local/Cellar/android-ndk/r9d
