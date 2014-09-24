@@ -40,6 +40,7 @@ install fdupes
 install ffmpeg
 install gcc homebrew/dupes/gdb
 install git hub
+install glew
 install gnupg gnupg2
 install heroku-toolbelt
 install imagemagick
