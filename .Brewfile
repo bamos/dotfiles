@@ -38,6 +38,7 @@ install dos2unix
 install exiftool
 install fdupes
 install ffmpeg
+install foremost
 install gcc homebrew/dupes/gdb
 install git hub
 install glew
@@ -61,6 +62,7 @@ install rubber
 install sbt scala
 install sshfs
 install sox
+install tcpdump
 install terminal-notifier
 install the_silver_searcher
 install timidity
