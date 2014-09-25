@@ -41,4 +41,4 @@ Plugin 'tpope/vim-unimpaired' " Handy bracket mappings.
 Plugin 'scrooloose/nerdtree' " Textual filesystem navigation.
 Plugin 'chrisbra/CheckAttach' " Email attachments.
 Plugin 'tpope/vim-dispatch' " Asynchronous build and test dispatcher.
-Plugin 'jcf/vim-latex' " LaTeX suite.
+" Plugin 'jcf/vim-latex' " LaTeX suite.
