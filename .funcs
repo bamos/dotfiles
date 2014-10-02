@@ -121,3 +121,7 @@ git-dirty() {
   done
   IFS=$OLDIFS
 }
+
+sys-find() {
+  find / -name $@ 2>/dev/null
+}
