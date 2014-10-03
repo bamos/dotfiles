@@ -1,10 +1,9 @@
-.vim/.netrwhist
-.vim/spell
-
+.aria2/dht.dat
+.emacs.d/elpa
 .mutt/private
 .mutt/contacts
 .mutt/cache
 .mutt/postponed
 .mutt/sent
-
-.aria2/dht.dat
+.vim/.netrwhist
+.vim/spell
