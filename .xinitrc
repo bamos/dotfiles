@@ -25,7 +25,7 @@ elif [[ $(hostname) == derecho ]]; then
 fi
 
 # Set up the resources
-xrdb ~/.Xresources
+xrdb ~/.Xresources -D$(hostname)
 
 
 export LOCALE='en_US.UTF-8'
