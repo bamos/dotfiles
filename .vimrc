@@ -64,3 +64,5 @@ let g:tex_flavor = "latex"
 
 " Copy in the OSX terminal.
 set clipboard=unnamed
+
+set guioptions-=T  "remove menu bar
