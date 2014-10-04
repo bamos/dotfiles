@@ -125,3 +125,8 @@ git-dirty() {
 sys-find() {
   find / -name $@ 2>/dev/null
 }
+
+
+dump-packages() {
+  yaourt -Qe | cut -d ' ' -f 1 | sed 's/^.*\///'
+}
