@@ -9,6 +9,7 @@ install mpv
 
 tap caskroom/cask
 install brew-cask
+cask install alfred
 cask install android-studio eclipse-java
 cask install dia
 cask install google-chrome firefox
@@ -21,11 +22,13 @@ cask install seil
 cask install silverlight
 cask install skim
 cask install skype
+cask install sublime-text
 cask install synergy
 cask install tikz-editor
 cask install torbrowser
 cask install vagrant
 cask install xquartz
+cask install xtrafinder
 
 install ant
 install android-ndk android-sdk
@@ -35,6 +38,7 @@ install cloc
 install coreutils
 install cvs
 install dos2unix
+install emacs --HEAD --use-git-head --cocoa --with-gnutls
 install exiftool
 install fdupes
 install ffmpeg
