@@ -100,9 +100,13 @@ lapack-install() {
 }
 
 function stopwatch(){
-  local BEGIN=`gdate +%s`
+  case $(uname) in
+    "Linux") DATE=date ;;
+    "Darwin") DATE=gdate ;;
+  esac
+  local BEGIN=`$DATE +%s`
   while true; do
-   echo -ne "$(gdate -u --date @$((`gdate +%s` - $BEGIN)) +%H:%M:%S)\r";
+    echo -ne "$($DATE -u --date @$((`$DATE +%s` - $BEGIN)) +%H:%M:%S)\r";
   done
 }
 
