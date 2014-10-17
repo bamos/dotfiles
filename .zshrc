@@ -13,7 +13,7 @@ REPOS=$HOME/repos
 pathadd $REPOS/shell-scripts
 pathadd $REPOS/python-scripts/python2.7
 pathadd $REPOS/python-scripts/python3
-command -v foo >/dev/null 2>&1 && \
+command -v ruby >/dev/null 2>&1 && \
   pathadd $(ruby -rubygems -e "puts Gem.user_dir")/bin
 unset REPOS
 
