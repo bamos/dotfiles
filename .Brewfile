@@ -7,6 +7,9 @@ install massren
 tap mpv-player/mpv
 install mpv
 
+brew tap homebrew/science
+brew install r
+
 tap caskroom/cask
 install brew-cask
 cask install alfred
@@ -18,6 +21,7 @@ cask install java
 cask install mactex
 cask install musicbrainz-picard
 cask install music-manager radiant-player
+cask install RStudio
 cask install seil
 cask install silverlight
 cask install skim
