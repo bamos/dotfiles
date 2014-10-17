@@ -42,3 +42,6 @@ Plugin 'scrooloose/nerdtree' " Textual filesystem navigation.
 Plugin 'chrisbra/CheckAttach' " Email attachments.
 Plugin 'tpope/vim-dispatch' " Asynchronous build and test dispatcher.
 " Plugin 'jcf/vim-latex' " LaTeX suite.
+
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
