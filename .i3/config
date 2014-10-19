@@ -25,6 +25,10 @@ bindsym $mod+b exec spacefm
 bindsym $mod+j exec chromium
 bindsym $mod+Tab exec chromium
 
+# Screenshots
+bindsym --release $mod+x exec scrot -s
+bindsym $mod+i exec scrot
+
 # Borders and workspace location
 new_window 1pixel
 bindsym $mod+y border normal
