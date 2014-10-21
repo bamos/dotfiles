@@ -12,7 +12,6 @@ brew install r
 
 tap caskroom/cask
 install brew-cask
-cask install alfred
 cask install android-studio eclipse-java
 cask install dia
 cask install google-chrome firefox
@@ -58,7 +57,7 @@ install lua
 install macvim
 install markdown
 install mosh
-install mutt
+#install mutt
 install ncdu
 install netcat
 install nmap
