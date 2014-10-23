@@ -14,6 +14,7 @@ Plugin 'octave.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'gisraptor/vim-lilypond-integrator'
 Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'fatih/vim-go'
 
 " Snippets.
 Plugin 'MarcWeber/vim-addon-mw-utils' " Dependency.
