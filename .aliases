@@ -45,6 +45,7 @@ alias gc='git commit'
 alias gclo='git clone'
 alias gl='git pull'
 alias gp='git push'
+alias gpsuom='git push --set-upstream origin master'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
 alias gu="git reset --soft 'HEAD^'"
