@@ -7,13 +7,14 @@ pathadd() {
 }
 
 PATH=/usr/local/bin":$PATH" # Prefer brew packages.
+pathadd /opt/local/bin
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
 REPOS=$HOME/repos
 pathadd $REPOS/shell-scripts
 pathadd $REPOS/python-scripts/python2.7
 pathadd $REPOS/python-scripts/python3
-command -v foo >/dev/null 2>&1 && \
+command -v ruby >/dev/null 2>&1 && \
   pathadd $(ruby -rubygems -e "puts Gem.user_dir")/bin
 unset REPOS
 

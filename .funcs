@@ -26,7 +26,7 @@ d2h() { # diff2html
   chromium $TMP_FILE
 }
 
-mkdircd() { mkdir $1; cd $1; }
+mkdircd() { mkdir $1 && cd $1; }
 alias mcd='mkdircd'
 
 # Netjoin - Block until a network connection is obtained.
@@ -100,9 +100,13 @@ lapack-install() {
 }
 
 function stopwatch(){
-  local BEGIN=`gdate +%s`
+  case $(uname) in
+    "Linux") DATE=date ;;
+    "Darwin") DATE=gdate ;;
+  esac
+  local BEGIN=`$DATE +%s`
   while true; do
-   echo -ne "$(gdate -u --date @$((`gdate +%s` - $BEGIN)) +%H:%M:%S)\r";
+    echo -ne "$($DATE -u --date @$((`$DATE +%s` - $BEGIN)) +%H:%M:%S)\r";
   done
 }
 

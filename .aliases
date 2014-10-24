@@ -37,8 +37,6 @@ alias get-tags='exiftool -json'
 alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
 
 # Git. Prefer these to git aliases for brevity.
-# Use the GitHub wrapper `hub` if found.
-command -v hub &> /dev/null && alias git='hub'
 alias g='git'
 alias ga='git add'
 alias gc='git commit'
@@ -99,3 +97,5 @@ alias pw='pwgen --numerals --symbols --ambiguous 15 1'
 
 alias count-frames=$'grep -c \'^\\(\\\\frame{\\|\\\\begin{frame}\\\)\''
 alias tmux='tmux -2'
+
+alias f='sudo $(fc -ln -1)'

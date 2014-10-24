@@ -14,6 +14,7 @@ Plugin 'octave.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'gisraptor/vim-lilypond-integrator'
 Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'fatih/vim-go'
 
 " Snippets.
 Plugin 'MarcWeber/vim-addon-mw-utils' " Dependency.
@@ -42,3 +43,6 @@ Plugin 'scrooloose/nerdtree' " Textual filesystem navigation.
 Plugin 'chrisbra/CheckAttach' " Email attachments.
 Plugin 'tpope/vim-dispatch' " Asynchronous build and test dispatcher.
 " Plugin 'jcf/vim-latex' " LaTeX suite.
+
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'

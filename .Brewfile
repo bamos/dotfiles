@@ -7,6 +7,9 @@ install massren
 tap mpv-player/mpv
 install mpv
 
+brew tap homebrew/science
+brew install r
+
 tap caskroom/cask
 install brew-cask
 cask install android-studio eclipse-java
@@ -17,15 +20,18 @@ cask install java
 cask install mactex
 cask install musicbrainz-picard
 cask install music-manager radiant-player
+cask install RStudio
 cask install seil
 cask install silverlight
 cask install skim
 cask install skype
+cask install sublime-text
 cask install synergy
 cask install tikz-editor
 cask install torbrowser
 cask install vagrant
 cask install xquartz
+cask install xtrafinder
 
 install ant
 install android-ndk android-sdk
@@ -35,6 +41,7 @@ install cloc
 install coreutils
 install cvs
 install dos2unix
+install emacs --HEAD --use-git-head --cocoa --with-gnutls
 install exiftool
 install fdupes
 install ffmpeg
@@ -50,7 +57,7 @@ install lua
 install macvim
 install markdown
 install mosh
-install mutt
+#install mutt
 install ncdu
 install netcat
 install nmap

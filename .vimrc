@@ -3,7 +3,7 @@ set nocompatible
 set shiftwidth=2 tabstop=2 expandtab
 set number wrap mouse=a
 set dir=~/.vim/tmp backupdir=~/.vim/tmp
-set ignorecase smartcase
+set ignorecase smartcase shiftround smartindent
 set t_Co=256
 
 filetype off
@@ -44,7 +44,6 @@ endfunction
 " Key mappings.
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
-nnoremap <F5> :GundoToggle<CR>
 nmap <F6> :w<CR>:!make<CR>
 nmap <F7> :source ~/.vim/pdf-replace.vim<CR>
 
@@ -66,3 +65,6 @@ let g:tex_flavor = "latex"
 set clipboard=unnamed
 
 set guioptions-=T  "remove menu bar
+
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!

@@ -9,5 +9,5 @@ update_interval 60
 TEXT
 CPU: $cpu%  \
 RAM: $memperc%  \
-Batt: $battery_percent%  \
+${if_match "$battery_percent" != "0"}Batt: $battery_percent%  ${endif}\
 ${time %a %b %d, %Y %I:%M %p}
