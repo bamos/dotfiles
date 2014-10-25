@@ -7,6 +7,7 @@ pathadd() {
 }
 
 PATH=/usr/local/bin":$PATH" # Prefer brew packages.
+pathadd /opt/local/bin
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
 REPOS=$HOME/repos
