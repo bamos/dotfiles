@@ -134,3 +134,5 @@ sys-find() {
 dump-packages() {
   yaourt -Qe | cut -d ' ' -f 1 | sed 's/^.*\///'
 }
+
+unset -f die
