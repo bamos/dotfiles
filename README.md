@@ -23,6 +23,119 @@ second one shows my current zsh theme.
 [screenshot-gen]: https://github.com/bamos/dotfiles/blob/master/screenshots/generate.sh
 [xvfb]: http://www.x.org/archive/X11R7.7/doc/man/man1/Xvfb.1.xhtml
 
+# Shell functions and aliases.
+The following is a summary of custom Bash and zsh functions and
+aliases contained in [.funcs][funcs] and [.aliases][aliases].
+
+## Functions
+Generate this list with:
+
+```
+grep '()' .funcs | sed -e 's/\(.*()\).*/+ \`\1\`/g'
+```
+
++ `die()`
++ `rand-cd()`
++ `wget-rec()`
++ `d2h()`
++ `mkdircd()`
++ `nj()`
++ `musicToAndroid()`
++ `docker-clean()`
++ `docker-zsh()`
++ `ps-threads()`
++ `watch-threads()`
++ `crontab()`
++ `inf()`
++ `memo()`
++ `lapack-install()`
++ `function stopwatch()`
++ `git-dirty()`
++ `sys-find()`
++ `dump-packages()`
+
+## Aliases.
+`.aliases` sets aliases conditionally depending on the OS.
+The following is the full list of aliases.
+
+```
+grep 'alias .*=' .funcs .aliases | \
+  sed -e 's/.*alias \(.*\)=\(.*\)/\`\1\` | \`\2\`/g' | \
+  sort
+```
+
+| Alias | Definition |
+|---|---|
+`acs` | `'apt-cache search'`
+`add-tags` | `'picard'`
+`agi` | `'_ apt-get install -y'`
+`agr` | `'_ apt-get remove -y'`
+`aup` | `'_ apt-get update; _ apt-get upgrade;'`
+`bcl` | `'vim +BundleClean +qall'`
+`bri` | `'brew install'`
+`brun` | `'brew uninstall'`
+`brup` | `'brew update; brew upgrade'`
+`bup` | `'vim +BundleInstall +qall'`
+`c` | `'clear'`
+`..` | `'cd ..'`
+`...` | `'cd ../..'`
+`....` | `'cd ../../..'`
+`.....` | `'cd ../../../..'`
+`......` | `'cd ../../../../..'`
+`chax` | `'chmod a+x'`
+`chromium` | `'chromium-browser'`
+`count-frames` | `$'grep -c \'^\\(\\\\frame{\\|\\\\begin{frame}\\\)\''`
+`dual` | `'xrandr --output VGA1 --right-of LVDS1 --auto'`
+`dx` | `'dual; exit'`
+`f` | `'sudo $(fc -ln -1)'`
+`ga` | `'git add'`
+`gc` | `'git commit'`
+`gclo` | `'git clone'`
+`get-tags` | `'exiftool -json'`
+`g` | `'git'`
+`gl` | `'git pull'`
+`gp` | `'git push'`
+`gpsuom` | `'git push --set-upstream origin master'`
+`grive` | `'grive -p ~/grive'`
+`gsd` | `'git svn dcommit'`
+`gsr` | `'git svn rebase'`
+`gu` | `"git reset --soft 'HEAD^'"`
+`h` | `'hostname'`
+`i-ext` | `'curl icanhazip.com'`
+`i-int` | `'ip address show wlp3s0'`
+`i-int` | `'ipconfig getifaddr en0'`
+`less` | `'/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/Resources/vim/runtime/macros/less.sh'`
+`less` | `'/usr/share/vim/vim74/macros/less.sh'`
+`li` | `'libreoffice'`
+`m2a` | `'musicToAndroid'`
+`mcd` | `'mkdircd'`
+`m` | `'make -j8'`
+`mu` | `'mutt'`
+`psg` | `'ps aux | grep'`
+`pullimages` | `"adb pull /storage/sdcard0/DCIM/Camera ."`
+`pw` | `'pwgen --numerals --symbols --ambiguous 15 1'`
+`rcd` | `'rand-cd'`
+`remove-tags` | `'eyeD3 --remove-all'`
+`rh` | `'rehash'`
+`rsyncdir` | `'rsync -azrv --progress'`
+`sudo` | `'nocorrect sudo'`
+`sync-music` | `'rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'`
+`tmux` | `'tmux -2'`
+`up` | `'yaourt -Syua'`
+`vim` | `'mvim -v -p'`
+`vim` | `'vim -p'`
+`xa` | `'xrandr --auto'`
+`xax` | `'xrandr --auto; exit'`
+`yr` | `'yaourt -R --noconfirm'`
+`ys` | `'yaourt -S --noconfirm'`
+`yup` | `'up --noconfirm'`
+`y` | `'yaourt'`
+`z` | `'Skim'`
+`z` | `'zathura'`
+
+[funcs]: https://github.com/bamos/dotfiles/blob/master/.funcs
+[aliases]: https://github.com/bamos/dotfiles/blob/master/.aliases
+
 # Installation
 
 Use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
