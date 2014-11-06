@@ -23,6 +23,24 @@ second one shows my current zsh theme.
 [screenshot-gen]: https://github.com/bamos/dotfiles/blob/master/screenshots/generate.sh
 [xvfb]: http://www.x.org/archive/X11R7.7/doc/man/man1/Xvfb.1.xhtml
 
+# Installation
+
+Use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
+in this repo to the home directory and install vim plugins.
+An alternate to manually linking with shell script is to use [GNU Stow][stow].
+I'm keeping the shell script for now because some machines
+I have limit access to don't have GNU Stow installed.
+
+```Bash
+git clone --recursive git://github.com/bamos/dotfiles.git .dotfiles
+cd .dotfiles
+./bootstrap.sh
+```
+
+[bootstrap.sh]: https://github.com/bamos/dotfiles/blob/master/bootstrap.sh
+[stow]: http://www.gnu.org/software/stow/
+
+
 # Shell functions and aliases.
 The following is a summary of custom Bash and zsh functions and
 aliases contained in [.funcs][funcs] and [.aliases][aliases].
@@ -135,19 +153,6 @@ grep 'alias .*=' .funcs .aliases | \
 
 [funcs]: https://github.com/bamos/dotfiles/blob/master/.funcs
 [aliases]: https://github.com/bamos/dotfiles/blob/master/.aliases
-
-# Installation
-
-Use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
-in this repo to the home directory and install vim plugins.
-
-```Bash
-git clone --recursive git://github.com/bamos/dotfiles.git .dotfiles
-cd .dotfiles
-./bootstrap.sh
-```
-
-[bootstrap.sh]: https://github.com/bamos/dotfiles/blob/master/bootstrap.sh
 
 # Similar Projects and Inspiration
 There are many approaches to managing dotfiles on GitHub
