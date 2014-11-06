@@ -30,7 +30,7 @@ aliases contained in [.funcs][funcs] and [.aliases][aliases].
 ## Functions
 Generate this list with:
 
-```
+```Bash
 grep '()' .funcs | sed -e 's/\(.*()\).*/+ \`\1\`/g'
 ```
 
@@ -54,11 +54,11 @@ grep '()' .funcs | sed -e 's/\(.*()\).*/+ \`\1\`/g'
 + `sys-find()`
 + `dump-packages()`
 
-## Aliases.
+## Aliases
 `.aliases` sets aliases conditionally depending on the OS.
 The following is the full list of aliases.
 
-```
+```Bash
 grep 'alias .*=' .funcs .aliases | \
   sed -e 's/.*alias \(.*\)=\(.*\)/\`\1\` | \`\2\`/g' | \
   sort
