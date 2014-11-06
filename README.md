@@ -1,4 +1,4 @@
-# About.
+# About
 These are configuration files I use on Mac and Linux systems,
 which have been largely inspired by other people.
 
@@ -8,13 +8,22 @@ by taking screenshots in an [X virtual framebuffer][xvfb].
 The first one shows my current vim color scheme and the
 second one shows my current zsh theme.
 
+## vim
 ![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/vim.png)
+
+## zsh
 ![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/zsh-ls.png)
+
+## screen
+![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/screen.png)
+
+## tmux
+![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/tmux.png)
 
 [screenshot-gen]: https://github.com/bamos/dotfiles/blob/master/screenshots/generate.sh
 [xvfb]: http://www.x.org/archive/X11R7.7/doc/man/man1/Xvfb.1.xhtml
 
-# Installation.
+# Installation
 
 Use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
 in this repo to the home directory and install vim plugins.
@@ -27,7 +36,7 @@ cd .dotfiles
 
 [bootstrap.sh]: https://github.com/bamos/dotfiles/blob/master/bootstrap.sh
 
-# Similar Projects and Inspiration.
+# Similar Projects and Inspiration
 There are many approaches to managing dotfiles on GitHub
 that have inspired this repository, and this project
 uniquely adds automatic screenshot generation.
