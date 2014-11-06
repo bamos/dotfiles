@@ -14,3 +14,18 @@
 (evil-mode 1)
 
 (setq make-backup-files nil)
+
+(unless window-system
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (global-set-key [mouse-4] '(lambda () (interactive) (scroll-down 1)))
+  (global-set-key [mouse-5] '(lambda () (interactive) (scroll-up 1)))
+  (defun track-mouse (e))
+  (setq mouse-sel-mode t)
+)
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-charcoal-black)
+
+(add-hook 'find-file-hook (lambda () (linum-mode 1)))
