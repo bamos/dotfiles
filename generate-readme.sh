@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x -e
+set -x -e +H
 cd "$(dirname "$0")"
 
 cat>README.md<<EOF
@@ -21,7 +21,9 @@ EOF
 ./screenshots/generate.sh
 
 SS_PREFIX=https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots
-for F in {vim,emacs,zsh,screen,tmux}; do echo -e "## $F\n\![]($SS_PREFIX/$F.png)"; done
+for F in {vim,emacs,zsh,screen,tmux}; do
+  echo -e "## $F\n![]($SS_PREFIX/$F.png)" >> README.md
+done
 
 cat>>README.md<<EOF
 # Installation
@@ -55,6 +57,7 @@ EOF
 grep '()' .funcs | sed -e 's/\(.*()\).*/+ \`\1\`/g' >> README.md
 
 cat>>README.md<<EOF
+
 ## Aliases
 | Alias | Definition |
 |---|---|
