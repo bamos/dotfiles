@@ -1,6 +1,8 @@
 #!/bin/bash
 
 set -x
+cd ~/.dotfiles
+
 Xvfb :1 -screen 0 500x500x16 & XVFB_PROC=$!
 sleep 1
 
