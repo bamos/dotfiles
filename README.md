@@ -8,9 +8,10 @@ by taking screenshots in an [X virtual framebuffer][xvfb-cmd].
 The first one shows my current vim color scheme and the
 second one shows my current zsh theme.
 
+<center>
 ![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/vim.png)
 ![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/zsh-ls.png)
-
+</center>
 
 [screenshot-gen]: https://github.com/bamos/dotfiles/blob/master/screenshots/generate.sh
 [xvfb]: http://www.x.org/archive/X11R7.7/doc/man/man1/Xvfb.1.xhtml
