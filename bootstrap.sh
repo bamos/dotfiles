@@ -38,6 +38,7 @@ for DOTFILE in $DOTFILES; do
   [[ $DOTFILE != "./.git" ]] \
     && [[ $DOTFILE != "./.gitmodules" ]] \
     && [[ $DOTFILE != "./.gitignore" ]] \
+    && [[ $DOTFILE != "./screenshots" ]] \
     && [[ ! $DOTFILE =~ swp$ ]] \
     && link_file "$HOME/$DOTFILE" "$CHECKOUT_DIR/$DOTFILE"
 done
