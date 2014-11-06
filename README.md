@@ -29,7 +29,7 @@ Use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
 in this repo to the home directory and install vim plugins.
 An alternate to manually linking with shell script is to use [GNU Stow][stow].
 I'm keeping the shell script for now because some machines
-I have limit access to don't have GNU Stow installed.
+I have non-sudo access to don't have GNU Stow installed.
 
 ```Bash
 git clone --recursive git://github.com/bamos/dotfiles.git .dotfiles
