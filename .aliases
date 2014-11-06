@@ -99,3 +99,5 @@ alias count-frames=$'grep -c \'^\\(\\\\frame{\\|\\\\begin{frame}\\\)\''
 alias tmux='tmux -2'
 
 alias f='sudo $(fc -ln -1)'
+
+alias en='emacs --no-window-system'

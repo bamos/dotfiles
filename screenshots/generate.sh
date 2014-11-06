@@ -18,6 +18,12 @@ sleep 1
 scrot screenshots/vim.png
 kill $URXVT_PROC
 
+urxvt -e emacs -nw ~/.emacs.d/init.el & URXVT_PROC=$!
+sleep 3
+
+scrot screenshots/emacs.png
+kill $URXVT_PROC
+
 echo 'spawn zsh; send -- "clear\rls -a\r"; expect eof' > /tmp/bamos-expect
 urxvt --hold -e expect -f /tmp/bamos-expect & URXVT_PROC=$!
 

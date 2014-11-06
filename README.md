@@ -10,6 +10,9 @@ by taking screenshots in an [X virtual framebuffer][xvfb].
 ## vim
 ![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/vim.png)
 
+## emacs
+![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/emacs.png)
+
 ## zsh
 ![](https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots/zsh-ls.png)
 
