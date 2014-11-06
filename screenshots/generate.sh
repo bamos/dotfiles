@@ -24,7 +24,7 @@ urxvt_scrot "-e vim ~/.vimrc" 1 vim
 urxvt_scrot "-e emacs -nw ~/.emacs.d/init.el" 3 emacs
 
 echo 'spawn zsh; send -- "clear\rls -a\r"; expect eof' > /tmp/bamos-expect
-urxvt_scrot "--hold -e expect -f /tmp/bamos-expect" 1 zsh-ls
+urxvt_scrot "--hold -e expect -f /tmp/bamos-expect" 1 zsh
 rm /tmp/bamos-expect
 
 urxvt_scrot "-e screen -S bamos-screen" 1 screen
