@@ -137,7 +137,7 @@ grep 'alias .*=' .funcs .aliases | \
 `rcd` | `'rand-cd'`
 `remove-tags` | `'eyeD3 --remove-all'`
 `rh` | `'rehash'`
-`rsyncdir` | `'rsync -azrv --progress'`
+`rsyncdir` | `'rsync -azv --progress'`
 `sudo` | `'nocorrect sudo'`
 `sync-music` | `'rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'`
 `tmux` | `'tmux -2'`

@@ -23,7 +23,7 @@ alias grive='grive -p ~/grive'
 # Programs.
 alias m='make -j8'
 alias mu='mutt'
-alias rsyncdir='rsync -azrv --progress'
+alias rsyncdir='rsync -azv --progress'
 alias bup='vim +BundleInstall +qall'
 alias bcl='vim +BundleClean +qall'
 
