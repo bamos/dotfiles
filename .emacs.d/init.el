@@ -13,8 +13,6 @@
 
 (require 'evil)(evil-mode 1) ; vim-esque 'evil' mode.
 
-(setq make-backup-files nil)
-
 (unless window-system
   (require 'mouse)
   (xterm-mouse-mode t)
@@ -27,7 +25,8 @@
 (require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
 (add-hook 'find-file-hook (lambda () (linum-mode 1))) ; Line numbers.
 (set-face-foreground 'minibuffer-prompt "white") ; White miniprompt.
-(add-hook 'emacs-startup-hook  'delete-other-windows)
 (setq visible-bell t) ; Disable bell.
 (fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
-(C-h v vc-follow-symlinks) ; Always follow symlinks.
+(setq vc-follow-symlinks t) ; Always follow symlinks.
+(add-hook 'emacs-startup-hook  'delete-other-windows)
+(setq make-backup-files nil)
