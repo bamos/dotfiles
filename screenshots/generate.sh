@@ -12,33 +12,26 @@ exec i3 & I3_PROC=$!
 sleep 1
 xrdb ~/.Xresources -D$(hostname) -all
 
-urxvt -e vim ~/.vimrc & URXVT_PROC=$!
-sleep 1
+urxvt_scrot() {
+  urxvt $1 & URXVT_PROC=$!
+  sleep $2
 
-scrot screenshots/vim.png
-kill $URXVT_PROC
+  scrot screenshots/$3.png
+  kill $URXVT_PROC
+}
+
+urxvt_scrot "-e vim $HOME/.vimrc" 1 vim
+urxvt_scrot "-e emacs -nw $HOME/.emacs.d/init.el" 3 emacs
 
 echo 'spawn zsh; send -- "clear\rls -a\r"; expect eof' > /tmp/bamos-expect
-urxvt --hold -e expect -f /tmp/bamos-expect & URXVT_PROC=$!
-
-sleep 1
-scrot screenshots/zsh-ls.png
-kill $URXVT_PROC
+urxvt_scrot "--hold -e expect -f /tmp/bamos-expect" 1 zsh
 rm /tmp/bamos-expect
 
-urxvt -e screen -S bamos-screen & URXVT_PROC=$!
-sleep 1
-
-scrot screenshots/screen.png
+urxvt_scrot "-e screen -S bamos-screen" 1 screen
 screen -X -S bamos-screen kill
-kill $URXVT_PROC
 
-urxvt -e tmux new -s bamos-tmux & URXVT_PROC=$!
-sleep 1
-
-scrot screenshots/tmux.png
+urxvt_scrot "-e tmux new -s bamos-tmux" 1 tmux
 tmux kill-session -t bamos-tmux
-kill $URXVT_PROC
 
 kill $I3_PROC
 kill $XVFB_PROC
