@@ -11,7 +11,11 @@
 (load-user-file "clipboard.el")
 (load-user-file "mail.el")
 
-(require 'evil)(evil-mode 1) ; vim-esque 'evil' mode.
+;; vim-esque 'evil' mode.
+(require 'evil)(evil-mode 1)
+(require 'evil-nerd-commenter)(evilnc-default-hotkeys)
+(require 'evil-surround)(global-evil-surround-mode 1)
+(require 'powerline)(powerline-center-evil-theme)
 
 (unless window-system
   (require 'mouse)

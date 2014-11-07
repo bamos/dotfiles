@@ -9,6 +9,8 @@
     color-theme
     dash
     evil
+    evil-nerd-commenter
+    evil-surround
     flycheck
     git-messenger
     go-mode
