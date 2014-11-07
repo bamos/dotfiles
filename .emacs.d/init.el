@@ -9,6 +9,7 @@
 
 (load-user-file "packages.el")
 (load-user-file "clipboard.el")
+(load-user-file "mail.el")
 
 (require 'evil)(evil-mode 1) ; vim-esque 'evil' mode.
 
@@ -27,3 +28,6 @@
 (add-hook 'find-file-hook (lambda () (linum-mode 1))) ; Line numbers.
 (set-face-foreground 'minibuffer-prompt "white") ; White miniprompt.
 (add-hook 'emacs-startup-hook  'delete-other-windows)
+(setq visible-bell t) ; Disable bell.
+(fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
+(C-h v vc-follow-symlinks) ; Always follow symlinks.
