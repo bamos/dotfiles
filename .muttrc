@@ -6,6 +6,7 @@ set edit_headers = yes
 source ~/.mutt/gmail
 source ~/.mutt/crypto
 source ~/.mutt/private
+source ~/.mutt/colors
 
 set postponed=~/.mutt/postponed
 set alias_file=~/.mutt/contacts
@@ -21,5 +22,3 @@ set copy=yes
 set record=~/.mutt/sent
 set delete=no
 auto_view text/html
-
-color normal default default
