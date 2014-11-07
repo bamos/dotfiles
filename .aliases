@@ -100,4 +100,4 @@ alias tmux='tmux -2'
 
 alias f='sudo $(fc -ln -1)'
 
-alias emacs='emacs --no-window-system'
+alias emacs='emacsclient -t -a "" -c'
