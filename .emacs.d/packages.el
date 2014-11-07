@@ -1,12 +1,8 @@
 (require 'package)
-(push '("marmalade" . "http://marmalade-repo.org/packages/")
-      package-archives )
-(push '("melpa" . "http://melpa.milkbox.net/packages/")
-      package-archives)
+(push '("marmalade" . "http://marmalade-repo.org/packages/") package-archives )
+(push '("melpa" . "http://melpa.milkbox.net/packages/") package-archives)
 (package-initialize)
-
-(when (not package-archive-contents)
-  (package-refresh-contents))
+(when (not package-archive-contents) (package-refresh-contents))
 
 (defvar required-packages '(
     ack-and-a-half
@@ -30,7 +26,8 @@
     yaml-mode
     zenburn-theme
   )
-  "Packages which should be installed upon launch")
+  "Packages which should be installed upon launch"
+)
 
 (dolist (p required-packages)
   (when (not (package-installed-p p))
