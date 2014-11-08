@@ -5,7 +5,6 @@
 (when (not package-archive-contents) (package-refresh-contents))
 
 (defvar required-packages '(
-    ack-and-a-half
     color-theme
     dash
     evil
