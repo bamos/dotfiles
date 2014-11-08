@@ -21,7 +21,7 @@ EOF
 ./screenshots/generate.sh
 
 SS_PREFIX=https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots
-for F in {vim,emacs,zsh,screen,tmux}; do
+for F in {vim,emacs,zsh,mutt,screen,tmux}; do
   echo -e "## $F\n![]($SS_PREFIX/$F.png)" >> README.md
 done
 
