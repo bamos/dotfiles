@@ -1,5 +1,6 @@
 .aria2/dht.dat
 .emacs.d/elpa
+.emacs.d/auto-save-list
 .mutt/private
 .mutt/contacts
 .mutt/cache
