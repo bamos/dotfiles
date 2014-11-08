@@ -16,6 +16,8 @@
 (require 'evil-nerd-commenter)(evilnc-default-hotkeys)
 (require 'evil-surround)(global-evil-surround-mode 1)
 (require 'powerline)(powerline-center-evil-theme)
+(define-key evil-normal-state-map (kbd "C-x C-j") 'execute-extended-command)
+(define-key evil-visual-state-map (kbd "C-x C-j") 'execute-extended-command)
 
 (unless window-system
   (require 'mouse)
@@ -27,6 +29,8 @@
 )
 
 (require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
+(require 'magit)
+
 (add-hook 'find-file-hook (lambda () (linum-mode 1))) ; Line numbers.
 (set-face-foreground 'minibuffer-prompt "white") ; White miniprompt.
 (setq visible-bell t) ; Disable bell.
