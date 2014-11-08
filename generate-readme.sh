@@ -18,7 +18,7 @@ by taking screenshots in an [X virtual framebuffer][xvfb].
 [generate-readme.sh]: https://github.com/bamos/dotfiles/blob/master/generate-readme.sh
 EOF
 
-./screenshots/generate.sh
+#./screenshots/generate.sh
 
 SS_PREFIX=https://raw.githubusercontent.com/bamos/dotfiles/master/screenshots
 for F in {vim,emacs,zsh,mutt,screen,tmux}; do
