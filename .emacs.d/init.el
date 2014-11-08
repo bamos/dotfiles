@@ -38,3 +38,8 @@
 (setq vc-follow-symlinks t) ; Always follow symlinks.
 (add-hook 'emacs-startup-hook  'delete-other-windows)
 (setq make-backup-files nil)
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+
+(setq auto-mode-alist (append '((".aliases" . shell-mode)) auto-mode-alist))
+(setq auto-mode-alist (append '((".funcs" . shell-mode)) auto-mode-alist))
