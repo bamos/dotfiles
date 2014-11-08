@@ -22,6 +22,7 @@ urxvt_scrot() {
 
 urxvt_scrot "-e vim $HOME/.vimrc" 1 vim
 urxvt_scrot "-e emacs -nw $HOME/.emacs.d/init.el" 3 emacs
+urxvt_scrot "-e mutt" 5 mutt
 
 echo 'spawn zsh; send -- "clear\rls -a\r"; expect eof' > /tmp/bamos-expect
 urxvt_scrot "--hold -e expect -f /tmp/bamos-expect" 1 zsh
