@@ -1,19 +1,11 @@
-# .screenrc
-
-# Use 256 colors instead of the default 8.
 attrcolor b ".I"
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce on
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo xterm* ti@:te@ # Use X scrolling.
+startup_message off
+shell /bin/zsh
 
-# Improved statusline.
 hardstatus off
 hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
-
-# Use X scrolling.
-termcapinfo xterm* ti@:te@
-
-startup_message off
-
-shell "zsh"
+hardstatus string '%{= kW} %= %H | %n | %f%t%?(%u)%? | %m-%d | %c %='
