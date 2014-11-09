@@ -41,6 +41,10 @@ export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
 
+# Don't hash directories on the path a time, which allows new
+# binaries in $PATH to be executed without rehashing.
+setopt nohashdirs
+
 # If a pattern for filename generation has no matches,
 # delete the pattern from the argument list.
 # Do not report an error unless all the patterns in a command have no matches.
