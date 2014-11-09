@@ -43,3 +43,6 @@
 
 (setq auto-mode-alist (append '((".aliases" . shell-mode)) auto-mode-alist))
 (setq auto-mode-alist (append '((".funcs" . shell-mode)) auto-mode-alist))
+
+(setq shell-prompt-pattern ".*» *")
+(setq dired-use-ls-dired nil)
