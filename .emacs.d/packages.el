@@ -8,6 +8,7 @@
     color-theme
     dash
     evil
+    evil-leader
     evil-nerd-commenter
     evil-surround
     flycheck

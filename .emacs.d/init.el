@@ -10,14 +10,10 @@
 (load-user-file "packages.el")
 (load-user-file "clipboard.el")
 (load-user-file "mail.el")
+(load-user-file "init-evil.el")
 
-;; vim-esque 'evil' mode.
-(require 'evil)(evil-mode 1)
-(require 'evil-nerd-commenter)(evilnc-default-hotkeys)
-(require 'evil-surround)(global-evil-surround-mode 1)
-(require 'powerline)(powerline-center-evil-theme)
-(define-key evil-normal-state-map (kbd "C-x C-j") 'execute-extended-command)
-(define-key evil-visual-state-map (kbd "C-x C-j") 'execute-extended-command)
+(require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
+(require 'magit)
 
 (unless window-system
   (require 'mouse)
@@ -27,9 +23,6 @@
   (defun track-mouse (e))
   (setq mouse-sel-mode t)
 )
-
-(require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
-(require 'magit)
 
 (add-hook 'find-file-hook (lambda () (linum-mode 1))) ; Line numbers.
 (set-face-foreground 'minibuffer-prompt "white") ; White miniprompt.
@@ -46,3 +39,11 @@
 
 (setq shell-prompt-pattern ".*» *")
 (setq dired-use-ls-dired nil)
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+
+(defun duplicate-line()
+  (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank)
+)
+(global-set-key (kbd "C-c C-d") 'duplicate-line)
