@@ -99,4 +99,6 @@ github-repo-summary.py \
   ssaunier/dotfiles \
   windelicato/dotfiles \
   pengwynn/dotfiles \
-  nelstrom/dotfiles >> README.md
+  ocodo/emacs.d \
+  nelstrom/dotfiles \
+  >> README.md
