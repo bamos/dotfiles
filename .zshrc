@@ -37,6 +37,9 @@ source $ZSH/oh-my-zsh.sh
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186'
 export LSCOLORS='ExGxFxdxCxEgEdHbagacad'
 export EDITOR=emacs
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
 
 # If a pattern for filename generation has no matches,
 # delete the pattern from the argument list.
