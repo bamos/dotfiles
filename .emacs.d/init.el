@@ -42,8 +42,6 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
-(tab-stop-list (number-sequence 2 200 2))
-(evil-shift-width 2)
 
 (defun duplicate-line()
   (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank)
