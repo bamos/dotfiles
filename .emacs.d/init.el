@@ -47,3 +47,5 @@
   (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank)
 )
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
+
+(setq inhibit-startup-message t)
