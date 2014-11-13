@@ -10,6 +10,7 @@
     evil
     evil-leader
     evil-nerd-commenter
+    evil-numbers
     evil-surround
     flycheck
     git-messenger

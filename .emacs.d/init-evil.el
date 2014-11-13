@@ -58,6 +58,10 @@
 (define-key evil-normal-state-map (kbd "C-.") 'execute-extended-command)
 (define-key evil-visual-state-map (kbd "C-.") 'execute-extended-command)
 
+(require 'evil-numbers)
+(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+
 (require 'evil-surround)(global-evil-surround-mode 1)
 (require 'evil-nerd-commenter)(evilnc-default-hotkeys)
 (require 'powerline)(powerline-center-evil-theme)
