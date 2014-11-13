@@ -52,3 +52,8 @@
 (global-set-key (kbd "C-c C-f") 'duplicate-line-above)
 
 (setq inhibit-startup-message t)
+
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
