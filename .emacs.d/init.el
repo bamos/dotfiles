@@ -46,6 +46,10 @@
 (defun duplicate-line()
   (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank)
 )
+(defun duplicate-line-above()
+  (interactive)(duplicate-line)(previous-line)
+)
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
+(global-set-key (kbd "C-c C-f") 'duplicate-line-above)
 
 (setq inhibit-startup-message t)
