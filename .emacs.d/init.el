@@ -13,7 +13,9 @@
 (load-user-file "init-evil.el")
 
 (require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
+
 (require 'magit)
+(global-set-key (kbd "C-x C-g") 'magit-status)
 
 (unless window-system
   (require 'mouse)
@@ -44,11 +46,8 @@
 (setq-default tab-width 2)
 
 (defun duplicate-line()
-  (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank)
-)
-(defun duplicate-line-above()
-  (interactive)(duplicate-line)(previous-line)
-)
+  (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank))
+(defun duplicate-line-above() (interactive)(duplicate-line)(previous-line))
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
 (global-set-key (kbd "C-c C-f") 'duplicate-line-above)
 
