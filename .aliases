@@ -85,7 +85,7 @@ case $(uname) in
     fi
   ;;
   "Darwin")
-    alias emacs='~/Applications/Emacs.app/Contents/MacOS/Emacs'
+    alias emacs="$HOME/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias brup='brew update; brew upgrade'
     alias bri='brew install'
     alias brun='brew uninstall'
