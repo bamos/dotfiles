@@ -57,3 +57,11 @@
   (add-hook hook (lambda () (flyspell-mode 1))))
 (dolist (hook '(change-log-mode-hook log-edit-mode-hook))
   (add-hook hook (lambda () (flyspell-mode -1))))
+
+(defun enumerate-list(num-elems)
+  (interactive "nNumber of Elements: ")
+  (setq i 1)
+  (while (<= i num-elems)
+    (insert (concat (number-to-string i) ". \n"))
+    (incf i)))
+(global-set-key (kbd "C-c C-g") 'enumerate-list)
