@@ -6,6 +6,8 @@
 # Brandon Amos
 # 2013.01.20
 
+set -e
+
 link_file() {
   local ORIG="$1"; local NEW="$2"
 
