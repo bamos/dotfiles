@@ -65,3 +65,5 @@
     (insert (concat (number-to-string i) ". \n"))
     (incf i)))
 (global-set-key (kbd "C-c C-g") 'enumerate-list)
+
+(setq-default show-trailing-whitespace t)
