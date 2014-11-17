@@ -6,6 +6,8 @@
 # Brandon Amos
 # 2013.01.20
 
+set -e
+
 link_file() {
   local ORIG="$1"; local NEW="$2"
 
@@ -14,7 +16,7 @@ link_file() {
     mv "$ORIG" "${ORIG}.prebamos" &> /dev/null \
     && echo "    ...backed up"
   else
-    rm -f "$ORIG"
+    rm -rf "$ORIG"
     echo "    ...deleted"
   fi
   ln -s "$NEW" "$ORIG" && echo "    ...linked"
@@ -29,18 +31,23 @@ else
 fi
 
 cd "$(dirname "${BASH_SOURCE}")"
-CHECKOUT_DIR="$PWD"
 
 echo "Symlinking..."
-DOTFILES="$(find . -maxdepth 1 -name '.?*')" # ?* - Don't include ./.
 
-for DOTFILE in $DOTFILES; do
+for DOTFILE in $(find . -maxdepth 1 -name '.?*'); do
   [[ $DOTFILE != "./.git" ]] \
     && [[ $DOTFILE != "./.gitmodules" ]] \
     && [[ $DOTFILE != "./.gitignore" ]] \
+    && [[ $DOTFILE != "./.config" ]] \
     && [[ $DOTFILE != "./screenshots" ]] \
     && [[ ! $DOTFILE =~ swp$ ]] \
-    && link_file "$HOME/$DOTFILE" "$CHECKOUT_DIR/$DOTFILE"
+    && link_file "$HOME/$DOTFILE" "$PWD/$DOTFILE"
+done
+
+mkdir -p $HOME/.config
+cd .config
+for DOTFILE in $(find . -maxdepth 1 ! -path .); do
+  link_file "$HOME/.config/$DOTFILE" "$PWD/$DOTFILE"
 done
 
 vim +BundleInstall +qall

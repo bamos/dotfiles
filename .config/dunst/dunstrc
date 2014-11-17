@@ -1,0 +1,120 @@
+[global]
+    font = "Monospace 8"
+    allow_markup = yes
+    format = "<b>%s %p</b>\n%b"
+    sort = yes
+    indicate_hidden = true
+    # geometry = "x5"
+    idle_threshold = 0
+    geometry = "300x5-20+20"
+    alignment = center
+    show_age_threshold = 60
+    sticky_history = yes
+    follow = mouse
+    word_wrap = yes
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 10
+    separator_color = frame
+    startup_notification = true
+    dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #94DBFF -sf #000000"
+    browser = /home/knopwob/bin/url_dispatcher
+
+
+[frame]
+    width = 3
+    color = "#000000"
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = "#ffffff"
+    foreground = "#000000"
+    timeout = 30
+
+[urgency_normal]
+    background = "#94DBFF"
+    foreground = "#000000"
+    timeout = 45
+
+[urgency_critical]
+    background = "#ff9999"
+    foreground = "#000000"
+    timeout = 0
+
+
+[libpurple_signed]
+    appname = libpurple
+    summary = *igned*
+    urgency = low
+    timeout = 3
+    background = "#ccff33"
+
+[libpurple_came_back]
+    appname = libpurple
+    summary = "*came*"
+    format = ""
+
+[libpurple_went_away]
+    appname = libpurple
+    summary = "*went*"
+    format = ""
+
+[libpurple_says]
+    appname = libpurple
+    summary = *ays*
+    urgency = critical
+    background = "#ccff33"
+
+[libpurple]
+    appname = libpurple
+    urgency = critical
+    background = "#ccff33"
+
+[twitter]
+    appname = Pidgin
+    summary = *twitter.com*
+    urgency = low
+
+[turpial]
+    appname = Turpial
+    urgency = low
+
+[ttytter]
+    summary = "TTYtter*"
+    urgency = low
+
+[dunst-sum]
+    appname = gmailnotify.py
+    summary = "*[dD]unst*"
+    urgency = critical
+
+[dunst-body]
+    appname = gmailnotify.py
+    body = "*[dD]unst*"
+    urgency = critical
+
+[mcabber]
+    appname = notify-send
+    summary = "*jabber*"
+    urgency = critical
+
+[irc]
+    appname = weechat
+    timeout = 0
+    background = "#99FF33"
+    foreground = "#000000"
+
+[XChat]
+    appname = XChat
+    timeout = 0
+    background = "#99FF33"
+    foreground = "#000000"
+
+[test]
+    summary = "*test*"
+    background="#22dd22"
