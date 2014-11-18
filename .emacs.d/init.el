@@ -69,3 +69,10 @@
 (global-set-key (kbd "C-c C-g") 'enumerate-list)
 
 (setq-default show-trailing-whitespace t)
+
+
+(defun copy-all ()
+  (interactive)
+  (clipboard-kill-ring-save (point-min) (point-max))
+  (message "Copied to clipboard."))
+(global-set-key (kbd "C-c C-a") 'copy-all)
