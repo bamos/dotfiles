@@ -44,6 +44,8 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+(setq sh-basic-offset 2)
+(setq sh-indentation 2)
 
 (defun duplicate-line()
   (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank))
@@ -60,10 +62,10 @@
 
 (defun enumerate-list(num-elems)
   (interactive "nNumber of Elements: ")
-  (setq i 1)
-  (while (<= i num-elems)
-    (insert (concat (number-to-string i) ". \n"))
-    (incf i)))
+  (mapcar (lambda (i) (insert (concat (number-to-string i) ". \n")))
+          (number-sequence 1 num-elems)))
+
+
 (global-set-key (kbd "C-c C-g") 'enumerate-list)
 
 (setq-default show-trailing-whitespace t)
