@@ -62,7 +62,7 @@ esac
 # OS and distro-specific aliases.
 case $(uname) in
   "Linux")
-    alias z='zathura'
+    alias za='zathura'
     alias emacs='emacsclient -a "" -c'
     if command -v lsb_release &> /dev/null; then
       case $(lsb_release -s -i) in
@@ -91,7 +91,7 @@ case $(uname) in
     alias brun='brew uninstall'
     alias i-int='ipconfig getifaddr en0'
     alias less='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/Resources/vim/runtime/macros/less.sh'
-    alias z='Skim'
+    alias za='Skim'
   ;;
 esac
 

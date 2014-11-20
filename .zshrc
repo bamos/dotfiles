@@ -30,7 +30,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 DISABLE_AUTO_UPDATE='true';
 ZSH_THEME=bamos_minimal; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
-plugins=(vi-mode git history-substring-search fabric)
+plugins=(vi-mode git history-substring-search fabric z)
 source $ZSH/oh-my-zsh.sh
 
 # Environment variables.
