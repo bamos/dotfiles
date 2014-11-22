@@ -1,0 +1,53 @@
+# Reference: https://github.com/prakhar1989/Gems
+
+# 81 - blue
+# 208 - orange
+# 184 - green
+# 23[456] - grey
+# 255 - white
+
+# command line
+set color_cmdline_bg=234
+set color_cmdline_fg=255
+
+# error, info and separator
+set color_error=81
+set color_info=81
+set color_separator=234
+
+# status line (time, volume etc display)
+set color_statusline_bg=235
+set color_statusline_fg=208
+
+# title : song title, album etc
+set color_titleline_bg=235
+set color_titleline_fg=184
+
+# main bg and fg color
+set color_win_bg=234
+set color_win_fg=255
+
+# fg of playing item / album in all views
+set color_win_cur=184
+
+# fg in "Add to Library(5) view"
+set color_win_dir=81
+
+# top of the window (Artist/Album Track...)
+set color_win_title_bg=235
+set color_win_title_fg=81
+
+# current selection
+set color_win_sel_bg=208
+set color_win_sel_fg=235
+
+# current inactive selection
+set color_win_inactive_cur_sel_bg=236
+set color_win_inactive_cur_sel_fg=208
+
+# cursor on current selection
+set color_win_cur_sel_bg=236
+set color_win_cur_sel_fg=184
+
+set color_win_inactive_sel_bg=236
+set color_win_inactive_sel_fg=208
