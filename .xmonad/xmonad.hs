@@ -23,10 +23,7 @@ myLayout = avoidStruts (
     noBorders (fullscreenFull Full)
 
 main = do
-  xmonad $ defaults {
-      logHook = dynamicLogWithPP
-      , startupHook = setWMName "LG3D"
-  }
+  xmonad $ defaults
 
 
 defaults = defaultConfig {
