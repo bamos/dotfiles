@@ -15,6 +15,7 @@
     flycheck
     git-messenger
     go-mode
+    haskell-mode
     magit
     markdown-mode
     multiple-cursors
