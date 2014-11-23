@@ -52,6 +52,7 @@ install git hub
 install glew
 install gnupg gnupg2
 install heroku-toolbelt
+install htop
 install imagemagick
 #install lilypond
 install lua
