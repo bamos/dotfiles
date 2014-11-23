@@ -1,5 +1,10 @@
 -- https://wiki.archlinux.org/index.php/Xmobar
 
+--TODO
+--import Data.List
+--let cpuTotalList = map (\ x -> "<total" ++ show (x) ++ "%>") [0 .. 7]
+--let cpuTotalStr = intercalate "|" cpuTotalList
+
 Config {
 
    -- appearance
@@ -54,8 +59,8 @@ Config {
 
         -- cpu activity monitor
         , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"
-                             , "--Low"      , "50"         -- units: %
-                             , "--High"     , "85"         -- units: %
+                             , "--Low"      , "50"
+                             , "--High"     , "85"
                              , "--low"      , "darkgreen"
                              , "--normal"   , "darkorange"
                              , "--high"     , "darkred"
@@ -63,8 +68,8 @@ Config {
 
         -- cpu core temperature monitor
         , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"
-                             , "--Low"      , "70"        -- units: °C
-                             , "--High"     , "80"        -- units: °C
+                             , "--Low"      , "70"
+                             , "--High"     , "80"
                              , "--low"      , "darkgreen"
                              , "--normal"   , "darkorange"
                              , "--high"     , "darkred"
@@ -72,8 +77,8 @@ Config {
 
         -- memory usage monitor
         , Run Memory         [ "--template" ,"Mem: <usedratio>%"
-                             , "--Low"      , "20"        -- units: %
-                             , "--High"     , "90"        -- units: %
+                             , "--Low"      , "20"
+                             , "--High"     , "90"
                              , "--low"      , "darkgreen"
                              , "--normal"   , "darkorange"
                              , "--high"     , "darkred"
@@ -81,8 +86,8 @@ Config {
 
         -- battery monitor
         , Run Battery        [ "--template" , "Batt: <acstatus>"
-                             , "--Low"      , "10"        -- units: %
-                             , "--High"     , "80"        -- units: %
+                             , "--Low"      , "10"
+                             , "--High"     , "80"
                              , "--low"      , "darkred"
                              , "--normal"   , "darkorange"
                              , "--high"     , "darkgreen"
