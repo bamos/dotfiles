@@ -1,7 +1,7 @@
 # ~/.muttrc
 
 #set editor = "mvim -v +FixWhitespace"
-set editor = "emacs"
+set editor = "emacs -nw"
 set edit_headers = yes
 
 source ~/.mutt/gmail
