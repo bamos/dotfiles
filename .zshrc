@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables.
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186'
 export LSCOLORS='ExGxFxdxCxEgEdHbagacad'
-export EDITOR="$(whence emacs)"
+export EDITOR="$(whence emacsn)"
 export GIT_EDITOR=$EDITOR
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
