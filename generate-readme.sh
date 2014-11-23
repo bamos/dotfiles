@@ -102,4 +102,5 @@ github-repo-summary.py \
   nelstrom/dotfiles \
   ocodo/emacs.d \
   terhechte/emacs.d \
+  vicfryzel/xmonad-config \
   >> README.md
