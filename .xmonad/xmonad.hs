@@ -23,10 +23,13 @@ myLayout = avoidStruts (
     noBorders (fullscreenFull Full)
 
 main = do
-  xmonad $ defaults
+  config <- statusBar "xmobar ~/.xmonad/xmobar.hs" xmobarPP toggleXMobarKey _config
+  xmonad config
+
+toggleXMobarKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
 
 
-defaults = defaultConfig {
+_config = defaultConfig {
     terminal = "/usr/bin/urxvt",
     modMask = mod4Mask,
     normalBorderColor  = "#333333",
