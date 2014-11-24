@@ -93,3 +93,5 @@
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil))))))
 (global-set-key (kbd "C-c C-r") 'rename-file-and-buffer)
+
+(add-hook 'latex-mode-hook (lambda () (setq linum-format "%d  ")))
