@@ -68,3 +68,8 @@ set guioptions-=T  "remove menu bar
 
 autocmd User GoyoEnter Limelight
 autocmd User GoyoLeave Limelight!
+
+" Save pointer location between sessions.
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
