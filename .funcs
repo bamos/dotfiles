@@ -126,6 +126,17 @@ git-dirty() {
   IFS=$OLDIFS
 }
 
+git-clonecd() {
+  local TMP=$(mktemp /tmp/gcloc-XXXXXX)
+  git clone $@ 2>&1 | tee $TMP
+  local DIR=$(grep "Cloning into" $TMP | sed -e "s/Cloning into '\(.*\)'.*/\1/g")
+  if [[ ! -z $DIR ]]; then
+    cd $DIR
+  fi
+  rm $TMP
+}
+alias gcloc='git-clonecd'
+
 sys-find() {
   find / -name $@ 2>/dev/null
 }
