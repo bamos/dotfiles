@@ -69,7 +69,7 @@
 (global-set-key (kbd "C-c C-g") 'enumerate-list)
 
 (setq-default show-trailing-whitespace t)
-
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (defun copy-all ()
   (interactive)
