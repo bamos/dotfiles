@@ -75,6 +75,7 @@ The following list was generated on $(date +%Y-%m-%d) and
 shows a subset of related projects.
 [The dotfiles page on the Arch Linux Wiki](https://wiki.archlinux.org/index.php/Dotfiles)
 is another good resource.
+
 EOF
 
 # Reference:
