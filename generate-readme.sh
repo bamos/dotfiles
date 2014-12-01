@@ -54,7 +54,7 @@ aliases contained in [.funcs][funcs] and [.aliases][aliases].
 ## Functions
 EOF
 
-grep '()' .funcs | sed -e 's/\(.*()\).*/+ \`\1\`/g' >> README.md
+grep '()' .funcs | sed -e 's/\(.*\)().*/+ \1/g' >> README.md
 
 cat>>README.md<<EOF
 
@@ -63,7 +63,7 @@ cat>>README.md<<EOF
 |---|---|
 EOF
 grep 'alias .*=' .funcs .aliases | \
-  sed -e 's/.*alias \(.*\)=\(.*\)/\`\1\` | \`\2\`/g' | \
+  sed -e "s/.*alias \(.*\)=\(.*\)/\1 | \2/g" | \
   sort >> README.md
 
 cat>>README.md<<EOF
@@ -71,8 +71,11 @@ cat>>README.md<<EOF
 There are many approaches to managing dotfiles on GitHub
 that have inspired this repository, and this project
 uniquely adds automatic screenshot generation.
-The following list shows a subset of related projects.
-Feel free to add yours.
+The following list was generated on $(date +%Y-%m-%d) and
+shows a subset of related projects.
+[The dotfiles page on the Arch Linux Wiki](https://wiki.archlinux.org/index.php/Dotfiles)
+is another good resource.
+
 EOF
 
 # Reference:

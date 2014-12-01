@@ -18,6 +18,7 @@ cask install emacs
 cask install google-chrome firefox
 cask install github
 cask install java
+cask install kid3
 cask install mactex
 cask install musicbrainz-picard
 cask install music-manager radiant-player
