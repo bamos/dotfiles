@@ -94,7 +94,7 @@
           (set-buffer-modified-p nil))))))
 (global-set-key (kbd "C-c C-r") 'rename-file-and-buffer)
 
-(add-hook 'latex-mode-hook (lambda () (setq linum-format "%d  ")))
+(add-hook 'latex-mode-hook (lambda () (setq linum-format "%d ")))
 
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
