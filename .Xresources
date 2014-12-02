@@ -16,7 +16,9 @@ URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=tru
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=10:antialias=true:hinting=tru
 #endif
 URxvt.scrollstyle: plain
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,font-size
 URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 URxvt*iso14755: False
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
