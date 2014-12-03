@@ -7,6 +7,7 @@ import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
 import XMonad.Layout.ThreeColumns
+import XMonad.Layout.SimpleFloat
 import XMonad.Util.EZConfig(additionalKeys)
 
 myLayout = avoidStruts (
@@ -15,7 +16,8 @@ myLayout = avoidStruts (
         Full |||
         spiral (6/7)
     ) |||
-    noBorders (fullscreenFull Full)
+    noBorders (fullscreenFull Full) |||
+    simpleFloat
 
 -- Toggle xmobar visibility with mod+b.
 toggleXMobarKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
