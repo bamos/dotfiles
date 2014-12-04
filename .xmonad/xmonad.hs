@@ -31,7 +31,8 @@ _config = defaultConfig {
     startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs"
 } `additionalKeys`
   [ ((_mod, xK_o), spawn "chromium")
-  , ((_mod .|. shiftMask, xK_apostrophe), kill)]
+  , ((_mod .|. shiftMask, xK_apostrophe), kill)
+  , ((_mod, xK_semicolon), spawn "sleep 1; xset dpms force off")]
 
 main = do
   xmonad _config
