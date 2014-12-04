@@ -32,7 +32,9 @@ _config = defaultConfig {
 } `additionalKeys`
   [ ((_mod, xK_o), spawn "chromium")
   , ((_mod .|. shiftMask, xK_apostrophe), kill)
-  , ((_mod, xK_semicolon), spawn "sleep 1; xset dpms force off")]
+  , ((_mod, xK_semicolon), spawn "sleep 1; xset dpms force off")
+  , ((_mod, xK_s), spawn "slock")
+  ]
 
 main = do
   xmonad _config
