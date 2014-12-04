@@ -8,6 +8,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.SimpleFloat
+import XMonad.Util.SpawnOnce
 import XMonad.Util.EZConfig(additionalKeys)
 
 myLayout = avoidStruts (
@@ -26,11 +27,11 @@ _config = defaultConfig {
     modMask = _mod,
     normalBorderColor  = "#333333",
     focusedBorderColor = "#5882FA",
-    layoutHook = smartBorders $ myLayout
+    layoutHook = smartBorders $ myLayout,
+    startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs"
 } `additionalKeys`
   [ ((_mod, xK_o), spawn "chromium")
   , ((_mod .|. shiftMask, xK_apostrophe), kill)]
 
 main = do
-  config <- statusBar "xmobar ~/.xmonad/xmobar.hs" xmobarPP toggleXMobarKey _config
-  xmonad config
+  xmonad _config
