@@ -19,10 +19,8 @@ myLayout = avoidStruts (
     noBorders (fullscreenFull Full) |||
     simpleFloat
 
--- Toggle xmobar visibility with mod+b.
-toggleXMobarKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
-
 _mod = mod4Mask
+toggleXMobarKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
 _config = defaultConfig {
     terminal = "/usr/bin/urxvt",
     modMask = _mod,
@@ -30,7 +28,8 @@ _config = defaultConfig {
     focusedBorderColor = "#5882FA",
     layoutHook = smartBorders $ myLayout
 } `additionalKeys`
-  [ ((_mod, xK_j), spawn "chromium")]
+  [ ((_mod, xK_o), spawn "chromium")
+  , ((_mod .|. shiftMask, xK_apostrophe), kill)]
 
 main = do
   config <- statusBar "xmobar ~/.xmonad/xmobar.hs" xmobarPP toggleXMobarKey _config
