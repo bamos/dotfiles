@@ -15,7 +15,7 @@
 (require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
 
 (require 'magit)
-(global-set-key (kbd "C-x C-g") 'magit-status)
+(global-set-key (kbd "C-c C-s") 'magit-status)
 
 (unless window-system
   (require 'mouse)
@@ -99,3 +99,7 @@
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
 (setq-default save-place t)
+
+; Disable menu and tool bars.
+(menu-bar-mode -99)
+(tool-bar-mode -1)
