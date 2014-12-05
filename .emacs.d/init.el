@@ -103,3 +103,6 @@
 ; Disable menu and tool bars.
 (menu-bar-mode -99)
 (tool-bar-mode -1)
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
