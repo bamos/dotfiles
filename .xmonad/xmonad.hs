@@ -34,6 +34,8 @@ _config = defaultConfig {
   , ((_mod .|. shiftMask, xK_apostrophe), kill)
   , ((_mod, xK_semicolon), spawn "sleep 1; xset dpms force off")
   , ((_mod, xK_s), spawn "slock")
+  , ((_mod, xK_Up), spawn "amixer set Master playback 5%+")
+  , ((_mod, xK_Down), spawn "amixer set Master playback 5%-")
   ]
 
 main = do
