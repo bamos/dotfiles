@@ -17,11 +17,9 @@ myLayout = avoidStruts (
         Full |||
         spiral (6/7)
     ) |||
-    noBorders (fullscreenFull Full) |||
     simpleFloat
 
 _mod = mod4Mask
-toggleXMobarKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
 _config = defaultConfig {
     terminal = "/usr/bin/urxvt",
     modMask = _mod,
@@ -36,6 +34,7 @@ _config = defaultConfig {
   , ((_mod, xK_s), spawn "slock")
   , ((_mod, xK_Up), spawn "amixer set Master playback 5%+")
   , ((_mod, xK_Down), spawn "amixer set Master playback 5%-")
+  , ((_mod, xK_b), sendMessage ToggleStruts)
   ]
 
 main = do
