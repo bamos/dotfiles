@@ -28,17 +28,10 @@ done
 cat>>README.md<<EOF
 # Installation
 
-Use [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles
-in this repo to the home directory and install vim plugins.
-An alternate to manually linking with shell script is to use [GNU Stow][stow].
-I'm keeping the shell script for now because some machines
-I have non-sudo access to don't have GNU Stow installed.
-
-\`\`\`Bash
-git clone --recursive git://github.com/bamos/dotfiles.git .dotfiles
-cd .dotfiles
-./bootstrap.sh
-\`\`\`
+Clone this repo with git's `--recursive` flag to obtain all the submodules.
+Run [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles in this repo
+to the home directory and install vim plugins.
+This shell script will possibly be migrated to [GNU Stow][stow] in the future
 
 [bootstrap.sh]: https://github.com/bamos/dotfiles/blob/master/bootstrap.sh
 [stow]: http://www.gnu.org/software/stow/
@@ -105,5 +98,6 @@ github-repo-summary.py \
   nelstrom/dotfiles \
   ocodo/emacs.d \
   terhechte/emacs.d \
+  themattman/utilities \
   vicfryzel/xmonad-config \
   >> README.md
