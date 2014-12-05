@@ -19,6 +19,8 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias grive='grive -p ~/grive'
+alias wh='which'
+alias j='jobs'
 
 # Programs.
 alias m='make -j8'
