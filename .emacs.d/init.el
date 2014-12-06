@@ -15,7 +15,7 @@
 (require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
 
 (require 'magit)
-(global-set-key (kbd "C-x C-g") 'magit-status)
+(global-set-key (kbd "C-c C-s") 'magit-status)
 
 (unless window-system
   (require 'mouse)
@@ -69,7 +69,7 @@
 (global-set-key (kbd "C-c C-g") 'enumerate-list)
 
 (setq-default show-trailing-whitespace t)
-
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (defun copy-all ()
   (interactive)
@@ -99,3 +99,10 @@
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
 (setq-default save-place t)
+
+; Disable menu and tool bars.
+(menu-bar-mode -99)
+(tool-bar-mode -1)
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)

@@ -7,6 +7,8 @@ import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
 import XMonad.Layout.ThreeColumns
+import XMonad.Layout.SimpleFloat
+import XMonad.Util.SpawnOnce
 import XMonad.Util.EZConfig(additionalKeys)
 
 myLayout = avoidStruts (
@@ -15,10 +17,7 @@ myLayout = avoidStruts (
         Full |||
         spiral (6/7)
     ) |||
-    noBorders (fullscreenFull Full)
-
--- Toggle xmobar visibility with mod+b.
-toggleXMobarKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
+    simpleFloat
 
 _mod = mod4Mask
 _config = defaultConfig {
@@ -26,10 +25,17 @@ _config = defaultConfig {
     modMask = _mod,
     normalBorderColor  = "#333333",
     focusedBorderColor = "#5882FA",
-    layoutHook = smartBorders $ myLayout
+    layoutHook = smartBorders $ myLayout,
+    startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs"
 } `additionalKeys`
-  [ ((_mod, xK_j), spawn "chromium")]
+  [ ((_mod, xK_o), spawn "chromium")
+  , ((_mod .|. shiftMask, xK_apostrophe), kill)
+  , ((_mod, xK_semicolon), spawn "sleep 1; xset dpms force off")
+  , ((_mod, xK_s), spawn "slock")
+  , ((_mod, xK_Up), spawn "amixer set Master playback 5%+")
+  , ((_mod, xK_Down), spawn "amixer set Master playback 5%-")
+  , ((_mod, xK_b), sendMessage ToggleStruts)
+  ]
 
 main = do
-  config <- statusBar "xmobar ~/.xmonad/xmobar.hs" xmobarPP toggleXMobarKey _config
-  xmonad config
+  xmonad _config

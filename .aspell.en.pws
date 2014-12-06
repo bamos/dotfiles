@@ -79,6 +79,7 @@ JPEG's
 gcc
 lapack
 ctz
+Eigenfaces
 MobileResultHandler
 zenity
 testInsertionSort
@@ -123,6 +124,7 @@ IDC
 screencasts
 RevenueFromTopReferringDomains
 strptime
+DeepFace
 deepface
 username
 xvzf
@@ -135,6 +137,7 @@ minDate
 mpvp
 mpv's
 arff
+topologies
 underutilize
 idx
 isvariablechar
@@ -234,6 +237,7 @@ iwcmc
 kinesis
 heapList
 define's
+Ayad
 Errorf
 pcd
 LTS
@@ -263,6 +267,7 @@ mul
 npm
 blocksize
 qemu
+nolistsep
 pgp
 LDFLAGS
 OMP
@@ -367,6 +372,8 @@ u'id
 BigTable's
 divad
 tmp
+STF
+Thinkair
 repo
 localFiles
 repr
@@ -437,12 +444,15 @@ showWeekNumbers
 xml
 getmail
 cancelClass
+Gbps
 gclo
 pypdf
 PyPDF
 pssh
 rightEndVar
+al
 bg
+Haar
 addShutdown
 versioning
 yoe
@@ -474,7 +484,9 @@ dT
 gf
 eightbitraptor
 gh
+et
 ia
+UberTrace
 ev
 HH
 eW
@@ -511,6 +523,7 @@ mh
 lm
 RevenueFromTopReferringDomainsFirstVisitGoogle
 ln
+Tbps
 resumé
 GeoLite
 siuro
@@ -523,6 +536,7 @@ ok
 ol
 mv
 stylesheets
+Ph
 armeabi
 DavidRagone
 regex
@@ -597,6 +611,7 @@ arffList
 evalExpr
 iCal
 ical
+Hinojos
 gabriel
 operatorStack
 nagle
@@ -609,6 +624,7 @@ fortran
 icco
 Weka's
 printoptions
+Daines
 multipart
 parseCalendars
 countrynames
@@ -643,6 +659,7 @@ Gmail
 exif
 OpenCV
 opencv
+Deligne
 ieee
 TestHeapArray
 cloudcom
@@ -682,6 +699,7 @@ endTime
 filesystem
 SortingTest
 sqlite
+Matlab
 interoperate
 visid
 printArraySeq
@@ -768,8 +786,8 @@ chinese
 BitBucket
 elseif
 IMAP
-github
 GitHub
+github
 gpgPass
 santa
 varMap
@@ -799,6 +817,7 @@ writegood
 writeGood
 readme
 vframes
+toolkits
 frameSize
 wildcards
 libvirt
@@ -848,6 +867,7 @@ localhost
 rageagainstthecage
 Unmounting
 middleware
+accuracies
 checksums
 StringMap
 Ciura's
@@ -919,10 +939,13 @@ optimizations
 countLines
 blueimp
 Mboxrd
+CloneCloud
 deedydas
 multi
 lblas
 toNeat
+Shotton
+Pearce
 vsprintf
 ENDDO
 freeTime
@@ -944,7 +967,9 @@ zshrc
 natively
 endhighlight
 mkdir
+Mariposa
 mbox
+Mbps
 vncviewer
 HeapSort
 Heapsort
@@ -986,6 +1011,7 @@ german
 elijah
 jstz
 avctx
+Soyota
 Cutts
 demux
 outputFile

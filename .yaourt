@@ -82,6 +82,7 @@ tree
 unrar
 unzip
 urxvt-perls
+urxvt-font-size-git
 valgrind
 wget
 wireshark-gtk
