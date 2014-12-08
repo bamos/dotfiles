@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1075 
+personal_ws-1.1 en 1157 
 mapreduce
 MapReduce
 multihop
@@ -12,6 +12,7 @@ listFiles
 shellrc
 BLK
 mfloat
+KVM's
 arg
 parentEl
 ASF
@@ -25,6 +26,7 @@ deleteUserUsername
 dfe
 DDR
 kwargs
+Zhuo
 ast
 sortedList
 ecb
@@ -47,6 +49,7 @@ logcat
 KeepThisDir
 eef
 prebuilt
+DHT
 cmu
 loVal
 adduser
@@ -54,23 +57,28 @@ dir
 urllib
 edu
 SSHing
+parallelized
 OverrideDefaultFromEnvar
 lapacklib
 SimpleIMAPSSLRetriever
 cpp
 QNSTOP
+tradeoff
 RESTful
 timePickerIncrement
 strftime
 postChannel
 xvfz
 cpu
+CDFs
 libandroidterm
 mistyped
 findMedian
+parallelizes
 doi
 gbc
 css
+DNS
 mboxFile
 daterangepicker
 JPEG's
@@ -84,6 +92,7 @@ testInsertionSort
 consoleQuick
 EOF
 rtcwake
+underutilizing
 pcap
 gpambrozio
 getTrackerUrl
@@ -99,6 +108,7 @@ screenshots
 XeTeX
 xetex
 eps
+GFS
 hbase
 HBase
 libblas
@@ -106,7 +116,7 @@ HAX
 blas
 ghp
 eth
-Passwordless
+passwordless
 fmt
 u'emulated
 validator
@@ -136,6 +146,7 @@ arff
 topologies
 underutilize
 idx
+deduplicated
 isvariablechar
 websockify
 GPU
@@ -159,6 +170,7 @@ cies
 dropdown
 ini
 misconfigured
+hypervisors
 Tokelau
 testExpressions
 Makefile
@@ -167,17 +179,21 @@ testShellSort
 htm
 EvalExprTest
 armv
+vmhandoff
 ips
 eabi
 FloorDiv
 floordiv
 ish
 isIntersection
+LZMA
 arsc
 JNI
 ProductID
 templating
 omap
+timestamp
+ISP
 passphrase
 jpg
 ParseIP
@@ -190,6 +206,7 @@ Mult
 truediv
 jre
 Shive
+scalability
 androiddebugkey
 blocksizes
 tmpFile
@@ -209,7 +226,9 @@ JVM
 SplitN
 testbed
 autodetect
+NAS
 QEMU's
+mispredictions
 LOC
 ndk
 Kitts
@@ -230,10 +249,12 @@ preprocessing
 lua
 iwcmc
 kinesis
+compressibility
 heapList
 define's
 Ayad
 Errorf
+uplink
 pcd
 LTS
 mov
@@ -247,11 +268,13 @@ mpv
 MathematicaScript
 pageview
 ReadingList
+hypervisor
 averagesecurityguy
 avro
 SetValue
 JavaCameraSizeAccessor
 perras
+transformative
 TokenBase
 DEVNULL
 modprobe
@@ -267,6 +290,7 @@ pgp
 LDFLAGS
 OMP
 Inodes
+facto
 Massie's
 libav's
 libav
@@ -275,6 +299,7 @@ BibTeX
 num
 YYYY
 singleDatePicker
+Mahadev
 rdd
 subsubsection
 registerName
@@ -285,6 +310,7 @@ ProLiant
 enricher
 conf
 nofork
+Pillai
 libGL
 AssertionsForJUnit
 AssertionsForJunit
@@ -306,16 +332,20 @@ numCols
 RDD's
 addShutdownHook
 sed
+Shadyside
 sbt
 ArgumentParser
 sdk
 ClarkGoble
 OS'es
+bsdiff
 findPivot
 CountryParser
 ataack
 toRPN
 sdp
+abbrv
+SHA
 filename
 PWD
 daysAway
@@ -327,6 +357,7 @@ isdigit
 cout
 tcp
 daysInMonth
+RPC
 realpython
 deleteUserCommand
 subpart
@@ -343,6 +374,7 @@ MaxHeap
 rsa
 Simbabwe
 tex
+memtables
 marche
 deleteMax
 tgz
@@ -354,14 +386,16 @@ Marcin
 endfor
 src
 cron
+RTT
 numInstances
 sql
 maplace
 rpnQueue
 intervalTree
-sps
 uid
 u'id
+sps
+BigTable's
 divad
 tmp
 STF
@@ -388,6 +422,7 @@ ScalaIDE
 cruz
 trackPageView
 italian
+bzip
 tsv
 dpkg
 sys
@@ -406,10 +441,13 @@ autoreconf
 setParameters
 zipalign
 utf
+pipelined
 registerNick
 elif
 HTTPHeaderValue
 Ctrl
+VM's
+VMs
 usr
 vmx
 txt
@@ -441,6 +479,7 @@ gclo
 pypdf
 PyPDF
 pssh
+Kiryong
 rightEndVar
 al
 bg
@@ -468,6 +507,8 @@ redis
 DL
 fb
 eg
+BW
+parallelize
 cv
 BitAnd
 fi
@@ -476,7 +517,9 @@ dT
 gf
 eightbitraptor
 gh
+liveness
 et
+latencies
 ia
 UberTrace
 ev
@@ -487,6 +530,7 @@ tmpPos
 initializeCamera
 fw
 createpdf
+deduplicate
 refactored
 getPlaintextBody
 parentNode
@@ -494,6 +538,7 @@ i'm
 arffLoader
 io
 ip
+Hu
 beamer
 softfp
 Enum
@@ -504,6 +549,7 @@ zimage
 BinOp
 zsh
 jq
+lookups
 minispiral
 reposJson
 md
@@ -515,6 +561,7 @@ mh
 lm
 RevenueFromTopReferringDomainsFirstVisitGoogle
 ln
+bursty
 Tbps
 resumé
 GeoLite
@@ -556,9 +603,11 @@ goodreads
 sp
 va
 pagename
+assistive
 texample
 ss
 ui
+handoff
 su
 wb
 hdfs
@@ -571,7 +620,9 @@ TopPages
 setFile
 VM
 vm
+Wi
 keybindings
+durations
 Wl
 winternship
 HAXM
@@ -615,6 +666,7 @@ egrep
 fortran
 icco
 Weka's
+Comcast
 printoptions
 Daines
 multipart
@@ -624,6 +676,7 @@ WalnutiQ
 getStructure
 ShutdownHook
 decrypted
+SSTables
 BitOr
 linkchecker
 testSort
@@ -632,6 +685,7 @@ genomics
 proxying
 brandon
 VEVENT
+Satyanarayanan
 mwhite
 tikz
 TikZ
@@ -641,6 +695,9 @@ Heyo
 applyClass
 uncomment
 SnowGlobe
+sendmail
+Sundaresan
+granularities
 bspline
 SMTP
 rval
@@ -651,6 +708,7 @@ OpenCV
 opencv
 Deligne
 ieee
+snapshotting
 TestHeapArray
 cloudcom
 CloudCom
@@ -663,6 +721,7 @@ subcommand
 smartphones
 HTMLParser
 storepass
+precached
 CFLAGS
 MarcheSlave
 losetup
@@ -710,9 +769,11 @@ inEvent
 remoteFiles
 TODO
 SQRT
+Wenlu
 tmpl
 tmpm
 monthrange
+Paxos
 printheader
 rebalance
 repos
@@ -748,6 +809,7 @@ mesos
 jinja
 UComm
 ucomm
+Linktropy
 sunf
 Virtualization
 latexmk
@@ -758,6 +820,7 @@ POSIX
 PlaceHolder
 google
 sysroot
+WANs
 keystore
 nometa
 AndroidManifest
@@ -800,18 +863,23 @@ rightPos
 apache
 midVal
 feeded
+Yoshihisa
 opPrecedence
 weka
 writegood
 writeGood
+deduplication
 readme
 vframes
+smartphone
 toolkits
 frameSize
 wildcards
+rrrrr
 libvirt
 init
 llapack
+compactions
 setStartDate
 impl
 srcElement
@@ -848,6 +916,7 @@ webpages
 rightVar
 charsets
 deleteCommand
+gzip
 BibtexParser
 bibtexparser
 Printf
@@ -860,6 +929,8 @@ checksums
 StringMap
 Ciura's
 onclick
+priori
+URL's
 arffDir
 BeautifulSoup
 http
@@ -870,15 +941,18 @@ purchaseid
 Flesch
 fluxbox
 getAvailableTimes
+dedup
 u'mjepg
 timezones
 resigner
 antimalware
+hostnames
 AppleWebKit
 minItem
 cassandra
 getPgpBody
 appscript
+Xfer
 fastboot
 raphink
 beatles
@@ -908,11 +982,13 @@ coreutil's
 screenshot
 zfill
 nForked
+timestamps
 mjepg
 playcurrentdir
 preprocessed
 busyTimes
 datetime
+ISPs
 GammaRay's
 nonrigorous
 parsedURL
@@ -934,6 +1010,7 @@ vsprintf
 ENDDO
 freeTime
 ghostscript
+HTTPS
 todayEpoch
 Ooyala's
 libs
@@ -947,6 +1024,7 @@ TimeInterval
 mpvshuf
 ShellSort
 zshrc
+pipelining
 natively
 endhighlight
 mkdir
@@ -977,6 +1055,7 @@ noVNC
 json
 cmonty
 dateLimit
+Padmanabhan
 atmos
 LaTeX
 PythonScripts
@@ -996,6 +1075,7 @@ jstz
 avctx
 Soyota
 Cutts
+xdelta
 demux
 outputFile
 sigint
@@ -1026,6 +1106,7 @@ maxDate
 autoaccept
 zellux
 tcpdump
+OpenStack
 openstack
 unittest
 benchmarking
@@ -1054,6 +1135,7 @@ ocaml
 executables
 pathadd
 tcpflow
+MITM
 kryo
 Incorect
 TestSuite
