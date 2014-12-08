@@ -36,7 +36,7 @@ _config = defaultConfig {
   , ((_mod, xK_Down), spawn "amixer set Master playback 5%-")
   , ((_mod, xK_Right), spawn "cmus-remote -n")
   , ((_mod, xK_Left), spawn "cmus-remote -r")
-  , ((_mod, xK_c), spawn "cmus-remote -u")
+  , ((_mod, xK_u), spawn "cmus-remote -u")
   , ((_mod, xK_b), sendMessage ToggleStruts)
   ]
 
