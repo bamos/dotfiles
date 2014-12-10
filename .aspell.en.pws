@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1157 
+personal_ws-1.1 en 1207 
 mapreduce
 MapReduce
 multihop
@@ -12,6 +12,7 @@ listFiles
 shellrc
 BLK
 mfloat
+NICs
 KVM's
 arg
 parentEl
@@ -56,6 +57,7 @@ adduser
 dir
 urllib
 edu
+DMA
 SSHing
 parallelized
 OverrideDefaultFromEnvar
@@ -102,6 +104,7 @@ isPgp
 KHTML
 env
 CXX
+pluggable
 xclock
 DiamondAndroid
 screenshots
@@ -134,8 +137,10 @@ DeepFace
 deepface
 username
 xvzf
+sendfile
 ics
 gmt
+skiyak
 pdfs
 PDF's
 gpg
@@ -152,10 +157,12 @@ websockify
 GPU
 librefblas
 drawable
+GRO
 jdk
 unsortedList
 biodata
 args
+GSO
 telefonica
 exploid
 DCIM
@@ -170,9 +177,11 @@ cies
 dropdown
 ini
 misconfigured
+Serhat
 hypervisors
 Tokelau
 testExpressions
+Jin
 Makefile
 encodings
 testShellSort
@@ -182,8 +191,8 @@ armv
 vmhandoff
 ips
 eabi
-FloorDiv
 floordiv
+FloorDiv
 ish
 isIntersection
 LZMA
@@ -210,9 +219,11 @@ scalability
 androiddebugkey
 blocksizes
 tmpFile
+ConnectX
 lin
 mei
 MGA
+MTUs
 leftPos
 endDate
 mem
@@ -220,6 +231,7 @@ nbc
 startswith
 nbd
 javascript
+Kadekodi
 bool
 cmichi
 JVM
@@ -243,15 +255,21 @@ lon
 dest
 bootloader
 kvm
+NIC
+outliers
 postText
 biber
+Kiyak
 preprocessing
 lua
 iwcmc
 kinesis
+Mellanox
 compressibility
 heapList
 define's
+rmmod
+MPI
 Ayad
 Errorf
 uplink
@@ -259,12 +277,14 @@ pcd
 LTS
 mov
 bashrc
+Infiniband
 LVM
 isinstance
 pdf
 NLP
 msg
 mpv
+IEEEtran
 MathematicaScript
 pageview
 ReadingList
@@ -298,6 +318,7 @@ NTP
 BibTeX
 num
 YYYY
+Yoshino
 singleDatePicker
 Mahadev
 rdd
@@ -327,6 +348,7 @@ São
 sda
 hadoop
 SAS
+RFS
 lsmod
 numCols
 RDD's
@@ -374,10 +396,13 @@ MaxHeap
 rsa
 Simbabwe
 tex
+sysctl
 memtables
 marche
+CPUs
 deleteMax
 tgz
+UDP
 uname
 calculateCameraFrameSize
 RSS
@@ -395,8 +420,10 @@ intervalTree
 uid
 u'id
 sps
+Maccabe
 BigTable's
 divad
+datagrams
 tmp
 STF
 Thinkair
@@ -418,6 +445,7 @@ const
 nbdroid
 deleteUserUIDFlag
 prev
+TSO
 ScalaIDE
 cruz
 trackPageView
@@ -433,6 +461,7 @@ webpage
 vnc
 unregister
 timegm
+checksum
 supersu
 SuperSU
 url
@@ -584,6 +613,8 @@ rc
 os
 config
 rf
+Weinsberg
+RMPP
 sc
 strTok
 ps
@@ -591,6 +622,7 @@ runtime
 sdcard
 UAdd
 pu
+SG
 pv
 sortAlgorithm
 ethernet
@@ -607,6 +639,7 @@ assistive
 texample
 ss
 ui
+ethtool
 handoff
 su
 wb
@@ -680,6 +713,7 @@ SSTables
 BitOr
 linkchecker
 testSort
+scatterplots
 extractedData
 genomics
 proxying
@@ -724,6 +758,7 @@ storepass
 precached
 CFLAGS
 MarcheSlave
+tuple's
 losetup
 serverIP
 NoMachine
@@ -734,8 +769,8 @@ mpvnova
 Biblatex
 combinedFile
 saoTome
-openmp
 OpenMP
+openmp
 StackOverflow
 expr
 tempfile
@@ -745,6 +780,7 @@ virtualenv
 FullCommand
 showDropdowns
 endTime
+Saurabh
 filesystem
 SortingTest
 sqlite
@@ -764,6 +800,7 @@ exiftool
 doubleTok
 localtime
 scala
+netperf
 gfortran
 inEvent
 remoteFiles
@@ -852,10 +889,13 @@ stevegeek
 combineAllArffs
 nargs
 ScrapeCountriesTest
+multicore
 IsCumulative
 genPickle
 groupByKey
 frontend
+iperf
+iPerf
 dayEnd
 Mergesort
 mergeSort
@@ -872,6 +912,7 @@ deduplication
 readme
 vframes
 smartphone
+tuple
 toolkits
 frameSize
 wildcards
@@ -968,8 +1009,10 @@ playlist
 OpenFile
 Joël
 BitXor
+PRObE
 computermacgyver
 USub
+saukad
 Xeon
 jobserver
 synchrony
@@ -1038,6 +1081,7 @@ siftDown
 iDRAC
 buttonClasses
 KeyError
+Pesterev
 classpath
 nodeca
 adam
@@ -1050,6 +1094,7 @@ makeSpline
 pdflatex
 toEpochTime
 gokpg
+Susitna
 ALLOCATABLE
 noVNC
 json
@@ -1090,6 +1135,7 @@ mfpu
 fileHandle
 boolean
 decrypt
+rxhash
 hiVal
 charset
 ffmpeg
@@ -1121,11 +1167,13 @@ btford
 timeStr
 testMergeSort
 DTEND
+checksumming
 RuntimeException
 PowerEdge
 mkfs
 codebase
 leftEnd
+Brightwell
 Bcc
 metadata
 arffFile
@@ -1151,6 +1199,7 @@ neue
 ami
 subshell
 availableTimes
+CDF
 RShift
 rshift
 heroku
