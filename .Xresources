@@ -13,7 +13,7 @@ URxvt*foreground: #ffffff
 #ifdef derecho
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=tru
 #else
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=10:antialias=true:hinting=tru
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=tru
 #endif
 URxvt.scrollstyle: plain
 URxvt.perl-ext-common: default,matcher,font-size
