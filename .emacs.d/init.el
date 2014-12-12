@@ -43,9 +43,9 @@
 (setq dired-use-ls-dired nil)
 
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
-(setq sh-basic-offset 2)
-(setq sh-indentation 2)
+(setq-default tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
+(add-hook 'python-mode-hook (lambda() (
+  (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
 (defun duplicate-line()
   (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank))
