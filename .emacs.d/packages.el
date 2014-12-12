@@ -12,6 +12,7 @@
     evil-nerd-commenter
     evil-numbers
     evil-surround
+    ess
     flycheck
     git-messenger
     go-mode
@@ -23,6 +24,7 @@
     rfringe
     scala-mode
     smooth-scroll
+    org
     popup
     powerline
     projectile

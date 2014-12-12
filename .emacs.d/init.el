@@ -96,6 +96,9 @@
 
 (add-hook 'latex-mode-hook (lambda () (setq linum-format "%d ")))
 
+(require 'ess)
+(require 'ess-font-lock)
+
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
 (setq-default save-place t)
@@ -106,3 +109,8 @@
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+
+
+(transient-mark-mode 1)
+
+(require 'org)
