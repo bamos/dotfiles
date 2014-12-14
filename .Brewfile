@@ -14,7 +14,6 @@ tap caskroom/cask
 install brew-cask
 cask install android-studio eclipse-java
 cask install dia
-cask install emacs
 cask install google-chrome firefox
 cask install github
 cask install java
@@ -43,7 +42,7 @@ install cloc
 install coreutils
 install cvs
 install dos2unix
-#install emacs --HEAD --use-git-head --cocoa --with-gnutls
+install emacs --cocoa --with-gnutls
 install exiftool
 install fdupes
 install ffmpeg
