@@ -49,24 +49,20 @@ alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
 alias gu="git reset --soft 'HEAD^'"
 
-# Vim aliases.
-case $(uname) in
-  "Linux")
-    alias less='/usr/share/vim/vim74/macros/less.sh'
-    alias vim='vim -p'
-  ;;
-  "Darwin")
-    alias vim='mvim -v -p'
-  ;;
-esac
+alias pw='pwgen --numerals --symbols --ambiguous 15 1'
+
+alias count-frames=$'grep -c \'^\\(\\\\frame{\\|\\\\begin{frame}\\\)\''
+alias tmux='tmux -2'
+
+alias f='sudo $(fc -ln -1)'
 
 # OS and distro-specific aliases.
 case $(uname) in
   "Linux")
     alias m="make -j$(cat /proc/cpuinfo | grep -c processor)"
     alias za='zathura'
-    alias emacs='emacsclient -a "" -c'
-    alias emacsn='\emacs -nw'
+    alias less='/usr/share/vim/vim74/macros/less.sh'
+    alias vim='vim -p'
     if command -v lsb_release &> /dev/null; then
       case $(lsb_release -s -i) in
         "Arch")
@@ -89,20 +85,17 @@ case $(uname) in
   ;;
   "Darwin")
     alias m="make -j8"
-    alias emacs="$HOME/Applications/Emacs.app/Contents/MacOS/Emacs"
-    alias emacsn="$HOME/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+    #alias full-emacs="$HOME/Applications/Emacs.app/Contents/MacOS/Emacs"
+    #alias emacsclient="$HOME/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
     alias brup='brew update; brew upgrade'
     alias bri='brew install'
     alias brun='brew uninstall'
     alias i-int='ipconfig getifaddr en0'
     alias less='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/Resources/vim/runtime/macros/less.sh'
+    alias vim='mvim -v -p'
     alias za='Skim'
   ;;
 esac
 
-alias pw='pwgen --numerals --symbols --ambiguous 15 1'
-
-alias count-frames=$'grep -c \'^\\(\\\\frame{\\|\\\\begin{frame}\\\)\''
-alias tmux='tmux -2'
-
-alias f='sudo $(fc -ln -1)'
+alias emacs='emacsclient -a "" -c -n'
+alias e='emacs'
