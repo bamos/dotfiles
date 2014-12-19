@@ -17,10 +17,10 @@
     git-messenger
     go-mode
     haskell-mode
+    lua-mode
     magit
     markdown-mode
     multiple-cursors
-    nrepl
     rfringe
     scala-mode
     smooth-scroll
