@@ -114,3 +114,7 @@
 (transient-mark-mode 1)
 
 (require 'org)
+
+; Temporary hack for syntax highlighting in R.
+; https://github.com/bamos/dotfiles/issues/16
+(add-to-list 'auto-mode-alist '("\\.r\\'" . python-mode))
