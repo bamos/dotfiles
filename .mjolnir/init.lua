@@ -4,6 +4,7 @@ local hotkey = require "mjolnir.hotkey"
 local fnutils = require "mjolnir.fnutils"
 -- local alert = require "mjolnir.alert"
 local grid = require "mjolnir.bg.grid"
+local cmus = require "cmus"
 
 local mash = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
@@ -47,8 +48,6 @@ hotkey.bind(mash, 'c', grid.resizewindow_shorter)
 hotkey.bind(mash, 'r', grid.resizewindow_wider)
 hotkey.bind(mash, 'l', grid.resizewindow_thinner)
 
--- hotkey.bind(mashshift, 'space', spotify.displayCurrentTrack)
--- hotkey.bind(mashshift, 'p', spotify.play)
--- hotkey.bind(mashshift, 'o', spotify.pause)
--- hotkey.bind(mashshift, 'n', spotify.next)
--- hotkey.bind(mashshift, 'i', spotify.previous)
+hotkey.bind(mash, 'space', cmus.play)
+hotkey.bind(mash, 'left', cmus.previous)
+hotkey.bind(mash, 'right', cmus.next)
