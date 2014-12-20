@@ -1,5 +1,6 @@
 -- Controls for cmus music player
 -- Usage: local cmus = require "mjolnir.lb.cmus"
+-- Inspired by https://github.com/Linell/mjolnir.lb.spotify
 
 require 'os'
 
