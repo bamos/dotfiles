@@ -97,5 +97,5 @@ case $(uname) in
   ;;
 esac
 
-alias emacs='emacsclient -a "" -c -n'
-alias e='emacs'
+alias emacsd='emacs --daemon'
+alias e='emacsclient -nw'
