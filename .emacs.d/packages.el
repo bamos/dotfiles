@@ -28,6 +28,7 @@
     popup
     powerline
     projectile
+    protobuf-mode
     python-mode
     yaml-mode
     zenburn-theme

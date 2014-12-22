@@ -11,11 +11,13 @@
 (load-user-file "clipboard.el")
 (load-user-file "mail.el")
 (load-user-file "init-evil.el")
+(load-user-file "modes.el")
+(load-user-file "funcs.el")
 
 (require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
 
 (require 'magit)
-(global-set-key (kbd "C-c C-s") 'magit-status)
+(global-set-key (kbd "C-c C-t") 'magit-status)
 
 (unless window-system
   (require 'mouse)
@@ -32,72 +34,19 @@
 (fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
 (setq vc-follow-symlinks t) ; Always follow symlinks.
 (add-hook 'emacs-startup-hook  'delete-other-windows)
+(setq inhibit-startup-message t)
 (setq make-backup-files nil)
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-
-(setq auto-mode-alist (append '((".aliases" . shell-mode)) auto-mode-alist))
-(setq auto-mode-alist (append '((".funcs" . shell-mode)) auto-mode-alist))
 
 (setq shell-prompt-pattern ".*» *")
 (setq dired-use-ls-dired nil)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
-(add-hook 'python-mode-hook (lambda() (
-  (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
-
-(defun duplicate-line()
-  (interactive)(move-beginning-of-line 1)(kill-line)(yank)(newline)(yank))
-(defun duplicate-line-above() (interactive)(duplicate-line)(previous-line))
-(global-set-key (kbd "C-c C-d") 'duplicate-line)
-(global-set-key (kbd "C-c C-f") 'duplicate-line-above)
-
-(setq inhibit-startup-message t)
-
-(dolist (hook '(text-mode-hook))
-  (add-hook hook (lambda () (flyspell-mode 1))))
-(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
-  (add-hook hook (lambda () (flyspell-mode -1))))
-
-(defun enumerate-list(num-elems)
-  (interactive "nNumber of Elements: ")
-  (mapcar (lambda (i) (insert (concat (number-to-string i) ". \n")))
-          (number-sequence 1 num-elems)))
-
-
-(global-set-key (kbd "C-c C-g") 'enumerate-list)
 
 (setq-default show-trailing-whitespace t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(defun copy-all ()
-  (interactive)
-  (clipboard-kill-ring-save (point-min) (point-max))
-  (message "Copied to clipboard."))
-(global-set-key (kbd "C-c C-a") 'copy-all)
-
-;; http://steve.yegge.googlepages.com/my-dot-emacs-file
-(defun rename-file-and-buffer (new-name)
-  "Renames both current buffer and file it's visiting to NEW-NAME."
-  (interactive "sNew name: ")
-  (let ((name (buffer-name))
-        (filename (buffer-file-name)))
-    (if (not filename)
-        (message "Buffer '%s' is not visiting a file!" name)
-      (if (get-buffer new-name)
-          (message "A buffer named '%s' already exists!" new-name)
-        (progn
-          (rename-file name new-name 1)
-          (rename-buffer new-name)
-          (set-visited-file-name new-name)
-          (set-buffer-modified-p nil))))))
-(global-set-key (kbd "C-c C-r") 'rename-file-and-buffer)
-
-(add-hook 'latex-mode-hook (lambda () (setq linum-format "%d ")))
-
-(require 'ess)
-(require 'ess-font-lock)
 
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
@@ -107,14 +56,4 @@
 (menu-bar-mode -99)
 (tool-bar-mode -1)
 
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-
-
 (transient-mark-mode 1)
-
-(require 'org)
-
-; Temporary hack for syntax highlighting in R.
-; https://github.com/bamos/dotfiles/issues/16
-(add-to-list 'auto-mode-alist '("\\.r\\'" . python-mode))
