@@ -15,12 +15,12 @@ end
 
 function cmus.next()
   os.execute('/usr/local/bin/cmus-remote -n')
-  alert.show('⧐', 0.5)
+  alert.show('>', 0.5)
 end
 
 function cmus.previous()
   os.execute('/usr/local/bin/cmus-remote -r')
-  alert.show('⧏', 0.5)
+  alert.show('<', 0.5)
 end
 
 return cmus
