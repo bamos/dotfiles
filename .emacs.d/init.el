@@ -57,3 +57,8 @@
 (tool-bar-mode -1)
 
 (transient-mark-mode 1)
+
+; Re-initialize mouse mode for tmux.
+(defun my-terminal-config (&optional frame)
+  (if xterm-mouse-mode (xterm-mouse-mode 1)))
+(add-hook 'after-make-frame-functions 'my-terminal-config)
