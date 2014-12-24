@@ -14,9 +14,9 @@
 (add-hook 'haskell-mode-hook
           (lambda() ((turn-on-haskell-doc-mode)(turn-on-haskell-indentation))))
 
-; Temporary hack for syntax highlighting in R.
-; https://github.com/bamos/dotfiles/issues/16
-(add-to-list 'auto-mode-alist '("\\.r\\'" . python-mode))
+(require 'ess-site)
+(setq ess-indent-level 2)
+(setq ess-default-style 'OWN)
 
 (require 'org)
 
