@@ -11,6 +11,14 @@
 (setq erc-nickserv-passwords
       `((freenode (("bdamos" . ,freenode-pass)))
         (OFTC (("bdamos" . ,oftc-pass)))))
+(custom-set-variables
+ '(erc-autojoin-timing 'ident)
+ '(erc-autojoin-delay 10))
+(setq erc-auto-query 'buffer)
+
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
+                                "324" "329" "332" "333" "353" "477"))
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))
 
 (setq erc-echo-notices-in-minibuffer-flag t)
 
@@ -19,6 +27,9 @@
 (setq erc-log-channels-directory "~/.irclogs/")
 (setq erc-save-buffer-on-part t)
 (setq erc-hide-timestamps nil)
+
+(add-to-list 'erc-mode-hook
+             (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
 
 (setq erc-max-buffer-size 20000)
 (defvar erc-insert-post-hook)
@@ -36,7 +47,7 @@
       '(("freenode.net" "#android" "#android-dev" "#archlinux"
          "#archlinux-offtopic" "#bash" "#clojure" "##c" "##c++"
          "##cclub" "#cslounge" "#docker" "#emacs" "#erlang"
-         "#git" "#github" "#go-nuts" "#haskell" "##linux"
+         "#gentoo" "#git" "#github" "#go-nuts" "#haskell" "##linux"
          "#MacOSX" "#math" "#music" "#networking" "#programming"
          "#python" "#Reddit" "#ruby" "#scala" "#security"
          "#startups" "#vim" "#xmonad" "#zsh")
