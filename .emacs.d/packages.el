@@ -12,6 +12,7 @@
     evil-nerd-commenter
     evil-numbers
     evil-surround
+    erc
     ess
     flycheck
     free-keys
