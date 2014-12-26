@@ -17,7 +17,7 @@
 (require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
 
 (require 'magit)
-(global-set-key (kbd "C-c C-t") 'magit-status)
+(global-set-key (kbd "C-c C-m") 'magit-status)
 
 (unless window-system
   (require 'mouse)
