@@ -14,6 +14,7 @@
     evil-surround
     ess
     flycheck
+    free-keys
     git-messenger
     go-mode
     haskell-mode
