@@ -27,7 +27,8 @@ by taking screenshots in an [X virtual framebuffer][xvfb].
 Clone this repo with git's  flag to obtain all the submodules.
 Run [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles in this repo
 to the home directory and install vim plugins.
-This shell script will possibly be migrated to [GNU Stow][stow] in the future
+This shell script will possibly be migrated to [GNU Stow][stow]
+or [rcm](https://github.com/thoughtbot/rcm) in the future.
 
 [bootstrap.sh]: https://github.com/bamos/dotfiles/blob/master/bootstrap.sh
 [stow]: http://www.gnu.org/software/stow/
@@ -158,7 +159,7 @@ Name | Stargazers | Description
 [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) | 10166 | .files, including ~/.osx — sensible hacker defaults for OS X
 [nelstrom/dotfiles](https://github.com/nelstrom/dotfiles) | 234 | My dotfiles. Mainly customisations for Vim and Bash.
 [ocodo/emacs.d](https://github.com/ocodo/emacs.d) | 19 | My emacs.d
-[paulmillr/dotfiles](https://github.com/paulmillr/dotfiles) | 314 | Colourful & robust OS X / \*nix configuration files and utilities. 
+[paulmillr/dotfiles](https://github.com/paulmillr/dotfiles) | 314 | Colourful & robust OS X / \*nix configuration files and utilities.
 [pengwynn/dotfiles](https://github.com/pengwynn/dotfiles) | 253 | $HOME sweet ~/
 [rmm5t/dotfiles](https://github.com/rmm5t/dotfiles) | 264 | Ryan McGeary's configuration shiznit that makes him productive
 [robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) | 20122 | A community-driven framework for managing your zsh configuration. Includes 120+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, macports, etc), over 120 themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
