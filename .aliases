@@ -99,3 +99,5 @@ esac
 
 alias emacsd='emacs --daemon'
 alias e='emacsclient -nw'
+
+alias tsh='tmux split-window -h'
