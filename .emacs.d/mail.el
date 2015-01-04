@@ -4,6 +4,9 @@
 
 (add-hook 'mail-mode-hook (lambda ()
    (define-key mail-mode-map [(control c) (control c)]
-     (lambda () (interactive) (save-buffer) (kill-emacs)))
+     (lambda () (interactive) (save-buffer) (save-buffers-kill-terminal)))
    (delete-trailing-whitespace)
-   (next-line 8)(open-line 2)))
+   (if (re-search-forward "\n\n" nil t)
+     (progn (open-line 2))
+     (when (search-forward "Reply-To:" nil t)
+       (open-line 2)(next-line 2)))))
