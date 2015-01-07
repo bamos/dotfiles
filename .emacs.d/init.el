@@ -10,7 +10,7 @@
 (load-user-file "packages.el")
 (load-user-file "clipboard.el")
 (load-user-file "init-evil.el")
-(load-user-file "init-erc.el")
+(when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
 (load-user-file "modes.el")
 (load-user-file "funcs.el")
 (load-user-file "mail.el")
