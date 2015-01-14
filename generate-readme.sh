@@ -28,7 +28,7 @@ done
 cat>>README.md<<EOF
 # Installation
 
-Clone this repo with git's `--recursive` flag to obtain all the submodules.
+Clone this repo with git's \`--recursive\` flag to obtain all the submodules.
 Run [bootstrap.sh][bootstrap.sh] to symlink all of the dotfiles in this repo
 to the home directory and install vim plugins.
 This shell script will possibly be migrated to [GNU Stow][stow] in the future
@@ -96,8 +96,9 @@ github-repo-summary.py \
   windelicato/dotfiles \
   pengwynn/dotfiles \
   nelstrom/dotfiles \
-  ocodo/emacs.d \
+  ocodo/.emacs.d \
   terhechte/emacs.d \
+  themattman/dotfiles \
   themattman/utilities \
   vicfryzel/xmonad-config \
   >> README.md
