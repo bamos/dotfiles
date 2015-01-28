@@ -10,3 +10,8 @@
 
 ;;     (setq interprogram-cut-function 'paste-to-osx)
 ;;     (setq interprogram-paste-function 'copy-from-osx)))
+
+(when (eq system-type 'darwin)
+  (progn
+    (require 'xclip)
+    (turn-on-xclip)))
