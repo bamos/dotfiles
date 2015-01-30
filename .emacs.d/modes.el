@@ -17,8 +17,9 @@
 (require 'ess-site)
 (setq ess-indent-level 2)
 (setq ess-default-style 'OWN)
+(setq ess-toggle-underscore nil)
 
 (require 'org)
 
-; (require 'protobuf-mode)
-; (add-to-list 'auto-mode-alist '("\\.prototxt\\'" . protobuf-mode))
+(require 'protobuf-mode)
+(add-to-list 'auto-mode-alist '("\\.prototxt\\'" . yaml-mode))

@@ -19,6 +19,7 @@
     git-messenger
     go-mode
     haskell-mode
+    json-mode
     lua-mode
     magit
     markdown-mode
@@ -32,6 +33,7 @@
     projectile
     protobuf-mode
     python-mode
+    xclip
     yaml-mode
     zenburn-theme
   )
