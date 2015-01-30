@@ -1,8 +1,9 @@
-personal_ws-1.1 en 1364 
+personal_ws-1.1 en 1390 
 mapreduce
 MapReduce
 multihop
 Akka
+stdev
 amongst
 API
 Scala's
@@ -61,6 +62,7 @@ cmu
 loVal
 adduser
 dir
+nginx
 urllib
 edu
 DMA
@@ -90,8 +92,10 @@ doi
 gbc
 css
 DNS
+fge
 mboxFile
 daterangepicker
+CSV
 JPEG's
 gcc
 lapack
@@ -122,6 +126,7 @@ XeTeX
 xetex
 GFS
 eps
+stderr
 hbase
 HBase
 libblas
@@ -157,6 +162,7 @@ skiyak
 pdfs
 PDF's
 gpg
+igb
 minDate
 mpvp
 Dinion
@@ -288,7 +294,7 @@ Xerces
 dest
 bootloader
 kvm
-NIC
+nic
 outliers
 postText
 biber
@@ -299,6 +305,7 @@ lua
 iwcmc
 kinesis
 Mellanox
+mlx
 compressibility
 heapList
 define's
@@ -369,6 +376,7 @@ subsubsection
 registerName
 ranlib
 setEndDate
+losslessly
 png
 ProLiant
 enricher
@@ -385,8 +393,8 @@ surveilled
 req
 rlamana
 subdirectory
-OSX
 pos
+OSX
 pre
 São
 sda
@@ -419,12 +427,14 @@ daysAway
 InsertionSort
 HTTPHeader
 Reimplemented
+resize
 Mathematica
 VideoSensorHandler
 isdigit
 blogosphere
 cout
 tcp
+skb
 daysInMonth
 RPC
 realpython
@@ -452,7 +462,7 @@ marche
 CPUs
 Harkes
 deleteMax
-UDP
+udp
 tgz
 uname
 codrops
@@ -600,7 +610,7 @@ eg
 fb
 DL
 DM
-BW
+bw
 parallelize
 cv
 BitAnd
@@ -644,6 +654,7 @@ zimage
 transcoding
 BinOp
 zsh
+mb
 jq
 lookups
 minispiral
@@ -712,6 +723,7 @@ assistive
 texample
 ui
 ss
+rx
 ethtool
 handoff
 su
@@ -729,6 +741,8 @@ setFile
 VM
 vm
 Wi
+tx
+iperf's
 keybindings
 durations
 Wl
@@ -756,13 +770,14 @@ pivotIdx
 UnaryOp
 thereIs
 snowplowTracker
+ResultParsers
 rightEnd
 linux
 TestVar
 arffList
 evalExpr
-iCal
 ical
+iCal
 Hinojos
 gabriel
 operatorStack
@@ -775,6 +790,7 @@ egrep
 fortran
 icco
 Martial's
+lllllllll
 Weka's
 Comcast
 printoptions
@@ -938,6 +954,7 @@ safeDelete
 symlink
 malware
 tmux
+packetization
 hardcopy
 coryschires
 pgpText
@@ -966,6 +983,7 @@ POSIX
 PlaceHolder
 google
 sysroot
+GSO's
 WANs
 keystore
 nometa
@@ -992,6 +1010,7 @@ santa
 varMap
 killall
 etection
+keepalive
 numElements
 daterange
 getElementsByTagName
@@ -1092,6 +1111,7 @@ Ciura's
 onclick
 priori
 URL's
+warmup
 arffDir
 BeautifulSoup
 http
@@ -1186,6 +1206,7 @@ HTTPS
 todayEpoch
 Ooyala's
 libs
+YCSB
 lshift
 LShift
 wikia
@@ -1230,7 +1251,7 @@ makeSpline
 pdflatex
 toEpochTime
 gokpg
-Susitna
+susitna
 ALLOCATABLE
 noVNC
 json
@@ -1258,6 +1279,7 @@ Haskell
 elijah
 Babu
 jstz
+resegmented
 avctx
 Soyota
 Cutts
@@ -1269,6 +1291,7 @@ utils
 krha
 ipList
 IPList
+pseudocode
 MartinThoma
 tchaikovsky
 MobileVideoHandler
@@ -1276,6 +1299,7 @@ VBODA
 mfpu
 fileHandle
 boolean
+workloadf
 Ravindran
 decrypt
 rxhash
@@ -1291,6 +1315,7 @@ arraySeq
 kaeluka
 hashbang
 srini
+Dragonet
 descr
 htmlContent
 MJPEG
@@ -1349,6 +1374,7 @@ cmusatyalab
 unescape
 Layne
 parsestr
+PRObE's
 splinePlot
 ccf
 Pamplin
@@ -1356,7 +1382,7 @@ neue
 ami
 subshell
 availableTimes
-CDF
+cdf
 cbp
 rshift
 RShift
