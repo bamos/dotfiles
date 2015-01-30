@@ -1,6 +1,7 @@
 .aria2/dht.dat
 .emacs.d/auto-save-list
 .emacs.d/elpa
+.emacs.d/eshell
 .emacs.d/saveplace.el
 .emacs.d/tramp
 .mutt/private
