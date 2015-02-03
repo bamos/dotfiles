@@ -30,8 +30,5 @@ xrdb ~/.Xresources -D$(hostname)
 
 export LOCALE='en_US.UTF-8'
 
-dunst &
-unclutter -grab &
-
 #exec i3 # -V >> ~/.i3/i3.log 2>&1
 exec xmonad
