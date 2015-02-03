@@ -63,3 +63,5 @@
 (defun my-terminal-config (&optional frame)
   (if xterm-mouse-mode (xterm-mouse-mode 1)))
 (add-hook 'after-make-frame-functions 'my-terminal-config)
+
+(setq compilation-scroll-output 'first-error)
