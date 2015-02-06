@@ -27,6 +27,7 @@ fi
 # Set up the resources
 xrdb ~/.Xresources -D$(hostname)
 
+redshift &
 
 export LOCALE='en_US.UTF-8'
 
