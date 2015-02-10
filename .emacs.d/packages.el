@@ -33,6 +33,7 @@
     projectile
     protobuf-mode
     python-mode
+    w3m
     xclip
     yaml-mode
     zenburn-theme

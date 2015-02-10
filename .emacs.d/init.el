@@ -10,12 +10,14 @@
 (load-user-file "packages.el")
 (load-user-file "clipboard.el")
 (load-user-file "init-evil.el")
+(load-user-file "init-w3m.el")
 (when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
 (load-user-file "modes.el")
 (load-user-file "funcs.el")
 (load-user-file "mail.el")
 
-(require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
+;(require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
+(load-theme 'zenburn t)
 
 (require 'magit)
 (global-set-key (kbd "C-c m") 'magit-status)
