@@ -1,3 +1,4 @@
 0 22 * * * time /home/bamos/repos/personal-github-archive/daily-cron.sh &> ~/data/.pga.log
 0 23 * * * /home/bamos/bin/link-checker.py
+0 23 * * * /home/bamos/bin/check-servers.py
 #* * * * * export DISPLAY=:0.0 && /home/bamos/bin/gmail.py
