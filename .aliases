@@ -91,8 +91,10 @@ case $(uname) in
     alias bri='brew install'
     alias brun='brew uninstall'
     alias i-int='ipconfig getifaddr en0'
-    alias less='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/Resources/vim/runtime/macros/less.sh'
-    alias vim='mvim -v -p'
+    if command -v mvim > /dev/null 2>&1; then
+      alias less='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/Resources/vim/runtime/macros/less.sh'
+      alias vim='mvim -v -p'
+    fi
     alias za='Skim'
   ;;
 esac
