@@ -1,11 +1,11 @@
-personal_ws-1.1 en 1390
+personal_ws-1.1 en 1396 
 mapreduce
 MapReduce
 multihop
 Akka
-stdev
 amongst
 API
+stdev
 Scala's
 drublic
 tmlabel
@@ -295,6 +295,7 @@ dest
 bootloader
 kvm
 nic
+NIC
 outliers
 postText
 biber
@@ -305,8 +306,8 @@ lua
 iwcmc
 kinesis
 Mellanox
-mlx
 compressibility
+mlx
 heapList
 define's
 rmmod
@@ -393,8 +394,8 @@ surveilled
 req
 rlamana
 subdirectory
-pos
 OSX
+pos
 pre
 São
 sda
@@ -462,6 +463,7 @@ marche
 CPUs
 Harkes
 deleteMax
+UDP
 tgz
 uname
 codrops
@@ -610,6 +612,7 @@ fb
 DL
 DM
 bw
+BW
 parallelize
 cv
 BitAnd
@@ -653,10 +656,10 @@ zimage
 transcoding
 BinOp
 zsh
-mb
 jq
 lookups
 minispiral
+mb
 reposJson
 js
 md
@@ -722,9 +725,9 @@ assistive
 texample
 ui
 ss
-rx
 ethtool
 handoff
+rx
 su
 wb
 ul
@@ -741,9 +744,9 @@ VM
 vm
 Wi
 tx
-iperf's
 keybindings
 durations
+iperf's
 Wl
 winternship
 HAXM
@@ -775,8 +778,8 @@ linux
 TestVar
 arffList
 evalExpr
-ical
 iCal
+ical
 Hinojos
 gabriel
 operatorStack
@@ -1143,6 +1146,7 @@ println
 scipts
 TZID
 TimeInt
+compositional
 subcommands
 dangrossman
 typesetted
@@ -1251,6 +1255,7 @@ pdflatex
 toEpochTime
 gokpg
 susitna
+Susitna
 ALLOCATABLE
 noVNC
 json
@@ -1381,7 +1386,9 @@ neue
 ami
 subshell
 availableTimes
+denotational
 cdf
+CDF
 cbp
 rshift
 RShift
