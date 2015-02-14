@@ -23,3 +23,4 @@ set copy=yes
 set record=~/.mutt/sent
 set delete=no
 auto_view text/html
+unset markers # Don't show markers ('+') for wrapped lines.
