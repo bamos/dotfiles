@@ -47,7 +47,7 @@
       '(("freenode.net" "#android" "#android-dev" "#archlinux"
          "#archlinux-offtopic" "#bash" "##c" "##c++"
          "##cclub" "#cslounge" "#emacs" "#erlang"
-         "#gentoo" "#git" "#github" "#haskell" "##linux"
+         "#gentoo" "#git" "#github" "#haskell" "##hh" "##linux"
          "#MacOSX" "#machinelearning" "#math" "#mutt" "#music"
          "#networking" "#programming"
          "#python" "#ruby" "#scala"
