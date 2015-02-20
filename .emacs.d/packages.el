@@ -25,7 +25,7 @@
     markdown-mode
     multiple-cursors
     rfringe
-    scala-mode
+    scala-mode2
     smooth-scroll
     org
     popup
