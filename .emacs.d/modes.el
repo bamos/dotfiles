@@ -25,3 +25,4 @@
 ; (add-to-list 'auto-mode-alist '("\\.prototxt\\'" . yaml-mode))
 
 (require 'scala-mode2)
+(require 'puppet-mode)

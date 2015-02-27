@@ -32,6 +32,7 @@
     powerline
     projectile
     protobuf-mode
+    puppet-mode
     python-mode
     w3m
     xclip
