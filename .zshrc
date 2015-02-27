@@ -34,6 +34,10 @@ plugins=(vi-mode git history-substring-search fabric z)
 source $ZSH/oh-my-zsh.sh
 
 # Environment variables.
+if [[ $(uname) == "Darwin" ]]; then
+  # Overwrite oh-my-zsh's default 'ls' alias.
+  alias ls='gls -G --color=tty'
+fi
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186'
 export LSCOLORS='ExGxFxdxCxEgEdHbagacad'
 export EDITOR="emacsclient -nw"
