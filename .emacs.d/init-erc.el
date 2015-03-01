@@ -44,15 +44,14 @@
 (require 'erc-join)
 (erc-autojoin-mode 1)
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#android" "#android-dev" "#archlinux"
-         "#archlinux-offtopic" "#bash" "##c" "##c++"
-         "##cclub" "#cslounge" "#emacs" "#erlang"
-         "#gentoo" "#git" "#github" "#haskell" "##hh" "##linux"
-         "#MacOSX" "#machinelearning" "#math" "#mutt" "#music"
-         "#networking" "#programming"
-         "#python" "#ruby" "#scala"
-         "#vim" "#xmonad" "#zsh")
-        ("oftc.net" "#vtluug" "#tor" "#suckless")))
+      '(("freenode.net"
+         "#android" "#android-dev"
+         "#archlinux" "#archlinux-offtopic"
+         "##cclub" "#cslounge"
+         "#emacs" "#github" "#haskell" "##linux"
+         "#machinelearning" "#math" "#mutt" "#music"
+         "#programming" "#python" "#scala" "#zsh")
+        ("oftc.net" "#vtluug")))
 
 (defun irc-maybe ()
   (interactive)
