@@ -5,6 +5,7 @@
 (when (not package-archive-contents) (package-refresh-contents))
 
 (defvar required-packages '(
+    auctex
     color-theme
     dash
     evil

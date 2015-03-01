@@ -26,3 +26,7 @@
 
 (require 'scala-mode2)
 (require 'puppet-mode)
+
+(setq-default TeX-PDF-mode t)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
