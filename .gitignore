@@ -4,6 +4,9 @@
 .emacs.d/eshell
 .emacs.d/saveplace.el
 .emacs.d/tramp
+.gnupg/*
+!.gnupg/gpg-agent.conf
+!.gnupg/gpg.conf
 .mutt/private
 .mutt/contacts
 .mutt/cache
