@@ -24,5 +24,8 @@
 ; (require 'protobuf-mode)
 ; (add-to-list 'auto-mode-alist '("\\.prototxt\\'" . yaml-mode))
 
-(require 'scala-mode2)
+; (require 'scala-mode2)
 (require 'puppet-mode)
+
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
