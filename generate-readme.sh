@@ -101,4 +101,5 @@ github-repo-summary.py \
   themattman/dotfiles \
   themattman/utilities \
   vicfryzel/xmonad-config \
+  zweifisch/dotfiles \
   >> README.md

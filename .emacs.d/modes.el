@@ -29,3 +29,7 @@
 
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+(setq-default TeX-PDF-mode t)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)

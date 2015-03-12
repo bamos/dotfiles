@@ -16,8 +16,11 @@
 (load-user-file "funcs.el")
 (load-user-file "mail.el")
 
-;(require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
+;; The `charcoal-black` theme leaves the default colors in `w3m-mode`.
+;; First load the zenburn theme for better colors in `w3m-mode`,
+;; then use `charcoal-black` for everything else
 (load-theme 'zenburn t)
+(require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
 
 (require 'magit)
 (global-set-key (kbd "C-c m") 'magit-status)
