@@ -1,3 +1,2 @@
 0 23 * * * /home/bamos/bin/link-checker.py
 0 12 * * * /home/bamos/bin/weather.py
-0 12 * * * /home/bamos/bin/reddit-email.py
