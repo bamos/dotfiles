@@ -8,6 +8,7 @@
     auctex
     color-theme
     dash
+    ensime
     evil
     evil-leader
     evil-nerd-commenter
