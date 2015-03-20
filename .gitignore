@@ -13,4 +13,6 @@
 .mutt/cache
 .mutt/postponed
 .mutt/sent
+.sbt/*
+!.sbt/0.13/plugins/plugins.sbt
 .vim/.netrwhist
