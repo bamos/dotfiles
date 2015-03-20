@@ -12,29 +12,27 @@
 #
 # Of 2015-03-20 mutt's wiki's MuttGuide/UseGPG page at
 # http://dev.mutt.org/trac/wiki/MuttGuide/UseGPG
-# provides example config options to use mutt with GnuPG.
+# provides example config options to use mutt with GnuPG,
+# but is incompatible with GnuPG>=2.1.0.
 #
-# GnuPG 2.1.0 requires use of gpg-agent and pinentry,
-# which breaks backwards compatibility with mutt's
-# gpg input method, which pipes the passphrase over STDIN.
-# To continue piping the passphrase over STDIN, enable
-# the loopback pinentry mode in the gpg-agent configuration
-# and update the mutt commands to use the `--pinentry-mode loopback`
-# flag as described in
+# GnuPG 2.1.0 requires use of gpg-agent and pinentry and
+# breaks backwards compatibility.
+# To pipe the passphrase over stdin with mutt, one fix is
+# to enable the loopback pinentry mode in the gpg-agent
+# configuration and update the mutt commands to use the
+# `--pinentry-mode loopback` flag as described in
 # https://wiki.archlinux.org/index.php/GnuPG#Unattended_passphrase.
 #
-# However, mutt configurations may be version-controlled and shared
-# among multiple computers with different gpg versions,
-# like in https://github.com/bamos/dotfiles.
+# However, I version-control my non-private mutt configuration
+# at https://github.com/bamos/dotfiles and use it between multiple computers
+# with conflicting gpg versions.
 # This script will provide the appropriate gpg flags to mutt
 # regardless of the gpg version being used.
 #
 # This shell script should be put in the same location on each machine
-# and sourced in your mutt configuration with ` source '~/.mutt/crypto.sh|'`
-# (ticks included) as described in
-# http://dev.mutt.org/trac/wiki/ConfigTricks#Generatingadynamicmuttrcfile.
-#
-# This script can be debugged from running in a terminal.
+# and sourced in your mutt configuration with `source '~/.mutt/crypto.sh|`
+# as described in the manual at
+# http://www.mutt.org/doc/manual/manual-3.html.
 #
 # ----
 #
