@@ -5,9 +5,9 @@ set editor = 'emacsclient -nw'
 set edit_headers = yes
 
 source ~/.mutt/gmail
-source ~/.mutt/crypto
 source ~/.mutt/private
 source ~/.mutt/colors
+source ~/.mutt/crypto.sh|
 
 set postponed=~/.mutt/postponed
 set alias_file=~/.mutt/contacts
