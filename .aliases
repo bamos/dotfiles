@@ -106,3 +106,5 @@ alias ts='tmux split-window'
 alias tsh='tmux split-window -h'
 
 alias psgrep='ps aux | grep'
+
+alias clauncher='chromium --show-app-list'
