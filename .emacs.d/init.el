@@ -9,12 +9,16 @@
 
 (load-user-file "packages.el")
 (load-user-file "clipboard.el")
+(load-user-file "init-auctex.el")
+(load-user-file "init-ensime.el")
+(load-user-file "init-ess.el")
 (load-user-file "init-evil.el")
 (load-user-file "init-w3m.el")
-(when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
-(load-user-file "modes.el")
-(load-user-file "funcs.el")
+(load-user-file "init-flyspell.el")
 (load-user-file "mail.el")
+(load-user-file "funcs.el")
+
+(when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
 
 ;; The `charcoal-black` theme leaves the default colors in `w3m-mode`.
 ;; First load the zenburn theme for better colors in `w3m-mode`,
@@ -70,3 +74,16 @@
 (add-hook 'after-make-frame-functions 'my-terminal-config)
 
 (setq compilation-scroll-output 'first-error)
+
+(setq auto-mode-alist (append '((".aliases" . shell-mode)) auto-mode-alist))
+(setq auto-mode-alist (append '((".funcs" . shell-mode)) auto-mode-alist))
+
+(add-hook 'python-mode-hook (lambda() (
+  (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
+
+(add-hook 'haskell-mode-hook
+          (lambda() ((turn-on-haskell-doc-mode)(turn-on-haskell-indentation))))
+
+(require 'org)
+
+(require 'puppet-mode)
