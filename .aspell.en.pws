@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1392 
+personal_ws-1.1 en 1411 
 mapreduce
 MapReduce
 multihop
@@ -82,6 +82,7 @@ strftime
 postChannel
 xvfz
 cpu
+curation
 DoD
 CDFs
 libandroidterm
@@ -165,6 +166,7 @@ igb
 gpg
 minDate
 mpvp
+recognizers
 Dinion
 mpv's
 arff
@@ -187,6 +189,7 @@ unsortedList
 biodata
 args
 GSO
+dilations
 telefonica
 exploid
 DCIM
@@ -384,8 +387,9 @@ conf
 nofork
 Pillai
 libGL
-AssertionsForJUnit
+RGB
 AssertionsForJunit
+AssertionsForJUnit
 dirs
 stdout
 pjson
@@ -403,6 +407,7 @@ RFS
 SAS
 lsmod
 numCols
+Peucker
 RDD's
 addShutdownHook
 sed
@@ -438,6 +443,7 @@ skb
 daysInMonth
 RPC
 realpython
+ROI
 deleteUserCommand
 subpart
 QNSTOP's
@@ -554,6 +560,7 @@ AnalyticsData
 GammaRay
 gpgDir
 russian
+erosions
 subprocess
 winternships
 cloudlets
@@ -699,6 +706,7 @@ Weinsberg
 RMPP
 sc
 strTok
+Jiang
 ps
 runtime
 sdcard
@@ -725,6 +733,7 @@ rx
 ss
 ui
 ethtool
+wearsys
 handoff
 su
 ul
@@ -756,6 +765,7 @@ natasha
 reduceByKey
 analytics
 mCamera
+PubSub
 endtag
 Pedersen
 ZW
@@ -800,6 +810,7 @@ multipart
 parseCalendars
 countrynames
 WalnutiQ
+dimensionality
 getStructure
 ShutdownHook
 decrypted
@@ -816,6 +827,7 @@ READMEs
 lurry
 VEVENT
 Satyanarayanan
+SPCL
 mwhite
 tikz
 TikZ
@@ -880,6 +892,7 @@ OpenMP
 openmp
 StackOverflow
 expr
+Gabriel's
 tempfile
 JARSIGNER
 DTSTART
@@ -984,6 +997,7 @@ PlaceHolder
 google
 sysroot
 GSO's
+convolutional
 WANs
 keystore
 nometa
@@ -1032,6 +1046,7 @@ Mergesort
 mergeSort
 deduplicating
 rightPos
+Iarussi
 apache
 midVal
 feeded
@@ -1071,6 +1086,7 @@ keytool
 assertEquals
 leftPosVar
 chmod
+omelette
 insmod
 intel
 Makefile's
@@ -1185,6 +1201,7 @@ parsedURL
 brandondamos
 Poynor
 u'sensor
+thresholding
 argparse
 optimizations
 countLines
@@ -1212,6 +1229,7 @@ LShift
 lshift
 wikia
 WPCM
+quantized
 tcpstreams
 NoSQL
 TimeInterval
@@ -1348,6 +1366,7 @@ DTEND
 checksumming
 ACM
 RuntimeException
+AED
 PowerEdge
 mkfs
 Qualstar
