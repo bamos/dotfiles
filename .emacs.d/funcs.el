@@ -27,3 +27,9 @@
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil))))))
 (global-set-key (kbd "C-c C-r") 'rename-file-and-buffer)
+
+;; http://stackoverflow.com/questions/20967818/
+(defun sort-lines-nocase()
+  (interactive)
+  (let ((sort-fold-case t))
+    (call-interactively 'sort-lines)))
