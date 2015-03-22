@@ -3,6 +3,7 @@ import System.Exit
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Layout.Grid
 import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
@@ -15,6 +16,7 @@ myLayout = avoidStruts (
         Tall 1 (3/100) (1/2) |||
         Mirror (Tall 1 (3/100) (1/2)) |||
         Full |||
+        Grid |||
         spiral (6/7)
     ) |||
     simpleFloat
