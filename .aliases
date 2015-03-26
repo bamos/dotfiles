@@ -108,3 +108,5 @@ alias tsh='tmux split-window -h'
 alias psgrep='ps aux | grep'
 
 alias clauncher='chromium --show-app-list'
+
+alias random-mac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'"
