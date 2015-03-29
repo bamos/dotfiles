@@ -29,6 +29,7 @@
     rfringe
     scala-mode2
     smooth-scroll
+    octave
     org
     popup
     powerline
