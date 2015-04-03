@@ -22,5 +22,7 @@ bind index,pager G group-reply
 set copy=yes
 set record=~/.mutt/sent
 set delete=no
-auto_view text/html
 unset markers # Don't show markers ('+') for wrapped lines.
+
+alternative_order text/plain text/html # Prefer text
+auto_view text/html
