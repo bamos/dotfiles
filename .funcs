@@ -147,3 +147,13 @@ dump-packages() {
 }
 
 unset -f die
+
+mkdir-mv() {
+  [[ $# == 2 ]] || return -1
+  mkdir -p $(dirname $2) && mv $1 $2
+}
+
+mkdir-cp() {
+  [[ $# == 2 ]] || return -1
+  mkdir -p $(dirname $2) && cp $1 $2
+}
