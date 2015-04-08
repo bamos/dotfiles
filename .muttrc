@@ -15,8 +15,8 @@ source ~/.mutt/contacts
 set query_command= "abook --mutt-query '%s'"
 macro index,pager A "<pipe-message>abook --add-email-quiet<return>" \
   "add the sender address to abook"
-#set attribution="Hi %n,\n\n\n\nRegards,\nBrandon.\n\nOn %d, %n <%a> wrote:"
-set attribution="On %d, %n <%a> wrote:"
+#set attribution="On %d, %n <%a> wrote:"
+set attribution="* %n :: %[%Y-%m-%d %H:%M %a]:"
 
 bind index,pager G group-reply
 set copy=yes
@@ -24,5 +24,7 @@ set record=~/.mutt/sent
 set delete=no
 unset markers # Don't show markers ('+') for wrapped lines.
 
-alternative_order text/plain text/html # Prefer text
+#alternative_order text/plain text/html # Prefer text
 auto_view text/html
+
+alternates (bdamos@vt\.edu|(bamos@(andrew\.)?cmu\.edu))
