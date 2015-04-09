@@ -66,3 +66,6 @@ zstyle ':completion:most-recent-file:*' hidden all
 zstyle ':completion:most-recent-file:*' completer _files
 zle -C most-recent-file menu-complete _generic
 bindkey "^N" most-recent-file
+
+export GPG_TTY=$(tty)
+export GPG_AGENT_INFO=$HOME/.gnupg/S.gpg-agent
