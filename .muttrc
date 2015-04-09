@@ -7,7 +7,7 @@ set edit_headers = yes
 source ~/.mutt/gmail
 source ~/.mutt/private
 source ~/.mutt/colors
-source ~/.mutt/crypto.sh|
+source ~/.mutt/crypto
 
 set postponed=~/.mutt/postponed
 set alias_file=~/.mutt/contacts

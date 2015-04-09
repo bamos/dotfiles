@@ -1,0 +1,24 @@
+set crypt_use_gpgme=yes
+
+set pgp_sign_as=0xB72D6B6F
+
+set pgp_timeout=6000
+set pgp_good_sign="^gpg: Good signature from"
+
+set crypt_autosign
+set crypt_replysign
+
+set crypt_replyencrypt=yes
+set crypt_replysignencrypted=yes
+
+set crypt_verify_sig=yes
+
+send-hook . 'reset pgp_autoencrypt'
+
+set pgp_auto_decode
+set crypt_autosign=yes
+set crypt_verify_sig=yes
+
+set crypt_replysign=yes
+set crypt_replyencrypt=yes
+set crypt_replysignencrypted=yes

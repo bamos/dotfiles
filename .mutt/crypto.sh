@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 # ~/.mutt/crypto.sh
 #
+# ---
+#
+# Note: This script is deprecated thanks to mutt's gpgme integration, which
+# I discoved through Henry Todd's (http://github.com/hjst) post:
+# http://henrytodd.org/notes/2014/simpler-gnupg-mutt-config-with-gpgme/
+#
+# ---
+#
 # Provide crypto functionality to mutt when used between
 # multiple computers with conflicting GnuPG versions.
 #
