@@ -86,5 +86,4 @@
 
 (require 'org)
 
-(require 'octave)
 (require 'puppet-mode)
