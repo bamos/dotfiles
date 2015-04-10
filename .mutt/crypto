@@ -16,9 +16,3 @@ set crypt_verify_sig=yes
 send-hook . 'reset pgp_autoencrypt'
 
 set pgp_auto_decode
-set crypt_autosign=yes
-set crypt_verify_sig=yes
-
-set crypt_replysign=yes
-set crypt_replyencrypt=yes
-set crypt_replysignencrypted=yes
