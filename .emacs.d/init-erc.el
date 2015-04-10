@@ -38,20 +38,32 @@
 
 (setq whitespace-global-modes '(not erc-mode))
 
+;; http://www.emacswiki.org/emacs/ErcAutoQuery
+(setq erc-auto-query 'buffer)
+(add-hook 'erc-after-connect
+          (lambda (server nick)
+            (add-hook 'erc-server-NOTICE-hook 'erc-auto-query)))
+
 (require 'erc-match)
 (setq erc-keywords '("bdamos"))
 
 (require 'erc-join)
 (erc-autojoin-mode 1)
+
+;; # Interesting channels
+;; ## freenode.net
+;;   "#android" "#android-dev" "#archlinux" "#archlinux-offtopic"
+;;   "#bash" "##c" "##c++" "##cclub" "#cslounge" "#emacs" "#erlang"
+;;   "#gentoo" "#git" "#github" "#haskell" "##hh" "##linux" "#MacOSX"
+;;   "#machinelearning" "#math" "#mutt" "#music" "#networking" "#programming"
+;;   "#python" "#ruby" "#scala" "#vim" "#xmonad" "#zsh"
+;; ## oftc.net
+;;   "#vtluug" "#tor" "#suckless"
 (setq erc-autojoin-channels-alist
-      '(("freenode.net"
-         "#android" "#android-dev"
-         "#archlinux" "#archlinux-offtopic"
-         "##cclub" "#cslounge"
-         "#emacs" "#github" "#haskell" "##linux"
-         "#machinelearning" "#math" "#mutt" "#music"
-         "#programming" "#python" "#scala" "#zsh")
-        ("oftc.net" "#vtluug")))
+      '(("freenode.net" "##cclub" "#cslounge" "#haskell" "#machinelearning"
+         "#math" "#mutt" "#music" "#perl" "#scala")
+        ("oftc.net" "#vtluug")
+        ("127.0.0.1" "&bitlbee")))
 
 (defun irc-maybe ()
   (interactive)
@@ -59,4 +71,6 @@
     (erc :server "irc.freenode.net" :port 6667
          :nick "bdamos" :full-name "Brandon Amos")
     (erc :server "irc.oftc.net" :port 6667
+         :nick "bdamos" :full-name "Brandon Amos")
+    (erc :server "127.0.0.1" :port 6667
          :nick "bdamos" :full-name "Brandon Amos")))
