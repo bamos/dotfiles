@@ -8,15 +8,15 @@ map f zoom width
 set adjust-open width
 # set font terminus 8
 
-set default-bg "#000000"
-set default-fg "#FFFFFF"
+# set default-bg "#000000"
+# set default-fg "#FFFFFF"
 
-set statusbar-bg "#000000"
-set statusbar-fg "#FFFFFF"
+# set statusbar-bg "#000000"
+# set statusbar-fg "#FFFFFF"
 
-set inputbar-bg "#000000"
-set inputbar-fg "#FFFFFF"
+# set inputbar-bg "#000000"
+# set inputbar-fg "#FFFFFF"
 
-set recolor-darkcolor "#FFFFFF"
-set recolor-lightcolor "#000000"
-set recolor true
+# set recolor-darkcolor "#FFFFFF"
+# set recolor-lightcolor "#000000"
+# set recolor true
