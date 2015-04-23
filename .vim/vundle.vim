@@ -29,7 +29,7 @@ Plugin 'tpope/vim-fugitive.git' " Git.
 " Writing/editing helpers.
 Plugin 'tpope/vim-commentary' " Easy commenting.
 Plugin 'tpope/vim-surround' " Quoting/parenthesizing made simple.
-Plugin 'bronson/vim-trailing-whitespace' " Mark and remove trailing whitespace.
+Plugin 'ntpeters/vim-better-whitespace' " Mark and remove trailing whitespace.
 Plugin 'tpope/vim-endwise.git' " Add 'end' in various languages.
 Plugin 'tpope/vim-speeddating' " Increment dates and times correctly.
 Plugin 'tpope/vim-abolish' " Search for, substitute, and abbreviate words.

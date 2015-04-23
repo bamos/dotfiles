@@ -10,11 +10,11 @@
 (setq erc-prompt-for-nickserv-password nil)
 (setq erc-nickserv-passwords
       `((freenode (("bdamos" . ,freenode-pass)))
-        (OFTC (("bdamos" . ,oftc-pass)))))
+        (OFTC (("bdamos" . ,oftc-pass)))
+        (127\.0\.0\.1 (("bdamos" . ,bitlbee-pass)))))
 (custom-set-variables
  '(erc-autojoin-timing 'ident)
  '(erc-autojoin-delay 10))
-(setq erc-auto-query 'buffer)
 
 (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
                                 "324" "329" "332" "333" "353" "477"))
@@ -22,11 +22,24 @@
 
 (setq erc-echo-notices-in-minibuffer-flag t)
 
+;; Logging
+(erc-log-mode t)
 (setq erc-log-insert-log-on-open nil)
 (setq erc-log-channels t)
 (setq erc-log-channels-directory "~/.irclogs/")
 (setq erc-save-buffer-on-part t)
 (setq erc-hide-timestamps nil)
+
+(defadvice save-buffers-kill-emacs (before save-logs (arg) activate)
+  (save-some-buffers t (lambda () (when (and (eq major-mode 'erc-mode)
+                                             (not (null buffer-file-name)))))))
+
+(add-hook 'erc-insert-post-hook 'erc-save-buffer-in-logs)
+(add-hook 'erc-mode-hook
+          '(lambda () (when (not (featurep 'xemacs))
+                        (set (make-variable-buffer-local
+                              'coding-system-for-write)
+                             'emacs-mule))))
 
 (add-to-list 'erc-mode-hook
              (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
@@ -60,8 +73,9 @@
 ;; ## oftc.net
 ;;   "#vtluug" "#tor" "#suckless"
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "##cclub" "#cslounge" "#haskell" "#machinelearning"
-         "#math" "#mutt" "#music" "#perl" "#scala")
+      '(("freenode.net" "##cs" "##computerscience" "##cclub" "#cslounge"
+         "#haskell" "#machinelearning"
+         "#math" "#mutt" "#music" "#perl" "#scala" "#statistics")
         ("oftc.net" "#vtluug")
         ("127.0.0.1" "&bitlbee")))
 
