@@ -94,16 +94,6 @@ memo() {
   echo "$*" | mail -n -s "$*" bamos@cmu.edu
 }
 
-lapack-install() {
-  wget http://www.netlib.org/lapack/lapack-3.5.0.tgz -O /tmp/lapack.tgz
-  tar xvfz /tmp/lapack.tgz -C ~
-  rm -f /tmp/lapack.tgz
-  cd ~/lapack-3.5.0
-  cp make.inc{.example,}
-  make -j8 lapacklib blaslib
-  ln -s $PWD/librefblas.a libblas.a
-}
-
 function stopwatch(){
   case $(uname) in
     "Linux") DATE=date ;;
@@ -145,7 +135,6 @@ alias gcloc='git-clonecd'
 sys-find() {
   find / -name $@ 2>/dev/null
 }
-
 
 dump-packages() {
   yaourt -Qe | cut -d ' ' -f 1 | sed 's/^.*\///'
