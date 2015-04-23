@@ -174,8 +174,8 @@ alias j='jobs'
 
 # Programs.
 mu() {
-  # TODO: Fix `read` for bash
-  read "REPLY?Is this important? "
+  echo "Is this important?"
+  read REPLY
   [[ $REPLY =~ ^[Yy]$ ]] && mutt
 }
 alias rsyncdir='rsync -azv --progress'
