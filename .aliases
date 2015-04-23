@@ -23,7 +23,11 @@ alias wh='which'
 alias j='jobs'
 
 # Programs.
-alias mu='mutt'
+#alias mu='mutt'
+mu() {
+  read "REPLY?Is this important? "
+  [[ $REPLY =~ ^[Yy]$ ]] && mutt
+}
 alias rsyncdir='rsync -azv --progress'
 alias bup='vim +BundleInstall +qall'
 alias bcl='vim +BundleClean +qall'
