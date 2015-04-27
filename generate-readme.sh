@@ -4,6 +4,13 @@ set -x -e +H
 cd "$(dirname "$0")"
 
 cat>README.md<<EOF
+<!--
+
+This README is auto-generated with generate-readme.sh
+Please add changes there.
+
+-->
+
 # About
 This repository contains configuration files I use on Mac and Linux systems
 which have been inspired by the rest of the dotfiles community.
