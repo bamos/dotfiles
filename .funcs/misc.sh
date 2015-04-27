@@ -1,13 +1,12 @@
-# .funcs.sh
-# Custom shell functions and aliases that can be sources from
-# bash or zsh.
+# .funcs/misc.sh
 #
-# Brandon Amos: http://bamos.github.io
-# 2015/04/23
+# Miscellaneous shell functions and aliases.
+# Source this directly or source env.sh for everything.
+#
+# Brandon Amos
+# http://bamos.github.io
+# 2015/04/27
 
-die() { echo $@; exit -1; }
-
-# Misc.
 rand-cd() {
   local DIRS; DIRS=$(find . -maxdepth 1 -type d | sed 's/\(.*\)/"\1"/g')
   local NUM_DIRS=$(echo $DIRS | wc -l)
@@ -41,23 +40,6 @@ nj() {
     sleep 1
   done
 }
-
-# Android.
-# TODO - Use ssh if available.
-musicToAndroid() {
-  { adb devices | grep "device$" &> /dev/null } \
-    || { echo "No devices found."; return; }
-  if [[ $(uname) == "Linux" ]]; then SORT=sort;
-  else SORT=gsort; fi
-  while read SONG; do
-    echo "Syncing $SONG."
-    #TODO - Get relative directory.
-    adb push $SONG /sdcard/Music &> /dev/null
-    [[ $? != 0 ]] && echo " + Failed."
-  done < <(find $* -type f | $SORT -R)
-  unset SORT
-}
-alias m2a='musicToAndroid'
 
 # Docker.
 docker-clean() {
@@ -150,7 +132,6 @@ mkdir-cp() {
   mkdir -p $(dirname $2) && cp $1 $2
 }
 
-# Utilities and tools.
 alias c='clear'
 alias chax='chmod a+x'
 alias h='hostname'
@@ -172,7 +153,6 @@ alias grive='grive -p ~/grive'
 alias wh='which'
 alias j='jobs'
 
-# Programs.
 mu() {
   echo "Is this important?"
   read REPLY
@@ -183,40 +163,16 @@ alias rsyncdir='rsync -azv --progress'
 alias bup='vim +BundleInstall +qall'
 alias bcl='vim +BundleClean +qall'
 
-# Music.
-alias sync-music='rsyncdir $HOME/docs/music/ dijkstra:~/mnt/usb/music/'
-alias remove-tags='eyeD3 --remove-all'
-alias add-tags='picard'
-alias get-tags='exiftool -json'
-
-# Android.
-alias pullimages="adb pull /storage/sdcard0/DCIM/Camera ."
-
-# Git. Prefer these to git aliases for brevity.
-alias g='git'
-alias ga='git add'
-alias gc='git commit'
-alias gclo='git clone'
-alias gl='git pull'
-alias gup='git pull --rebase'
-alias gp='git push'
-alias gpsuom='git push --set-upstream origin master'
-alias gsr='git svn rebase'
-alias gsd='git svn dcommit'
-alias gu="git reset --soft 'HEAD^'"
-
 alias pw='pwgen --numerals --symbols --ambiguous 15 1'
 
-alias count-frames=$'grep -c \'^\\(\\\\frame{\\|\\\\begin{frame}\\\)\''
 alias tmux='tmux -2'
+alias ts='tmux split-window'
+alias tsh='tmux split-window -h'
 
 alias f='sudo $(fc -ln -1)'
 
 alias emacsd='emacs --daemon'
 alias e='emacsclient -nw'
-
-alias ts='tmux split-window'
-alias tsh='tmux split-window -h'
 
 alias psgrep='ps aux | grep'
 
@@ -224,49 +180,6 @@ alias clauncher='chromium --show-app-list'
 
 alias random-mac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'"
 
-# OS and distro-specific aliases.
-case $(uname) in
-  "Linux")
-    alias m="make -j$(cat /proc/cpuinfo | grep -c processor)"
-    alias za='zathura'
-    alias less='/usr/share/vim/vim74/macros/less.sh'
-    alias vim='vim -p'
-    if command -v lsb_release &> /dev/null; then
-      case $(lsb_release -s -i) in
-        "Arch")
-          alias y='yaourt'
-          alias ys='yaourt -S --noconfirm'
-          alias yr='yaourt -R --noconfirm'
-          alias up='yaourt -Syua'
-          alias yup='up --noconfirm'
-          alias i-int='ip address show wlp3s0'
-        ;;
-        "Ubuntu")
-          alias agi='_ apt-get install -y'
-          alias agr='_ apt-get remove -y'
-          alias aup='_ apt-get update; _ apt-get upgrade;'
-          alias acs='apt-cache search'
-          alias chromium='chromium-browser'
-        ;;
-      esac
-    fi
-  ;;
-  "Darwin")
-    alias m="make -j8"
-    #alias full-emacs="$HOME/Applications/Emacs.app/Contents/MacOS/Emacs"
-    #alias emacsclient="$HOME/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
-    alias brup='brew update; brew upgrade'
-    alias bri='brew install'
-    alias brun='brew uninstall'
-    alias i-int='ipconfig getifaddr en0'
-    if command -v mvim > /dev/null 2>&1; then
-      alias less='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/Resources/vim/runtime/macros/less.sh'
-      alias vim='mvim -v -p'
-    fi
-    alias za='Skim'
-    alias open-wallpaper='open $(get-osx-wallpaper.py)'
-    alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
-  ;;
-esac
-
-unset -f die
+alias remove-tags='eyeD3 --remove-all'
+alias add-tags='picard'
+alias get-tags='exiftool -json'

@@ -21,7 +21,7 @@ unset REPOS
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Source external files.
-[[ -a ~/.funcs.sh ]] && source ~/.funcs.sh
+[[ -a ~/.funcs/env.sh ]] && source ~/.funcs/env.sh
 [[ -a ~/.private ]] && source ~/.private
 [[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
 

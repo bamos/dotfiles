@@ -44,27 +44,11 @@ This shell script will possibly be migrated to [GNU Stow][stow] in the future
 [stow]: http://www.gnu.org/software/stow/
 
 
-# Shell functions and aliases.
-The following is a summary of custom Bash and zsh functions and
-aliases contained in [.funcs][funcs] and [.aliases][aliases].
+# Custom shell functions and aliases.
+See [env.sh][env.sh] in the [.funcs][funcs] directory.
 
 [funcs]: https://github.com/bamos/dotfiles/blob/master/.funcs
-[aliases]: https://github.com/bamos/dotfiles/blob/master/.aliases
-
-## Functions
-EOF
-
-grep '()' .funcs | sed -e 's/\(.*\)().*/+ \1/g' >> README.md
-
-cat>>README.md<<EOF
-
-## Aliases
-| Alias | Definition |
-|---|---|
-EOF
-grep 'alias .*=' .funcs .aliases | \
-  sed -e "s/.*alias \(.*\)=\(.*\)/\1 | \2/g" | \
-  sort >> README.md
+[env.sh]: https://github.com/bamos/dotfiles/blob/master/.funcs/env.sh
 
 cat>>README.md<<EOF
 # Similar Projects and Inspiration
