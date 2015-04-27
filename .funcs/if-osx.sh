@@ -21,4 +21,4 @@ if command -v mvim > /dev/null 2>&1; then
 fi
 alias za='Skim'
 alias open-wallpaper='open $(get-osx-wallpaper.py)'
-alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
+# alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
