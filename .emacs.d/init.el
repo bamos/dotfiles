@@ -75,9 +75,6 @@
 
 (setq compilation-scroll-output 'first-error)
 
-(setq auto-mode-alist (append '((".aliases" . shell-mode)) auto-mode-alist))
-(setq auto-mode-alist (append '((".funcs" . shell-mode)) auto-mode-alist))
-
 (add-hook 'python-mode-hook (lambda() (
   (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
