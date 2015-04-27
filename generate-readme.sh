@@ -50,7 +50,6 @@ See [env.sh][env.sh] in the [.funcs][funcs] directory.
 [funcs]: https://github.com/bamos/dotfiles/blob/master/.funcs
 [env.sh]: https://github.com/bamos/dotfiles/blob/master/.funcs/env.sh
 
-cat>>README.md<<EOF
 # Similar Projects and Inspiration
 There are many approaches to managing dotfiles on GitHub
 that have inspired this repository, and this project
