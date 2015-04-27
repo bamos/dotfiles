@@ -176,7 +176,7 @@ alias j='jobs'
 mu() {
   # TODO: Fix `read` for bash
   read "REPLY?Is this important? "
-  [[ $REPLY =~ ^[Yy]$ ]] && mutt
+  [[ $REPLY =~ ^[Yy]$ ]] && mutt $*
 }
 alias rsyncdir='rsync -azv --progress'
 alias bup='vim +BundleInstall +qall'
