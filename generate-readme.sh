@@ -45,10 +45,9 @@ This shell script will possibly be migrated to [GNU Stow][stow] in the future
 
 
 # Custom shell functions and aliases.
-See [env.sh][env.sh] in the [.funcs][funcs] directory.
+See the [.funcs][funcs] directory.
 
 [funcs]: https://github.com/bamos/dotfiles/blob/master/.funcs
-[env.sh]: https://github.com/bamos/dotfiles/blob/master/.funcs/env.sh
 
 # Similar Projects and Inspiration
 There are many approaches to managing dotfiles on GitHub
