@@ -1,5 +1,7 @@
 # ~/.zshrc
-# Brandon Amos <http://bamos.io>
+#
+# Brandon Amos
+# http://bamos.github.io
 
 # Add additional directories to the path.
 pathadd() {
@@ -20,11 +22,6 @@ unset REPOS
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# Source external files.
-[[ -a ~/.funcs/env.sh ]] && source ~/.funcs/env.sh
-[[ -a ~/.private ]] && source ~/.private
-[[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
-
 # Initialize oh-my-zsh.
 DISABLE_AUTO_UPDATE='true';
 ZSH_THEME=sammy; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
@@ -32,11 +29,12 @@ ZSH_THEME=sammy; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 plugins=(vi-mode git history-substring-search fabric z)
 source $ZSH/oh-my-zsh.sh
 
-# Environment variables.
-if [[ $(uname) == "Darwin" ]]; then
-  # Overwrite oh-my-zsh's default 'ls' alias.
-  alias ls='gls -G --color=tty'
-fi
+# Source external files.
+# After oh-my-zsh initialization to override defaults.
+[[ -a ~/.funcs/env.sh ]] && source ~/.funcs/env.sh
+[[ -a ~/.private ]] && source ~/.private
+[[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
+
 export LS_COLORS='di=38;5;108:fi=00:ln=38;5;116:ex=38;5;186'
 export LSCOLORS='ExGxFxdxCxEgEdHbagacad'
 export EDITOR="emacsclient -nw"
