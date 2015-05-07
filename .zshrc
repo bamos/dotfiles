@@ -10,6 +10,7 @@ PATH=/usr/local/bin":$PATH" # Prefer brew packages.
 pathadd /opt/local/bin
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
+pathadd $HOME/.cabal/bin
 REPOS=$HOME/repos
 pathadd $REPOS/shell-scripts
 pathadd $REPOS/python-scripts/python2.7
