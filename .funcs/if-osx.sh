@@ -22,3 +22,5 @@ fi
 alias za='Skim'
 alias open-wallpaper='open $(get-osx-wallpaper.py)'
 # alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
+
+alias ls='gls -G --color=tty'
