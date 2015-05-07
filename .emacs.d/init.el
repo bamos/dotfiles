@@ -78,8 +78,8 @@
 (add-hook 'python-mode-hook (lambda() (
   (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
-(add-hook 'haskell-mode-hook
-          (lambda() ((turn-on-haskell-doc-mode)(turn-on-haskell-indentation))))
+(require 'haskell-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
 (require 'org)
 
