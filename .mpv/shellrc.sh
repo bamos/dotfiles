@@ -21,3 +21,5 @@ playdir() {
   fi
 }
 alias pd='playdir'
+
+alias random-mpv="find . -type f  | shuf | head -n 1 | xargs mpv"
