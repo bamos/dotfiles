@@ -6,7 +6,7 @@ alias mpvshuf='mpvnova --shuffle --loop inf'
 alias mpvp='mpvshuf --playlist'
 
 playcurrentdir() {
-  mpvp <(find "$PWD" -type f -follow)
+  mpvp <(find "$PWD" -type f -follow -not -path '*/\.*')
 }
 alias pcd='playcurrentdir'
 
@@ -16,7 +16,7 @@ playdir() {
   else
     if [[ $(uname) == "Linux" ]]; then READLINK=readlink;
     else READLINK=greadlink; fi
-    mpvshuf --playlist <(find "$@" -type f -follow -exec $READLINK -f {} \;)
+    mpvshuf --playlist <(find "$@" -type f -follow -exec $READLINK -f {} -not -path '*/\.*'\;)
     unset READLINK
   fi
 }
