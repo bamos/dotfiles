@@ -16,7 +16,7 @@ playdir() {
   else
     if [[ $(uname) == "Linux" ]]; then READLINK=readlink;
     else READLINK=greadlink; fi
-    mpvshuf --playlist <(find "$@" -type f -follow -exec $READLINK -f {} -not -path '*/\.*'\;)
+    mpvshuf --playlist <(find "$@" -type f -follow -not -path '*/\.*' -exec $READLINK -f {} \;)
     unset READLINK
   fi
 }
