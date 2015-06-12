@@ -153,11 +153,12 @@ alias grive='grive -p ~/grive'
 alias wh='which'
 alias j='jobs'
 
-mu() {
-  echo "Is this important?"
-  read REPLY
-  [[ $REPLY =~ ^[Yy]$ ]] && mutt $*
-}
+alias mu='mutt'
+# mu() {
+#   echo "Is this important?"
+#   read REPLY
+#   [[ $REPLY =~ ^[Yy]$ ]] && mutt $*
+# }
 
 alias rsyncdir='rsync -azv --progress'
 alias bup='vim +BundleInstall +qall'
