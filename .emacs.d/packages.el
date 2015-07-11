@@ -37,6 +37,7 @@
     puppet-mode
     python-mode
     w3m
+    web-mode
     xclip
     yaml-mode
     zenburn-theme

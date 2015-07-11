@@ -14,6 +14,7 @@
 (load-user-file "init-ess.el")
 (load-user-file "init-evil.el")
 (load-user-file "init-w3m.el")
+(load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
 (load-user-file "mail.el")
 (load-user-file "funcs.el")
