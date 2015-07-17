@@ -7,8 +7,11 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file user-init-dir)))
 
-(load-user-file "packages.el")
 (load-user-file "clipboard.el")
+(load-user-file "funcs.el")
+(load-user-file "mail.el")
+(load-user-file "packages.el")
+
 (load-user-file "init-auctex.el")
 (load-user-file "init-ensime.el")
 (load-user-file "init-ess.el")
@@ -16,8 +19,6 @@
 (load-user-file "init-w3m.el")
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
-(load-user-file "mail.el")
-(load-user-file "funcs.el")
 
 (when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
 
