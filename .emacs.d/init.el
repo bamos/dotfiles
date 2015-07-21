@@ -7,10 +7,11 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file user-init-dir)))
 
+(load-user-file "packages.el")
+
 (load-user-file "clipboard.el")
 (load-user-file "funcs.el")
 (load-user-file "mail.el")
-(load-user-file "packages.el")
 
 (load-user-file "init-auctex.el")
 (load-user-file "init-ensime.el")
