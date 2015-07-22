@@ -14,10 +14,10 @@ playdir() {
   if [[ $# == 0 ]]; then
     echo "playdir requires one or more directories on input."
   else
-    if [[ $(uname) == "Linux" ]]; then READLINK=readlink;
-    else READLINK=greadlink; fi
-    mpvshuf --playlist <(find "$@" -type f -follow -not -path '*/\.*' -exec $READLINK -f {} \;)
-    unset READLINK
+    TMP=$(mktemp .mpv.XXX) # Must be in current dir for relative paths.
+    find "$@" -type f -follow -not -path '*/\.*' > $TMP
+    mpvp $TMP
+    rm $TMP
   fi
 }
 alias pd='playdir'
