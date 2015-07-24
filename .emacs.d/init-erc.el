@@ -10,8 +10,8 @@
 (setq erc-prompt-for-nickserv-password nil)
 (setq erc-nickserv-passwords
       `((freenode (("bdamos" . ,freenode-pass)))
-        (OFTC (("bdamos" . ,oftc-pass)))
-        (127\.0\.0\.1 (("bdamos" . ,bitlbee-pass)))))
+        (OFTC (("bdamos" . ,oftc-pass)))))
+        ;; (127\.0\.0\.1 (("bdamos" . ,bitlbee-pass)))))
 (custom-set-variables
  '(erc-autojoin-timing 'ident)
  '(erc-autojoin-delay 10))
@@ -76,8 +76,8 @@
       '(("freenode.net" "##cs" "##computerscience" "##cclub" "#cslounge"
          "#haskell" "#machinelearning"
          "#math" "#mutt" "#music" "#perl" "#scala" "#statistics")
-        ("oftc.net" "#vtluug")
-        ("127.0.0.1" "&bitlbee")))
+        ("oftc.net" "#vtluug")))
+        ;; ("127.0.0.1" "&bitlbee")))
 
 (defun irc-maybe ()
   (interactive)
@@ -85,6 +85,6 @@
     (erc :server "irc.freenode.net" :port 6667
          :nick "bdamos" :full-name "Brandon Amos")
     (erc :server "irc.oftc.net" :port 6667
-         :nick "bdamos" :full-name "Brandon Amos")
-    (erc :server "127.0.0.1" :port 6667
          :nick "bdamos" :full-name "Brandon Amos")))
+    ;; (erc :server "127.0.0.1" :port 6667
+         ;; :nick "bdamos" :full-name "Brandon Amos")))
