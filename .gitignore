@@ -8,8 +8,9 @@
 .gnupg/*
 !.gnupg/gpg.conf
 .mutt/private
-.mutt/contacts
 .mutt/cache
+.mutt/certificates
+.mutt/contacts
 .mutt/postponed
 .mutt/sent
 .sbt/*
