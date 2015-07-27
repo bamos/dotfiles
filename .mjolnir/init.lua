@@ -1,8 +1,11 @@
+-- Inspired by https://github.com/Linell/mjolnir-config
+
+local alert = require "mjolnir.alert"
+local audiodevice = require "mjolnir._asm.sys.audiodevice"
 local application = require "mjolnir.application"
 local window = require "mjolnir.window"
 local hotkey = require "mjolnir.hotkey"
 local fnutils = require "mjolnir.fnutils"
--- local alert = require "mjolnir.alert"
 local grid = require "mjolnir.bg.grid"
 local cmus = require "cmus"
 
@@ -51,3 +54,28 @@ hotkey.bind(mash, 'l', grid.resizewindow_thinner)
 hotkey.bind(mash, 'space', cmus.play)
 hotkey.bind(mash, 'left', cmus.previous)
 hotkey.bind(mash, 'right', cmus.next)
+
+local function showTime()
+   alert.show(os.date("%A %b %d, %Y - %I:%M%p"), 4)
+end
+
+hotkey.bind(mashshift, 'T', showTime)
+
+local function bumpVolume(amount)
+   local vol = audiodevice.current().volume
+   if (vol == 0 and amount < 0) then
+      audiodevice.defaultoutputdevice():setmuted(true)
+   else
+      audiodevice.defaultoutputdevice():setmuted(false)
+      audiodevice.defaultoutputdevice():setvolume(vol + amount)
+   end
+end
+
+local function toggleMute()
+   local isMuted = audiodevice.defaultoutputdevice():muted()
+   audiodevice.defaultoutputdevice():setmuted(not isMuted)
+end
+
+hotkey.bind(mash, 'up', function() bumpVolume(1) end)
+hotkey.bind(mash, 'down', function() bumpVolume(-1) end)
+hotkey.bind(mash, 'm', toggleMute)
