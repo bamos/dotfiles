@@ -20,7 +20,6 @@ grid.MARGINY = 0
 hotkey.bind(mash, 'd', function() application.launchorfocus("Dictionary") end)
 
 hotkey.bind(mash, '-', function() grid.snap(window.focusedwindow()) end)
--- hotkey.bind(mash, "-", function() fnutils.map(window.visiblewindows(), grid.snap) end)
 
 hotkey.bind(mash, ']', function() grid.adjustwidth( 1) end)
 hotkey.bind(mash, '[', function() grid.adjustwidth(-1) end)
@@ -36,10 +35,10 @@ hotkey.bind(mashshift, 'up', function()
 hotkey.bind(mashshift, 'down', function()
   window.focusedwindow():focuswindow_south() end)
 
--- hotkey.bind(mash, 'm', grid.maximize_window)
+hotkey.bind(mashshift, 'm', grid.maximize_window)
 
--- hotkey.bind(mash, 'N', grid.pushwindow_nextscreen)
--- hotkey.bind(mash, 'P', grid.pushwindow_prevscreen)
+hotkey.bind(mashshift, 'N', grid.pushwindow_nextscreen)
+hotkey.bind(mashshift, 'P', grid.pushwindow_prevscreen)
 
 hotkey.bind(mash, 'h', grid.pushwindow_down)
 hotkey.bind(mash, 't', grid.pushwindow_up)
