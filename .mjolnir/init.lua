@@ -62,17 +62,19 @@ hotkey.bind(mashshift, 'T', showTime)
 
 local function bumpVolume(amount)
    local vol = audiodevice.current().volume
+   local dev = audiodevice.defaultoutputdevice()
    if (vol == 0 and amount < 0) then
-      audiodevice.defaultoutputdevice():setmuted(true)
+      dev:setmuted(true)
    else
-      audiodevice.defaultoutputdevice():setmuted(false)
-      audiodevice.defaultoutputdevice():setvolume(vol + amount)
+      dev:setmuted(false)
+      dev:setvolume(vol + amount)
    end
 end
 
 local function toggleMute()
-   local isMuted = audiodevice.defaultoutputdevice():muted()
-   audiodevice.defaultoutputdevice():setmuted(not isMuted)
+   local dev = audiodevice.defaultoutputdevice()
+   local isMuted = dev:muted()
+   dev:setmuted(not isMuted)
 end
 
 hotkey.bind(mash, 'up', function() bumpVolume(1) end)
