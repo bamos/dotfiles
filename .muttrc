@@ -28,3 +28,5 @@ unset markers # Don't show markers ('+') for wrapped lines.
 auto_view text/html
 
 alternates (bdamos@vt\.edu|(bamos@(andrew\.)?cmu\.edu))
+
+bind index "^" imap-fetch-mail
