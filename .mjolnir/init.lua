@@ -1,4 +1,6 @@
 -- Inspired by https://github.com/Linell/mjolnir-config
+--
+-- Keybindings are in Dvorak.
 
 local alert = require "mjolnir.alert"
 local audiodevice = require "mjolnir._asm.sys.audiodevice"
@@ -26,14 +28,18 @@ hotkey.bind(mash, '[', function() grid.adjustwidth(-1) end)
 hotkey.bind(mashshift, ']', function() grid.adjustheight(1) end)
 hotkey.bind(mashshift, '[', function() grid.adjustheight(-1) end)
 
-hotkey.bind(mashshift, 'left', function()
-  window.focusedwindow():focuswindow_west() end)
-hotkey.bind(mashshift, 'right', function()
-  window.focusedwindow():focuswindow_east() end)
-hotkey.bind(mashshift, 'up', function()
-  window.focusedwindow():focuswindow_north() end)
-hotkey.bind(mashshift, 'down', function()
-  window.focusedwindow():focuswindow_south() end)
+
+function focus(f)
+  return function()
+    local w = window.focusedwindow()
+    f(w)
+  end
+end
+
+hotkey.bind(mashshift, 'left', focus(function(w) w:focuswindow_west() end))
+hotkey.bind(mashshift, 'right', focus(function(w) w:focuswindow_east() end))
+hotkey.bind(mashshift, 'up', focus(function(w) w:focuswindow_north() end))
+hotkey.bind(mashshift, 'down', focus(function(w) w:focuswindow_south() end))
 
 hotkey.bind(mashshift, 'm', grid.maximize_window)
 
@@ -55,28 +61,30 @@ hotkey.bind(mash, 'left', cmus.previous)
 hotkey.bind(mash, 'right', cmus.next)
 
 local function showTime()
-   alert.show(os.date("%A %b %d, %Y - %I:%M%p"), 4)
+  alert.show(os.date("%A %b %d, %Y - %I:%M%p"), 4)
 end
 
 hotkey.bind(mashshift, 'T', showTime)
 
 local function bumpVolume(amount)
-   local vol = audiodevice.current().volume
-   local dev = audiodevice.defaultoutputdevice()
-   if (vol == 0 and amount < 0) then
+  return function()
+    local vol = audiodevice.current().volume
+    local dev = audiodevice.defaultoutputdevice()
+    if (vol == 0 and amount < 0) then
       dev:setmuted(true)
-   else
+    else
       dev:setmuted(false)
       dev:setvolume(vol + amount)
-   end
+    end
+  end
 end
 
 local function toggleMute()
-   local dev = audiodevice.defaultoutputdevice()
-   local isMuted = dev:muted()
-   dev:setmuted(not isMuted)
+  local dev = audiodevice.defaultoutputdevice()
+  local isMuted = dev:muted()
+  dev:setmuted(not isMuted)
 end
 
-hotkey.bind(mash, 'up', function() bumpVolume(1) end)
-hotkey.bind(mash, 'down', function() bumpVolume(-1) end)
+hotkey.bind(mash, 'up', bumpVolume(1))
+hotkey.bind(mash, 'down', bumpVolume(-1))
 hotkey.bind(mash, 'm', toggleMute)
