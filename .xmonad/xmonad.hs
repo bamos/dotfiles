@@ -40,8 +40,8 @@ _config = defaultConfig {
   , ((_mod, xK_Left), spawn "cmus-remote -r")
   , ((_mod, xK_u), spawn "cmus-remote -u")
   , ((_mod, xK_b), sendMessage ToggleStruts)
-  , ((_mod, xK_g), spawn "setxkbmap us")
-  , ((_mod, xK_v), spawn "setxkbmap dvorak")
+  , ((_mod, xK_g), spawn "setxkbmap us; xmodmap ~/.Xmodmap")
+  , ((_mod, xK_v), spawn "setxkbmap dvorak; xmodmap ~/.Xmodmap")
   ]
 
 main = do
