@@ -1,7 +1,7 @@
 # shellrc.sc
 # Source this to add additional shell features for mpv.
 
-alias mpvnova='mpv --no-video --input-unix-socket=/tmp/mpv-socket'
+alias mpvnova='mpv --no-video'
 alias mpvshuf='mpvnova --shuffle --loop inf'
 alias mpvp='mpvshuf --playlist'
 
