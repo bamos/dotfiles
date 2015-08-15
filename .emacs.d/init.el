@@ -1,3 +1,5 @@
+; (package-initialize)
+
 (defconst user-init-dir (cond
   ((boundp 'user-emacs-directory) user-emacs-directory)
   ((boundp 'user-init-directory) user-init-directory)
