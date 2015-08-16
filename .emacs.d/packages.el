@@ -1,8 +1,8 @@
 (require 'package)
-(push '("marmalade" . "http://marmalade-repo.org/packages/") package-archives )
-(push '("melpa" . "http://melpa.milkbox.net/packages/") package-archives)
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
-(when (not package-archive-contents) (package-refresh-contents))
 
 (defvar required-packages '(
     auctex
@@ -47,4 +47,5 @@
 
 (dolist (p required-packages)
   (when (not (package-installed-p p))
+    (package-refresh-contents)
     (package-install p)))
