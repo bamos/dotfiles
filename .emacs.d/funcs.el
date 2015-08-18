@@ -33,3 +33,8 @@
   (interactive)
   (let ((sort-fold-case t))
     (call-interactively 'sort-lines)))
+
+;; http://www.emacswiki.org/emacs/KillingBuffers#toc2
+(defun kill-other-buffers ()
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
