@@ -1,4 +1,4 @@
-.aria2/dht.dat
+.aria2/dht.dat*
 .emacs.d/auto-save-list
 .emacs.d/network-security.data
 .emacs.d/elpa
