@@ -16,6 +16,7 @@ cask install android-studio eclipse-java
 cask install dia
 cask install google-chrome firefox
 cask install github
+cask install insomniax
 cask install java
 cask install kid3
 cask install mactex
