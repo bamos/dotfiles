@@ -1,86 +1,100 @@
 # .Brewfile
-# Install brew packages on a new system with `brew bundle ~/.Brewfile`.
+#
+# Uses: https://github.com/Homebrew/homebrew-bundle
+# Run with: brew bundle --file=$HOME/.Brewfile
+#
+# Brandon Amos <http://bamos.github.io>
 
-tap laurent22/massren
-install massren
+tap 'laurent22/massren'
+brew 'massren'
 
-tap mpv-player/mpv
-install mpv
+tap 'mpv-player/mpv'
+brew 'mpv'
 
-brew tap homebrew/science
-brew install r
+tap 'homebrew/science'
+brew 'r'
 
-tap caskroom/cask
-install brew-cask
-cask install android-studio eclipse-java
-cask install dia
-cask install google-chrome firefox
-cask install github
-cask install insomniax
-cask install java
-cask install kid3
-cask install mactex
-cask install musicbrainz-picard
-cask install music-manager radiant-player
-cask install RStudio
-cask install seil
-cask install silverlight
-cask install skim
-cask install skype
-cask install sublime-text
-cask install synergy
-cask install tikz-editor
-cask install torbrowser
-cask install vagrant
-cask install xquartz
-cask install xtrafinder
+tap 'caskroom/cask'
+brew 'brew-cask'
+cask 'android-studio'
+cask 'eclipse-java'
+cask 'dia'
+cask 'google-chrome'
+cask 'firefox'
+cask 'github'
+cask 'insomniax'
+cask 'java'
+cask 'kid3'
+cask 'mactex'
+cask 'musicbrainz-picard'
+cask 'music-manager'
+cask 'radiant-player'
+cask 'RStudio'
+cask 'seil'
+cask 'silverlight'
+cask 'skim'
+cask 'skype'
+cask 'sublime-text'
+cask 'synergy'
+cask 'tikz-editor'
+cask 'torbrowser'
+cask 'vagrant'
+cask 'xquartz'
+cask 'xtrafinder'
 
-install ant
-install android-ndk android-sdk
-install aria2
-install autossh
-install cloc
-install coreutils
-install cvs
-install dos2unix
-install emacs --cocoa --with-gnutls
-install exiftool
-install fdupes
-install ffmpeg
-install foremost
-install gcc homebrew/dupes/gdb
-install git hub
-install glew
-install gnupg gnupg2
-install heroku-toolbelt
-install htop
-install imagemagick
-#install lilypond
-install lua
-install macvim
-install markdown
-install mosh
-#install mutt
-install ncdu
-install netcat
-install nmap
-install npm
-install pass pwgen
-install python python3
-install reattach-to-user-namespace
-install rubber
-install sbt scala
-install sshfs
-install sox
-install tcpdump
-install terminal-notifier
-install the_silver_searcher
-install timidity
-install tmux
-install tor
-install tree
-install unrar
-install watch
-install wget
-install youtube-dl
-install zsh
+brew 'ant'
+brew 'android-ndk'
+brew 'android-sdk'
+brew 'aria2'
+brew 'autossh'
+brew 'cloc'
+brew 'coreutils'
+brew 'cvs'
+brew 'dos2unix'
+brew 'emacs', args: ['with-cocoa', 'with-gnutls']
+brew 'exiftool'
+brew 'fdupes'
+brew 'ffmpeg'
+brew 'foremost'
+brew 'gcc'
+brew 'homebrew/dupes/gdb'
+brew 'git'
+brew 'hub'
+brew 'glew'
+brew 'gnupg'
+brew 'gnupg2'
+brew 'heroku-toolbelt'
+brew 'htop'
+brew 'imagemagick'
+#brew 'lilypond'
+brew 'lua'
+brew 'macvim'
+brew 'markdown'
+brew 'mosh'
+#brew 'mutt'
+brew 'ncdu'
+brew 'netcat'
+brew 'nmap'
+brew 'npm'
+brew 'pass'
+brew 'pwgen'
+brew 'python'
+brew 'python3'
+brew 'reattach-to-user-namespace'
+brew 'rubber'
+brew 'sbt'
+brew 'scala'
+brew 'sshfs'
+brew 'sox'
+brew 'tcpdump'
+brew 'terminal-notifier'
+brew 'the_silver_searcher'
+brew 'timidity'
+brew 'tmux'
+brew 'tor'
+brew 'tree'
+brew 'unrar'
+brew 'watch'
+brew 'wget'
+brew 'youtube-dl'
+brew 'zsh'
