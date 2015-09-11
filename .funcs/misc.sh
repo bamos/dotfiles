@@ -132,6 +132,11 @@ mkdir-cp() {
   mkdir -p $(dirname $2) && cp $1 $2
 }
 
+# http://stackoverflow.com/a/21096209/1381755
+ls-by-files() {
+  find . -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n
+}
+
 alias c='clear'
 alias chax='chmod a+x'
 alias h='hostname'
