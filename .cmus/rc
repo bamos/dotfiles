@@ -3,3 +3,4 @@ colorscheme gems
 fset electronic=genre="Electronic"|genre="House"|genre="Electro"|genre="Trance"|genre="Dance"|genre="Pop"|artist="Avicii"
 fset symphonic=genre="Symphonic"|genre="Classical"
 fset country=genre="Country"
+fset bluegrass=genre="Bluegrass"
