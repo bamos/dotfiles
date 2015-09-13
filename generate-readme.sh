@@ -68,6 +68,34 @@ See the [.funcs][funcs] directory.
 
 [funcs]: https://github.com/bamos/dotfiles/blob/master/.funcs
 
+# What programs do these configure?
+<!-- TODO: Make this easier to maintain. -->
++ Misc Linux config: [.xinitrc](/.xinitrc), [.Xmodmap](/.Xmodmap),
+  [.Xresources](/.Xresources)
++ [aria2](https://github.com/tatsuhiro-t/aria2): [.aria2](/.aria2)
++ [cmus](https://cmus.github.io/): [.cmus](/.cmus)
++ [conky](https://wiki.archlinux.org/index.php/Conky): [.conkyrc](/.conkyrc)
++ [emacs](https://www.gnu.org/software/emacs/): [.emacs.d](/.emacs)
++ [git](https://git-scm.com/): [.gitignore_global](/.gitignore_global)
++ [GNU aspell](aspell.net): [.aspell.en.pws](/.aspell.en.pws)
++ [GPG](https://www.gnupg.org): [.gnupg](/.gnupg)
++ [homebrew](http://brew.sh/): [.Brewfile](/.Brewfile)
++ [i3wm](https://i3wm.org/): [.i3](/.i3)
++ [ispell](https://www.gnu.org/software/ispell/): [.ispell_english](/.ispell_english)
++ [mjolnir](https://github.com/sdegutis/mjolnir): [.mjolnir](/.mjolnir)
++ [mpv](http://mpv.io): [.mpv](/.mpv)
++ [mutt](http://www.mutt.org): [.mutt](/.mutt) and [.muttrc](/.muttrc)
++ [sbt](http://www.scala-sbt.org): [.sbt](/.sbt)
++ [screen](https://www.gnu.org/software/screen/): [.screenrc](/.screenrc)
++ [tmux](https://tmux.github.io/): [.tmux.conf](/.tmux.conf) and
+  [.tmux-osx.conf](/.tmux-osx.conf)
++ [vim](http://www.vim.org/): [.vim](/.vim)
++ [xmonad](http://xmonad.org): [.xmonad](/.xmonad)
++ [yaourt](https://github.com/archlinuxfr/yaourt): [.yaourt](/.yaourt)
++ [zsh](http://www.zsh.org): [.zshrc](/.zshrc), [.zshenv](/.zshenv),
+  [.zsh-custom](/.zsh-custom), [.funcs](/.funcs), and [.oh-my-zsh](/.oh-my-zsh).
+
+cat>>README.md<<EOF
 # Similar Projects and Inspiration
 There are many approaches to managing dotfiles on GitHub
 that have inspired this repository, and this project
