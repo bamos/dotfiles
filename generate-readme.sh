@@ -95,7 +95,6 @@ See the [.funcs][funcs] directory.
 + [zsh](http://www.zsh.org): [.zshrc](/.zshrc), [.zshenv](/.zshenv),
   [.zsh-custom](/.zsh-custom), [.funcs](/.funcs), and [.oh-my-zsh](/.oh-my-zsh).
 
-cat>>README.md<<EOF
 # Similar Projects and Inspiration
 There are many approaches to managing dotfiles on GitHub
 that have inspired this repository, and this project
