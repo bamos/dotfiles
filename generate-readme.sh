@@ -75,9 +75,9 @@ See the [.funcs][funcs] directory.
 + [aria2](https://github.com/tatsuhiro-t/aria2): [.aria2](/.aria2)
 + [cmus](https://cmus.github.io/): [.cmus](/.cmus)
 + [conky](https://wiki.archlinux.org/index.php/Conky): [.conkyrc](/.conkyrc)
-+ [emacs](https://www.gnu.org/software/emacs/): [.emacs.d](/.emacs)
++ [emacs](https://www.gnu.org/software/emacs/): [.emacs.d](/.emacs.d)
 + [git](https://git-scm.com/): [.gitignore_global](/.gitignore_global)
-+ [GNU aspell](aspell.net): [.aspell.en.pws](/.aspell.en.pws)
++ [GNU aspell](http://aspell.net): [.aspell.en.pws](/.aspell.en.pws)
 + [GPG](https://www.gnupg.org): [.gnupg](/.gnupg)
 + [homebrew](http://brew.sh/): [.Brewfile](/.Brewfile)
 + [i3wm](https://i3wm.org/): [.i3](/.i3)
@@ -93,7 +93,7 @@ See the [.funcs][funcs] directory.
 + [xmonad](http://xmonad.org): [.xmonad](/.xmonad)
 + [yaourt](https://github.com/archlinuxfr/yaourt): [.yaourt](/.yaourt)
 + [zsh](http://www.zsh.org): [.zshrc](/.zshrc), [.zshenv](/.zshenv),
-  [.zsh-custom](/.zsh-custom), [.funcs](/.funcs), and [.oh-my-zsh](/.oh-my-zsh).
+  [.zsh-custom](/.zsh-custom), and [.funcs](/.funcs).
 
 # Similar Projects and Inspiration
 There are many approaches to managing dotfiles on GitHub
