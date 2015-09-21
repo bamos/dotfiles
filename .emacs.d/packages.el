@@ -39,6 +39,7 @@
     w3m
     web-mode
     xclip
+    yasnippet
     yaml-mode
     zenburn-theme
   )

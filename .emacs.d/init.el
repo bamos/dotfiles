@@ -87,5 +87,11 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
 (require 'org)
-
 (require 'puppet-mode)
+
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets/yasnippet-snippets"
+        "~/.emacs.d/snippets/yasmate/snippets"
+        ))
+(yas-global-mode 1)

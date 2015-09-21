@@ -4,3 +4,9 @@
 [submodule ".vim/bundle/vundle"]
 	path = .vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
+[submodule ".emacs.d/snippets/yasnippet-snippets"]
+	path = .emacs.d/snippets/yasnippet-snippets
+	url = git@github.com:AndreaCrotti/yasnippet-snippets.git
+[submodule ".emacs.d/snippets/yasmate"]
+	path = .emacs.d/snippets/yasmate
+	url = git@github.com:capitaomorte/yasmate.git
