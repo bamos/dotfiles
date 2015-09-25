@@ -1,12 +1,12 @@
 #!/bin/bash
 
-set -x
+set -x -e -u
 cd ~/.dotfiles
 
-Xvfb :1 -screen 0 500x500x16 & XVFB_PROC=$!
+Xvfb :1 -screen 0 1000x1000x16 & XVFB_PROC=$!
 sleep 1
 
-export DISPLAY=localhost:1.0
+export DISPLAY=:1
 
 exec i3 & I3_PROC=$!
 sleep 1
