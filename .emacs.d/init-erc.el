@@ -30,9 +30,12 @@
 (setq erc-save-buffer-on-part t)
 (setq erc-hide-timestamps nil)
 
+(if (not (file-exists-p erc-log-channels-directory))
+    (mkdir erc-log-channels-directory t))
+
 (defadvice save-buffers-kill-emacs (before save-logs (arg) activate)
   (save-some-buffers t (lambda () (when (and (eq major-mode 'erc-mode)
-                                             (not (null buffer-file-name)))))))
+                                             (not (null buffer-file-name))) t))))
 
 (add-hook 'erc-insert-post-hook 'erc-save-buffer-in-logs)
 (add-hook 'erc-mode-hook
