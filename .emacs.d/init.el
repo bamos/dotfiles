@@ -95,3 +95,6 @@
         "~/.emacs.d/snippets/yasmate/snippets"
         ))
 (yas-global-mode 1)
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
