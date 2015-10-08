@@ -20,8 +20,6 @@ if [[ $(hostname) == tchaikovsky ]]; then
     "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Width" 8
   xinput --set-prop --type=int --format=8 \
     "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 0
-elif [[ $(hostname) == derecho ]]; then
-  xrandr --output VGA1 --right-of HDMI2
 fi
 
 # Set up the resources
