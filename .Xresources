@@ -15,7 +15,9 @@ xterm.foreground: #ffffff
 URxvt.background: #1C1C1C
 URxvt.foreground: #ffffff
 #ifdef derecho
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=16
+URxvt.xftAntialias: true
+URxvt.font: xft:inconsolata:pixelsize=14:antialias=true:hinting=true, \
+  xft:dejavu sans mono:pixelsize=14:antialias=true,hinting=true
 #else
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
 #endif
@@ -24,5 +26,5 @@ URxvt.perl-ext-common: default,matcher,font-size
 URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 URxvt.iso14755: False
-URxvt.keysym.C-Up:     perl:font-size:increase
-URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-Up: perl:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:decrease
