@@ -33,6 +33,7 @@
 
 (require 'magit)
 (global-set-key (kbd "C-x C-g C-s") 'magit-status)
+(setq magit-push-always-verify nil)
 
 (unless window-system
   (require 'mouse)
