@@ -15,14 +15,14 @@ import qualified XMonad.StackSet as W
 import Data.Bits ((.|.))
 import qualified Data.Map as M
 
-myLayout = avoidStruts (
-        Tall 1 (3/100) (1/2) |||
-        Mirror (Tall 1 (3/100) (1/2)) |||
-        Full |||
-        Grid |||
-        spiral (6/7)
-    ) |||
-    simpleFloat
+_layout = avoidStruts (   Tall 1 (3/100) (1/2)
+                      ||| Mirror (Tall 1 (3/100) (1/2))
+                      ||| Full
+                      ||| Grid
+                      ||| spiral (6/7)
+                      )
+          |||
+          simpleFloat
 
 -- Keymappings are for Dvorak.
 -- Original: http://xmonad.org/xmonad-docs/xmonad/src/XMonad-Config.html
@@ -52,7 +52,7 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_space), sendMessage NextLayout) -- %! Rotate through the available layout algorithms
     , ((mod.|. shiftMask, xK_space), setLayout $ XMonad.layoutHook conf) -- %!  Reset the layouts on the current workspace to default
 
-    , ((mod, xK_b), refresh) -- %! Resize viewed windows to the correct size
+    -- , ((mod, xK_b), refresh) -- %! Resize viewed windows to the correct size
 
     -- Move focus up or down the window stack.
     , ((mod, xK_Tab), windows W.focusDown) -- %! Move focus to the next window
@@ -74,8 +74,8 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_y), withFocused $ windows . W.sink) -- %! Push window back into tiling
 
     -- Increase or decrease number of windows in the master area.
-    , ((mod, xK_w), sendMessage (IncMasterN 1))
-    , ((mod, xK_v), sendMessage (IncMasterN (-1)))
+    -- , ((mod, xK_w), sendMessage (IncMasterN 1))
+    -- , ((mod, xK_v), sendMessage (IncMasterN (-1)))
 
     -- Quit, or restart.
     , ((mod.|. shiftMask, xK_apostrophe), io exitSuccess)
@@ -99,7 +99,7 @@ _config = defaultConfig { terminal = "/usr/bin/urxvt"
                         , keys = _keys
                         , normalBorderColor  = "#333333"
                         , focusedBorderColor = "#5882FA"
-                        , layoutHook = smartBorders myLayout
+                        , layoutHook = smartBorders _layout
                         , startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs"
                         }
 
