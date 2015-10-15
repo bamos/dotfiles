@@ -18,7 +18,7 @@ URxvt.xftAntialias: true
 #ifdef derecho
 URxvt.font: xft:terminus:pixelsize=18:hinting=true
 #else
-URxvt.font: xft:terminus:pixelsize=12:hinting=true
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
 #endif
 URxvt.scrollstyle: plain
 URxvt.perl-ext-common: default,matcher,font-size
