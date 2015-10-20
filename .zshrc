@@ -21,6 +21,8 @@ command -v ruby >/dev/null 2>&1 && \
   pathadd $(ruby -rubygems -e "puts Gem.user_dir")/bin
 unset REPOS
 
+autoload -U zmv
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Initialize oh-my-zsh.
