@@ -44,7 +44,7 @@
   (setq mouse-sel-mode t)
 )
 
-(add-hook 'find-file-hook (lambda () (linum-mode 1))) ; Line numbers.
+(add-hook 'find-file-hook (lambda () (linum-mode 0))) ; Line numbers.
 (set-face-foreground 'minibuffer-prompt "white") ; White miniprompt.
 (setq visible-bell t) ; Disable bell.
 (fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
