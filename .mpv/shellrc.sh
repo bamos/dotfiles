@@ -2,7 +2,7 @@
 # Source this to add additional shell features for mpv.
 
 alias mpvnova='mpv --no-video'
-alias mpvshuf='mpvnova --shuffle --loop inf'
+alias mpvshuf='mpvnova --shuffle --loop=inf'
 alias mpvp='mpvshuf --playlist'
 
 playcurrentdir() {
