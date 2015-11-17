@@ -13,7 +13,7 @@
 .mutt/cache
 .mutt/certificates
 .mutt/contacts
-.mutt/postponed
+.mutt/postponed*
 .mutt/sent
 .sbt/*
 !.sbt/0.13/plugins/plugins.sbt
