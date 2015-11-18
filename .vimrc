@@ -1,7 +1,7 @@
 set nocompatible
 
 set shiftwidth=2 tabstop=2 expandtab
-set number wrap mouse=a
+set wrap mouse=a
 set dir=~/.vim/tmp backupdir=~/.vim/tmp
 set ignorecase smartcase shiftround smartindent
 set t_Co=256
