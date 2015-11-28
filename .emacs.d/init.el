@@ -90,6 +90,8 @@
 (require 'org)
 (require 'puppet-mode)
 
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
+
 (require 'yasnippet)
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets/yasnippet-snippets"
