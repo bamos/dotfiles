@@ -41,17 +41,6 @@ nj() {
   done
 }
 
-# Docker.
-docker-clean() {
-  docker rm $(docker ps -a -q)
-  docker rmi $(docker images -q)
-}
-
-docker-zsh() {
-  local TAG=$1
-  docker run -v /tmp:/host_tmp:rw -i -t $TAG /bin/zsh
-}
-
 # Thread functions.
 ps-threads() { ps -C $1 -L -opsr,pid,ppid,lwp,state }
 watch-threads() { watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state }
@@ -62,18 +51,6 @@ watch-threads() { watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state }
 crontab() {
   if [[ $@ == "-e" ]]; then vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
   else $CRONTABCMD $@; fi
-}
-
-# Infinitely loop commands.
-inf() {
-  while true; do
-    zsh -ci "source $HOME/.zshrc; $* ;"
-    [[ $? == 0 ]] || return
-  done;
-}
-
-memo() {
-  echo "$*" | mail -n -s "$*" bamos@cmu.edu
 }
 
 function stopwatch(){
@@ -178,12 +155,10 @@ alias chax='chmod a+x'
 alias h='hostname'
 alias i-ext='curl icanhazip.com'
 alias li='libreoffice'
-alias psg='ps aux | grep'
 alias rh='rehash'
 alias sudo='nocorrect sudo'
 alias xa='xrandr --auto'
 alias xax='xrandr --auto; exit'
-alias dual='xrandr --output VGA1 --right-of LVDS1 --auto'
 alias dx='dual; exit'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -216,6 +191,7 @@ alias f='sudo $(fc -ln -1)'
 alias emacsd='emacs --daemon'
 alias e='emacsclient -nw'
 
+alias psg='ps aux | grep'
 alias psgrep='ps aux | grep'
 
 alias clauncher='chromium --show-app-list'
