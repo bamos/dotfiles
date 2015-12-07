@@ -90,6 +90,7 @@ See the [.funcs][funcs] directory.
 + [tmux](https://tmux.github.io/): [.tmux.conf](/.tmux.conf) and
   [.tmux-osx.conf](/.tmux-osx.conf)
 + [vim](http://www.vim.org/): [.vim](/.vim)
++ [wget](https://www.gnu.org/software/wget/): [.wgetrc](/.wgetrc)
 + [xmonad](http://xmonad.org): [.xmonad](/.xmonad)
 + [yaourt](https://github.com/archlinuxfr/yaourt): [.yaourt](/.yaourt)
 + [zsh](http://www.zsh.org): [.zshrc](/.zshrc), [.zshenv](/.zshenv),
