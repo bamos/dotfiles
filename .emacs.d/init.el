@@ -63,6 +63,15 @@
 
 (setq-default show-trailing-whitespace t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(defun save-buffer-without-dtw () ; http://stackoverflow.com/questions/14913398
+  (interactive)
+  (let ((b (current-buffer)))
+    (with-temp-buffer
+      (let ((before-save-hook (remove 'delete-trailing-whitespace before-save-hook)))
+        (with-current-buffer b
+          (let ((before-save-hook
+                 (remove 'delete-trailing-whitespace before-save-hook)))
+            (save-buffer)))))))
 
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
