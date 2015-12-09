@@ -22,3 +22,30 @@ alias gpsuom='git push --set-upstream origin master'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
 alias gu="git reset --soft 'HEAD^'"
+
+# https://github.com/matthewmccullough/scripts/blob/master/git-finddirty
+git-dirty() {
+  OLDIFS=$IFS; IFS=$'\n'
+
+  for gitprojpath in `find . -type d -name .git|sort|sed "s/\/\.git//"`; do
+    pushd . >/dev/null
+    cd $gitprojpath
+    isdirty=$(git status -s | grep "^.*")
+    if [ -n "$isdirty" ]; then
+      echo "DIRTY:" $gitprojpath
+    fi
+    popd >/dev/null
+  done
+  IFS=$OLDIFS
+}
+
+git-clonecd() {
+  local TMP=$(mktemp /tmp/gcloc-XXXXXX)
+  git clone $@ 2>&1 | tee $TMP
+  local DIR=$(grep "Cloning into" $TMP | sed -e "s/Cloning into '\(.*\)'.*/\1/g")
+  if [[ ! -z $DIR ]]; then
+    cd $DIR
+  fi
+  rm $TMP
+}
+alias gcloc='git-clonecd'

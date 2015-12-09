@@ -64,33 +64,6 @@ function stopwatch(){
   done
 }
 
-# https://github.com/matthewmccullough/scripts/blob/master/git-finddirty
-git-dirty() {
-  OLDIFS=$IFS; IFS=$'\n'
-
-  for gitprojpath in `find . -type d -name .git|sort|sed "s/\/\.git//"`; do
-    pushd . >/dev/null
-    cd $gitprojpath
-    isdirty=$(git status -s | grep "^.*")
-    if [ -n "$isdirty" ]; then
-      echo "DIRTY:" $gitprojpath
-    fi
-    popd >/dev/null
-  done
-  IFS=$OLDIFS
-}
-
-git-clonecd() {
-  local TMP=$(mktemp /tmp/gcloc-XXXXXX)
-  git clone $@ 2>&1 | tee $TMP
-  local DIR=$(grep "Cloning into" $TMP | sed -e "s/Cloning into '\(.*\)'.*/\1/g")
-  if [[ ! -z $DIR ]]; then
-    cd $DIR
-  fi
-  rm $TMP
-}
-alias gcloc='git-clonecd'
-
 sys-find() {
   find / -name $@ 2>/dev/null
 }
@@ -112,42 +85,6 @@ mkdir-cp() {
 # http://stackoverflow.com/a/21096209/1381755
 ls-by-files() {
   find . -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n
-}
-
-# Takes a PDF of slides as input and outputs them tiled
-# in a 2x2 landscape PDF.
-2x2-slides() {
-  local INPUT_SLIDES=$1
-  local OUTPUT=2x2-$INPUT_SLIDES
-
-  # LaTeX has trouble with some filenames.
-  ln -sf $PWD/$INPUT_SLIDES /tmp/slides.pdf
-  INPUT_SLIDES=/tmp/slides.pdf
-
-  cat>/tmp/2x2-slides.tex<<EOF
-\documentclass[a4paper]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{pdfpages}
-\usepackage{hyperref}
-
-\begin{document}
-
-\hypersetup{}
-
-\pdfbookmark[0]{landscape}{1}
-
-\includepdfmerge[nup=2x2, column=False, frame=False, angle=0,
-                 scale=1, landscape=True, noautoscale=False,
-                 clip=True ]{$INPUT_SLIDES, -}
-
-
-\end{document}
-EOF
-  rm -f /tmp/2x2-slides.pdf
-  pdflatex /tmp/2x2-slides.tex > /dev/null
-  mv 2x2-slides.pdf $OUTPUT
-  echo "Output in $OUTPUT"
 }
 
 alias c='clear'
