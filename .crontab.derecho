@@ -5,3 +5,4 @@
 59 23 * * * /home/bamos/repos/snowglobe/scripts/analytics-daily-report.sh
 59 23 * * 0 /home/bamos/repos/snowglobe/scripts/analytics-weekly-report.sh
 1 0 * * 0 /home/bamos/repos/conference-tracker/email-report.sh
+59 23 * * * /home/bamos/repos/openface/util/email-broken-links.sh
