@@ -8,6 +8,8 @@
 ;; New is C-g
 (define-key evil-insert-state-map "\C-g" 'evil-normal-state)
 
+(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+
 ;; http://dnquark.com/blog/2012/02/emacs-evil-ecumenicalism/
 ;; I want c-n / c-p to work like in emacs
 (define-key evil-insert-state-map "\C-e" 'end-of-line)
