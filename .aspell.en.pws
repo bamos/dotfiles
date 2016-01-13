@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1581 
+personal_ws-1.1 en 1608 
 TopPages
 println
 rsync
@@ -15,6 +15,7 @@ getPlaintextBody
 BLK
 arg
 JARSIGNER
+CIC
 busyTimes
 libvirtd
 ASF
@@ -49,9 +50,9 @@ cmu
 Caml
 dir
 Ayn
+edu
 CRA
 DMA
-edu
 leftEnd
 enricher
 cpp
@@ -85,6 +86,7 @@ geo
 srini
 env
 Flg
+GHC
 Delaunay
 CXX
 DTEND
@@ -115,6 +117,7 @@ setopt
 blas
 ics
 gmt
+Maarten
 workDir
 igb
 gpg
@@ -153,6 +156,7 @@ iOS
 IoT
 countryData
 ips
+Steen
 ish
 cies
 JNI
@@ -248,6 +252,7 @@ npm
 Ayad
 MTU
 pgp
+autolab
 sqlite
 Sylvestor
 OMP
@@ -271,7 +276,7 @@ Qualstar
 Rei
 Atcold
 elseif
-RGB
+rgb
 shellrc
 req
 OSX
@@ -286,6 +291,7 @@ RFS
 SAS
 Bhatt
 sed
+DOCTYPE
 sbt
 YYYY
 sdk
@@ -297,12 +303,14 @@ conf
 kinesis
 subsecond
 sdp
+TBD
 Pedersen
 SHA
 feeded
 dirs
 PWD
 outDir
+TAs
 roc
 tcp
 dlib
@@ -330,7 +338,7 @@ Rahul
 tgz
 UDP
 tmlabel
-RSS
+rss
 coryschires
 postText
 Kitts
@@ -392,6 +400,7 @@ VMs
 usr
 deleteUserCommand
 vmx
+modularity
 txt
 cruz
 arffFile
@@ -615,6 +624,7 @@ JetStream
 codebase
 passwordless
 mboxFile
+Klingensmith
 Hinojos
 eval
 lapacklib
@@ -764,8 +774,8 @@ scala
 mpvnova
 ILPs
 affine
-FaceNet
 facenet
+FaceNet
 getAvailableTimes
 schemas
 GigaSight
@@ -807,6 +817,7 @@ screenshot
 parsestr
 baseUrl
 baseURL
+lang
 POSIX
 serverIP
 deleteUserUIDFlag
@@ -861,6 +872,7 @@ hadoop
 parallelizes
 HTTPHeader
 tcpstreams
+filesystems
 frontalized
 dateLimit
 resigner
@@ -887,7 +899,7 @@ autoaccept
 Qualcomm
 emptyList
 StackOverflow
-Satya
+satya
 json
 stdout
 instantiations
@@ -920,6 +932,8 @@ ShellSort
 systemd
 Hokies
 kaeluka
+Birman
+nbsp
 Cornelis
 isIntersection
 tchaikovsky
@@ -1000,6 +1014,7 @@ dataset
 Daines
 Fulghum
 HotMobile
+architecting
 Shotton
 Vannevar
 AccSensorHandler
@@ -1104,6 +1119,7 @@ daysInMonth
 nter
 sortedList
 quantized
+classnotes
 octetStream
 dangrossman
 Tolkein
@@ -1130,6 +1146,7 @@ countLines
 GitHub
 github
 HTMLParser
+tbody
 Mergesort
 mergeSort
 minispiral
@@ -1165,7 +1182,8 @@ frontalization
 Massie's
 AnalyticsData
 combinatorial
-Scalable
+chasek
+scalable
 mkString
 remoteFiles
 postprocessed
@@ -1251,6 +1269,7 @@ UAdd
 dlib's
 pivotIdx
 datasets
+XHTML
 Grossman
 nonconvex
 Sunapsys
@@ -1337,6 +1356,7 @@ cmusatyalab
 tmpl
 tmpm
 rightEnd
+prefetching
 arffDir
 mfloat
 zellux
@@ -1383,6 +1403,7 @@ Brightwell
 PythonScripts
 interoperate
 mistyped
+Springer
 Mellanox
 TestSuite
 Gessen
@@ -1411,6 +1432,7 @@ appscript
 TopPagesByPreviousTopPages
 mplayer
 READMEs
+pspillai
 timezones
 hostname
 OpenFile
@@ -1439,6 +1461,7 @@ cmichi
 skiyak
 jinja
 extensibility
+xmlns
 snowplowTracker
 dailyTimes
 UComm
@@ -1475,6 +1498,7 @@ memtables
 passphrase
 TZID
 TokenBase
+Tanenbaum
 decrypt
 USub
 Xeon
@@ -1540,6 +1564,7 @@ Babu
 pageview
 OpenCV's
 nForked
+andrew
 getTrackerUrl
 ArgumentParser
 zfill
@@ -1571,8 +1596,10 @@ Bcc
 afterCreateMarker
 beamer
 openjdk
+afs
 xorg
 params
+printf's
 ccc
 ccf
 ami
