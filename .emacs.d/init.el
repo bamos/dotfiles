@@ -78,7 +78,7 @@
 (setq-default save-place t)
 
 ; Disable menu and tool bars.
-(menu-bar-mode -99)
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 
 (transient-mark-mode 1)
