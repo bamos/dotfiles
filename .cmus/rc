@@ -4,3 +4,4 @@ fset electronic=genre="Electronic"|genre="House"|genre="Electro"|genre="Trance"|
 fset symphonic=genre="Symphonic"|genre="Classical"
 fset country=genre="Country"
 fset bluegrass=genre="Bluegrass"
+fset rock=genre="rock"
