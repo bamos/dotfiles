@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1676 
+personal_ws-1.1 en 1741 
 TopPages
 println
 Zico
@@ -25,6 +25,7 @@ arn
 blocksizes
 DCP
 dfe
+gurobi
 picard
 DDR
 picasa
@@ -110,6 +111,7 @@ minipage
 FSB
 IDC
 Maurits
+Zico's
 Dmitry
 keygen
 outName
@@ -131,6 +133,7 @@ DBSCAN
 gop
 sshed
 accelerometers
+indices
 idx
 Heilman
 Layne
@@ -184,14 +187,15 @@ KKT
 lfw
 eabi
 nondeterministic
+cvxpy
 refactored
 arsc
-mei
 lin
+mei
 classpath
 MGA
-nbc
 mem
+nbc
 timesheet
 nbd
 Liu
@@ -222,6 +226,7 @@ isPgp
 kvm
 nic
 KHTML
+LPs
 HBase
 hbase
 susitna
@@ -258,9 +263,11 @@ geoff
 VCPUs
 boyd
 u'emulated
+NNs
 mul
 npm
 Ayad
+Glorot
 MTU
 autolab
 pgp
@@ -283,6 +290,7 @@ rdd
 nonnegative
 png
 websockify
+ECOS
 Qualstar
 Rei
 Atcold
@@ -294,6 +302,7 @@ pos
 OSX
 apache
 dayEnd
+nXY
 pre
 São
 FaceScrub
@@ -311,12 +320,13 @@ RESTful
 RuntimeException
 CMU's
 SEI
+SCS
 conf
 kinesis
 subsecond
 sdp
 TBD
-SGD
+sgd
 Pedersen
 SHA
 feeded
@@ -368,6 +378,7 @@ sps
 u'id
 uid
 SSD
+scikit
 CTAN
 taskar
 STF
@@ -437,6 +448,7 @@ elif
 Ctrl
 approximator
 cancelLabel
+backgroundcolor
 autoreconf
 ntroduction
 dpnn
@@ -481,6 +493,7 @@ bs
 Gbps
 ee
 gclo
+versa
 priori
 cp
 DL
@@ -516,6 +529,7 @@ HN
 assertEquals
 Pylearn
 i'm
+im
 createpdf
 io
 ip
@@ -544,6 +558,7 @@ losslessly
 ln
 zsh
 scipts
+lp
 Deligne
 u'mjepg
 uname
@@ -579,6 +594,7 @@ Mboxrd
 pu
 SG
 pv
+rl
 SetValue
 px
 td
@@ -586,9 +602,11 @@ overfit
 py
 bspline
 uncomment
+sl
 th
 va
 sp
+upquote
 CountryParser
 VC
 numCols
@@ -611,13 +629,17 @@ unary
 Poynor
 xf
 Wl
+showtabs
 tmpFile
 Pieter
 xm
 cmonty
 frontalizing
 Pearce
+zi
+x's
 hardcopy
+y's
 xy
 extractionMap
 lshift
@@ -699,6 +721,7 @@ Soyota
 afghanistan
 natasha
 KeepThisDir
+stringstyle
 metavar
 MetaVar
 xdelta
@@ -737,17 +760,19 @@ TokenQueue
 headerfont
 rpnQueue
 Weka's
+colorlinks
 russian
 supersu
 SuperSU
 daterange
 TemporaryFile
-rshift
 RShift
+rshift
 intrapersonal
 logcat
 Gmail
 GMail
+Toeplitz
 Solarized
 hyperplane's
 gists
@@ -770,15 +795,18 @@ DeepFace's
 makeSpline
 Caffe's
 durations
+stepnumber
 resegmented
 frontend
 proxying
 multiclass
 IMAP
+backpropagating
 Dinion
 fromEpochTime
 Kaku
 href
+ReLUs
 backpropagation
 optimizations
 OpenStack
@@ -820,6 +848,7 @@ impl
 Heapsort
 HeapSort
 Kay's
+showstringspaces
 setStartDate
 stderr
 JUnit
@@ -842,6 +871,7 @@ Surowiecki
 mesos
 scatterplots
 gzip
+MNIST's
 TestVar
 screenshot
 parsestr
@@ -876,6 +906,7 @@ deleteCommand
 Joël
 randexp
 BigTable's
+iter
 dilations
 JPEG
 ignoreNextParagraph
@@ -895,6 +926,7 @@ parallelized
 Inodes
 BibtexParser
 bibtexparser
+linkcolor
 facebook
 dotfiles
 getPgpBody
@@ -903,6 +935,7 @@ hadoop
 parallelizes
 HTTPHeader
 tcpstreams
+CVXOPT
 filesystems
 frontalized
 agglomerative
@@ -922,11 +955,13 @@ arffLoader
 mbox
 Mbps
 Pillai
+normals
 gbtekkie
 ICNN's
 ICNNs
 minItem
 libandroidterm
+cvxpy's
 tmtimeline
 dropdown
 autoaccept
@@ -955,10 +990,12 @@ Sedaris
 krha
 Martial's
 impactful
+llll
 Blacksburg
 mfpu
 gpgDir
 eigenfaces
+nLayers
 urlDict
 parallelize
 filesystem
@@ -1017,23 +1054,27 @@ KVM's
 NICs
 TestHeapArray
 filename
+noitemsep
 Ooyala's
 proxied
 Gopen
 preprocessing
 hiVal
 utils
+urlcolor
 yourPassword
 initializeCamera
 lshw
 arabic
 pipelined
+minibatch
 Contracrostipunctus
 TimeInt
 MarcheSlave
 radians
 descr
 GammaRay
+autograd
 CloudCom
 cloudcom
 iperf's
@@ -1074,6 +1115,7 @@ SocialCompare's
 subdirectory
 qwalnutiq
 blogosphere
+nInput
 Aldous
 MapReduce
 mapreduce
@@ -1095,6 +1137,7 @@ AndroidManifest
 prebuilt
 PlaceHolder
 pathadd
+deconvolution
 FooApp
 autodetect
 subprocess
@@ -1125,6 +1168,7 @@ OpenCV
 opencv
 findPivot
 ALLOCATABLE
+nClasses
 perl
 nopw
 dimensionality
@@ -1191,6 +1235,7 @@ tbody
 Mergesort
 mergeSort
 minispiral
+escapeinside
 tmtime
 datagrams
 deduplicating
@@ -1228,6 +1273,8 @@ chasek
 scalable
 mkString
 remoteFiles
+relu
+ReLU
 postprocessed
 linkedin
 Ciura's
@@ -1272,6 +1319,7 @@ asymptotes
 Vinton
 pssh
 microgram
+Hadamard
 HISTSIZE
 ffload
 combinedFile
@@ -1285,6 +1333,7 @@ showWeekNumbers
 Simor
 registerName
 divad
+breakatwhitespace
 postChannel
 nbdroid
 OpenBLAS
@@ -1298,17 +1347,20 @@ executables
 gfortran
 moderncv
 const
+commentstyle
 Srinivasan
 Seys
 flickr
 Tbps
 nonrigorous
+adagrad
 AdaGrad
 DeCorte
 Kiryong
+numberstyle
 RevenueFromTopReferringDomains
-Infiniband
 listal
+Infiniband
 Mathematica
 RMPP
 FLEXlm
@@ -1316,6 +1368,7 @@ UAdd
 dlib's
 pivotIdx
 datasets
+basicstyle
 XHTML
 Grossman
 backprop
@@ -1349,6 +1402,7 @@ heatmap
 numPops
 Padmanabhan
 Unmounting
+tabsize
 registerNick
 ffmpeg
 FFmpeg
@@ -1360,6 +1414,7 @@ IPList
 ipList
 orthant
 chinese
+showspaces
 lookups
 etection
 zkolter
@@ -1409,6 +1464,7 @@ egrep
 startup
 cmusatyalab
 tmpl
+breaklines
 leftmargin
 tmpm
 rightEnd
@@ -1418,6 +1474,7 @@ mfloat
 zellux
 DiamondAndroid
 inEvent
+heatmaps
 parentNode
 sudo
 decrypted
@@ -1442,15 +1499,17 @@ androiddebugkey
 strptime
 África
 timeframe
-OverrideDefaultFromEnvar
 kmeans
+OverrideDefaultFromEnvar
 ShutdownHook
 applyCharsets
+layerSizes
 sunf
 pdflatex
 DEALLOCATE
 AppleWebKit
 submodules
+FCNNs
 lapack
 gpgPass
 WANs
@@ -1475,6 +1534,7 @@ DistBelief
 leftPosVar
 blueimp
 checksum
+argmax
 vsprintf
 headerheight
 haping
@@ -1528,11 +1588,11 @@ snowplowTracker
 Akshay
 dailyTimes
 textborder
-UComm
 ucomm
+UComm
 WiFi
-wearsys
 WearSys
+wearsys
 CloneCloud
 ScrapeCountriesTest
 bashrc
@@ -1614,6 +1674,7 @@ screenshots
 ranlib
 embeddings
 topologies
+Keras
 QueryService
 Harkes
 adam
@@ -1627,6 +1688,7 @@ liveness
 Marcin
 resize
 Northside
+ADMM
 Babu
 pageview
 OpenCV's
@@ -1635,9 +1697,11 @@ andrew
 getTrackerUrl
 ArgumentParser
 zfill
+citecolor
 summarizations
 TypeError
 lblas
+filecolor
 symlink
 multi
 VideoSensorHandler
@@ -1667,6 +1731,7 @@ afs
 xorg
 params
 borderColor
+numbersep
 printf's
 ccc
 ccf
