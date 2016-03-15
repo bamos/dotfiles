@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1749 
+personal_ws-1.1 en 1785 
 TopPages
 println
 Zico
@@ -69,6 +69,7 @@ VBODA
 doi
 xvfb
 gbc
+dom
 DNS
 css
 fge
@@ -84,6 +85,7 @@ EOF
 heapList
 CDFs
 formulae
+nngraph's
 xvfz
 geo
 srini
@@ -167,12 +169,14 @@ iOS
 IoT
 countryData
 ips
+gModule
 Steen
 ish
 cies
 JNI
 colspacing
 Karuki
+LDL
 framerate
 preprocess
 ISP
@@ -182,6 +186,7 @@ protobuf
 printArraySeq
 jre
 armv
+chol
 mwhite
 KKT
 lfw
@@ -233,12 +238,14 @@ susitna
 stevegeek
 LTE
 lua
+prevSz
 ashmem
 mlx
 ECDF
 codrops
 MPI
 DHCP
+hyperparameters
 argparse
 PCA
 tcpdump
@@ -285,6 +292,7 @@ leftPos
 fileHandle
 NTP
 num
+spotrf
 mktime
 rdd
 nonnegative
@@ -292,6 +300,7 @@ png
 websockify
 ECOS
 Qualstar
+spotrs
 Rei
 Atcold
 elseif
@@ -304,6 +313,7 @@ apache
 dayEnd
 São
 pre
+nXy
 nXY
 FaceScrub
 sda
@@ -321,6 +331,7 @@ RuntimeException
 CMU's
 SCS
 SEI
+PRs
 conf
 kinesis
 subsecond
@@ -333,6 +344,7 @@ feeded
 dirs
 PWD
 cmyk
+rll
 outDir
 TAs
 conv
@@ -404,12 +416,12 @@ svm
 cron
 TestCase
 startswith
-CUDA
 validators
 readme
 TSO
 webpage's
 webpages
+vis
 templated
 ethernet
 tsv
@@ -457,6 +469,7 @@ libGL
 writegood
 writeGood
 arraySeq
+numpy
 MaxHeap
 xml
 Murakami
@@ -465,6 +478,7 @@ pjson
 isvariablechar
 vncviewer
 Orfeo
+backsolve
 discretization
 luarocks
 learn'd
@@ -493,6 +507,7 @@ toRPN
 bs
 Gbps
 ee
+Ay
 gclo
 versa
 priori
@@ -661,6 +676,7 @@ Pausch
 rlamana
 Yudkowsky
 RevenueFromTopReferringDomainsFirstVisitGoogle
+initializations
 fortran
 nodeca
 fiducial
@@ -711,11 +727,12 @@ Simbabwe
 toEpochTime
 numElements
 exif
+cuBLAS
 iclr
 deletePostCommand
 ieee
 regex
-ICNN
+icnn
 sigint
 printheader
 OSError
@@ -764,8 +781,8 @@ rpnQueue
 Weka's
 colorlinks
 russian
-SuperSU
 supersu
+SuperSU
 daterange
 TemporaryFile
 rshift
@@ -898,9 +915,12 @@ Errorf
 workflow
 Saurabh
 groupByKey
+nngraph
 feedforward
+potrf
 pgpText
 plaintext
+potri
 charset
 mispredictions
 username
@@ -908,6 +928,7 @@ deleteCommand
 Joël
 randexp
 BigTable's
+potrs
 iter
 dilations
 JPEG
@@ -916,6 +937,7 @@ changepoints
 analytics
 scalability
 drawable
+hyperparameter
 WebFace
 recognizers
 tuple
@@ -925,6 +947,7 @@ iostream
 ISPs
 chmod
 parallelized
+tridiagonal
 Inodes
 BibtexParser
 bibtexparser
@@ -947,6 +970,7 @@ libs
 tempfile
 arffList
 QueryProcessor
+scipy
 ProductID
 nofork
 dedup
@@ -1004,6 +1028,7 @@ filesystem
 ShellSort
 perceptron
 systemd
+backsubstitution
 Hokies
 kaeluka
 Birman
@@ -1032,7 +1057,6 @@ crimsonRed
 thresholded
 MITM
 reproducibility
-Reproducibility
 atmos
 kryo
 UberTrace
@@ -1047,6 +1071,7 @@ neue
 synchrony
 subcommand
 config
+cuSolver
 ubuntu
 Persaud's
 precached
@@ -1110,6 +1135,7 @@ zImage
 ocaml
 OCaml
 timestamp
+pointwise
 typesetted
 endDate
 PubSub
@@ -1148,6 +1174,7 @@ hypervisors
 rageagainstthecage
 Pamplin
 cknowledgements
+Cholesky
 ToString
 bgColorOne
 deduplicate
@@ -1162,6 +1189,7 @@ nginx
 bootloader
 inputbox
 thresholding
+semiseparable
 linkchecker
 pagename
 OpenCL
@@ -1292,6 +1320,8 @@ parsers
 mnist
 sbin
 facto
+AdaGrad's
+decompositions
 homedir
 Sundaresan
 prev
@@ -1340,6 +1370,7 @@ divad
 breakatwhitespace
 postChannel
 nbdroid
+openblas
 OpenBLAS
 FileWriter
 Peucker
@@ -1556,6 +1587,7 @@ ClarkGoble
 BeautifulSoup
 appscript
 TopPagesByPreviousTopPages
+Gabor
 mplayer
 READMEs
 pspillai
@@ -1675,10 +1707,12 @@ bamos
 rightVar
 YCSB
 multihop
+startCol
 Haskell
 WPCM
 screenshots
 ranlib
+nFeatures
 embeddings
 topologies
 Keras
@@ -1696,7 +1730,8 @@ Marcin
 resize
 Northside
 OpenFace's
-ADMM
+numpy's
+admm
 Babu
 pageview
 OpenCV's
