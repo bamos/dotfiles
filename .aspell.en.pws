@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1785 
+personal_ws-1.1 en 1790 
 TopPages
 println
 Zico
@@ -62,6 +62,7 @@ cpp
 SSTables
 AMD's
 Zhuo
+actualY
 cpu
 DoD
 xample
@@ -416,6 +417,7 @@ svm
 cron
 TestCase
 startswith
+CUDA
 validators
 readme
 TSO
@@ -543,6 +545,7 @@ fw
 Haar
 HN
 assertEquals
+dtype
 Pylearn
 im
 i'm
@@ -584,6 +587,7 @@ zipalign
 ethtool
 nn
 ok
+np
 TopReferringDomains
 ol
 mv
@@ -665,6 +669,7 @@ ZW
 qutebits
 hdfs
 MobileAccHandler
+marginScalingTerm
 getDataSet
 truediv
 jsonresume
@@ -774,6 +779,7 @@ BitOr
 operatorStack
 jQuery
 jquery
+FWIW
 PRObE's
 TokenQueue
 headerfont
