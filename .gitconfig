@@ -1,0 +1,10 @@
+[user]
+	email = bamos@cs.cmu.edu
+	name = Brandon Amos
+	signingkey = B72D6B6F
+[push]
+	default = simple
+[core]
+	excludesfile = /home/bamos/.gitignore_global
+[commit]
+	gpgsign = true
