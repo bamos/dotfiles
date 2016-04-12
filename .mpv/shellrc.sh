@@ -3,7 +3,9 @@
 
 alias mpvnova='mpv --no-video'
 alias mpvshuf='mpvnova --shuffle --loop=inf'
-alias mpvp='mpvshuf --playlist'
+mpvp() {
+  mpvshuf --playlist <(cat $*)
+}
 
 playcurrentdir() {
   mpvp <(find "$PWD" -type f -follow -not -path '*/\.*')
