@@ -8,7 +8,10 @@ mpvp() {
 }
 
 playcurrentdir() {
-  mpvp <(find "$PWD" -type f -follow -not -path '*/\.*')
+  TMP=$(mktemp .mpv.XXX) # Must be in current dir for relative paths.
+  find "$PWD" -type f -follow -not -path '*/\.*' > $TMP
+  mpvp $TMP
+  rm $TMP
 }
 alias pcd='playcurrentdir'
 
