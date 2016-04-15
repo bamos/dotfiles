@@ -8,10 +8,8 @@ mpvp() {
 }
 
 playcurrentdir() {
-  TMP=$(mktemp .mpv.XXX) # Must be in current dir for relative paths.
-  find "$PWD" -type f -follow -not -path '*/\.*' > $TMP
-  mpvp $TMP
-  rm $TMP
+  mpvshuf --playlist <(find "$PWD" -type f -follow \
+    -not -path '*/\.*' -exec realpath -s {} \;)
 }
 alias pcd='playcurrentdir'
 
@@ -19,10 +17,8 @@ playdir() {
   if [[ $# == 0 ]]; then
     echo "playdir requires one or more directories on input."
   else
-    TMP=$(mktemp .mpv.XXX) # Must be in current dir for relative paths.
-    find "$@" -type f -follow -not -path '*/\.*' > $TMP
-    mpvp $TMP
-    rm $TMP
+    mpvshuf --playlist <(find "$@" -type f -follow \
+      -not -path '*/\.*' -exec realpath -s {} \;)
   fi
 }
 alias pd='playdir'
