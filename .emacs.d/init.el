@@ -100,6 +100,7 @@
 (require 'puppet-mode)
 
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
+(add-to-list 'auto-mode-alist '("\\.liquid\\'" . web-mode))
 
 (require 'yasnippet)
 (setq yas-snippet-dirs
