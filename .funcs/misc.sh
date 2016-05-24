@@ -46,12 +46,12 @@ ps-threads() { ps -C $1 -L -opsr,pid,ppid,lwp,state }
 watch-threads() { watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state }
 
 # Allow crontab in dotfiles.
-[ -z "${CRONTABCMD+x}" ] && export CRONTABCMD=$(which crontab)
-[ -z "${CRONTABFILE+x}" ] && export CRONTABFILE=$HOME/.crontab.$HOST
-crontab() {
-  if [[ $@ == "-e" ]]; then vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
-  else $CRONTABCMD $@; fi
-}
+# [ -z "${CRONTABCMD+x}" ] && export CRONTABCMD=$(which crontab)
+# [ -z "${CRONTABFILE+x}" ] && export CRONTABFILE=$HOME/.crontab.$HOST
+# crontab() {
+#   if [[ $@ == "-e" ]]; then vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
+#   else $CRONTABCMD $@; fi
+# }
 
 function stopwatch(){
   case $(uname) in
@@ -138,3 +138,5 @@ alias random-mac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'"
 alias remove-tags='eyeD3 --remove-all'
 alias add-tags='picard'
 alias get-tags='exiftool -json'
+
+alias mcm='make clean; make'
