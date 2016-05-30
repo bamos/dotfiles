@@ -73,3 +73,7 @@
 (define-key evil-normal-state-map "t" 'evil-next-line)
 (define-key evil-normal-state-map "n" 'evil-previous-line)
 (define-key evil-normal-state-map "s" 'evil-forward-char)
+(define-key evil-normal-state-map [left] 'undefined)
+(define-key evil-normal-state-map [down] 'undefined)
+(define-key evil-normal-state-map [up] 'undefined)
+(define-key evil-normal-state-map [right] 'undefined)
