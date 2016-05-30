@@ -42,7 +42,7 @@
  (interactive)
  (let (evil-mode-map-alist)
    (call-interactively (key-binding (this-command-keys)))))
- 
+
 ;;; esc quits
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
@@ -67,3 +67,9 @@
 (require 'evil-surround)(global-evil-surround-mode 1)
 (require 'evil-nerd-commenter)(evilnc-default-hotkeys)
 (require 'powerline)(powerline-center-evil-theme)
+
+;; Dvorak.
+(define-key evil-normal-state-map "h" 'evil-backward-char)
+(define-key evil-normal-state-map "t" 'evil-next-line)
+(define-key evil-normal-state-map "n" 'evil-previous-line)
+(define-key evil-normal-state-map "s" 'evil-forward-char)
