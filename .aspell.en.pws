@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1960 
+personal_ws-1.1 en 1977 
 TopPages
 CCS
 println
@@ -64,6 +64,7 @@ DMA
 leftEnd
 enricher
 cpp
+CRF
 SSTables
 AMD's
 Zhuo
@@ -313,6 +314,7 @@ Sylvestor
 PHP
 OMP
 Kalenichenko
+PICNNs
 tcpflow
 Isaacson
 getRepos
@@ -381,6 +383,7 @@ SHA
 feeded
 dirs
 PWD
+vertices
 cmyk
 rll
 outDir
@@ -646,6 +649,7 @@ zipalign
 oH
 ethtool
 nn
+formalisms
 ok
 np
 TopReferringDomains
@@ -698,6 +702,7 @@ su
 setParameters
 wb
 ul
+Sx
 MartinThoma
 sy
 wildcard
@@ -712,9 +717,14 @@ Poynor
 xf
 Wl
 showtabs
+uy
+uz
+vu
 tmpFile
+vv
 Pieter
 xm
+vz
 cmonty
 frontalizing
 Pearce
@@ -850,6 +860,7 @@ typedef
 PRObE's
 TokenQueue
 headerfont
+GPUs
 rpnQueue
 Weka's
 colorlinks
@@ -1105,6 +1116,7 @@ PRObE
 JavaCameraSizeAccessor
 afriggeri
 Vissini
+nair
 timesheets
 ment
 onclick
@@ -1308,6 +1320,7 @@ pagename
 OpenCL
 LZMA
 inputSize
+vectorization
 omap
 OpenCV
 opencv
@@ -1633,6 +1646,7 @@ accelerometer
 bdamos
 ryan
 Sonmez
+piecewise
 getStructure
 testHeapSort
 idxint
@@ -1662,6 +1676,7 @@ cancelClass
 Contrapunctus
 Tomé
 commandLengths
+elementwise
 transformative
 pretrained
 InstallShield
@@ -1676,6 +1691,7 @@ Scala's
 setfenv
 EvalExprTest
 webpage
+linearities
 androiddebugkey
 strptime
 África
@@ -1905,6 +1921,7 @@ pageview
 OpenCV's
 nForked
 andrew
+FICNNs
 Yidx
 getTrackerUrl
 ArgumentParser
