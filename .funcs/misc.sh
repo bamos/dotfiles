@@ -46,12 +46,13 @@ ps-threads() { ps -C $1 -L -opsr,pid,ppid,lwp,state }
 watch-threads() { watch -n 1 ps -C $1 -L -opsr,pid,ppid,lwp,state }
 
 # Allow crontab in dotfiles.
-# [ -z "${CRONTABCMD+x}" ] && export CRONTABCMD=$(which crontab)
+[ -z "${CRONTABCMD+x}" ] && export CRONTABCMD=$(which crontab)
 # [ -z "${CRONTABFILE+x}" ] && export CRONTABFILE=$HOME/.crontab.$HOST
-# crontab() {
-#   if [[ $@ == "-e" ]]; then vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
-#   else $CRONTABCMD $@; fi
-# }
+[ -z "${CRONTABFILE+x}" ] && export CRONTABFILE=$HOME/.crontab
+crontab() {
+  if [[ $@ == "-e" ]]; then vim $CRONTABFILE && $CRONTABCMD $CRONTABFILE
+  else $CRONTABCMD $@; fi
+}
 
 function stopwatch(){
   case $(uname) in
