@@ -5,6 +5,6 @@
 [push]
 	default = simple
 [core]
-	excludesfile = /home/bamos/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [commit]
 	gpgsign = true
