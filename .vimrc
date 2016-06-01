@@ -49,6 +49,7 @@ nmap <F6> :w<CR>:!make<CR>
 nmap <F7> :source ~/.vim/pdf-replace.vim<CR>
 
 " Commands.
+" <leader>: \ (a backslash)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 command Rm :call delete(expand('%')) | bdelete!
 
@@ -74,3 +75,15 @@ autocmd User GoyoLeave Limelight!
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" Dvorak.
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+noremap k n
+noremap K N
+noremap h <left>
+noremap t <down>
+noremap n <up>
+noremap s <right>
