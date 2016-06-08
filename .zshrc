@@ -58,6 +58,8 @@ set -o CSH_NULL_GLOB
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '^t' history-substring-search-up
+bindkey '^n' history-substring-search-down
 
 # Bind ctrl+n to show a list of the most recently modified files.
 zstyle ':completion:most-recent-file:*' match-original both
@@ -66,9 +68,9 @@ zstyle ':completion:most-recent-file:*' file-patterns '*:all\ files'
 zstyle ':completion:most-recent-file:*' hidden all
 zstyle ':completion:most-recent-file:*' completer _files
 zle -C most-recent-file menu-complete _generic
-bindkey "^N" most-recent-file
+bindkey "^w" most-recent-file
 
-bindkey '^E' edit-command-line
+bindkey '^e' edit-command-line
 
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO=$HOME/.gnupg/S.gpg-agent
