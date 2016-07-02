@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1977 
+personal_ws-1.1 en 1983 
 TopPages
 CCS
 println
@@ -232,6 +232,7 @@ Liu
 openssh
 parseTimeStr
 JVM
+NA's
 NAS
 preprocessed
 ggplot
@@ -382,8 +383,8 @@ Pedersen
 SHA
 feeded
 dirs
-PWD
 vertices
+PWD
 cmyk
 rll
 outDir
@@ -410,6 +411,7 @@ rsa
 getElementsByTagName
 tex
 transcoding
+SNE
 bsplines
 Gladwell
 inputXy
@@ -479,6 +481,7 @@ crrr
 sys
 isdigit
 getmail
+NULLs
 vnc
 wildcards
 CASIA
@@ -519,8 +522,8 @@ backgroundcolor
 autoreconf
 ntroduction
 dpnn
-libGL
 FFNN
+libGL
 writeGood
 writegood
 arraySeq
@@ -720,8 +723,8 @@ showtabs
 uy
 uz
 vu
-tmpFile
 vv
+tmpFile
 Pieter
 xm
 vz
@@ -859,8 +862,8 @@ ipairs
 typedef
 PRObE's
 TokenQueue
-headerfont
 GPUs
+headerfont
 rpnQueue
 Weka's
 colorlinks
@@ -869,8 +872,8 @@ supersu
 SuperSU
 GirArrays
 daterange
-TemporaryFile
 krizhevsky
+TemporaryFile
 rshift
 RShift
 intrapersonal
@@ -880,6 +883,7 @@ GMail
 Toeplitz
 Solarized
 AlexNet
+hyperplanes
 hyperplane's
 gists
 Krach
@@ -942,6 +946,7 @@ bundleEcos
 mpvnova
 ILPs
 affine
+Infs
 facenet
 FaceNet
 getAvailableTimes
@@ -1075,7 +1080,6 @@ dateLimit
 resigner
 tonumber
 passthrough
-Passthrough
 libs
 expDir
 tempfile
@@ -1115,8 +1119,8 @@ Bokanovsky's
 PRObE
 JavaCameraSizeAccessor
 afriggeri
-Vissini
 nair
+Vissini
 timesheets
 ment
 onclick
@@ -1260,6 +1264,7 @@ timestamp
 pointwise
 typesetted
 endDate
+infeasible
 PubSub
 DEVNULL
 SocialCompare's
@@ -1366,6 +1371,7 @@ SpatialConvolutionMM
 Honeywords
 sortedList
 quantized
+benchmarked
 classnotes
 nRules
 octetStream
