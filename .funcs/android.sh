@@ -17,7 +17,7 @@ musicToAndroid() {
     #TODO - Get relative directory.
     adb push $SONG /sdcard/Music &> /dev/null
     [[ $? != 0 ]] && echo " + Failed."
-  done < <(find $* -type f | $SORT -R)
+  done < <(find $* | $SORT -R)
   unset SORT
 }
 alias m2a='musicToAndroid'
