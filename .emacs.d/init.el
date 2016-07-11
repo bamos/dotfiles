@@ -1,13 +1,14 @@
 ; (package-initialize)
 
-(defconst user-init-dir (cond
-  ((boundp 'user-emacs-directory) user-emacs-directory)
-  ((boundp 'user-init-directory) user-init-directory)
-  (t "~/.emacs.d/")))
+;; (defconst user-init-dir (cond
+;;   ((boundp 'user-emacs-directory) user-emacs-directory)
+;;   ((boundp 'user-init-directory) user-init-directory)
+;;   (t "~/.emacs.d/")))
 
 (defun load-user-file (file) (interactive "f")
   "Load a file in current user's configuration directory"
-  (load-file (expand-file-name file user-init-dir)))
+  ;; (load-file (expand-file-name file user-init-dir)))
+  (load-file (expand-file-name file "~/.emacs.d")))
 
 (load-user-file "packages.el")
 
@@ -22,6 +23,7 @@
 (load-user-file "init-w3m.el")
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
+(load-user-file "init-org.el")
 
 (when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
 
@@ -49,7 +51,7 @@
 (setq visible-bell t) ; Disable bell.
 (fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
 (setq vc-follow-symlinks t) ; Always follow symlinks.
-(add-hook 'emacs-startup-hook  'delete-other-windows)
+;; (add-hook 'emacs-startup-hook  'delete-other-windows)
 (setq inhibit-startup-message t)
 (setq make-backup-files nil)
 (show-paren-mode 1)
@@ -77,9 +79,13 @@
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
 (setq-default save-place t)
 
-; Disable menu and tool bars.
-(menu-bar-mode -1)
-(tool-bar-mode -1)
+(if (boundp 'aquamacs-version)
+    (progn
+      (put 'temporary-file-directory 'standard-value '((file-name-as-directory "/tmp")))
+      (tool-bar-mode -1))
+  (progn
+    (menu-bar-mode -1)
+    (tool-bar-mode -1)))
 
 (transient-mark-mode 1)
 
@@ -96,7 +102,6 @@
 (require 'haskell-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
-(require 'org)
 (require 'puppet-mode)
 
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
