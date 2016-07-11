@@ -81,6 +81,12 @@
 
 (if (boundp 'aquamacs-version)
     (progn
+      (custom-set-faces
+       '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey"
+                               :inverse-video nil :box nil :strike-through nil
+                               :overline nil :underline nil :slant normal
+                               :weight normal :height 125 :width normal
+                               :foundry "nil" :family "Monaco")))))
       (put 'temporary-file-directory 'standard-value '((file-name-as-directory "/tmp")))
       (tool-bar-mode -1))
   (progn
