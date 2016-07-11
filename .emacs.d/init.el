@@ -111,6 +111,7 @@
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets/yasnippet-snippets"
         "~/.emacs.d/snippets/yasmate/snippets"
+        "~/repos/yasnippet-lua-torch"
         ))
 (yas-global-mode 1)
 
