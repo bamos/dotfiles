@@ -87,9 +87,12 @@
                                :overline nil :underline nil :slant normal
                                :weight normal :height 125 :width normal
                                :foundry "nil" :family "Monaco")))))
-      (put 'temporary-file-directory 'standard-value '((file-name-as-directory "/tmp")))
+      (put 'temporary-file-directory 'standard-value
+           '((file-name-as-directory "/tmp")))
       (tool-bar-mode -1))
   (progn
+    (when (display-graphic-p)
+      (set-face-attribute 'default nil :height 125))
     (menu-bar-mode -1)
     (tool-bar-mode -1)))
 
