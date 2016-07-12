@@ -12,4 +12,5 @@
 
   (local-set-key (kbd "C-c a") 'org-agenda)
 
-  (local-set-key (kbd "C-S-<return>") 'org-insert-heading-after-current)))
+  (local-set-key (kbd "C-S-<return>") 'org-insert-heading-after-current)
+  (org-display-inline-images)))
