@@ -36,10 +36,15 @@ function focus(f)
   end
 end
 
-hotkey.bind(mashshift, 'left', focus(function(w) w:focuswindow_west() end))
-hotkey.bind(mashshift, 'right', focus(function(w) w:focuswindow_east() end))
-hotkey.bind(mashshift, 'up', focus(function(w) w:focuswindow_north() end))
-hotkey.bind(mashshift, 'down', focus(function(w) w:focuswindow_south() end))
+hotkey.bind(mash, 'left', focus(function(w) w:focuswindow_west() end))
+hotkey.bind(mash, 'right', focus(function(w) w:focuswindow_east() end))
+hotkey.bind(mash, 'up', focus(function(w) w:focuswindow_north() end))
+hotkey.bind(mash, 'down', focus(function(w) w:focuswindow_south() end))
+
+hotkey.bind(mash, 'h', focus(function(w) w:focuswindow_west() end))
+hotkey.bind(mash, 's', focus(function(w) w:focuswindow_east() end))
+hotkey.bind(mash, 'n', focus(function(w) w:focuswindow_north() end))
+hotkey.bind(mash, 't', focus(function(w) w:focuswindow_south() end))
 
 hotkey.bind(mashshift, 'm', grid.maximize_window)
 
@@ -56,9 +61,9 @@ hotkey.bind(mash, 'c', grid.resizewindow_shorter)
 hotkey.bind(mash, 'r', grid.resizewindow_wider)
 hotkey.bind(mash, 'l', grid.resizewindow_thinner)
 
-hotkey.bind(mash, 'space', cmus.play)
-hotkey.bind(mash, 'left', cmus.previous)
-hotkey.bind(mash, 'right', cmus.next)
+hotkey.bind(mashshift, 'space', cmus.play)
+hotkey.bind(mashshift, 'left', cmus.previous)
+hotkey.bind(mashshift, 'right', cmus.next)
 
 local function showTime()
   alert.show(os.date("%A %b %d, %Y - %I:%M%p"), 4)
