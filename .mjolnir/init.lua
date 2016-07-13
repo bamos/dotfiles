@@ -10,6 +10,7 @@ local hotkey = require "mjolnir.hotkey"
 local fnutils = require "mjolnir.fnutils"
 local grid = require "mjolnir.bg.grid"
 local cmus = require "cmus"
+local spotify = require "mjolnir.lb.spotify"
 
 local mash = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
@@ -36,10 +37,10 @@ function focus(f)
   end
 end
 
-hotkey.bind(mash, 'left', focus(function(w) w:focuswindow_west() end))
-hotkey.bind(mash, 'right', focus(function(w) w:focuswindow_east() end))
-hotkey.bind(mash, 'up', focus(function(w) w:focuswindow_north() end))
-hotkey.bind(mash, 'down', focus(function(w) w:focuswindow_south() end))
+-- hotkey.bind(mash, 'left', focus(function(w) w:focuswindow_west() end))
+-- hotkey.bind(mash, 'right', focus(function(w) w:focuswindow_east() end))
+-- hotkey.bind(mash, 'up', focus(function(w) w:focuswindow_north() end))
+-- hotkey.bind(mash, 'down', focus(function(w) w:focuswindow_south() end))
 
 hotkey.bind(mash, 'h', focus(function(w) w:focuswindow_west() end))
 hotkey.bind(mash, 's', focus(function(w) w:focuswindow_east() end))
@@ -60,10 +61,6 @@ hotkey.bind(mash, 'g', grid.resizewindow_taller)
 hotkey.bind(mash, 'c', grid.resizewindow_shorter)
 hotkey.bind(mash, 'r', grid.resizewindow_wider)
 hotkey.bind(mash, 'l', grid.resizewindow_thinner)
-
-hotkey.bind(mashshift, 'space', cmus.play)
-hotkey.bind(mashshift, 'left', cmus.previous)
-hotkey.bind(mashshift, 'right', cmus.next)
 
 local function showTime()
   alert.show(os.date("%A %b %d, %Y - %I:%M%p"), 4)
@@ -89,6 +86,13 @@ local function toggleMute()
   local isMuted = dev:muted()
   dev:setmuted(not isMuted)
 end
+
+-- hotkey.bind(mash, 'space', cmus.play)
+-- hotkey.bind(mash, 'left', cmus.previous)
+-- hotkey.bind(mash, 'right', cmus.next)
+hotkey.bind(mash, 'space', spotify.play)
+hotkey.bind(mash, 'left', spotify.previous)
+hotkey.bind(mash, 'right', spotify.next)
 
 hotkey.bind(mash, 'up', bumpVolume(1))
 hotkey.bind(mash, 'down', bumpVolume(-1))
