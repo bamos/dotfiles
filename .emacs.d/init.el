@@ -48,7 +48,6 @@
 
 (add-hook 'find-file-hook (lambda () (linum-mode 0))) ; Line numbers.
 (set-face-foreground 'minibuffer-prompt "white") ; White miniprompt.
-(setq visible-bell t) ; Disable bell.
 (fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
 (setq vc-follow-symlinks t) ; Always follow symlinks.
 ;; (add-hook 'emacs-startup-hook  'delete-other-windows)
@@ -91,8 +90,6 @@
            '((file-name-as-directory "/tmp")))
       (tool-bar-mode -1))
   (progn
-    (when (display-graphic-p)
-      (set-face-attribute 'default nil :height 125))
     (menu-bar-mode -1)
     (tool-bar-mode -1)))
 
@@ -128,3 +125,6 @@
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
 (global-set-key (kbd "C-c d") 'redraw-display)
+
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
