@@ -11,6 +11,7 @@
 # http://bamos.github.io
 # 2015/04/27
 
+# Inspired by: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
 alias g='git'
 alias ga='git add'
 alias gc='git commit'
