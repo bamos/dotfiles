@@ -1,4 +1,5 @@
 (require 'org)
+(require 'htmlize)
 
 (add-hook 'org-mode-hook (lambda ()
   ;; Dvorak.
@@ -14,7 +15,18 @@
 
   (local-set-key (kbd "C-S-<return>") 'org-insert-heading-after-current)))
 
-(org-display-inline-images)
+(setq org-startup-with-inline-images t
+      org-src-fontify-natively t
+      org-latex-to-pdf-process (list "latexmk -pdf %f")
+      org-image-actual-width 600
+      org-agenda-skip-scheduled-if-done t)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((sh . t)
+   (python . t)))
+(setq org-confirm-babel-evaluate nil)
+(setq org-babel-python-command "python3")
 
 ;; Automatic link description downloading.
 ;; Source: https://github.com/pkkm/.emacs.d/blob/8ac745bae09e303a13708fb9260849de9e1d8502/conf/mode-specific/org.el#L90
