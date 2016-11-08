@@ -6,7 +6,9 @@
  '(LaTeX-verbatim-environments (quote ("verbatim" "verbatim*" "lstlisting")))
  '(erc-autojoin-delay 10)
  '(erc-autojoin-timing (quote ident))
- '(org-agenda-files (quote ("~/org/dgm-notes.org" "~/org/todo.org"))))
+ '(org-agenda-files
+   (quote
+    ("~/org/cls.org" "~/org/todo.org" "~/org/notes.org" "~/2016-research/dgm/notes.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
