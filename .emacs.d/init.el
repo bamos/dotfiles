@@ -24,6 +24,7 @@
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
 (load-user-file "init-org.el")
+(load-user-file "init-helm.el")
 
 (when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
 
@@ -57,7 +58,7 @@
 (setq show-paren-delay 0)
 
 (setq shell-prompt-pattern ".*» *")
-(setq dired-use-ls-dired nil)
+;; (setq dired-use-ls-dired nil)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
@@ -126,8 +127,6 @@
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
 (global-set-key (kbd "C-c d") 'redraw-display)
-
-(require 'helm-config)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)

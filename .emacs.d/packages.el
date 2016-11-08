@@ -21,7 +21,8 @@
     git-messenger
     go-mode
     haskell-mode
-    helm-core
+    helm
+    helm-descbinds
     htmlize
     json-mode
     lua-mode
