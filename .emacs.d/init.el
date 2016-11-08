@@ -127,6 +127,8 @@
 
 (global-set-key (kbd "C-c d") 'redraw-display)
 
+(require 'helm-config)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
