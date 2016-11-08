@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1987 
+personal_ws-1.1 en 2087 
 TopPages
 CCS
 println
@@ -24,6 +24,7 @@ libvirtd
 ASF
 virtualenv
 arn
+stochastically
 blocksizes
 DCP
 dfe
@@ -53,6 +54,7 @@ AWS
 Bhat
 maxDate
 DHT
+zheng
 Linktropy
 cmu
 Caml
@@ -75,6 +77,7 @@ xample
 crr
 VBODA
 doi
+DPG
 xvfb
 gbc
 dom
@@ -90,6 +93,7 @@ Rscript
 getLayerSz
 endtag
 Tweepy
+DQN
 ctz
 getAdmmXY
 resumé
@@ -103,15 +107,19 @@ geo
 srini
 env
 Flg
+geq
 GHC
 Delaunay
 CXX
+hCD
 DTEND
 HDD
 eps
 GFS
+lillicrap
 ScalaTest
 Gjc
+amos
 define's
 HAX
 sdcard
@@ -130,6 +138,7 @@ Maurits
 Zico's
 Dmitry
 keygen
+cdot
 outName
 charsets
 starttag
@@ -154,6 +163,7 @@ getParameters
 idx
 Heilman
 Layne
+oliphant
 Gpr
 APIs
 duchi
@@ -166,15 +176,16 @@ GSO
 sshfs
 IIS
 Caffe
+Tsinghua
 addShutdownHook
 xvzf
-Tsinghua
 SPCriterion
 zeroGradParameters
 arff
 gSz
 kap
 img
+chen
 KDD
 ILP
 subsubsection
@@ -185,8 +196,8 @@ Jin
 stdev
 htm
 args
-inv
 HSV
+inv
 DCIM
 inW
 iOS
@@ -208,6 +219,7 @@ ISP
 jpg
 len
 protobuf
+leq
 printArraySeq
 jre
 armv
@@ -224,6 +236,7 @@ arsc
 lin
 mei
 classpath
+NAF
 MGA
 nbc
 mem
@@ -232,6 +245,7 @@ nbd
 Liu
 openssh
 parseTimeStr
+DDPG
 JVM
 NA's
 NAS
@@ -276,6 +290,7 @@ codrops
 MPI
 DHCP
 hyperparameters
+CAMcEshcXKwBKA
 argparse
 PCA
 tcpdump
@@ -321,6 +336,7 @@ tcpflow
 Isaacson
 getRepos
 consoleQuick
+recognise
 avro
 leftPos
 fileHandle
@@ -340,6 +356,7 @@ ecos
 Qualstar
 spotrs
 Rei
+polytope
 Atcold
 elseif
 argcheck's
@@ -370,22 +387,23 @@ sdk
 RESTful
 RuntimeException
 CMU's
-RHS
-SCS
 SEI
 PRs
+SCS
+RHS
 conf
 kinesis
 subsecond
 sdp
-sgd
 TBD
+sgd
 Pedersen
 SHA
 feeded
 dirs
 vertices
 PWD
+parameterizations
 cmyk
 rll
 outDir
@@ -406,6 +424,7 @@ benchmarking
 equilibrated
 storepass
 TripletEmbedding
+expressibility
 rpn
 leftVar
 rsa
@@ -416,13 +435,14 @@ SNE
 bsplines
 Gladwell
 inputXy
+rrr
 fallbackLfw
 cout
 Rahul
 UDP
 tgz
-tmlabel
 SPG
+tmlabel
 rss
 coryschires
 postText
@@ -472,6 +492,7 @@ cdata
 validators
 readme
 TSO
+TQz
 webpage's
 webpages
 scaledX
@@ -541,6 +562,7 @@ Orfeo
 backsolve
 discretization
 luarocks
+doya
 learn'd
 frameSize
 bb
@@ -561,6 +583,7 @@ bn
 de
 ProLiant
 df
+au
 yoe
 ec
 br
@@ -575,6 +598,7 @@ gclo
 versa
 priori
 cp
+Az
 DL
 fb
 eg
@@ -610,6 +634,7 @@ fw
 Haar
 HN
 assertEquals
+gu
 dtype
 Pylearn
 im
@@ -618,6 +643,7 @@ createpdf
 io
 ip
 Hu
+Gz
 MobileVideoHandler
 warmup
 brandon
@@ -626,6 +652,7 @@ hw
 kH
 ld
 kj
+usepackage
 jq
 mb
 telefonica
@@ -633,6 +660,7 @@ FullCommand
 li
 md
 js
+HumanoidStandup
 ko
 mf
 nParams
@@ -654,6 +682,7 @@ zipalign
 oH
 ethtool
 nn
+anonymized
 formalisms
 ok
 np
@@ -673,8 +702,10 @@ rc
 os
 Sa
 rf
+OU
 sc
 oW
+Qm
 Enum
 fopenmp
 ps
@@ -696,6 +727,7 @@ sl
 th
 va
 sp
+Qz
 upquote
 CountryParser
 VC
@@ -707,6 +739,7 @@ su
 setParameters
 wb
 ul
+DeepRL
 Sx
 MartinThoma
 sy
@@ -720,6 +753,7 @@ tx
 unary
 Poynor
 xf
+Tz
 Wl
 showtabs
 uy
@@ -735,13 +769,16 @@ frontalizing
 Pearce
 zi
 x's
+Xu
 hardcopy
 y's
 xy
 extractionMap
-LShift
+yu
 lshift
+LShift
 versioning
+zu
 ZW
 qutebits
 hdfs
@@ -750,6 +787,7 @@ marginScalingTerm
 getDataSet
 truediv
 jsonresume
+uhlenbeck
 HAXM
 unsortedList
 ScalaTest's
@@ -768,12 +806,14 @@ codebase
 Klingensmith
 passwordless
 mboxFile
+underestimator
 Hinojos
 eval
 lapacklib
 dayStr
 Satyanarayanan
 deleteUserUsername
+frac
 QNSTOP's
 hyperplane
 endTime
@@ -801,6 +841,7 @@ btford
 Virtualization
 keyframes
 Kazemi
+todorov
 Heyo
 ideo
 IsCumulative
@@ -820,12 +861,14 @@ sigint
 printheader
 OSError
 Soyota
+InvertedPendulum
 afghanistan
 solveGradY
 natasha
 KeepThisDir
 lastLayer
 stringstyle
+preprint
 metavar
 MetaVar
 xdelta
@@ -833,8 +876,11 @@ SUBARCH
 rxhash
 expP
 expr
+brockman
 omelette
 findMedian
+watkins
+Behaviour
 misconfigured
 SnowGlobe
 snowglobe
@@ -842,6 +888,7 @@ checksums
 func
 ghostscript
 Karlsruhe
+grffile
 toolchain
 setEndDate
 beatles
@@ -893,6 +940,7 @@ Krach
 Yoshino
 layerSz
 Thinkair
+ProjNewtonLogistic
 Príncipe
 decryptedMsgStr
 keybindings
@@ -913,6 +961,7 @@ stepnumber
 resegmented
 frontend
 ncones
+optimizable
 proxying
 multiclass
 IMAP
@@ -1122,6 +1171,7 @@ Bokanovsky's
 PRObE
 JavaCameraSizeAccessor
 afriggeri
+RGSgN
 nair
 Vissini
 timesheets
@@ -1136,14 +1186,19 @@ Sedaris
 krha
 Martial's
 nOutput
+TensorFlow
+tensorflow
 impactful
+login
 llll
 Blacksburg
 mfpu
+bengio
 gpgDir
 eigenfaces
 kTab
 nLayers
+Concat
 urlDict
 parallelize
 filesystem
@@ -1151,6 +1206,7 @@ ShellSort
 perceptron
 systemd
 backsubstitution
+goodfellow
 Hokies
 kaeluka
 Birman
@@ -1169,16 +1225,20 @@ wikia
 sysroot
 ispell
 spanish
+bertsekas
 kSpec
 latencies
 timegm
 Linpack
+astar
 zshrc
 mkfs
 Optiplex
 gokpg
+soumith
 crimsonRed
 thresholded
+arxiv
 MITM
 reproducibility
 atmos
@@ -1209,9 +1269,11 @@ KVM's
 TestHeapArray
 filename
 noitemsep
+Fenchel
 spArgs
 Ooyala's
 proxied
+mnih
 Gopen
 preprocessing
 hiVal
@@ -1265,6 +1327,7 @@ ocaml
 OCaml
 timestamp
 pointwise
+MRFs
 typesetted
 endDate
 infeasible
@@ -1299,6 +1362,7 @@ PlaceHolder
 pathadd
 deconvolution
 getMPParams
+optimality
 FooApp
 autodetect
 subprocess
@@ -1312,7 +1376,10 @@ bgColorOne
 deduplicate
 mknod
 u'sensor
+OpenAI
+openai
 yakju
+peng
 ScrapeCountries
 libblas
 FloatTensor
@@ -1343,13 +1410,16 @@ MathematicaScript
 Mult
 OpenGL
 smartphones
+hypercube
 KeyError
 cloudlet
 doubleTok
+koller
 halfspaces
 blocksize
 MTUs
 gpambrozio
+sigmoid
 simonyan
 setmetatable
 sheng
@@ -1366,6 +1436,7 @@ cassandra
 calculateCameraFrameSize
 xetex
 XeTeX
+inpainting
 centos
 CentOS
 daysInMonth
@@ -1418,6 +1489,7 @@ datagrams
 deduplicating
 gradIn
 deduplication
+detections
 ExistingFile
 htmlContent
 middleware
@@ -1438,8 +1510,10 @@ startDate
 ubicomp
 ParseIP
 convos
+abadi
 cpath
 imilarity
+discretizing
 Mahadev
 u'type
 reduceByKey
@@ -1460,11 +1534,13 @@ Ciura's
 rightPosVar
 rmmod
 insmod
+poon
 genomics
 repo
 postImage
 repr
 parsers
+Ramstedt's
 mnist
 rPrimal
 sbin
@@ -1477,6 +1553,7 @@ resy
 Sundaresan
 resz
 prev
+HalfCheetah
 Flesch
 functionalities
 computermacgyver
@@ -1499,6 +1576,7 @@ lsmod
 listal's
 GammaRay's
 maplace
+parameterized
 Kistler
 unregister
 PlotRange
@@ -1525,8 +1603,8 @@ divad
 breakatwhitespace
 postChannel
 nbdroid
-openblas
 OpenBLAS
+openblas
 FileWriter
 Peucker
 pipelining
@@ -1566,6 +1644,7 @@ nIter
 basicstyle
 XHTML
 Grossman
+Adact
 backprop
 nonconvex
 Sunapsys
@@ -1591,6 +1670,7 @@ pypdf
 intervalTree
 subshell
 ntpdate
+suboptimality
 compositional
 combineAllArffs
 heatmap
@@ -1610,6 +1690,7 @@ Eliezer
 backpropagate
 ipList
 IPList
+latexpreview
 orthant
 chinese
 showspaces
@@ -1624,10 +1705,14 @@ testQuicksort
 deleteMax
 siuro
 parseCalendars
+SPEN
 SMTP
 rval
 Jiang
+Reacher
 ReadingList
+mujoco
+MuJoCo
 vmhandoff
 CacheTimeout
 OpenFace
@@ -1637,9 +1722,11 @@ exiftool
 subpart
 packetization
 tradeoff
+SNrNtg
 unescape
 vals
 param
+Stationarity
 stylesheet
 timestamps
 terro
@@ -1657,6 +1744,7 @@ ryan
 Sonmez
 piecewise
 getStructure
+AlphaGo
 testHeapSort
 idxint
 TODO
@@ -1670,6 +1758,7 @@ tmpl
 breaklines
 leftmargin
 tmpm
+succ
 rightEnd
 prefetching
 arffDir
@@ -1689,6 +1778,7 @@ elementwise
 transformative
 pretrained
 InstallShield
+BundleEntropyMethod
 kwargs
 lurry
 tmux
@@ -1719,6 +1809,7 @@ submodules
 FCNNs
 lapack
 gpgPass
+SETUPFILE
 WANs
 singleDatePicker
 FaceNet's
@@ -1766,6 +1857,7 @@ TopPagesByPreviousTopPages
 Gabor
 pfloat
 mplayer
+huang
 READMEs
 pspillai
 timezones
@@ -1804,6 +1896,7 @@ nSamples
 jinja
 extensibility
 xmlns
+smola
 snowplowTracker
 Akshay
 dailyTimes
@@ -1837,6 +1930,7 @@ hashbang
 util
 iPerf
 iperf
+customizable
 Kincaid
 UnaryOp
 Xfer
@@ -1865,6 +1959,7 @@ librefblas
 keepalive
 SplitN
 psutil
+discretized
 CocoaDialog
 builtin
 templating
@@ -1893,6 +1988,7 @@ Xerces
 SpatialMaxPooling
 InsertionSort
 amongst
+henderson
 uplink
 compressibility
 splinePlot
@@ -1918,7 +2014,7 @@ Theano
 ratliff
 marche
 modprobe
-Belanger
+belanger
 liveness
 Marcin
 resize
@@ -1929,6 +2025,7 @@ admm
 Babu
 pageview
 OpenCV's
+magnani
 nForked
 andrew
 FICNNs
@@ -1962,7 +2059,8 @@ adb
 todayEpoch
 ACM
 AED
-FICNN
+regularizers
+ficnn
 tradeoffs
 NoSQL
 raphink
@@ -1973,11 +2071,13 @@ beamer
 openjdk
 afs
 xorg
+InvertedDoublePendulum
 Ajc
 params
 borderColor
 numbersep
 printf's
+Alg
 ccc
 ccf
 getConvParams
