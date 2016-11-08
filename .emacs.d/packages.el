@@ -21,6 +21,8 @@
     git-messenger
     go-mode
     haskell-mode
+    helm-core
+    htmlize
     json-mode
     lua-mode
     magit
