@@ -102,8 +102,8 @@
 
 (setq compilation-scroll-output 'first-error)
 
-(add-hook 'python-mode-hook (lambda() (
-  (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
+;; (add-hook 'python-mode-hook (lambda() (
+;;   (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
 (require 'haskell-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
@@ -117,6 +117,7 @@
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets/yasnippet-snippets"
         "~/.emacs.d/snippets/yasmate/snippets"
+        "~/.emacs.d/snippets/custom"
         "~/repos/yasnippet-lua-torch"
         ))
 (yas-global-mode 1)
@@ -128,3 +129,7 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
+
+;; OSX-specific:
+(setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
+(setq exec-path (append exec-path '("/Library/TeX/texbin")))
