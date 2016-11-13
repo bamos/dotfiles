@@ -1,11 +1,14 @@
 .aria2/dht.dat*
+.emacs.d/abbrev_defs
 .emacs.d/auto-save-list
-.emacs.d/network-security.data
 .emacs.d/elpa
-.emacs.d/eshell
 .emacs.d/ensime
+.emacs.d/eshell
+.emacs.d/helm-adaptive-history
+.emacs.d/network-security.data
 .emacs.d/saveplace.el
 .emacs.d/tramp
+.emacs.d/url
 .gnupg/*
 !.gnupg/gpg.conf
 .mpv/watch_later
