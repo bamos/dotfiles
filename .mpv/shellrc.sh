@@ -9,7 +9,7 @@ mpvp() {
 
 playcurrentdir() {
   mpvshuf --playlist <(find "$PWD" -type f -follow \
-    -not -path '*/\.*' -exec realpath -s {} \;)
+    -not -path '*/\.*' -not -path '*.m3u' -exec realpath -s {} \;)
 }
 alias pcd='playcurrentdir'
 
