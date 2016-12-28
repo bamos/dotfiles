@@ -6,6 +6,7 @@
 .emacs.d/eshell
 .emacs.d/helm-adaptive-history
 .emacs.d/network-security.data
+.emacs.d/recentf
 .emacs.d/saveplace.el
 .emacs.d/tramp
 .emacs.d/url
