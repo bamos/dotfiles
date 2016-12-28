@@ -35,6 +35,7 @@
 (global-set-key (kbd "C-h d")                        'helm-info-at-point)
 (global-set-key (kbd "C-h i")                        'helm-info)
 (global-set-key (kbd "C-x C-d")                      'helm-browse-project)
+(global-set-key (kbd "C-x b")                        'helm-buffers-list)
 (global-set-key (kbd "<f1>")                         'helm-resume)
 (global-set-key (kbd "C-h C-f")                      'helm-apropos)
 (global-set-key (kbd "C-h a")                        'helm-apropos)
