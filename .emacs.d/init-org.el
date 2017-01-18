@@ -57,3 +57,12 @@
         (message "Automatic link description downloading disabled."))
     (setq org-make-link-description-function #'get-url-html-title)
     (message "Automatic link description downloading enabled.")))
+
+;; Source: http://stackoverflow.com/a/27043756
+(defun my-org-archive-done-tasks ()
+  (interactive)
+  (org-map-entries
+   (lambda ()
+     (org-archive-subtree)
+     (setq org-map-continue-from (outline-previous-heading)))
+   "/DONE" 'file))
