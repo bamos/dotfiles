@@ -37,6 +37,7 @@
 (require 'magit)
 (global-set-key (kbd "C-x C-g C-s") 'magit-status)
 (setq magit-push-always-verify nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 (unless window-system
   (require 'mouse)
@@ -134,3 +135,5 @@
 ;; OSX-specific:
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))
+
+(set-face-attribute 'default (selected-frame) :height 100)
