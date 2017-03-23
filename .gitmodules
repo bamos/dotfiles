@@ -10,3 +10,6 @@
 [submodule ".emacs.d.old/snippets/yasmate"]
 	path = .emacs.d.old/snippets/yasmate
   url = https://github.com/capitaomorte/yasmate.git
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = https://github.com/syl20bnr/spacemacs
