@@ -9,6 +9,8 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.SimpleFloat
+import XMonad.Layout.LayoutScreens
+import XMonad.Layout.TwoPane
 import XMonad.Util.SpawnOnce
 
 import qualified XMonad.StackSet as W
@@ -72,6 +74,10 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
 
     -- Floating layer support.
     , ((mod, xK_y), withFocused $ windows . W.sink) -- %! Push window back into tiling
+
+    -- Screen division.
+    , ((mod .|. shiftMask,                 xK_space), layoutScreens 2 (TwoPane 0.6 0.4))
+    , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
 
     -- Increase or decrease number of windows in the master area.
     -- , ((mod, xK_w), sendMessage (IncMasterN 1))
