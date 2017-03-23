@@ -299,37 +299,40 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (interactive)
+  (progn
 
-  ;; Dvorak.
-  (define-key evil-normal-state-map "h" 'evil-backward-char)
-  (define-key evil-normal-state-map "t" 'evil-next-line)
-  (define-key evil-normal-state-map "n" 'evil-previous-line)
-  (define-key evil-normal-state-map "s" 'evil-forward-char)
-  ;; (define-key evil-normal-state-map [left] 'undefined)
-  ;; (define-key evil-normal-state-map [down] 'undefined)
-  ;; (define-key evil-normal-state-map [up] 'undefined)
-  ;; (define-key evil-normal-state-map [right] 'undefined)
-  (define-key evil-normal-state-map "k" 'undefined)
-  (define-key evil-normal-state-map "l" 'undefined)
-  (define-key evil-normal-state-map ";" 'undefined)
+    ;; Dvorak.
+    (define-key evil-normal-state-map "h" 'evil-backward-char)
+    (define-key evil-normal-state-map "t" 'evil-next-line)
+    (define-key evil-normal-state-map "n" 'evil-previous-line)
+    (define-key evil-normal-state-map "s" 'evil-forward-char)
+    ;; (define-key evil-normal-state-map [left] 'undefined)
+    ;; (define-key evil-normal-state-map [down] 'undefined)
+    ;; (define-key evil-normal-state-map [up] 'undefined)
+    ;; (define-key evil-normal-state-map [right] 'undefined)
+    (define-key evil-normal-state-map "k" 'undefined)
+    (define-key evil-normal-state-map "l" 'undefined)
+    (define-key evil-normal-state-map ";" 'undefined)
 
-  (define-key evil-motion-state-map "h" 'evil-backward-char)
-  (define-key evil-motion-state-map "t" 'evil-next-line)
-  (define-key evil-motion-state-map "n" 'evil-previous-line)
-  (define-key evil-motion-state-map "s" 'evil-forward-char)
-  ;; (define-key evil-motion-state-map [left] 'undefined)
-  ;; (define-key evil-motion-state-map [down] 'undefined)
-  ;; (define-key evil-motion-state-map [up] 'undefined)
-  ;; (define-key evil-motion-state-map [right] 'undefined)
-  (define-key evil-motion-state-map "k" 'undefined)
-  (define-key evil-motion-state-map "l" 'undefined)
-  (define-key evil-motion-state-map ";" 'undefined)
+    (define-key evil-motion-state-map "h" 'evil-backward-char)
+    (define-key evil-motion-state-map "t" 'evil-next-line)
+    (define-key evil-motion-state-map "n" 'evil-previous-line)
+    (define-key evil-motion-state-map "s" 'evil-forward-char)
+    ;; (define-key evil-motion-state-map [left] 'undefined)
+    ;; (define-key evil-motion-state-map [down] 'undefined)
+    ;; (define-key evil-motion-state-map [up] 'undefined)
+    ;; (define-key evil-motion-state-map [right] 'undefined)
+    (define-key evil-motion-state-map "k" 'undefined)
+    (define-key evil-motion-state-map "l" 'undefined)
+    (define-key evil-motion-state-map ";" 'undefined)
 
-  (define-key evil-normal-state-map "N" 'undefined)
-  (define-key evil-normal-state-map "k" 'evil-search-next)
-  (define-key evil-normal-state-map "K" 'evil-search-previous)
-  )
+    (define-key evil-normal-state-map "N" 'undefined)
+    (define-key evil-normal-state-map "k" 'evil-search-next)
+    (define-key evil-normal-state-map "K" 'evil-search-previous)
+
+
+    (add-to-list yas-snippet-dirs "~/.spacemacs.d/my-snippets")
+    ))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: se
+# key: se
+# --
+sys.exit(-1)
