@@ -3,6 +3,7 @@ import System.Exit
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
 import XMonad.Layout.Grid
 import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
@@ -106,7 +107,8 @@ _config = defaultConfig { terminal = "/usr/bin/urxvt"
                         , normalBorderColor  = "#333333"
                         , focusedBorderColor = "#5882FA"
                         , layoutHook = smartBorders _layout
-                        , startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs"
+                        , startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs" <+>
+                                        setWMName "LG3D"
                         }
 
 
