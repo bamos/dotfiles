@@ -293,14 +293,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration.
-This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
   (progn
-
     ;; Dvorak.
     (define-key evil-normal-state-map "h" 'evil-backward-char)
     (define-key evil-normal-state-map "t" 'evil-next-line)
@@ -329,9 +322,6 @@ you should place your code here."
     (define-key evil-normal-state-map "N" 'undefined)
     (define-key evil-normal-state-map "k" 'evil-search-next)
     (define-key evil-normal-state-map "K" 'evil-search-previous)
-
-
-    (add-to-list yas-snippet-dirs "~/.spacemacs.d/my-snippets")
     ))
 
 ;; Do not write anything past this comment. This is where Emacs will
