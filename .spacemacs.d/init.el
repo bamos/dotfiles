@@ -323,6 +323,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
     (define-key evil-normal-state-map "N" 'undefined)
     (define-key evil-normal-state-map "k" 'evil-search-next)
     (define-key evil-normal-state-map "K" 'evil-search-previous)
+
+    (evil-define-key 'normal evil-org-mode-map "t" 'evil-next-line)
     ))
 
 ;; Do not write anything past this comment. This is where Emacs will
