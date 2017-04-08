@@ -326,7 +326,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
     (define-key evil-normal-state-map "K" 'evil-search-previous)
 
     (evil-define-key 'normal evil-org-mode-map "t" 'evil-next-line)
-    ))
+
+    (setq org-agenda-files '("~/org"
+                             "/ssh:j:~/empc/notes/bamos.org"
+                             "/ssh:j:~/optnet.private/notes.org"))
+))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
