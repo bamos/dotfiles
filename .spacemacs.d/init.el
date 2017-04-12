@@ -296,7 +296,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 (defun dotspacemacs/user-config ()
   (progn
-    ;; Dvorak.
+    ;; Dvorak keybindings for evil and org.
     (define-key evil-normal-state-map "h" 'evil-backward-char)
     (define-key evil-normal-state-map "t" 'evil-next-line)
     (define-key evil-normal-state-map "n" 'evil-previous-line)
@@ -327,9 +327,24 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
     (evil-define-key 'normal evil-org-mode-map "t" 'evil-next-line)
 
+    ;; Org settings.
     (setq org-agenda-files '("~/org"
                              "/ssh:j:~/empc/notes/bamos.org"
                              "/ssh:j:~/optnet.private/notes.org"))
+
+    ;; Mutt settings.
+    (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
+
+    (add-hook 'mail-mode-hook 'turn-on-auto-fill)
+
+    (add-hook 'mail-mode-hook (lambda ()
+                                (define-key mail-mode-map [(control c) (control c)]
+                                  (lambda () (interactive) (save-buffer) (save-buffers-kill-terminal)))
+                                (delete-trailing-whitespace)
+                                (if (re-search-forward "\n\n" nil t)
+                                    (progn (open-line 2))
+                                  (when (search-forward "Reply-To:" nil t)
+                                    (open-line 2)(next-line 2)))))
 ))
 
 ;; Do not write anything past this comment. This is where Emacs will
