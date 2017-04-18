@@ -328,12 +328,12 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
     (evil-define-key 'normal evil-org-mode-map "t" 'evil-next-line)
 
-    ;; Org settings.
+    ;; org-mode.
     (setq org-agenda-files '("~/org"
                              "/ssh:j:~/empc/notes/bamos.org"
                              "/ssh:j:~/optnet.private/notes.org"))
 
-    ;; mu4e settings.
+    ;; mu4e.
     (setq user-full-name "Brandon Amos"
           user-mail-address "bamos@cs.cmu.edu"
           message-send-mail-function 'smtpmail-send-it
