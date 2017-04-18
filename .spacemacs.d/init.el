@@ -361,23 +361,34 @@ before packages are loaded. If you are unsure, you should try in setting them in
           mu4e-change-filenames-when-moving t
           mu4e-hide-index-messages 1
           mu4e-confirm-quit nil
-          mu4e-headers-leave-behavior 'apply)
+          mu4e-headers-leave-behavior 'apply
+          mu4e-compose-complete-only-personal t)
     (when (fboundp 'imagemagick-register-types)
       (imagemagick-register-types))
     (defun my-mu4e-mark-execute-all-no-confirm ()
       (interactive)
       (mu4e-mark-execute-all 'no-confirm))
     (eval-after-load 'mu4e
-      '(define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm))
-    (setcar mu4e-marks
-            '(refile
-              :char ("r" . "▶")
-              :prompt "refile"
-              :dyn-target (lambda (target msg) (mu4e-get-refile-folder msg))
-              :action (lambda (docid msg target)
-                        (progn
-                          (mu4e~proc-move docid (mu4e~mark-check-target target) "-N")
-                          (mu4e~proc-move docid nil "+S-u-N")))))
+      '(progn
+         (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm)
+
+         ;; Refile will set mail to All Mail (basically archiving them). I want this to
+         ;; auto-mark them as read, so I redefine refile to add the +S tag.
+         ;; Source: https://github.com/hlissner/.emacs.d/blob/f74c2ff618f8ad3090e02177d1cf9f428aac5a6b/modules/app/email/config.el#L126
+         (setq mu4e-marks (assq-delete-all 'refile mu4e-marks))
+         (push '(refile :char ("r" . "▶")
+                        :prompt "refile"
+                        :dyn-target (lambda (target msg) (mu4e-get-refile-folder msg))
+                        :action
+                        (lambda (docid msg target)
+                          (mu4e~proc-move docid (mu4e~mark-check-target target) "-u-N")))
+               mu4e-marks)
+
+         (defun +email|gmail-fix-flags (mark msg)
+           (cond ((memq mark '(trash refile)) (mu4e-action-retag-message msg "-\\Inbox"))
+                 ((eq mark 'flag) (mu4e-action-retag-message msg "+\\Starred"))
+                 ((eq mark 'unflag) (mu4e-action-retag-message msg "-\\Starred"))))
+         (add-hook 'mu4e-mark-execute-pre-hook #'+email|gmail-fix-flags)))
     ))
 
 
