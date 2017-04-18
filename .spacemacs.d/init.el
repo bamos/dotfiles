@@ -367,6 +367,15 @@ before packages are loaded. If you are unsure, you should try in setting them in
       (mu4e-mark-execute-all 'no-confirm))
     (eval-after-load 'mu4e
       '(define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm))
+    (setcar mu4e-marks
+            '(refile
+              :char ("r" . "▶")
+              :prompt "refile"
+              :dyn-target (lambda (target msg) (mu4e-get-refile-folder msg))
+              :action (lambda (docid msg target)
+                        (progn
+                          (mu4e~proc-move docid (mu4e~mark-check-target target) "-N")
+                          (mu4e~proc-move docid nil "+S-u-N")))))
     ))
 
 
