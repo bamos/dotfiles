@@ -355,10 +355,13 @@ before packages are loaded. If you are unsure, you should try in setting them in
              ("/[Gmail].All Mail"    . ?a))
           mu4e-get-mail-command "mbsync gmail"
           mu4e-update-interval (* 10 60)
+          mu4e-view-image-max-width 800
           mu4e-view-show-images t
           mu4e-view-show-addresses t
           mu4e-change-filenames-when-moving t
           mu4e-hide-index-messages 1)
+    (when (fboundp 'imagemagick-register-types)
+      (imagemagick-register-types))
     (defun my-mu4e-mark-execute-all-no-confirm () (mu4e-mark-execute-all 'no-confirm))
     (eval-after-load 'mu4e
          (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm))
