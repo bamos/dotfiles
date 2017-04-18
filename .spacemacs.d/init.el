@@ -360,7 +360,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
           mu4e-view-show-addresses t
           mu4e-change-filenames-when-moving t
           mu4e-hide-index-messages 1
-          mu4e-confirm-quit nil)
+          mu4e-confirm-quit nil
+          mu4e-headers-leave-behavior 'apply)
     (when (fboundp 'imagemagick-register-types)
       (imagemagick-register-types))
     (defun my-mu4e-mark-execute-all-no-confirm ()
