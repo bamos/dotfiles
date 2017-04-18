@@ -125,7 +125,7 @@ alias grive='grive -p ~/grive'
 alias wh='which'
 alias j='jobs'
 
-alias mu='mutt'
+# alias mu='mutt'
 # mu() {
 #   echo "Is this important?"
 #   read REPLY
