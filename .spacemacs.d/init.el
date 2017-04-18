@@ -362,9 +362,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
           mu4e-hide-index-messages 1)
     (when (fboundp 'imagemagick-register-types)
       (imagemagick-register-types))
-    (defun my-mu4e-mark-execute-all-no-confirm () (mu4e-mark-execute-all 'no-confirm))
+    (defun my-mu4e-mark-execute-all-no-confirm ()
+      (interactive)
+      (mu4e-mark-execute-all 'no-confirm))
     (eval-after-load 'mu4e
-         (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm))
+      '(define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm))
     ))
 
 
