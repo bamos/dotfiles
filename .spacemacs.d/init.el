@@ -370,25 +370,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
       (mu4e-mark-execute-all 'no-confirm))
     (eval-after-load 'mu4e
       '(progn
-         (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm)
+         (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm)))
 
-         ;; Refile will set mail to All Mail (basically archiving them). I want this to
-         ;; auto-mark them as read, so I redefine refile to add the +S tag.
-         ;; Source: https://github.com/hlissner/.emacs.d/blob/f74c2ff618f8ad3090e02177d1cf9f428aac5a6b/modules/app/email/config.el#L126
-         (setq mu4e-marks (assq-delete-all 'refile mu4e-marks))
-         (push '(refile :char ("r" . "▶")
-                        :prompt "refile"
-                        :dyn-target (lambda (target msg) (mu4e-get-refile-folder msg))
-                        :action
-                        (lambda (docid msg target)
-                          (mu4e~proc-move docid (mu4e~mark-check-target target) "-u-N")))
-               mu4e-marks)
-
-         (defun +email|gmail-fix-flags (mark msg)
-           (cond ((memq mark '(trash refile)) (mu4e-action-retag-message msg "-\\Inbox"))
-                 ((eq mark 'flag) (mu4e-action-retag-message msg "+\\Starred"))
-                 ((eq mark 'unflag) (mu4e-action-retag-message msg "-\\Starred"))))
-         (add-hook 'mu4e-mark-execute-pre-hook #'+email|gmail-fix-flags)))
+    (setq org-capture-templates
+          '(("t" "todo" entry (file "~/org/todo.org")
+             "* TODO %a %?\nDEADLINE: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))")))
     ))
 
 
