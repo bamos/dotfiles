@@ -8,3 +8,5 @@
 	excludesfile = ~/.gitignore_global
 [commit]
 	gpgsign = true
+[pull]
+	rebase = true
