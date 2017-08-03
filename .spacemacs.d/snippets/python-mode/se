@@ -2,4 +2,4 @@
 # name: se
 # key: se
 # --
-sys.exit(-1)
+import sys; sys.exit(-1)
