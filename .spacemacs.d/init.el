@@ -63,7 +63,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(smartparens)
+   dotspacemacs-excluded-packages '(anaconda-mode smartparens)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -331,6 +331,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
     (evil-define-key 'normal evil-org-mode-map "t" 'evil-next-line)
 
+    ;; Python.
+    (global-flycheck-mode -1)
+    (custom-set-variables '(python-guess-indent nil)
+                          '(python-indent-offset 2))
+
     ;; org-mode.
     (setq org-agenda-files
           '("~/org"
@@ -339,6 +344,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
             ))
 
     ;; mu4e.
+    (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
     (setq user-full-name "Brandon Amos"
           user-mail-address "bamos@cs.cmu.edu"
           message-send-mail-function 'smtpmail-send-it
@@ -376,6 +382,58 @@ before packages are loaded. If you are unsure, you should try in setting them in
     (eval-after-load 'mu4e
       '(progn
          (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm)))
+
+    (autoload 'mm-url-decode-entities-string "mm-url")
+    (defun get-url-html-title (url &rest ignored)
+      "Return the title of the HTML page at URL."
+      (let ((download-buffer (url-retrieve-synchronously url))
+            title-start title-end)
+        (save-excursion
+          (set-buffer download-buffer)
+          (beginning-of-buffer)
+          (setq title-start (search-forward "<title>"))
+          (search-forward "</title>")
+          (setq title-end (search-backward "<"))
+          (s-trim
+           (s-collapse-whitespace
+            (mm-url-decode-entities-string
+             (buffer-substring-no-properties title-start title-end)))))))
+
+    (defun my-org-toggle-auto-link-description ()
+      "Toggle automatically downloading link descriptions."
+      (interactive)
+      (if org-make-link-description-function
+          (progn
+            (setq org-make-link-description-function nil)
+            (message "Automatic link description downloading disabled."))
+        (setq org-make-link-description-function #'get-url-html-title)
+        (message "Automatic link description downloading enabled.")))
+
+    ;; https://emacs.stackexchange.com/a/9588
+    (require 'cl)
+    (require 'dash)
+
+    (defun todo-to-int (todo)
+      (first (-non-nil
+              (mapcar (lambda (keywords)
+                        (let ((todo-seq
+                               (-map (lambda (x) (first (split-string  x "(")))
+                                     (rest keywords)))) 
+                          (cl-position-if (lambda (x) (string= x todo)) todo-seq)))
+                      org-todo-keywords))))
+
+    (defun my-org-sort-key ()
+      (let* ((todo-max (apply #'max (mapcar #'length org-todo-keywords)))
+             (todo (org-entry-get (point) "TODO"))
+             (todo-int (if todo (todo-to-int todo) todo-max))
+             (priority (org-entry-get (point) "PRIORITY"))
+             (priority-int (if priority (string-to-char priority) org-default-priority)))
+        (format "%03d %03d" todo-int priority-int)
+        ))
+
+    (defun my-org-sort-entries ()
+      (interactive)
+      (org-sort-entries nil ?f #'my-org-sort-key))
 
     (setq org-capture-templates
           '(("t" "todo" entry (file "~/org/todo.org")
