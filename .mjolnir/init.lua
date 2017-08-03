@@ -94,6 +94,6 @@ hotkey.bind(mash, 'space', spotify.play)
 hotkey.bind(mash, 'left', spotify.previous)
 hotkey.bind(mash, 'right', spotify.next)
 
-hotkey.bind(mash, 'up', bumpVolume(1))
-hotkey.bind(mash, 'down', bumpVolume(-1))
+-- hotkey.bind(mash, 'up', bumpVolume(1))
+-- hotkey.bind(mash, 'down', bumpVolume(-1))
 hotkey.bind(mash, 'm', toggleMute)
