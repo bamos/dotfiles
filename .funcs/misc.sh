@@ -146,6 +146,7 @@ alias f='sudo $(fc -ln -1)'
 
 alias emacsd='emacs --daemon'
 alias e='emacsclient -nw'
+alias enq='emacsclient -nq'
 
 alias psg='ps aux | grep'
 alias psgrep='ps aux | grep'
