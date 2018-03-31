@@ -6,7 +6,9 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore_global
-[commit]
-	gpgsign = true
+#[commit]
+#	gpgsign = true
 [pull]
 	rebase = true
+[http]
+	cookiefile = /Users/bamos/.gitcookies
