@@ -33,6 +33,8 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     vimscript
+     lua
      csv
      javascript
      yaml
@@ -334,7 +336,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
     ;; Python.
     (global-flycheck-mode -1)
     (custom-set-variables '(python-guess-indent nil)
-                          '(python-indent-offset 2))
+                          '(python-indent-offset 4))
 
     ;; org-mode.
     (setq org-agenda-files
@@ -344,13 +346,17 @@ before packages are loaded. If you are unsure, you should try in setting them in
             ))
 
     ;; mu4e.
-    (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+    ;; (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+    (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-90868bd_1/share/emacs/site-lisp/mu/mu4e")
     (setq user-full-name "Brandon Amos"
           user-mail-address "bamos@cs.cmu.edu"
           message-send-mail-function 'smtpmail-send-it
+          smtpmail-local-domain "gmail.com"
+          smtpmail-default-smtp-server "smtp.gmail.com"
           smtpmail-smtp-server "smtp.gmail.com"
+          smtpmail-smtp-service 587
           smtpmail-queue-mail nil
-          smtpmail-queue-dir "~/mbsync/queue/cur"
+          smtpmail-queue-dir "~/.mu/queue/cur"
           mu4e-maildir "~/mbsync"
           mu4e-drafts-folder "/[Gmail].Drafts"
           mu4e-sent-folder   "/[Gmail].Sent Mail"
@@ -382,6 +388,23 @@ before packages are loaded. If you are unsure, you should try in setting them in
     (eval-after-load 'mu4e
       '(progn
          (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm)))
+
+    ;; https://emacs.stackexchange.com/a/24430
+    (defun draft-auto-save-buffer-name-handler (operation &rest args)
+      "for `make-auto-save-file-name' set '.' in front of the file name; do nothing for other operations"
+      (if
+          (and buffer-file-name (eq operation 'make-auto-save-file-name))
+          (concat (file-name-directory buffer-file-name)
+                  "."
+                  (file-name-nondirectory buffer-file-name))
+        (let ((inhibit-file-name-handlers
+               (cons 'draft-auto-save-buffer-name-handler
+                     (and (eq inhibit-file-name-operation operation)
+                          inhibit-file-name-handlers)))
+              (inhibit-file-name-operation operation))
+          (apply operation args))))
+
+    (add-to-list 'file-name-handler-alist '("Drafts/cur/" . draft-auto-save-buffer-name-handler))
 
     (autoload 'mm-url-decode-entities-string "mm-url")
     (defun get-url-html-title (url &rest ignored)
@@ -451,7 +474,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-auctex auctex-latexmk auctex w3m csv-mode mu4e-maildirs-extension mu4e-alert ht winum unfill fuzzy web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode yaml-mode intero flycheck hlint-refactor hindent helm-hoogle haskell-snippets yasnippet company-ghci company-ghc ghc company haskell-mode cmm-mode yapfify ws-butler window-numbering which-key web-mode volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spaceline powerline slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum live-py-mode linum-relative link-hint less-css-mode info+ indent-guide ido-vertical-mode hydra hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-css-scss helm-ag haml-mode google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight emmet-mode elisp-slime-nav dumb-jump diminish define-word cython-mode column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+    (vimrc-mode dactyl-mode xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro org-download mwim multi-term alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-web web-completion-data company-statistics company-cabal company-anaconda auto-yasnippet auto-dictionary ac-ispell auto-complete lua-mode company-auctex auctex-latexmk auctex w3m csv-mode mu4e-maildirs-extension mu4e-alert ht winum unfill fuzzy web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode yaml-mode intero flycheck hlint-refactor hindent helm-hoogle haskell-snippets yasnippet company-ghci company-ghc ghc company haskell-mode cmm-mode yapfify ws-butler window-numbering which-key web-mode volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spaceline powerline slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum live-py-mode linum-relative link-hint less-css-mode info+ indent-guide ido-vertical-mode hydra hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-css-scss helm-ag haml-mode google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight emmet-mode elisp-slime-nav dumb-jump diminish define-word cython-mode column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+ '(python-guess-indent nil)
+ '(python-indent-guess-indent-offset nil)
+ '(python-indent-offset 4)
  '(send-mail-function (quote mailclient-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
