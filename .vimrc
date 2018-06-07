@@ -87,3 +87,5 @@ noremap h <left>
 noremap t <down>
 noremap n <up>
 noremap s <right>
+
+let g:go_version_warning = 0
