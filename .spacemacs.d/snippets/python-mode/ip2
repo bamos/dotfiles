@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ip2
+# key: ip2
+#
+# --
+import IPython, sys; IPython.embed(); sys.exit(-1)

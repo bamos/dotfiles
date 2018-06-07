@@ -17,8 +17,8 @@ REPOS=$HOME/repos
 pathadd $REPOS/shell-scripts
 pathadd $REPOS/python-scripts/python2.7
 pathadd $REPOS/python-scripts/python3
-command -v ruby >/dev/null 2>&1 && \
-  pathadd $(ruby -rubygems -e "puts Gem.user_dir")/bin
+# command -v ruby >/dev/null 2>&1 && \
+#   pathadd $(ruby -rubygems -e "puts Gem.user_dir")/bin
 unset REPOS
 
 autoload -U zmv
@@ -75,3 +75,6 @@ bindkey '^e' edit-command-line
 
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO=$HOME/.gnupg/S.gpg-agent
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

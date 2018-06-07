@@ -1,7 +1,8 @@
 # -*- mode: snippet -*-
 # name: ip
 # key: ip
-# --
 #
 # import IPython, sys; IPython.embed(); sys.exit(-1)
-import ipdb, sys; ipdb.set_trace(); sys.exit(-1)
+# import ipdb; ipdb.set_trace()
+# --
+import ipdb; ipdb.set_trace()
