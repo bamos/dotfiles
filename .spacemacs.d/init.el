@@ -333,6 +333,15 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
     (evil-define-key 'normal evil-org-mode-map "t" 'evil-next-line)
 
+    ;; https://stackoverflow.com/questions/10929915
+    (require 'cl)
+    (defun my-kill-buffers (regexp)
+      "Kill buffers matching REGEXP without asking for confirmation."
+      (interactive "sKill buffers matching this regular expression: ")
+      (flet ((kill-buffer-ask (buffer) (kill-buffer buffer)))
+        (kill-matching-buffers regexp)))
+
+
     ;; Python.
     (global-flycheck-mode -1)
     (custom-set-variables '(python-guess-indent nil)
@@ -358,7 +367,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
           smtpmail-queue-mail nil
           smtpmail-queue-dir "~/.mu/queue/cur"
           mu4e-maildir "~/mbsync"
-          mu4e-drafts-folder "/[Gmail].Drafts"
+          ;; mu4e-drafts-folder "/[Gmail].Drafts"
           mu4e-sent-folder   "/[Gmail].Sent Mail"
           mu4e-refile-folder   "/[Gmail].All Mail"
           mu4e-trash-folder  "/[Gmail].Trash"
@@ -368,7 +377,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
           '( ("/INBOX"               . ?i)
              ("/[Gmail].Sent Mail"   . ?s)
              ("/[Gmail].Trash"       . ?t)
-             ("/[Gmail].Drafts"      . ?d)
+             ;; ("/[Gmail].Drafts"      . ?d)
              ("/[Gmail].All Mail"    . ?a))
           mu4e-get-mail-command "mbsync gmail"
           mu4e-update-interval (* 10 60)
