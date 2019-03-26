@@ -33,7 +33,9 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     graphviz
      vimscript
+     ipython-notebook
      lua
      csv
      javascript
@@ -61,7 +63,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(olivetti)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -302,6 +304,22 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 (defun dotspacemacs/user-config ()
   (progn
+    (add-hook 'tex-mode-hook (lambda ()
+                                (interactive)
+                                (olivetti-mode 1)
+                                (olivetti-set-width 81)
+                                ))
+    (add-hook 'text-mode-hook (lambda ()
+                               (interactive)
+                                (olivetti-mode 1)
+                                (olivetti-set-width 81)
+                                ))
+    (add-hook 'prog-mode-hook (lambda ()
+                                (interactive)
+                                (olivetti-mode 1)
+                                (olivetti-set-width 81)
+                                ))
+
     ;; Dvorak keybindings for evil and org.
     (define-key evil-normal-state-map "h" 'evil-backward-char)
     (define-key evil-normal-state-map "t" 'evil-next-line)
@@ -358,7 +376,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
     ;; (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
     (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-90868bd_1/share/emacs/site-lisp/mu/mu4e")
     (setq user-full-name "Brandon Amos"
-          user-mail-address "bamos@cs.cmu.edu"
+          user-mail-address "brandon.amos.cs@gmail.com"
           message-send-mail-function 'smtpmail-send-it
           smtpmail-local-domain "gmail.com"
           smtpmail-default-smtp-server "smtp.gmail.com"
@@ -483,7 +501,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (vimrc-mode dactyl-mode xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro org-download mwim multi-term alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-web web-completion-data company-statistics company-cabal company-anaconda auto-yasnippet auto-dictionary ac-ispell auto-complete lua-mode company-auctex auctex-latexmk auctex w3m csv-mode mu4e-maildirs-extension mu4e-alert ht winum unfill fuzzy web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode yaml-mode intero flycheck hlint-refactor hindent helm-hoogle haskell-snippets yasnippet company-ghci company-ghc ghc company haskell-mode cmm-mode yapfify ws-butler window-numbering which-key web-mode volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spaceline powerline slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum live-py-mode linum-relative link-hint less-css-mode info+ indent-guide ido-vertical-mode hydra hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-css-scss helm-ag haml-mode google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight emmet-mode elisp-slime-nav dumb-jump diminish define-word cython-mode column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+    (ein deferred websocket olivetti org-mime vimrc-mode dactyl-mode xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro org-download mwim multi-term alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-web web-completion-data company-statistics company-cabal company-anaconda auto-yasnippet auto-dictionary ac-ispell auto-complete lua-mode company-auctex auctex-latexmk auctex w3m csv-mode mu4e-maildirs-extension mu4e-alert ht winum unfill fuzzy web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode yaml-mode intero flycheck hlint-refactor hindent helm-hoogle haskell-snippets yasnippet company-ghci company-ghc ghc company haskell-mode cmm-mode yapfify ws-butler window-numbering which-key web-mode volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spaceline powerline slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum live-py-mode linum-relative link-hint less-css-mode info+ indent-guide ido-vertical-mode hydra hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-css-scss helm-ag haml-mode google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight emmet-mode elisp-slime-nav dumb-jump diminish define-word cython-mode column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
  '(python-guess-indent nil)
  '(python-indent-guess-indent-offset nil)
  '(python-indent-offset 4)
