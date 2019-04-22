@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: sd
+# key: sd
+# --
+import os
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))

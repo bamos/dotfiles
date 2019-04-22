@@ -5,6 +5,9 @@
 (require 'evil)
 (evil-mode 1)
 
+(require 'evil-commentary)
+(evil-commentary-mode)
+
 ;; New is C-g
 (define-key evil-insert-state-map "\C-g" 'evil-normal-state)
 

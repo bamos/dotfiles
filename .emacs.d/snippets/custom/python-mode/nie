@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: nie
+# key: nie
+# --
+raise NotImplementedError

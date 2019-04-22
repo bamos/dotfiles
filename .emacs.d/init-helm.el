@@ -10,7 +10,7 @@
 
 (helm-mode 0)
 (helm-adaptive-mode 1)
-(helm-push-mark-mode 1)
+; (helm-push-mark-mode 1)
 (helm-popup-tip-mode 1)
 (helm-top-poll-mode 1)
 
@@ -21,7 +21,9 @@
 (define-key helm-command-map (kbd "#") 'helm-emms)
 (define-key helm-command-map (kbd "I") 'helm-imenu-in-all-buffers)
 
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "TAB") #'helm-execute-persistent-action)
+(define-key helm-map (kbd "<tab>") #'helm-execute-persistent-action)
+(define-key helm-map (kbd "C-z") #'helm-select-action)
 
 (global-set-key (kbd "M-x")                          'undefined)
 (global-set-key (kbd "M-x")                          'helm-M-x)

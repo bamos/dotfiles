@@ -1,9 +1,14 @@
-; (package-initialize)
-
 ;; (defconst user-init-dir (cond
 ;;   ((boundp 'user-emacs-directory) user-emacs-directory)
 ;;   ((boundp 'user-init-directory) user-init-directory)
 ;;   (t "~/.emacs.d/")))
+
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
 
 (defun load-user-file (file) (interactive "f")
   "Load a file in current user's configuration directory"
@@ -12,27 +17,25 @@
 
 (load-user-file "packages.el")
 
-(load-user-file "clipboard.el")
+; (load-user-file "clipboard.el")
 (load-user-file "funcs.el")
 (load-user-file "mail.el")
 
 (load-user-file "init-auctex.el")
-(load-user-file "init-ensime.el")
-(load-user-file "init-ess.el")
 (load-user-file "init-evil.el")
-(load-user-file "init-w3m.el")
+(load-user-file "init-helm.el")
+(load-user-file "init-mu4e.el")
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
 (load-user-file "init-org.el")
-(load-user-file "init-helm.el")
-
-(when (file-exists-p "~/.ercpass") (load-user-file "init-erc.el"))
 
 ;; The `charcoal-black` theme leaves the default colors in `w3m-mode`.
 ;; First load the zenburn theme for better colors in `w3m-mode`,
 ;; then use `charcoal-black` for everything else
 (load-theme 'zenburn t)
-(require 'color-theme)(color-theme-initialize)(color-theme-charcoal-black)
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-charcoal-black)
 
 (require 'magit)
 (global-set-key (kbd "C-x C-g C-s") 'magit-status)
@@ -65,7 +68,7 @@
 (setq-default tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
 
 (setq-default show-trailing-whitespace t)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defun save-buffer-without-dtw () ; http://stackoverflow.com/questions/14913398
   (interactive)
   (let ((b (current-buffer)))
@@ -110,8 +113,6 @@
 (require 'haskell-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
-(require 'puppet-mode)
-
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 (add-to-list 'auto-mode-alist '("\\.liquid\\'" . web-mode))
 
@@ -123,6 +124,7 @@
         "~/repos/yasnippet-lua-torch"
         ))
 (yas-global-mode 1)
+(global-set-key (kbd "M-/") 'yas-expand)
 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)

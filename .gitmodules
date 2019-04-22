@@ -4,11 +4,11 @@
 [submodule ".vim/bundle/vundle"]
 	path = .vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
-[submodule ".emacs.d.old/snippets/yasnippet-snippets"]
-	path = .emacs.d.old/snippets/yasnippet-snippets
+[submodule ".emacs.d/snippets/yasnippet-snippets"]
+	path = .emacs.d/snippets/yasnippet-snippets
 	url = https://github.com/AndreaCrotti/yasnippet-snippets.git
-[submodule ".emacs.d.old/snippets/yasmate"]
-	path = .emacs.d.old/snippets/yasmate
+[submodule ".emacs.d/snippets/yasmate"]
+	path = .emacs.d/snippets/yasmate
   url = https://github.com/capitaomorte/yasmate.git
 [submodule ".emacs.d"]
 	path = .emacs.d

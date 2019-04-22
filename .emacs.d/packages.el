@@ -1,6 +1,7 @@
 (require 'package)
 (setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
+      '(("org" . "http://orgmode.org/elpa/")
+        ("gnu" . "http://elpa.gnu.org/packages/")
         ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
@@ -10,17 +11,14 @@
     dash
     ensime
     evil
+    evil-commentary
     evil-leader
     evil-nerd-commenter
     evil-numbers
     evil-surround
-    erc
-    ess
     flycheck
     free-keys
     git-messenger
-    go-mode
-    haskell-mode
     helm
     helm-descbinds
     htmlize
@@ -29,8 +27,6 @@
     magit
     markdown-mode
     multiple-cursors
-    rfringe
-    ;; scala-mode2
     smooth-scroll
     org
     popup
