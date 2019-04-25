@@ -6,3 +6,4 @@ _region_.tex
 .fuse_hidden*
 ._*
 auto
+__pycache__
