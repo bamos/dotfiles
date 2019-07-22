@@ -26,7 +26,8 @@ autoload -U zmv
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Initialize oh-my-zsh.
-DISABLE_AUTO_UPDATE='true';
+DISABLE_AUTO_UPDATE='true'
+ZSH_DISIBLE_COMPFIX='true'
 ZSH_THEME=sammy; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
 plugins=(vi-mode git history-substring-search fabric z)
