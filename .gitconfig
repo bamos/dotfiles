@@ -1,7 +1,6 @@
 [user]
-	email = bamos@cs.cmu.edu
+	email = brandon.amos.cs@gmail.com
 	name = Brandon Amos
-	signingkey = B72D6B6F
 [push]
 	default = simple
 [core]
