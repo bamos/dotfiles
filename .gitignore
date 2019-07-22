@@ -10,6 +10,8 @@
 .emacs.d*/saveplace.el
 .emacs.d*/tramp
 .emacs.d*/url
+.emacs.d*/SessionDesktop.el
+.emacs.d*/.org-id-locations
 .gnupg/*
 !.gnupg/gpg.conf
 .mpv/watch_later

@@ -23,19 +23,21 @@
 
 (load-user-file "init-auctex.el")
 (load-user-file "init-evil.el")
+(load-user-file "init-org.el")
 (load-user-file "init-helm.el")
-(load-user-file "init-mu4e.el")
+;; (load-user-file "init-mu4e.el")
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
-(load-user-file "init-org.el")
 
 ;; The `charcoal-black` theme leaves the default colors in `w3m-mode`.
 ;; First load the zenburn theme for better colors in `w3m-mode`,
 ;; then use `charcoal-black` for everything else
 (load-theme 'zenburn t)
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-charcoal-black)
+(require 'color-theme-modern)
+; (color-theme-initialize)
+; (color-theme-charcoal-black)
+(load-theme 'charcoal-black t t)
+(enable-theme 'charcoal-black)
 
 (require 'magit)
 (global-set-key (kbd "C-x C-g C-s") 'magit-status)
@@ -110,8 +112,8 @@
 ;; (add-hook 'python-mode-hook (lambda() (
 ;;   (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
-(require 'haskell-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+; (require 'haskell-mode)
+; (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 (add-to-list 'auto-mode-alist '("\\.liquid\\'" . web-mode))
@@ -138,4 +140,6 @@
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))
 
-(set-face-attribute 'default (selected-frame) :height 100)
+(set-face-attribute 'default (selected-frame) :height 120)
+
+(server-start)

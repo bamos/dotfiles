@@ -7,7 +7,7 @@
 
 (defvar required-packages '(
     auctex
-    color-theme
+    color-theme-modern
     dash
     ensime
     evil
