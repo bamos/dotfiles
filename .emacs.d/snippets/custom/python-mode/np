@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: np
+# key: np
+# --
+import numpy as np
+import numpy.random as npr
