@@ -79,3 +79,12 @@ export GPG_AGENT_INFO=$HOME/.gnupg/S.gpg-agent
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+if [[ "$TERM" == "dumb" ]]; then
+  unsetopt zle
+  unsetopt prompt_cr
+  unsetopt prompt_subst
+  unfunction precmd
+  unfunction preexec
+  PS1='$ '
+fi
