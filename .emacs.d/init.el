@@ -136,6 +136,10 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
+(require 'darkroom)
+(setq darkroom-mode-left-margin 40
+      darkroom-mode-right-margin 40)
+
 ;; OSX-specific:
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))

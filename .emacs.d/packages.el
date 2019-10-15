@@ -8,6 +8,7 @@
 (defvar required-packages '(
     auctex
     color-theme-modern
+    darkroom
     dash
     ensime
     evil

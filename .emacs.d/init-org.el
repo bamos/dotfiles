@@ -14,7 +14,12 @@
   (local-set-key "\M-t" 'org-metadown)
   (local-set-key "\M-n" 'org-metaup)
 
-  (local-set-key (kbd "C-S-<return>") 'org-insert-heading-after-current)))
+  (local-set-key (kbd "C-S-<return>") 'org-insert-heading-after-current)
+
+  (setq indent-tabs-mode nil)
+  (setq tap-width 2)
+  (setq evil-shift-width 2)
+))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 
