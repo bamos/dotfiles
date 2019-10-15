@@ -7,3 +7,7 @@ _region_.tex
 ._*
 auto
 __pycache__
+*.egg-info
+
+.mypy_cache
+.nfs*
