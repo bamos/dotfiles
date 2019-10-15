@@ -2,8 +2,11 @@ abadi
 ablations
 adam
 adams
+agarwal
 aggarwal
+almeida
 amos
+Andr
 argmin
 asmuth
 ATTR
@@ -18,13 +21,17 @@ bayesian
 bcai
 bda
 behaviour
+belanger
 bengio
 berrada
 Birkhoff
+blondel
 bojarski
-Bosch
+bosch
 bottlenecked
+boyd
 Brandon's
+brukhim
 calandra
 cao
 cartpole
@@ -36,6 +43,7 @@ cmu
 codebase
 CorNoise
 corrector's
+csoftmax
 DC
 DCEM
 de
@@ -57,6 +65,7 @@ Ent
 env
 equiv
 factorizable
+feedforward
 fraccaro
 fu
 gao
@@ -67,6 +76,7 @@ Genome
 ghavamzadeh
 GPU
 GTX
+gupta
 haber
 Hacky
 haptic
@@ -74,6 +84,7 @@ haptics
 HAPTIX
 heess
 herzig
+huang
 hyperparameters
 ICNNs
 IndNoise
@@ -85,11 +96,13 @@ ive
 Iverson
 jain
 johannes
+johnson
 karl
 kingma
 KKT
 Kolter
 Koltun
+krishna
 krishnan
 lapin
 layer's
@@ -97,13 +110,16 @@ ldots
 lederman
 LeftRight
 li
+liang
 linknet
+liu
 liuhaptic
 lml
 loeb
 lsos
 LSTM
 mackay
+malaviya
 MAML
 martinez
 martius
@@ -111,6 +127,7 @@ mathbb
 mathcal
 Mathematica
 mena
+min
 minibatch
 MLP
 MLPs
@@ -126,6 +143,7 @@ MuJoCo
 na
 nabla
 navarro
+newell
 niculae
 NVIDIA
 nyi
@@ -138,6 +156,7 @@ orthant
 overfit
 paszke
 pathak
+PCA
 pilco
 PlaNet
 Plannable
@@ -150,7 +169,10 @@ predictor's
 preprocessed
 PyTorch
 PyTorch's
+rakotomamonjy
 RandLSTM
+raposo
+regin
 regularized
 regularizer
 ReLU
@@ -162,6 +184,7 @@ rm
 rollout
 rollouts
 Rowan
+rudin
 SA
 santa
 schmidhuber
@@ -176,9 +199,11 @@ SPENs
 su
 sur
 SVM
+tarlow
 tensorflow
 Ti
 TODO
+transductive
 Uhlenbeck
 unconverged
 VAE
@@ -186,6 +211,7 @@ variational
 venkatraman
 vestibular
 Vladlen
+warmuth
 website
 xu
 yni
