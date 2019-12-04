@@ -25,7 +25,7 @@
 (load-user-file "init-evil.el")
 (load-user-file "init-org.el")
 (load-user-file "init-helm.el")
-;; (load-user-file "init-mu4e.el")
+(load-user-file "init-mu4e.el")
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
 
@@ -147,3 +147,4 @@
 (set-face-attribute 'default (selected-frame) :height 120)
 
 (server-start)
+(put 'downcase-region 'disabled nil)

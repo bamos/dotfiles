@@ -1,6 +1,6 @@
+(add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
 
-(add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-90868bd_1/share/emacs/site-lisp/mu/mu4e")
 (setq user-full-name "Brandon Amos"
         user-mail-address "brandon.amos.cs@gmail.com"
         message-send-mail-function 'smtpmail-send-it
@@ -16,7 +16,7 @@
         mu4e-refile-folder   "/[Gmail].All Mail"
         mu4e-trash-folder  "/[Gmail].Trash"
         mu4e-sent-messages-behavior 'delete
-        mu4e-mu-binary "/usr/local/Cellar/mu/HEAD-90868bd_1/bin/mu"
+        mu4e-mu-binary "/usr/local/Cellar/mu/1.2.0_1/bin/mu"
         message-kill-buffer-on-exit t
         mu4e-maildir-shortcuts
         '( ("/INBOX"               . ?i)
