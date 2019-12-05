@@ -15,6 +15,11 @@
   ;; (load-file (expand-file-name file user-init-dir)))
   (load-file (expand-file-name file "~/.emacs.d")))
 
+(defun my-system-type-is-darwin ()
+  "Return true if system is darwin-based (Mac OS X)"
+  (string-equal system-type "darwin")
+  )
+
 (load-user-file "packages.el")
 
 ; (load-user-file "clipboard.el")
@@ -25,7 +30,7 @@
 (load-user-file "init-evil.el")
 (load-user-file "init-org.el")
 (load-user-file "init-helm.el")
-(load-user-file "init-mu4e.el")
+(when (my-system-type-is-darwin) (load-user-file "init-mu4e.el"))
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
 
