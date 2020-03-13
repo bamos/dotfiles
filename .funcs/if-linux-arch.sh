@@ -8,10 +8,10 @@
 # http://bamos.github.io
 # 2015/04/27
 
-alias y='yaourt'
-alias ys='yaourt -S --noconfirm'
-alias yr='yaourt -R --noconfirm'
-alias up='yaourt -Syua'
+alias y='yay'
+alias ys='yay -S --noconfirm'
+alias yr='yay -R --noconfirm'
+alias up='yay -Syua'
 alias yup='up --noconfirm'
 alias i-int='ip address show wlp3s0'
 alias rm-orphans='sudo pacman -Rns $(pacman -Qtdq)'
