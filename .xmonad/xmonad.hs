@@ -107,7 +107,7 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 _config = defaultConfig { terminal = "/usr/bin/urxvt"
-                        , modMask = mod1Mask
+                        , modMask = mod4Mask
                         , keys = _keys
                         , normalBorderColor  = "#333333"
                         , focusedBorderColor = "#5882FA"
