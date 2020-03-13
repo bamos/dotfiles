@@ -10,7 +10,7 @@
     color-theme-modern
     darkroom
     dash
-    ensime
+    ; ensime
     evil
     evil-commentary
     evil-leader
@@ -20,6 +20,7 @@
     flycheck
     free-keys
     git-messenger
+    haskell-mode
     helm
     helm-descbinds
     htmlize
