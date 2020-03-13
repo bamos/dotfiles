@@ -1,0 +1,42 @@
+#!/bin/bash
+## github.com/docgyneco69/chut/blob/master/chut
+## CHUT script
+## Note: regex [[:digit:]] requires a relatively recent shell
+## easy to change with a sed cmd if needed
+## applescript arg is not fully bullet proofed for sneaky cmds
+## but as no outside arg is passed by the script I kept the usual
+## arg format for code readibility (and pure laziness)
+
+# init _x and curr_vol with defaults values (muting)
+_x='- 100' ; curr_vol='0' ;
+
+function _usage {
+  echo -e "CHUT is a simple cmd exe to change the system audio volume.
+USAGE chut [][-][--][+][++]
+      no arg will mute (default)
+      [-][+] [--][++] to decrease or increase the volume
+      [+++] to set to the maximum
+      [-h][--help] display this message
+NOTE sys sets volume as float (0-10/0.1) but outputs int (0-100/14)" ; exit 1; } ;
+
+# set _x by looping $1 then break as we only use 1st arg, -h or --help to print usage
+while [[ "$1" ]]; do case "$1" in
+	"-h"|"--help") 	_usage 		;;
+	"-")		_x='- 0.5'	;;
+	"--")		_x='- 1.0'	;;
+	"+")		_x='+ 0.5'	;;
+	"++")		_x='+ 1.0'	;;
+	"+++")		_x='+ 100'	;;
+	*)		_x='- 100'	;; # unrecognized values will mute
+esac ; break ; done ;
+
+# get current volume value from system (sys volume is 0 to 100 step 14)
+curr_vol=$(/usr/bin/osascript -e "get volume settings" | cut -d ',' -f1 | tr -dc [[:digit:]]) ;
+
+# set new volume via _x - use bc for floating point, escape potential errors, 
+# print value with one decimal - test & echo the new volume value via applescript
+curr_vol=$( printf "%.1f" "$( echo "$curr_vol / 14 $_x" | bc -l 2>&-)" ) ;
+(/usr/bin/osascript -e "set Volume "\"$curr_vol"\" ") && \
+echo $(/usr/bin/osascript -e "get volume settings" | cut -d ',' -f1 | tr -dc [[:digit:]]) ;
+
+exit 0 ;
