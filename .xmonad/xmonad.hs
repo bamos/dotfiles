@@ -82,7 +82,7 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_y), withFocused $ windows . W.sink) -- %! Push window back into tiling
 
     -- Screen division.
-    , ((mod .|. shiftMask,                 xK_space), layoutScreens 2 (TwoPane 0.6 0.4))
+    , ((mod .|. shiftMask,                 xK_space), layoutScreens 2 (TwoPane 0.55 0.45))
     , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
 
     -- Increase or decrease number of windows in the master area.
@@ -107,13 +107,13 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 _config = defaultConfig { terminal = "/usr/bin/urxvt"
-                        , modMask = mod4Mask
+                        , modMask = mod1Mask
                         , keys = _keys
                         , normalBorderColor  = "#333333"
                         , focusedBorderColor = "#5882FA"
                         , layoutHook = smartBorders _layout
-                        , startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs" <+>
-                                        setWMName "LG3D"
+                        -- , startupHook = spawnOnce "xmobar ~/.xmonad/xmobar.hs" <+>
+                        --                 setWMName "LG3D"
                         }
 
 
