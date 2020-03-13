@@ -33,14 +33,15 @@ _keys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     -- Programs.
     [ ((mod, xK_o), spawn "chromium")
-    , ((mod.|. shiftMask, xK_apostrophe), kill)
     , ((mod, xK_semicolon), spawn "sleep 1; xset dpms force off")
     , ((mod, xK_s), spawn "slock")
-    , ((mod, xK_Up), spawn "amixer set Master playback 5%+")
-    , ((mod, xK_Down), spawn "amixer set Master playback 5%-")
-    , ((mod, xK_Right), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
-    , ((mod, xK_Left), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Prev")
-    , ((mod, xK_u), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
+    -- , ((mod .|. shiftMask, xK_Up), spawn "amixer set Master playback 5%+")
+    -- , ((mod .|. shiftMask, xK_Down), spawn "amixer set Master playback 5%-")
+    , ((mod .|. shiftMask, xK_Up), spawn "ssh host ./.dotfiles/bin/bump-osx-volume ++")
+    , ((mod .|. shiftMask, xK_Down), spawn "ssh host ./.dotfiles/bin/bump-osx-volume --")
+    , ((mod .|. shiftMask, xK_Right), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
+    , ((mod .|. shiftMask, xK_Left), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Prev")
+    , ((mod .|. shiftMask, xK_u), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
     , ((0, 0x1008FF11), spawn "amixer set Master playback 5%-")
     , ((0, 0x1008FF13), spawn "amixer set Master playback 5%+")
     -- , ((mod, xK_Right), spawn "cmus-remote -n")
@@ -90,7 +91,7 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     -- , ((mod, xK_v), sendMessage (IncMasterN (-1)))
 
     -- Quit, or restart.
-    , ((mod.|. shiftMask, xK_apostrophe), io exitSuccess)
+    , ((mod .|. shiftMask, xK_apostrophe), io exitSuccess)
     , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
     ]
     ++
@@ -107,7 +108,7 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 _config = defaultConfig { terminal = "/usr/bin/urxvt"
-                        , modMask = mod4Mask
+                        , modMask = mod1Mask
                         , keys = _keys
                         , normalBorderColor  = "#333333"
                         , focusedBorderColor = "#5882FA"
