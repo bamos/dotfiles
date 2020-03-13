@@ -30,7 +30,8 @@ hs.hotkey.bind(mash, 'n', function() hs.window.focusedWindow():focusWindowNorth(
 hs.hotkey.bind(mash, 't', function() hs.window.focusedWindow():focusWindowSouth() end)
 hs.hotkey.bind(mash, 'l', function() hs.reload() end)
 
-hs.hotkey.bind(mash, 'g', function()
+
+function set_screen_dual()
   local screens = hs.screen.allScreens()
 
   -- Left screen
@@ -53,32 +54,99 @@ hs.hotkey.bind(mash, 'g', function()
 
   local iTerms = hs.application.get("iTerm2"):allWindows()
   local win = iTerms[1]
-  local term_width = 700
+  local width = 700
   win:moveToScreen(screen)
   local f = win:frame()
   f.x = max.x
   f.y = max.y
-  f.w = term_width
+  f.w = width
   f.h = max.h
   win:setFrame(f)
 
   local win = iTerms[2]
   win:moveToScreen(screen)
   local f = win:frame()
-  f.x = max.x+term_width-5
+  f.x = max.x+width-5
   f.y = max.y
-  f.w = term_width
+  f.w = width
   f.h = max.h
   win:setFrame(f)
 
   local win = hs.application.get("Emacs"):allWindows()[1]
   win:moveToScreen(screen)
   local f = win:frame()
-  f.x = max.x+2*(term_width-5)
+  f.x = max.x+2*(width-5)
   f.y = max.y
-  f.w = term_width
+  f.w = width
   f.h = max.h
   win:setFrame(f)
+end
+
+function set_screen_wide(emacs)
+  local screens = hs.screen.allScreens()
+  assert(#screens == 1)
+
+  local screen = screens[1]
+  local max = screen:frame()
+
+  local chromes = hs.application.get("Google Chrome"):allWindows()
+
+  local win = chromes[1]
+  local width = 1200
+  local x = 0
+  local f = win:frame()
+  f.x = x
+  f.y = max.y
+  f.w = width
+  f.h = max.h
+  win:setFrame(f)
+  x = x + width
+
+  local iTerms = hs.application.get("iTerm2"):allWindows()
+  local win = iTerms[1]
+  local width = 700
+  local f = win:frame()
+  f.x = x
+  f.y = max.y
+  f.w = width
+  f.h = max.h
+  win:setFrame(f)
+  x = x + width
+
+  local win
+  if emacs then
+    win = iTerms[2]
+    win:minimize()
+    win = hs.application.get("Emacs"):allWindows()[1]
+    win:raise()
+  else
+    win = hs.application.get("Emacs"):allWindows()[1]
+    win:minimize()
+    win = iTerms[2]
+    win:raise()
+  end
+  local f = win:frame()
+  f.x = x
+  f.y = max.y
+  f.w = width
+  f.h = max.h
+  win:setFrame(f)
+  x = x + 20
+end
+
+hs.hotkey.bind(mash, 'g', function()
+  -- set_screen_dual()
+  set_screen_wide(false)
+end)
+
+hs.hotkey.bind(mash, 'c', function()
+  -- set_screen_dual()
+  set_screen_wide(true)
+end)
+
+hs.hotkey.bind(mash, 'm', function()
+  local win = hs.window.focusedWindow()
+  win:toggleFullScreen()
 end)
 
 -- hs.hotkey.bind(mash, 'm', function()
