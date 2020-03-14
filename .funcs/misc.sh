@@ -145,7 +145,7 @@ alias tsh='tmux split-window -h'
 alias f='sudo $(fc -ln -1)'
 
 alias emacsd='emacs --daemon'
-alias e='emacsclient -nw'
+alias e='emacsclient -a "" -c'
 alias enq='emacsclient -nq'
 
 alias psg='ps aux | grep'
