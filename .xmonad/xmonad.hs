@@ -45,7 +45,7 @@ _layout = smartBorders (
 
 _keys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
-    [ ((mod, xK_o), spawn "chromium")
+    [ ((mod, xK_o), spawn "qutebrowser")
     , ((mod, xK_e), spawn "emacsclient -a '' -c")
     , ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
     , ((mod, xK_l), spawn "dmenu_run")
