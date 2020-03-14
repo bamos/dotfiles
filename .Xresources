@@ -7,12 +7,12 @@ Xcursor.theme: whiteglass
 Xcursor.size: 14
 
 ! gcolor2/3: Color selector.
-xterm.background: #1C1C1C
+xterm.background: #262626
 xterm.foreground: #ffffff
 
 ! URxvt*.transparent: true
 ! URxvt*.shading: 60
-URxvt.background: #1C1C1C
+URxvt.background: #262626
 URxvt.foreground: #ffffff
 URxvt.xftAntialias: true
 #ifdef derecho
