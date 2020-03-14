@@ -30,17 +30,13 @@
 (load-user-file "init-evil.el")
 (load-user-file "init-org.el")
 (load-user-file "init-helm.el")
-(when (my-system-type-is-darwin) (load-user-file "init-mu4e.el"))
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
+(when (string= system-name "tchaikovsky")
+  (load-user-file "init-mu4e.el")
+)
 
-;; The `charcoal-black` theme leaves the default colors in `w3m-mode`.
-;; First load the zenburn theme for better colors in `w3m-mode`,
-;; then use `charcoal-black` for everything else
-(load-theme 'zenburn t)
 (require 'color-theme-modern)
-; (color-theme-initialize)
-; (color-theme-charcoal-black)
 (load-theme 'charcoal-black t t)
 (enable-theme 'charcoal-black)
 
@@ -90,20 +86,10 @@
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
 (setq-default save-place t)
 
-(if (boundp 'aquamacs-version)
-    (progn
-      (custom-set-faces
-       '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey"
-                               :inverse-video nil :box nil :strike-through nil
-                               :overline nil :underline nil :slant normal
-                               :weight normal :height 125 :width normal
-                               :foundry "nil" :family "Monaco")))))
-      (put 'temporary-file-directory 'standard-value
-           '((file-name-as-directory "/tmp")))
-      (tool-bar-mode -1))
-  (progn
-    (menu-bar-mode -1)
-    (tool-bar-mode -1)))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq-default mode-line-format nil)
 
 (transient-mark-mode 1)
 
