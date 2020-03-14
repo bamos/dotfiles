@@ -124,6 +124,8 @@
 
 (global-set-key (kbd "C-c d") 'redraw-display)
 
+(setq initial-scratch-message "")
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
