@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr -solid "#262626"
 
 # Set up the keyboard
 setxkbmap dvorak
