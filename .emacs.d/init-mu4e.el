@@ -1,3 +1,4 @@
+;; (add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
 (add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
 
@@ -10,13 +11,13 @@
         smtpmail-smtp-service 587
         smtpmail-queue-mail nil
         smtpmail-queue-dir "~/.mu/queue/cur"
-        mu4e-maildir "~/mbsync"
+        mu4e-maildir "~/.mbsync"
         ;; mu4e-drafts-folder "/[Gmail].Drafts"
         mu4e-sent-folder   "/[Gmail].Sent Mail"
         mu4e-refile-folder   "/[Gmail].All Mail"
         mu4e-trash-folder  "/[Gmail].Trash"
         mu4e-sent-messages-behavior 'delete
-        mu4e-mu-binary "/usr/local/Cellar/mu/1.2.0_1/bin/mu"
+        ;; mu4e-mu-binary "/usr/local/Cellar/mu/1.2.0_1/bin/mu"
         message-kill-buffer-on-exit t
         mu4e-maildir-shortcuts
         '( ("/INBOX"               . ?i)
