@@ -83,7 +83,7 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
 
-    -- mod-{,,.}: Switch to physical/Xinerama screens {1,2}
+    -- mod-{,,.}: Switch to screen {1,2}
     -- mod-shift-{,,.}: Move client to screen {1,2}
     [((m .|. mod, key), screenWorkspace sc >>= flip whenJust (windows . f))
         | (key, sc) <- zip [xK_comma, xK_period] [0..]
