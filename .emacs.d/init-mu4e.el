@@ -2,6 +2,8 @@
 (add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
 
+(global-set-key (kbd "C-x C-m") 'mu4e)
+
 (setq user-full-name "Brandon Amos"
         user-mail-address "brandon.amos.cs@gmail.com"
         message-send-mail-function 'smtpmail-send-it
@@ -35,6 +37,7 @@
         mu4e-confirm-quit nil
         mu4e-headers-leave-behavior 'apply
         mu4e-compose-complete-only-personal t)
+
 (when (fboundp 'imagemagick-register-types)
     (imagemagick-register-types))
 (defun my-mu4e-mark-execute-all-no-confirm ()
@@ -60,3 +63,6 @@
         (apply operation args))))
 
 (add-to-list 'file-name-handler-alist '("Drafts/cur/" . draft-auto-save-buffer-name-handler))
+
+(add-to-list 'mu4e-view-actions
+  '("ViewInBrowser" . mu4e-action-view-in-browser) t)
