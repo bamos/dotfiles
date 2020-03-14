@@ -1,4 +1,7 @@
 .aria2/dht.dat*
+.config/qutebrowser/bookmarks
+.config/qutebrowser/quickmarks
+.config/qutebrowser/autoconfig.yml
 .emacs.d*/abbrev_defs
 .emacs.d*/auto-save-list
 .emacs.d*/elpa
