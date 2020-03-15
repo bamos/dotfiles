@@ -21,6 +21,7 @@
         mu4e-sent-messages-behavior 'delete
         ;; mu4e-mu-binary "/usr/local/Cellar/mu/1.2.0_1/bin/mu"
         message-kill-buffer-on-exit t
+        mu4e-html2text-command "w3m -dump -T text/html -cols 72 -o display_link_number=true -o auto_image=false -o display_image=false -o ignore_null_img_alt=true"
         mu4e-maildir-shortcuts
         '( ("/INBOX"               . ?i)
             ("/[Gmail].Sent Mail"   . ?s)
@@ -66,3 +67,7 @@
 
 (add-to-list 'mu4e-view-actions
   '("ViewInBrowser" . mu4e-action-view-in-browser) t)
+
+(add-hook 'mu4e-view-mode-hook
+          #'(lambda ()
+              (setq-local show-trailing-whitespace nil)))
