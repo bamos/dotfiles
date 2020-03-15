@@ -47,6 +47,11 @@ config.bind('s', 'scroll right')
 config.bind('t', 'scroll down')
 config.bind('n', 'scroll up')
 
+config.bind('d', 'scroll-page 0 0.5')
+config.bind('u', 'scroll-page 0 -0.5')
+config.bind('<Ctrl-d>', 'tab-close')
+config.bind('<Ctrl-u>', 'undo')
+
 config.bind('H', 'back')
 config.bind('S', 'forward')
 

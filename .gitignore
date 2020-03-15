@@ -2,6 +2,7 @@
 .config/qutebrowser/bookmarks
 .config/qutebrowser/quickmarks
 .config/qutebrowser/autoconfig.yml
+.config/qutebrowser/qsettings
 .emacs.d*/abbrev_defs
 .emacs.d*/auto-save-list
 .emacs.d*/elpa
