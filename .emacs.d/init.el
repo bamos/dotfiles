@@ -36,6 +36,7 @@
   (load-user-file "init-mu4e.el")
 )
 
+(load-theme 'zenburn t)
 (require 'color-theme-modern)
 (load-theme 'charcoal-black t t)
 (enable-theme 'charcoal-black)
