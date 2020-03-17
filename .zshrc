@@ -88,3 +88,7 @@ if [[ "$TERM" == "dumb" ]]; then
   unfunction preexec
   PS1='$ '
 fi
+
+
+# https://github.com/ohmyzsh/ohmyzsh/issues/1563
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
