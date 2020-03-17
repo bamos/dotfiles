@@ -51,11 +51,11 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_l), spawn "dmenu_run")
     , ((mod .|. shiftMask, xK_j), kill)
 
-    , ((mod, xK_Up), bumpVolume "++")
-    , ((mod, xK_Down), bumpVolume "--")
+    , ((mod, xK_Up), bumpVolume "+")
+    , ((mod, xK_Down), bumpVolume "-")
     , ((mod, xK_Right), spotify "Next")
-    , ((mod, xK_Left), spotify "Prev")
-    , ((mod, xK_u), spotify "PlayPause")
+    , ((mod, xK_Left), spotify "Previous")
+    , ((mod .|. controlMask, xK_space), spotify "PlayPause")
 
     , ((mod, xK_g), setkbmap "us")
     , ((mod, xK_v), setkbmap "dvorak")
