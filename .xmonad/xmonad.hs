@@ -16,7 +16,6 @@ import Data.Bits ((.|.))
 import qualified Data.Map as M
 
 
-spotify :: MonadIO m => String -> m()
 spotify cmd = spawn
   (  "dbus-send --print-reply "
   ++ "--dest=org.mpris.MediaPlayer2.spotify "
@@ -24,14 +23,11 @@ spotify cmd = spawn
   ++ cmd
   )
 
-bumpVolume :: MonadIO m => String -> m()
 bumpVolume args = spawn ("ssh host ./.dotfiles/bin/bump-osx-volume " ++ args)
-
-setkbmap :: MonadIO m => String -> m()
 setkbmap layout = spawn ("setxkbmap " ++ layout ++ "; xmodmap ~/.Xmodmap")
+vScreen = layoutScreens 2 (TwoPane 0.55 0.45)
 
-
-_layout = smartBorders (
+layouts = smartBorders (
         avoidStruts
             (   Tall 1 (3/100) (1/2)
             ||| Mirror (Tall 1 (3/100) (1/2))
@@ -42,9 +38,8 @@ _layout = smartBorders (
         ||| simpleFloat
     )
 
-
-_keys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
-_keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
+ks :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
+ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     [ ((mod, xK_o), spawn "chromium")
     , ((mod, xK_e), spawn "emacsclient -a '' -c")
     , ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
@@ -70,8 +65,10 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod .|. shiftMask, xK_h), windows W.swapDown)
     , ((mod .|. shiftMask, xK_t), windows W.swapUp)
 
-    , ((mod .|. shiftMask, xK_space), layoutScreens 2 (TwoPane 0.55 0.45))
+    , ((mod .|. shiftMask, xK_space), vScreen)
     , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
+
+    , ((mod, xK_s), spawn "sleep 0.2; scrot -so /home/bda/tmp/t.png")
 
     , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
     , ((mod .|. shiftMask, xK_apostrophe), io exitSuccess)
@@ -94,8 +91,9 @@ _keys conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
 main = xmonad defaultConfig
   { terminal = "/usr/bin/urxvt"
   , modMask = mod1Mask
-  , keys = _keys
+  , keys = ks
   , normalBorderColor  = "#333333"
   , focusedBorderColor = "#5882FA"
-  , layoutHook = _layout
+  , layoutHook = layouts
+  , startupHook = vScreen
 }
