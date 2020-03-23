@@ -44,6 +44,7 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_e), spawn "emacsclient -a '' -c")
     , ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
     , ((mod, xK_l), spawn "dmenu_run")
+    , ((mod, xK_grave), spawn "sleep 0.2; xdotool key Multi_key &> /tmp/t")
     , ((mod .|. shiftMask, xK_j), kill)
 
     , ((mod, xK_Up), bumpVolume "+")
