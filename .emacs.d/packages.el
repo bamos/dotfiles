@@ -31,6 +31,7 @@
     multiple-cursors
     smooth-scroll
     org
+    pdf-tools
     popup
     powerline
     projectile
