@@ -22,9 +22,10 @@ URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
 #endif
 URxvt.scrollBar: False
 URxvt.scrollstyle: plain
-URxvt.perl-ext-common: default,matcher,font-size
+URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 URxvt.iso14755: False
-URxvt.keysym.C-Up: perl:font-size:increase
-URxvt.keysym.C-Down: perl:font-size:decrease
+! Requires urxvt-resize-font-git
+URxvt.keysym.C-Up: resize-font:bigger
+URxvt.keysym.C-Down: resize-font:smaller
