@@ -69,7 +69,7 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod .|. shiftMask, xK_space), vScreen)
     , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
 
-    , ((mod, xK_s), spawn "sleep 0.2; scrot -so /home/bda/tmp/t.png")
+    , ((mod, xK_s), spawn "sleep 0.2; scrot -so /home/bda/tmp/t.png; xclip -selection clipboard -t image/png -i ~/tmp/t.png")
 
     , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
     , ((mod .|. shiftMask, xK_apostrophe), io exitSuccess)
