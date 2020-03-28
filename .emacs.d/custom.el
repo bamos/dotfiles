@@ -10,7 +10,7 @@
  '(org-agenda-files (quote ("~/org/todo.org" "~/org/notes.org")))
  '(package-selected-packages
    (quote
-    (writeroom-mode olivetti darkroom pdf-tools org org-link-minor-mode evil-commentary zenburn-theme yaml-mode xclip web-mode w3m smooth-scroll python-mode puppet-mode protobuf-mode projectile powerline multiple-cursors markdown-mode magit lua-mode json-mode htmlize helm-descbinds haskell-mode go-mode git-messenger free-keys flycheck evil-surround evil-numbers evil-nerd-commenter evil-leader ess ensime color-theme auctex)))
+    (typescript-mode writeroom-mode olivetti darkroom pdf-tools org org-link-minor-mode evil-commentary zenburn-theme yaml-mode xclip web-mode w3m smooth-scroll python-mode puppet-mode protobuf-mode projectile powerline multiple-cursors markdown-mode magit lua-mode json-mode htmlize helm-descbinds haskell-mode go-mode git-messenger free-keys flycheck evil-surround evil-numbers evil-nerd-commenter evil-leader ess ensime color-theme auctex)))
  '(safe-local-variable-values
    (quote
     ((TeX-command-extra-options . "-shell-escape")
