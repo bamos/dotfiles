@@ -12,6 +12,7 @@
 .emacs.d*/network-security.data
 .emacs.d*/recentf
 .emacs.d*/saveplace.el
+.emacs.d*/request
 .emacs.d*/tramp
 .emacs.d*/url
 .emacs.d*/SessionDesktop.el

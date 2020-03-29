@@ -22,6 +22,7 @@
 ))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-startup-with-inline-images t
       org-startup-folded nil

@@ -1,6 +1,7 @@
 ;; (add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
 (add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
+(require 'org-mu4e)
 
 (global-set-key (kbd "C-x C-m") 'mu4e)
 
@@ -72,3 +73,7 @@
 (add-hook 'mu4e-view-mode-hook
           #'(lambda ()
               (setq-local show-trailing-whitespace nil)))
+
+(add-to-list 'org-capture-templates
+  '("m" "mu4e-msg" entry (file+headline "~/org/todo.org" "Todo")
+    "* TODO %a %?\nDEADLINE: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
