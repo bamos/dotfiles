@@ -30,7 +30,8 @@
       org-latex-to-pdf-process (list "latexmk -pdf %f")
       org-image-actual-width 600
       org-agenda-skip-scheduled-if-done t
-      org-agenda-files '("~/org"))
+      org-agenda-files '("~/org")
+      org-capture-templates '())
 
 ; (org-babel-do-load-languages
 ;  'org-babel-load-languages
