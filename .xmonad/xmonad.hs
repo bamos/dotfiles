@@ -53,8 +53,8 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_Left), spotify "Previous")
     , ((mod .|. controlMask, xK_space), spotify "PlayPause")
 
-    , ((mod, xK_g), setkbmap "us")
-    , ((mod, xK_v), setkbmap "dvorak")
+    -- , ((mod, xK_g), setkbmap "us")
+    -- , ((mod, xK_v), setkbmap "dvorak")
 
     , ((mod, xK_space), sendMessage NextLayout)
     , ((mod, xK_Return), windows W.swapMaster)
@@ -96,5 +96,8 @@ main = xmonad defaultConfig
   , normalBorderColor  = "#333333"
   , focusedBorderColor = "#5882FA"
   , layoutHook = layouts
-  , startupHook = vScreen
+  , startupHook = do
+      vScreen
+      spawnOnce "chromium"
+      spawnOnce "emacsclient -a '' -c"
 }
