@@ -42,9 +42,9 @@
 (enable-theme 'charcoal-black)
 
 (require 'magit)
-(global-set-key (kbd "C-x C-g C-s") 'magit-status)
-(setq magit-push-always-verify nil)
-(setq magit-last-seen-setup-instructions "1.4.0")
+(global-set-key (kbd "C-x C-g") 'magit-status)
+(setq magit-push-always-verify nil
+      magit-last-seen-setup-instructions "1.4.0")
 
 (unless window-system
   (require 'mouse)
