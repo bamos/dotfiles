@@ -39,7 +39,9 @@
       mu4e-hide-index-messages 1
       mu4e-confirm-quit nil
       mu4e-headers-leave-behavior 'apply
-      mu4e-compose-complete-only-personal t)
+      mu4e-compose-complete-only-personal t
+      mu4e-headers-show-threads nil
+      mu4e-headers-include-related nil)
 
 (when (fboundp 'imagemagick-register-types)
     (imagemagick-register-types))
@@ -75,5 +77,5 @@
               (setq-local show-trailing-whitespace nil)))
 
 (add-to-list 'org-capture-templates
-  '("m" "mu4e-msg" entry (file+headline "~/org/todo.org" "Todo")
+  '("m" "mu4e-msg" entry (file "~/org/todo.org")
     "* TODO %a %?\nDEADLINE: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
