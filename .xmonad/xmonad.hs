@@ -40,10 +40,11 @@ layouts = smartBorders (
 
 ks :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
-    [ ((mod, xK_o), spawn "chromium")
+    [ ((mod, xK_a), spawn "dmenu_run")
+    , ((mod, xK_o), spawn "chromium")
     , ((mod, xK_e), spawn "emacsclient -a '' -c")
+    , ((mod, xK_u), spawn "slack")
     , ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
-    , ((mod, xK_l), spawn "dmenu_run")
     , ((mod, xK_grave), spawn "sleep 0.2; xdotool key Multi_key &> /tmp/t")
     , ((mod .|. shiftMask, xK_j), kill)
 
