@@ -7,7 +7,6 @@
  '(erc-autojoin-delay 10)
  '(erc-autojoin-timing (quote ident))
  '(magit-pull-arguments nil)
- '(org-agenda-files (quote ("~/org/todo.org" "~/org/notes.org")))
  '(package-selected-packages
    (quote
     (anki-editor writeroom-mode olivetti darkroom pdf-tools org org-link-minor-mode evil-commentary zenburn-theme yaml-mode xclip web-mode w3m smooth-scroll python-mode puppet-mode protobuf-mode projectile powerline multiple-cursors markdown-mode magit lua-mode json-mode htmlize helm-descbinds haskell-mode go-mode git-messenger free-keys flycheck evil-surround evil-numbers evil-nerd-commenter evil-leader ess ensime color-theme auctex)))
