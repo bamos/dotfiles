@@ -97,8 +97,5 @@ main = xmonad defaultConfig
   , normalBorderColor  = "#333333"
   , focusedBorderColor = "#5882FA"
   , layoutHook = layouts
-  , startupHook = do
-      vScreen
-      spawnOnce "chromium"
-      spawnOnce "emacsclient -a '' -c"
+  , startupHook = vScreen
 }
