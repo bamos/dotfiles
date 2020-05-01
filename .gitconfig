@@ -11,3 +11,5 @@
 	rebase = true
 [http]
 	cookiefile = /Users/bamos/.gitcookies
+[credential]
+	helper = store
