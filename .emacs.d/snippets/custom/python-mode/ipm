@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ipm
+# key: ipm
+# --
+import sys
+from IPython.core import ultratb
+sys.excepthook = ultratb.FormattedTB(
+    mode='Plain', color_scheme='Neutral', call_pdb=1)
