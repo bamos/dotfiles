@@ -9,9 +9,13 @@ xmodmap ~/.Xmodmap
 xset r 66 # Make the remapped capslock repeat
 
 if [[ $(hostname) == tchaikovsky ]]; then
-  xrandr --newmode "wide" 230.00  2560 2720 2992 3424  1080 1083 1093 1120 -hsync +vsync
-  xrandr --addmode Virtual-1 wide
-  xrandr --output Virtual-1 --mode wide
+  # For wide monitor:
+  # xrandr --newmode "wide" 230.00  2560 2720 2992 3424  1080 1083 1093 1120 -hsync +vsync
+  # xrandr --addmode Virtual-1 wide
+  # xrandr --output Virtual-1 --mode wide
+
+  # For MBP
+  xrandr --output Virtual-1 --mode 1440x900
 fi
 
 # Set up the resources
@@ -25,3 +29,4 @@ export LOCALE='en_US.UTF-8'
 #exec i3 # -V >> ~/.i3/i3.log 2>&1
 #exec gnome-session
 exec xmonad
+# exec xclock
