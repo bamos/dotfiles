@@ -186,5 +186,12 @@ hs.hotkey.bind(mash, 'space', hs.spotify.playpause)
 hs.hotkey.bind(mash, 'right',     hs.spotify.next)
 hs.hotkey.bind(mash, 'left',     hs.spotify.previous)
 
-hs.hotkey.bind(mash, 'up', function() hs.audiodevice.defaultOutputDevice():setVolume(hs.audiodevice.current().volume + 5) end)
-hs.hotkey.bind(mash, 'down', function() hs.audiodevice.defaultOutputDevice():setVolume(hs.audiodevice.current().volume - 5) end)
+function bumpVol(d)
+    dev = hs.audiodevice.defaultOutputDevice()
+    v = hs.audiodevice.current().volume
+    dev:setVolume(v + d)
+    dev:setBalance(0.5)
+end
+
+hs.hotkey.bind(mash, 'up', function() bumpVol(5) end)
+hs.hotkey.bind(mash, 'down', function() bumpVol(-5) end)
