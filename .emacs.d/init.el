@@ -133,8 +133,10 @@
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))
 
-;; (set-face-attribute 'default (selected-frame) :height 120)
-(set-face-attribute 'default (selected-frame) :height 100)
+(when (string= system-name "bda-mbp")
+    (set-face-attribute 'default (selected-frame) :height 120))
+(when (string= system-name "tchaikovsky")
+    (set-face-attribute 'default (selected-frame) :height 100))
 
 (server-start)
 (put 'downcase-region 'disabled nil)
