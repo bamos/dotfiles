@@ -1,9 +1,10 @@
 (require 'package)
-(setq package-archives
-      '(("org" . "http://orgmode.org/elpa/")
-        ("gnu" . "http://elpa.gnu.org/packages/")
-        ("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-initialize)
+(setq package-archives '(
+    ("org" . "http://orgmode.org/elpa/")
+    ("gnu" . "http://elpa.gnu.org/packages/")
+    ("melpa" . "http://melpa.org/packages/")
+))
+(when (< emacs-major-version 27) (package-initialize))
 
 (defvar required-packages '(
     auctex
