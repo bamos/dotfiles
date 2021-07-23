@@ -30,7 +30,6 @@
     magit
     markdown-mode
     multiple-cursors
-    smooth-scroll
     org
     pdf-tools
     popup
@@ -39,6 +38,8 @@
     protobuf-mode
     puppet-mode
     python-mode
+    smooth-scroll
+    undo-tree
     w3m
     web-mode
     xclip

@@ -99,3 +99,6 @@
 (define-key evil-normal-state-map "N" 'undefined)
 (define-key evil-normal-state-map "k" 'evil-search-next)
 (define-key evil-normal-state-map "K" 'evil-search-previous)
+
+(global-undo-tree-mode)
+(evil-set-undo-system 'undo-tree)

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: bda
+# key: bda
+# --
+\newcommand{\bda}[1]{\textcolor[RGB]{168,141,201}{[bda: #1]}}
