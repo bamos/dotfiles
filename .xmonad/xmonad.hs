@@ -9,6 +9,7 @@ import XMonad.Layout.ThreeColumns
 import XMonad.Layout.SimpleFloat
 import XMonad.Layout.LayoutScreens
 import XMonad.Layout.TwoPane
+import XMonad.Layout.ResizableTile
 import XMonad.Util.SpawnOnce
 
 import qualified XMonad.StackSet as W
@@ -29,8 +30,8 @@ vScreen = layoutScreens 2 (TwoPane 0.55 0.45)
 
 layouts = smartBorders (
         avoidStruts
-            (   Tall 1 (3/100) (1/2)
-            ||| Mirror (Tall 1 (3/100) (1/2))
+            (   ResizableTall 1 (3/100) (1/2) []
+            ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
             ||| Full
             ||| Grid
             ||| spiral (6/7)
@@ -41,7 +42,7 @@ layouts = smartBorders (
 ks :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     [ ((mod, xK_a), spawn "dmenu_run")
-    , ((mod, xK_o), spawn "chromium")
+    , ((mod, xK_o), spawn "google-chrome")
     , ((mod, xK_e), spawn "emacsclient -a '' -c")
     , ((mod, xK_u), spawn "slack")
     , ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
@@ -59,8 +60,10 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
 
     , ((mod, xK_space), sendMessage NextLayout)
     , ((mod, xK_Return), windows W.swapMaster)
-    , ((mod, xK_d), sendMessage Shrink)
-    , ((mod, xK_n), sendMessage Expand)
+    , ((mod, xK_g), sendMessage Shrink)
+    , ((mod, xK_c), sendMessage MirrorShrink)
+    , ((mod, xK_r), sendMessage MirrorExpand)
+    , ((mod, xK_l), sendMessage Expand)
     , ((mod, xK_y), withFocused $ windows . W.sink)
     , ((mod, xK_h), windows W.focusDown)
     , ((mod, xK_t), windows W.focusUp)
@@ -97,5 +100,5 @@ main = xmonad defaultConfig
   , normalBorderColor  = "#333333"
   , focusedBorderColor = "#5882FA"
   , layoutHook = layouts
-  -- , startupHook = vScreen
+  -- , startupHook = spawnOnce "~/xmonad-init.sh"
 }
