@@ -32,7 +32,7 @@
 (load-user-file "init-helm.el")
 (load-user-file "init-web-mode.el")
 (load-user-file "init-flyspell.el")
-(when (string= system-name "tchaikovsky")
+(when (file-exists-p "~/.mbsyncrc")
   (load-user-file "init-mu4e.el")
 )
 
