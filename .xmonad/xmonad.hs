@@ -48,6 +48,7 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
     , ((mod, xK_grave), spawn "sleep 0.2; xdotool key Multi_key &> /tmp/t")
     , ((mod .|. shiftMask, xK_j), kill)
+    , ((mod, xK_d), spawn "xset dpms force off")
 
     , ((mod, xK_Up), bumpVolume "+")
     , ((mod, xK_Down), bumpVolume "-")
@@ -73,7 +74,8 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod .|. shiftMask, xK_space), vScreen)
     , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
 
-    , ((mod, xK_s), spawn "sleep 0.2; scrot -so /home/bda/tmp/t.png; xclip -selection clipboard -t image/png -i ~/tmp/t.png")
+    , ((mod, xK_n), sendMessage ToggleStruts)
+    , ((mod, xK_s), spawn "sleep 0.2; maim -s /home/bda/tmp/t.png; xclip -selection clipboard -t image/png -i ~/tmp/t.png")
 
     , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
     , ((mod .|. shiftMask, xK_apostrophe), io exitSuccess)
@@ -100,5 +102,9 @@ main = xmonad defaultConfig
   , normalBorderColor  = "#333333"
   , focusedBorderColor = "#5882FA"
   , layoutHook = layouts
-  -- , startupHook = spawnOnce "~/xmonad-init.sh"
+  , startupHook = do
+      docksStartupHook
+      spawnOnce "xmobar ~/.xmonad/xmobar.hs"
+  , manageHook = manageDocks
+  , handleEventHook = docksEventHook
 }
