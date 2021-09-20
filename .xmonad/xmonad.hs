@@ -31,12 +31,12 @@ vScreen = layoutScreens 2 (TwoPane 0.55 0.45)
 layouts = smartBorders (
         avoidStruts
             (   ResizableTall 1 (3/100) (1/2) []
-            ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
+            -- ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
             ||| Full
-            ||| Grid
-            ||| spiral (6/7)
+            -- ||| Grid
+            -- ||| spiral (6/7)
             )
-        ||| simpleFloat
+        -- ||| simpleFloat
     )
 
 ks :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
@@ -74,7 +74,7 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod .|. shiftMask, xK_space), vScreen)
     , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
 
-    , ((mod, xK_n), sendMessage ToggleStruts)
+    , ((mod, xK_b), sendMessage ToggleStruts)
     , ((mod, xK_s), spawn "sleep 0.2; maim -s /home/bda/tmp/t.png; xclip -selection clipboard -t image/png -i ~/tmp/t.png")
 
     , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
