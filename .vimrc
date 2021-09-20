@@ -89,3 +89,4 @@ noremap n <up>
 noremap s <right>
 
 let g:go_version_warning = 0
+let g:snipMate = { 'snippet_version' : 1 }
