@@ -1,5 +1,3 @@
-;; (add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
-(add-to-list 'load-path "/usr/local/Cellar/mu/1.2.0_1/share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
 (require 'org-mu4e)
 
@@ -16,21 +14,20 @@
       smtpmail-queue-mail nil
       smtpmail-queue-dir "~/.mu/queue/cur"
       mu4e-maildir "~/.mbsync"
-      ;; mu4e-drafts-folder "/[Gmail].Drafts"
-      mu4e-sent-folder   "/[Gmail].Sent Mail"
-      mu4e-refile-folder   "/[Gmail].All Mail"
-      mu4e-trash-folder  "/[Gmail].Trash"
+      mu4e-sent-folder   "/[Gmail]/Sent Mail"
+      mu4e-refile-folder   "/[Gmail]/All Mail"
+      mu4e-trash-folder  "/[Gmail]/Trash"
       mu4e-sent-messages-behavior 'delete
       ;; mu4e-mu-binary "/usr/local/Cellar/mu/1.2.0_1/bin/mu"
       message-kill-buffer-on-exit t
       mu4e-html2text-command "w3m -dump -T text/html -cols 72 -o display_link_number=true -o auto_image=false -o display_image=false -o ignore_null_img_alt=true"
       mu4e-maildir-shortcuts
       '( ("/INBOX"               . ?i)
-          ("/[Gmail].Sent Mail"   . ?s)
-          ("/[Gmail].Trash"       . ?t)
+          ("/[Gmail]/Sent Mail"   . ?s)
+          ("/[Gmail]/Trash"       . ?t)
         ;; ("/[Gmail].Drafts"      . ?d)
-          ("/[Gmail].All Mail"    . ?a))
-      mu4e-get-mail-command "mbsync gmail"
+          ("/[Gmail]/All Mail"    . ?a))
+      mu4e-get-mail-command "mbsync -a"
       mu4e-update-interval (* 10 60)
       mu4e-view-image-max-width 800
       mu4e-view-show-images t
