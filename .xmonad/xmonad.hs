@@ -50,31 +50,31 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod .|. shiftMask, xK_j), kill)
     , ((mod, xK_d), spawn "xset dpms force off")
 
-    , ((mod, xK_Up), bumpVolume "+")
-    , ((mod, xK_Down), bumpVolume "-")
-    , ((mod, xK_Right), spotify "Next")
-    , ((mod, xK_Left), spotify "Previous")
-    , ((mod .|. controlMask, xK_space), spotify "PlayPause")
+    -- , ((mod, xK_Up), bumpVolume "+")
+    -- , ((mod, xK_Down), bumpVolume "-")
+    -- , ((mod, xK_Right), spotify "Next")
+    -- , ((mod, xK_Left), spotify "Previous")
+    -- , ((mod .|. controlMask, xK_space), spotify "PlayPause")
 
     -- , ((mod, xK_g), setkbmap "us")
     -- , ((mod, xK_v), setkbmap "dvorak")
 
     , ((mod, xK_space), sendMessage NextLayout)
     , ((mod, xK_Return), windows W.swapMaster)
-    , ((mod, xK_g), sendMessage Shrink)
-    , ((mod, xK_c), sendMessage MirrorShrink)
-    , ((mod, xK_r), sendMessage MirrorExpand)
-    , ((mod, xK_l), sendMessage Expand)
-    , ((mod, xK_y), withFocused $ windows . W.sink)
     , ((mod, xK_h), windows W.focusDown)
     , ((mod, xK_t), windows W.focusUp)
     , ((mod .|. shiftMask, xK_h), windows W.swapDown)
     , ((mod .|. shiftMask, xK_t), windows W.swapUp)
-
-    , ((mod .|. shiftMask, xK_space), vScreen)
-    , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
-
+    , ((mod, xK_g), sendMessage Shrink)
+    , ((mod, xK_c), sendMessage MirrorShrink)
+    , ((mod, xK_r), sendMessage MirrorExpand)
+    , ((mod, xK_l), sendMessage Expand)
     , ((mod, xK_b), sendMessage ToggleStruts)
+    -- , ((mod, xK_y), withFocused $ windows . W.sink)
+
+    -- , ((mod .|. shiftMask, xK_space), vScreen)
+    -- , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
+
     , ((mod, xK_s), spawn "sleep 0.2; maim -s /home/bda/tmp/t.png; xclip -selection clipboard -t image/png -i ~/tmp/t.png")
 
     , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
