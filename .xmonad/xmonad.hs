@@ -10,6 +10,7 @@ import XMonad.Layout.SimpleFloat
 import XMonad.Layout.LayoutScreens
 import XMonad.Layout.TwoPane
 import XMonad.Layout.ResizableTile
+import XMonad.Layout.Reflect (reflectHoriz)
 import XMonad.Util.SpawnOnce
 
 import qualified XMonad.StackSet as W
@@ -31,7 +32,7 @@ vScreen = layoutScreens 2 (TwoPane 0.55 0.45)
 layouts = smartBorders (
         avoidStruts
             (   ResizableTall 1 (3/100) (1/2) []
-            -- ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
+            ||| reflectHoriz (ResizableTall 1 (3/100) (1/2) [])
             ||| Full
             -- ||| Grid
             -- ||| spiral (6/7)
