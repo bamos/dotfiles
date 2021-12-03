@@ -13,3 +13,5 @@
 	cookiefile = /Users/bamos/.gitcookies
 [credential]
 	helper = store
+[init]
+	defaultBranch = main
