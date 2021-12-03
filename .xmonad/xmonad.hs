@@ -1,4 +1,5 @@
 import System.Exit
+import Graphics.X11.ExtraTypes.XF86
 import XMonad
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.Grid
@@ -17,18 +18,11 @@ import qualified XMonad.StackSet as W
 import Data.Bits ((.|.))
 import qualified Data.Map as M
 
-
-spotify cmd = spawn
-  (  "dbus-send --print-reply "
-  ++ "--dest=org.mpris.MediaPlayer2.spotify "
-  ++ "/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player."
-  ++ cmd
-  )
-
+spotify cmd = spawn ("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player." ++ cmd)
 bumpVolume args = spawn ("ssh host ./.dotfiles/bin/bump-osx-volume " ++ args)
 setkbmap layout = spawn ("setxkbmap " ++ layout ++ "; xmodmap ~/.Xmodmap")
-vScreen = layoutScreens 2 (TwoPane 0.55 0.45)
 
+vScreen = layoutScreens 2 (TwoPane 0.55 0.45)
 layouts = smartBorders (
         avoidStruts
             (   ResizableTall 1 (3/100) (1/2) []
@@ -42,23 +36,27 @@ layouts = smartBorders (
 
 ks :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
-    [ ((mod, xK_a), spawn "dmenu_run")
+    [ ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    , ((mod, xK_a), spawn "dmenu_run")
+    , ((mod .|. shiftMask, xK_j), kill)
+    , ((mod, xK_d), spawn "xset dpms force off")
+    , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
+    , ((mod, xK_q), spawn "xmonad --recompile && xmonad --restart")
+    , ((mod .|. shiftMask, xK_apostrophe), io exitSuccess)
+
     , ((mod, xK_o), spawn "google-chrome")
     , ((mod, xK_e), spawn "emacsclient -a '' -c")
     , ((mod, xK_u), spawn "slack")
-    , ((mod .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+
+    , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 2%-")
+    , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2%+")
+    , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle")
+    , ((0, xF86XK_AudioPrev), spotify "Prev")
+    , ((0, xF86XK_AudioNext), spotify "Next")
+    , ((0, xF86XK_AudioPlay), spotify "PlayPause")
+
+    , ((mod .|. shiftMask, xK_k), setkbmap "dvorak")
     , ((mod, xK_grave), spawn "sleep 0.2; xdotool key Multi_key &> /tmp/t")
-    , ((mod .|. shiftMask, xK_j), kill)
-    , ((mod, xK_d), spawn "xset dpms force off")
-
-    -- , ((mod, xK_Up), bumpVolume "+")
-    -- , ((mod, xK_Down), bumpVolume "-")
-    -- , ((mod, xK_Right), spotify "Next")
-    -- , ((mod, xK_Left), spotify "Previous")
-    -- , ((mod .|. controlMask, xK_space), spotify "PlayPause")
-
-    -- , ((mod, xK_g), setkbmap "us")
-    -- , ((mod, xK_v), setkbmap "dvorak")
 
     , ((mod, xK_space), sendMessage NextLayout)
     , ((mod, xK_Return), windows W.swapMaster)
@@ -77,9 +75,6 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     -- , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
 
     , ((mod, xK_s), spawn "sleep 0.2; maim -s /home/bda/tmp/t.png; xclip -selection clipboard -t image/png -i ~/tmp/t.png")
-
-    , ((mod, xK_apostrophe), spawn "xmonad --recompile && xmonad --restart")
-    , ((mod .|. shiftMask, xK_apostrophe), io exitSuccess)
     ] ++
 
     -- mod-N: Switch to workspace N
