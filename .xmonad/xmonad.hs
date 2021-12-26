@@ -96,7 +96,7 @@ main = xmonad defaultConfig
   , modMask = mod1Mask
   , keys = ks
   , normalBorderColor  = "#333333"
-  , focusedBorderColor = "#5882FA"
+  , focusedBorderColor = "#B27AEB"
   , layoutHook = layouts
   , startupHook = do
       docksStartupHook
