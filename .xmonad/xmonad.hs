@@ -100,7 +100,6 @@ main = xmonad defaultConfig
   , layoutHook = layouts
   , startupHook = do
       docksStartupHook
-      spawnOnce "xmobar ~/.xmonad/xmobar.hs"
       spawn "~/xmonad-init.sh"
   , manageHook = manageDocks
   , handleEventHook = docksEventHook

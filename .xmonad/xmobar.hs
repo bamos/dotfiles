@@ -16,5 +16,5 @@ Config {
    , pickBroadest = False
    , persistent = True
 
-   , commands = [ Run Com "/home/bda/.xmonad/xmobar.py" [] "py" 0 ]
+   , commands = [ Run Com "/home/bda/.xmonad/xmobar.py" [] "py" 60 ]
    }
