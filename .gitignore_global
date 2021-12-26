@@ -13,3 +13,5 @@ __pycache__
 .nfs*
 
 *.ipynb_checkpoints
+*.fdb_latexmk
+*.fls
