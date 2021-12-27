@@ -1,0 +1,5 @@
+sync_dir = "~/onedrive"
+skip_file = "~*|.~*|*.tmp"
+monitor_interval = "300"
+log_dir = "/var/log/onedrive/"
+rate_limit = "131072"

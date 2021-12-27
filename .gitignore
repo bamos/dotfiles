@@ -1,4 +1,6 @@
 .aria2/dht.dat*
+.config/onedrive/*
+!.config/onedrive/config
 .config/qutebrowser/bookmarks
 .config/qutebrowser/quickmarks
 .config/qutebrowser/autoconfig.yml
