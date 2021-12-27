@@ -3,22 +3,24 @@
 from datetime import datetime
 import psutil
 import sys
+import argparse
 
-direction = sys.argv[1]
+parser = argparse.ArgumentParser()
+parser.add_argument('direction', type=str,
+                    choices=['left', 'right'])
+args = parser.parse_args()
 
-if direction == 'left':
+status = ''
+
+if args.direction == 'left':
     status = '<fc=#B27AEB><fn=2>❤</fn></fc>'
-elif direction == 'right':
-    status = ''
-
+elif args.direction == 'right':
     battery = psutil.sensors_battery()
-    if battery.percent < 50.:
+    if not battery.power_plugged:
         status += f'<fc=#D43737><fn=1></fn>{int(battery.percent)}%</fc> '
 
     now = datetime.now()
     time_str = now.strftime('%Y.%m.%d %-I:%M%p')
     status += f'<fc=#ABABAB>{time_str}</fc>'
-else:
-    assert False
 
 print(status)
