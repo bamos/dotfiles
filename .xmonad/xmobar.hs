@@ -20,7 +20,7 @@ Config {
   , persistent = True
 
   , commands = [
-        Run Com "/home/bda/.xmonad/xmobar.py" ["left"] "py_left" 60
-      , Run Com "/home/bda/.xmonad/xmobar.py" ["right"] "py_right" 60
+        Run Com "/home/bda/.xmonad/xmobar.py" ["left"] "py_left" -1
+      , Run Com "/home/bda/.xmonad/xmobar.py" ["right"] "py_right" 600
   ]
 }
