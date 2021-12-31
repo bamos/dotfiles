@@ -31,7 +31,7 @@
 (load-user-file "init-org.el")
 (load-user-file "init-helm.el")
 (load-user-file "init-web-mode.el")
-(load-user-file "init-flyspell.el")
+(load-user-file "init-spell.el")
 (when (file-exists-p "~/.mbsyncrc")
   (load-user-file "init-mu4e.el")
 )
