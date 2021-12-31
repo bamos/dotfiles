@@ -12,6 +12,7 @@ import XMonad.Layout.LayoutScreens
 import XMonad.Layout.TwoPane
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Reflect (reflectHoriz)
+import XMonad.Actions.SinkAll (sinkAll)
 import XMonad.Util.SpawnOnce
 
 import qualified XMonad.StackSet as W
@@ -69,7 +70,7 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_r), sendMessage MirrorExpand)
     , ((mod, xK_l), sendMessage Expand)
     , ((mod, xK_b), sendMessage ToggleStruts)
-    -- , ((mod, xK_y), withFocused $ windows . W.sink)
+    , ((mod, xK_y), sinkAll)
 
     -- , ((mod .|. shiftMask, xK_space), vScreen)
     -- , ((mod .|. controlMask .|. shiftMask, xK_space), rescreen)
