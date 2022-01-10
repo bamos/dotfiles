@@ -1,8 +1,8 @@
 Config {
-    font = "xft:Bitstream Vera Sans Mono:pixelsize=16:antialias=true"
+    font = "xft:terminus:pixelsize=16:antialias=true"
   , additionalFonts = [
         "xft:FontAwesome:pixelsize=16:antialias=true"
-      , "xft:Bitstream Vera Sans Mono:pixelsize=26:antialias=true"
+      , "xft:Bitstream Vera Sans Mono:pixelsize=28:antialias=true"
   ]
   , bgColor = "#262626"
   , fgColor = "#ffffff"
