@@ -36,7 +36,11 @@ elif [[ $(xrandr | grep 'DP-1 connected') ]]; then
   xrandr --output eDP-1 --same-as DP-1
 fi
 
-[[ $(pgrep redshift) ]] || redshift &
+
+gamma=$(xrandr --verbose | grep Gamma | awk 'NR==1{print $2}')
+if [[ $gamma == '1.0:1.0:1.0' ]]; then
+    redshift &
+fi
 
 [[ $(pgrep xmobar) ]] || xmobar ~/.xmonad/xmobar.hs &
 
