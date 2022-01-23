@@ -1,7 +1,8 @@
-personal_ws-1.1 en 98 
+personal_ws-1.1 en 111 
 Borel
 Broyden's
 CEM
+CIFAR
 CP
 DCEM
 DCEM's
@@ -18,10 +19,13 @@ HyperDEQ
 HyperNEAT
 HyperNet
 HyperNets
+HyperTransformer
 Hypernetworks
 IAPO
 ISTA
 IVAE
+ImageNet
+Jacobian
 KKT
 LISTA
 LM
@@ -32,17 +36,24 @@ MDP
 MDPs
 MIP
 MLP
+MNIST
 MPC
 MSA
 MSE
+MetaOptNet
+NeuralFP
 NeuralSCS
+OSQP
 PILCO
 PSD
 QP
 QPRL
 RBF
+RCPM
 RL
+RLQP
 RNN
+ResNet
 Riemannian
 SAVAE
 SAVAEs
@@ -51,6 +62,8 @@ SDP
 SPD
 SPENs
 SVG
+SVM
+SVMs
 TBPTT
 TBPTT's
 TODO
