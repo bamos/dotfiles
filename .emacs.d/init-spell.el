@@ -15,6 +15,7 @@
           ("\\\\citep" ispell-tex-arg-end)
           ("\\\\citet" ispell-tex-arg-end)
           ("\\\\cite" ispell-tex-arg-end)
+          ("\\\\href" ispell-tex-arg-end)
           ("\\\\bibliography" ispell-tex-arg-end)
           ("[^\\]\\$" . "[^\\]\\$")
           ("\\\\begin{tabular}" . "$")
