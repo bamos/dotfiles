@@ -78,3 +78,5 @@
 (add-to-list 'org-capture-templates
   '("m" "mu4e-msg" entry (file "~/org/todo.org")
     "* TODO %a %?\nDEADLINE: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
+
+(define-key message-mode-map (kbd "C-c C-a") 'mail-add-attachment)
