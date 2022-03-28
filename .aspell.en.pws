@@ -1,5 +1,8 @@
-personal_ws-1.1 en 162 
+personal_ws-1.1 en 182 
+ADMM
+Akpinar
 BPTT
+Bartolomeo
 Birkhoff
 Borel
 Bregman
@@ -41,6 +44,7 @@ JAX
 Jacobian
 JuMP
 KKT
+Knyazev
 LISTA
 LM
 LPs
@@ -54,12 +58,15 @@ MNIST
 MPC
 MSA
 MSE
+Marino
 MetaOptNet
 MiniImagenet
 Nesterov
 NeuralFP
+NeuralNMF
 NeuralSCS
 OSQP
+PCA
 PILCO
 PSD
 QP
@@ -69,6 +76,7 @@ RCPM
 RL
 RLQP
 RNN
+Rajiv
 ReLU
 ReLUs
 ResNet
@@ -85,6 +93,8 @@ SVG
 SVI
 SVM
 SVMs
+Sambharya
+Stellato
 TBPTT
 TBPTT's
 TODO
@@ -108,10 +118,16 @@ cartpole
 combinatorial
 convolutional
 cvxpylayers
+cyber
+deblurring
+denoising
 discretizations
 dists
+elementwise
 entropic
+factorizations
 feedforward
+footnotesize
 grey
 homotopy
 hyperparams
@@ -120,6 +136,7 @@ iMAML
 idempotency
 init
 inlined
+inpainting
 instable
 instantiation
 instantiations
@@ -130,6 +147,7 @@ iteratively
 jaxopt
 jl
 nn
+nonsmooth
 notationally
 optim
 optimality
@@ -141,6 +159,7 @@ parameterizations
 parameterizes
 parameterizing
 permutahedron
+photoacoustic
 polytope
 pseudolikelihood
 regularizer
@@ -149,6 +168,7 @@ rollout
 rollouts
 semidefinite
 sigmoid
+softargmax
 softmax
 softplus
 suboptimal
