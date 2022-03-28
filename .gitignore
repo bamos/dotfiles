@@ -19,6 +19,8 @@
 .emacs.d*/url
 .emacs.d*/SessionDesktop.el
 .emacs.d*/.org-id-locations
+.emacs.d*/bookmarks
+.emacs.d*/transient
 .gnupg/*
 !.gnupg/gpg.conf
 .mpv/watch_later
