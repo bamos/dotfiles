@@ -52,21 +52,21 @@
         (define-key mu4e-headers-mode-map "x" #'my-mu4e-mark-execute-all-no-confirm)))
 
 ;; https://emacs.stackexchange.com/a/24430
-(defun draft-auto-save-buffer-name-handler (operation &rest args)
-    "for `make-auto-save-file-name' set '.' in front of the file name; do nothing for other operations"
-    (if
-        (and buffer-file-name (eq operation 'make-auto-save-file-name))
-        (concat (file-name-directory buffer-file-name)
-                "."
-                (file-name-nondirectory buffer-file-name))
-    (let ((inhibit-file-name-handlers
-            (cons 'draft-auto-save-buffer-name-handler
-                    (and (eq inhibit-file-name-operation operation)
-                        inhibit-file-name-handlers)))
-            (inhibit-file-name-operation operation))
-        (apply operation args))))
+;; (defun draft-auto-save-buffer-name-handler (operation &rest args)
+;;     "for `make-auto-save-file-name' set '.' in front of the file name; do nothing for other operations"
+;;     (if
+;;         (and buffer-file-name (eq operation 'make-auto-save-file-name))
+;;         (concat (file-name-directory buffer-file-name)
+;;                 "."
+;;                 (file-name-nondirectory buffer-file-name))
+;;     (let ((inhibit-file-name-handlers
+;;             (cons 'draft-auto-save-buffer-name-handler
+;;                     (and (eq inhibit-file-name-operation operation)
+;;                         inhibit-file-name-handlers)))
+;;             (inhibit-file-name-operation operation))
+;;         (apply operation args))))
 
-(add-to-list 'file-name-handler-alist '("Drafts/cur/" . draft-auto-save-buffer-name-handler))
+;; (add-to-list 'file-name-handler-alist '("Drafts/cur/" . draft-auto-save-buffer-name-handler))
 
 (add-to-list 'mu4e-view-actions
   '("ViewInBrowser" . mu4e-action-view-in-browser) t)
@@ -74,6 +74,8 @@
 (add-hook 'mu4e-view-mode-hook
           #'(lambda ()
               (setq-local show-trailing-whitespace nil)))
+
+(add-hook 'mu4e-compose-mode-hook #'(lambda () (auto-save-mode -1)))
 
 (add-to-list 'org-capture-templates
   '("m" "mu4e-msg" entry (file "~/org/todo.org")
