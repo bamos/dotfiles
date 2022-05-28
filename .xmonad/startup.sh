@@ -33,7 +33,7 @@ elif [[ $(xrandr | grep 'DP-1 connected.*673mm') ]]; then
   xrandr --addmode DP-1 1920x810_60.00
   xrandr --output DP-1 --mode 1920x810_60.00
   xrandr --output DP-1 --left-of eDP-1
-elif [[ $(xrandr | grep 'DP-1 connected.*597mm') ]]; then
+elif [[ $(xrandr | grep 'DP-1 connected.*697mm') ]]; then
   xrandr --output DP-1 --mode 1920x1080
   if [[ $(cat /proc/acpi/button/lid/LID/state | grep open) ]]; then
     xrandr --output DP-1 --left-of eDP-1
