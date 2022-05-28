@@ -1,4 +1,4 @@
-personal_ws-1.1 en 182 
+personal_ws-1.1 en 196 
 ADMM
 Akpinar
 BPTT
@@ -25,6 +25,7 @@ FP
 Fenchel
 GRU
 Gaussians
+Gromov
 Hane
 HyperAA
 HyperAnderson
@@ -35,6 +36,8 @@ HyperNets
 HyperTransformer
 Hypernetworks
 IAPO
+ICNN
+ICNNs
 ILP
 ISTA
 IVAE
@@ -73,6 +76,7 @@ QP
 QPRL
 RBF
 RCPM
+RGB
 RL
 RLQP
 RNN
@@ -94,6 +98,7 @@ SVI
 SVM
 SVMs
 Sambharya
+Sinkhorn
 Stellato
 TBPTT
 TBPTT's
@@ -105,6 +110,7 @@ Unbiasing
 VAE
 VAEs
 Vinitsky
+Wasserstein
 acc
 adjoint
 autodiff
@@ -112,6 +118,8 @@ autoencoder
 autoencoders
 backprop
 backpropagation
+barycenters
+barycentric
 bilevel
 blackbox
 cartpole
@@ -122,8 +130,11 @@ cyber
 deblurring
 denoising
 discretizations
+discretized
 dists
+duals
 elementwise
+embeddings
 entropic
 factorizations
 feedforward
@@ -135,6 +146,7 @@ iLQR
 iMAML
 idempotency
 init
+initializations
 inlined
 inpainting
 instable
@@ -143,6 +155,7 @@ instantiations
 interpretability
 interpretable
 invertibility
+invertible
 iteratively
 jaxopt
 jl
@@ -174,6 +187,7 @@ softplus
 suboptimal
 suboptimality
 subsequences
+subspaces
 thresholding
 timesteps
 tradeoffs
