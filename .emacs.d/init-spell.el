@@ -4,8 +4,11 @@
   (add-hook hook (lambda () (flyspell-mode -1))))
 
 (setq ispell-program-name "aspell"
-      ispell-program-name "/usr/bin/aspell"
       ispell-personal-dictionary "~/.aspell.en.pws")
+
+(if (eq system-type 'darwin)
+    (setq ispell-program-name "/usr/local/bin/aspell")
+    (setq ispell-program-name "/usr/bin/aspell"))
 
 (setq ispell-tex-skip-alists
       (list
