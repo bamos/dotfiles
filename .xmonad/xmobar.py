@@ -13,7 +13,7 @@ args = parser.parse_args()
 status = ''
 
 deadlines = {
-    # 'NeurIPS': date(2022, 5, 19)
+    'ICLR': date(2022, 9, 19),
 }
 
 if args.direction == 'left':

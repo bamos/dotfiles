@@ -30,7 +30,7 @@ layouts = smartBorders (
             ||| reflectHoriz (ResizableTall 1 (3/100) (1/2) [])
             ||| Full
             -- ||| Grid
-            -- ||| spiral (6/7)
+            ||| spiral (6/7)
             )
         -- ||| simpleFloat
     )
