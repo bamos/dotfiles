@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rne
+# key: rne
+# --
+raise NotImplementedError()
