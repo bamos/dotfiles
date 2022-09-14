@@ -1,4 +1,5 @@
 set -g renumber-windows off
+set -g mouse off
 
 tmux_conf_new_window_retain_current_path=false
 tmux_conf_new_pane_retain_current_path=true
