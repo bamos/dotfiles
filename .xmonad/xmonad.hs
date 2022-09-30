@@ -92,16 +92,14 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
-main = xmonad defaultConfig
+main = xmonad $ docks def
   { terminal = "/usr/bin/urxvt"
   , modMask = mod1Mask
   , keys = ks
   , normalBorderColor  = "#262626"
   , focusedBorderColor = "#B27AEB"
   , layoutHook = layouts
-  , startupHook = do
-      docksStartupHook
-      spawn "~/.xmonad/startup.sh"
+  , startupHook = spawn "~/.xmonad/startup.sh"
   , manageHook = manageDocks
-  , handleEventHook = docksEventHook
+  -- , handleEventHook = docksEventHook
 }
