@@ -125,8 +125,8 @@
 (load custom-file 'noerror)
 
 (require 'darkroom)
-(setq darkroom-mode-left-margin 30
-      darkroom-mode-right-margin 30
+(setq darkroom-mode-left-margin 15
+      darkroom-mode-right-margin 15
       darkroom-mode-enable-longline-wrap t)
 
 ;; OSX-specific:
