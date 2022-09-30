@@ -13,7 +13,7 @@ args = parser.parse_args()
 status = ''
 
 deadlines = {
-    'ICLR': date(2022, 9, 19),
+    # 'ICLR': date(2022, 9, 28),
 }
 
 if args.direction == 'left':
@@ -26,7 +26,8 @@ elif args.direction == 'right':
     today_date = datetime.now().date()
     for tag,tag_date in deadlines.items():
         n_days = (tag_date-today_date).days
-        status += f'<fc=#ABABAB>{tag}: {n_days} days | </fc>'
+        day_str = 'day' if n_days == 1 else 'days'
+        status += f'<fc=#ABABAB>{tag}: {n_days} {day_str} | </fc>'
 
     now = datetime.now()
     time_str = now.strftime('%Y.%m.%d %-I:%M%p')
