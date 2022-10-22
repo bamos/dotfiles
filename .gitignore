@@ -7,6 +7,7 @@
 .config/qutebrowser/qsettings
 .emacs.d*/abbrev_defs
 .emacs.d*/auto-save-list
+.emacs.d*/custom.el*
 .emacs.d*/elpa
 .emacs.d*/ensime
 .emacs.d*/eshell
@@ -18,6 +19,7 @@
 .emacs.d*/request
 .emacs.d*/tramp
 .emacs.d*/url
+.emacs.d*/undo
 .emacs.d*/SessionDesktop.el
 .emacs.d*/.org-id-locations
 .emacs.d*/bookmarks

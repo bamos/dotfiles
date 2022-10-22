@@ -100,5 +100,6 @@
 (define-key evil-normal-state-map "k" 'evil-search-next)
 (define-key evil-normal-state-map "K" 'evil-search-previous)
 
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 (global-undo-tree-mode)
 (evil-set-undo-system 'undo-tree)
