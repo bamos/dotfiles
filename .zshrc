@@ -79,3 +79,5 @@ if [[ "$TERM" == "dumb" ]]; then
   unfunction preexec
   PS1='$ '
 fi
+
+alias guppy='gup;gp'
