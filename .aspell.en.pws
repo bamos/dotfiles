@@ -46,6 +46,8 @@ Azkaban
 BFGS
 BICNN
 BLK
+Arnaud
+BPC
 BPTT
 Babu
 Bai
@@ -77,6 +79,8 @@ Bregman
 Brenier's
 Brightwell
 Broyden
+Brenier
+Brenier's
 Broyden's
 Bujold
 BundleEntropyMethod
@@ -107,6 +111,9 @@ CSV
 CTAN
 CVPR
 CVXOPT
+CISE's
+CP
+CPUs
 CVXPY
 CXX
 Cabi
@@ -160,6 +167,7 @@ DCP
 DDPG
 DDR
 DEALLOCATE
+DEI
 DEQ
 DEQs
 DEVNULL
@@ -193,6 +201,7 @@ Deligne
 Denil
 DenseNet
 DiamondAndroid
+DeepMind
 DiffOpt
 Dinh
 Dinion
@@ -232,6 +241,7 @@ FFNN
 FFmpeg
 FICNN's
 FICNNs
+FAIR's
 FISTA
 FLEXlm
 FP
@@ -274,6 +284,12 @@ Gabor
 Gabriel's
 GammaRay
 GammaRay's
+Fickinger
+GN
+GNs
+GPUs
+GRU
+GRUs
 Gaussians
 Gbps
 GeForce
@@ -316,6 +332,7 @@ Haar
 Haardt
 Hadamard
 HalfCheetah
+HVAC
 Hane
 Harkes
 Haskell
@@ -339,6 +356,7 @@ HyperNets
 HyperTransformer
 Hypernetworks
 IAPO
+ICLR
 ICNN
 ICNN's
 ICNNs
@@ -400,6 +418,7 @@ KVM's
 Kadekodi
 Kaku
 Kalenichenko
+Kahneman's
 Kantorovich
 Karlsruhe
 Karuki
@@ -453,6 +472,10 @@ Lipschitz
 Lua's
 Lyapunov
 Lyerly
+LQR
+LSTM
+LSTMs
+LatinX
 MAML
 MDP
 MDPs
@@ -463,6 +486,7 @@ MJPEG
 MLP
 MMSP
 MMv
+MLPs
 MNIST
 MNIST's
 MPC
@@ -505,6 +529,8 @@ McGhee
 Mecklenburg
 Mellanox
 Mergesort
+Mentorship
+Meta's
 MetaOptNet
 MetaVar
 MetaVarFromDefault
@@ -538,6 +564,8 @@ Narajanan
 NatashaTheRobot
 Nesterov
 NetPerf
+NYU
+Nesterov
 NeurIPS
 NeuralFP
 NeuralNMF
@@ -552,6 +580,7 @@ OMP
 OS'es
 OSError
 OSGI
+Numerics
 OSQP
 OSX
 OT's
@@ -578,6 +607,8 @@ Optiplex
 Orfeo
 Orson
 OverrideDefaultFromEnvar
+OptNet
+OptNet's
 PCA
 PCM
 PDF's
@@ -657,6 +688,7 @@ RDD's
 READMEs
 RESTful
 RFS
+REU
 RGB
 RGSgN
 RHS
@@ -737,6 +769,7 @@ Schroff
 ScrapeCountries
 ScrapeCountriesTest
 Sedaris
+Satyanarayanan
 Senecio
 Serhat
 Serkan
@@ -802,6 +835,7 @@ Tanenbaum
 Tbps
 TemporaryFile
 TensorFlow
+TPUs
 Terenin
 TestCase
 TestHeapArray
@@ -1007,6 +1041,7 @@ attrs
 au
 autoaccept
 autodetect
+allyship
 autodiff
 autodifferentiation
 autoencoder
@@ -1193,6 +1228,7 @@ consoleQuick
 const
 conv
 convnet
+concretise
 convolutional
 convos
 coreutil's
@@ -1406,6 +1442,8 @@ extractionMap
 facebook
 facenet
 facto
+equitability
+expressivity
 factorizations
 fallbackLfw
 farquhar
@@ -1437,6 +1475,7 @@ floordiv
 fluxbox
 fmt
 foerster
+filesystems
 footnotesize
 fopenmp
 formalisms
@@ -1574,6 +1613,7 @@ hochreiter
 holeVar
 homedir
 homogenous
+homeworks
 homotopy
 hostname
 hostnames
@@ -1638,6 +1678,7 @@ infeasibilty
 infeasible
 ingraham
 ini
+inclusivity
 init
 initializations
 initializeCamera
@@ -1992,6 +2033,8 @@ nineq
 nk
 nl
 nlp
+mentee
+mentees
 nn
 nngraph
 nngraph's
@@ -2474,6 +2517,12 @@ subproblems
 subprocess
 subsampling
 subsecond
+subfield
+submodule
+suboptimal
+suboptimality
+suboptimally
+subproblems
 subsequences
 subshell
 subspaces
@@ -2627,6 +2676,7 @@ ulyanov
 umount
 uname
 unary
+transformative
 unbias
 unblurred
 uncomment
@@ -2643,6 +2693,7 @@ univariate
 unnormalized
 unrealizable
 unregister
+unobservable
 unregularized
 unrevertible
 unsortedList
