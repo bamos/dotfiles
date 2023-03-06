@@ -125,9 +125,8 @@
 (load custom-file 'noerror)
 
 (require 'darkroom)
-(setq darkroom-mode-left-margin 15
-      darkroom-mode-right-margin 15
-      darkroom-mode-enable-longline-wrap t)
+(setq darkroom-margins 0.1)
+(add-hook 'LaTeX-mode-hook 'darkroom-mode)
 
 ;; OSX-specific:
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
