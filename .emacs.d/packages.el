@@ -11,6 +11,7 @@
     color-theme-modern
     darkroom
     dash
+    editorconfig
     evil
     evil-commentary
     evil-leader
@@ -38,8 +39,12 @@
     protobuf-mode
     puppet-mode
     python-mode
+    quelpa
+    quelpa-use-package
+    s
     smooth-scroll
     undo-tree
+    use-package
     w3m
     web-mode
     xclip
@@ -50,7 +55,8 @@
   "Packages which should be installed upon launch"
 )
 
+(package-refresh-contents)
 (dolist (p required-packages)
   (when (not (package-installed-p p))
-    (package-refresh-contents)
+    (print p)
     (package-install p)))
