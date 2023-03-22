@@ -127,7 +127,7 @@
 
 (require 'darkroom)
 (setq darkroom-margins 0.1)
-(add-hook 'LaTeX-mode-hook 'darkroom-mode)
+;; (add-hook 'LaTeX-mode-hook 'darkroom-mode)
 
 ;; OSX-specific:
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
