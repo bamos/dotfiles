@@ -1,4 +1,4 @@
-personal_ws-1.1 en 2773 
+personal_ws-1.1 en 2800 
 ACM
 ADMM
 AED
@@ -28,6 +28,7 @@ Alg
 Alnur
 AlphaGo
 Amo
+AmorConj
 AnalyticsData
 AndroidManifest
 AppleWebKit
@@ -144,6 +145,7 @@ Cohe
 Colmenarejo
 Comcast
 Concat
+CondOT
 Conklin
 ConnectX
 Conroy
@@ -257,13 +259,16 @@ Flg
 FloatTensor
 FloorDiv
 Florian
+FnT
 FooApp
 Freitas
 Fulghum
 FullCommand
 Fx
 Füredi
+GAN
 GANs
+GECO
 GFS
 GG
 GHC
@@ -404,6 +409,7 @@ Jacobians
 JavaCameraSizeAccessor
 Jax
 Jax's
+Jens
 JetStream
 Jiang
 Jin
@@ -429,6 +435,7 @@ Kazemi
 KeepThisDir
 Keras
 KeyError
+Khodak
 Kijung
 Kincaid
 Kiryong
@@ -477,6 +484,7 @@ LSTM
 LSTMs
 LatinX
 MAML
+MAML's
 MDP
 MDPs
 MGA
@@ -484,6 +492,7 @@ MIP
 MITM
 MJPEG
 MLP
+MLPs
 MMSP
 MMv
 MLPs
@@ -627,9 +636,11 @@ PReLU
 PRs
 PSD
 PWD
+Paavo
 Padmanabahn
 Padmanabhan
 Pamplin
+Parmas
 ParseIP
 Pausch
 Paxos
@@ -700,6 +711,7 @@ RNN
 ROI
 RPC
 RShift
+RTRL
 RTT
 Rahul
 Rajen
@@ -790,6 +802,7 @@ Simbabwe
 Simor
 SimpleIMAPSSLRetriever
 Sinkhorn
+Sj
 SnowGlobe
 Sobel
 SocialCompare's
@@ -859,6 +872,7 @@ TopPages
 TopPagesByBrowser
 TopPagesByPreviousTopPages
 TopReferringDomains
+TorchOpt
 Torchmeta
 TripletEmbedding
 Tsinghua
@@ -872,6 +886,7 @@ UCL
 UComm
 UDP
 UNet
+UORO
 UPnP
 URL's
 URLParser
@@ -883,6 +898,7 @@ UnaryOp
 Unbiasing
 Unmounting
 VAE
+VAE's
 VAEs
 VBODA
 VC
@@ -895,6 +911,7 @@ VMs
 VOC
 Vaishnavh
 Vannevar
+VeLO
 VerticalTimeline
 VideoSensorHandler
 Vinitsky
@@ -905,6 +922,7 @@ Vladlen
 Vodafone
 Váza
 WANs
+WGAN
 WPCM
 WalnutiQ
 Wasserstein
@@ -1217,6 +1235,7 @@ commandLengths
 commentstyle
 compactions
 complementarity
+composable
 compositional
 compressibility
 computable
@@ -1500,6 +1519,7 @@ frontend
 fu
 func
 functionalities
+functorch
 fw
 gModule
 gModule's
@@ -1626,6 +1646,7 @@ hu
 huang
 hw
 hypercube
+hypergradients
 hypernetwork
 hypernetworks
 hyperparameter
@@ -1635,6 +1656,7 @@ hyperplane
 hyperplane's
 hyperplanes
 hypersphere
+hypertorch
 hypervisor
 hypervisors
 i'm
@@ -2059,6 +2081,7 @@ nopw
 normals
 notational
 notationally
+nowfntplain
 np
 npm
 npr
@@ -2087,6 +2110,7 @@ okada
 ol
 oldstyle
 oliphant
+olund
 omap
 omelette
 onclick
@@ -2564,6 +2588,7 @@ tarlow
 taskar
 tassa
 taxonimize
+taxonomized
 tbody
 tchaikovsky
 tcp
@@ -2596,6 +2621,7 @@ theodorou
 thereIs
 thresholded
 thresholding
+throughline
 tieleman
 tikz
 timePicker
@@ -2716,6 +2742,7 @@ ux
 uy
 uz
 va
+vae
 validator
 validators
 vals
