@@ -1,8 +1,4 @@
 (require 'package)
-(require 'use-package)
-(require 'quelpa-use-package)
-(setq use-package-always-ensure t)
-
 (setq package-archives '(
     ("org" . "http://orgmode.org/elpa/")
     ("gnu" . "http://elpa.gnu.org/packages/")
@@ -59,10 +55,9 @@
   "Packages which should be installed upon launch"
 )
 
-(package-refresh-contents)
 (dolist (p required-packages)
   (when (not (package-installed-p p))
-    (print p)
+    (package-refresh-contents)
     (package-install p)))
 
 (use-package quelpa
@@ -70,4 +65,8 @@
   (use-package quelpa-use-package)
   (setq quelpa-update-melpa-p nil)
   (quelpa-use-package-activate-advice))
+
+(require 'use-package)
+(require 'quelpa-use-package)
+(setq use-package-always-ensure t)
 
