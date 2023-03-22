@@ -1,4 +1,8 @@
 (require 'package)
+(require 'use-package)
+(require 'quelpa-use-package)
+(setq use-package-always-ensure t)
+
 (setq package-archives '(
     ("org" . "http://orgmode.org/elpa/")
     ("gnu" . "http://elpa.gnu.org/packages/")
@@ -60,3 +64,10 @@
   (when (not (package-installed-p p))
     (print p)
     (package-install p)))
+
+(use-package quelpa
+  :config
+  (use-package quelpa-use-package)
+  (setq quelpa-update-melpa-p nil)
+  (quelpa-use-package-activate-advice))
+
