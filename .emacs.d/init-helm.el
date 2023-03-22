@@ -1,7 +1,6 @@
 ; Reference: https://github.com/thierryvolpiatto/emacs-tv-config/blob/master/init-helm-thierry.el
 
 (require 'helm-mode)
-(require 'helm-config)
 (require 'helm-adaptive)
 (require 'helm-ring)
 (require 'helm-utils)
