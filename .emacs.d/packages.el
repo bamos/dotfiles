@@ -11,7 +11,6 @@
     color-theme-modern
     darkroom
     dash
-    ; ensime
     evil
     evil-commentary
     evil-leader
@@ -21,6 +20,7 @@
     flycheck
     free-keys
     git-messenger
+    gptel
     haskell-mode
     helm
     helm-descbinds

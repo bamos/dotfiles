@@ -139,3 +139,6 @@
 
 (server-start)
 (put 'downcase-region 'disabled nil)
+
+(require 'gptel)
+(setq gptel-api-key (with-temp-buffer (insert-file-contents "~/.gptel-key") (buffer-string)))
