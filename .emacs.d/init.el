@@ -20,6 +20,10 @@
   (string-equal system-type "darwin")
   )
 
+; Hack to use GNU tar on OSX for quelpa:
+; https://github.com/quelpa/quelpa/issues/221#issuecomment-882123183
+(setenv "PATH" "/usr/local/opt/gnu-tar/libexec/gnubin:$PATH" t)
+
 (load-user-file "packages.el")
 
 ; (load-user-file "clipboard.el")
