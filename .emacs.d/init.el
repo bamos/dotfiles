@@ -27,7 +27,7 @@
 (load-user-file "mail.el")
 
 (load-user-file "init-auctex.el")
-(load-user-file "init-llms.el")
+(load-user-file "init-ai.el")
 (load-user-file "init-evil.el")
 (load-user-file "init-org.el")
 (load-user-file "init-helm.el")
