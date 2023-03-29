@@ -1,5 +1,6 @@
 (require 'gptel)
-(setq gptel-api-key (with-temp-buffer (insert-file-contents "~/.gptel-key") (buffer-string)))
+(when (file-exists-p "~/.gptel-key")
+  (setq gptel-api-key (with-temp-buffer (insert-file-contents "~/.gptel-key") (buffer-string))))
 (define-key gptel-mode-map (kbd "C-c C-c") #'gptel-send)
 
 (use-package copilot
