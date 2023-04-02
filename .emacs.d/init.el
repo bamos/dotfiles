@@ -30,16 +30,12 @@
 (load-user-file "funcs.el")
 (load-user-file "mail.el")
 
-(load-user-file "init-ai.el")
 (load-user-file "init-auctex.el")
 (load-user-file "init-evil.el")
 (load-user-file "init-org.el")
 (load-user-file "init-helm.el")
 (load-user-file "init-web-mode.el")
 (load-user-file "init-spell.el")
-(when (file-exists-p "~/.mbsyncrc")
-  (load-user-file "init-mu4e.el")
-)
 
 (load-theme 'zenburn t)
 (require 'color-theme-modern)
@@ -73,9 +69,6 @@
 (setq shell-prompt-pattern ".*» *")
 ;; (setq dired-use-ls-dired nil)
 
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
-
 (setq-default show-trailing-whitespace t)
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defun save-buffer-without-dtw () ; http://stackoverflow.com/questions/14913398
@@ -106,8 +99,11 @@
 
 (setq compilation-scroll-output 'first-error)
 
-;; (add-hook 'python-mode-hook (lambda() (
-;;   (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
+;; default tab width to 2 except for python
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
+(add-hook 'python-mode-hook (lambda() (
+  (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
 (require 'yasnippet)
 (setq yas-snippet-dirs
@@ -144,3 +140,9 @@
 
 (server-start)
 (put 'downcase-region 'disabled nil)
+
+;; most likely to fail:
+(load-user-file "init-ai.el")
+(when (file-exists-p "~/.mbsyncrc")
+  (load-user-file "init-mu4e.el")
+)

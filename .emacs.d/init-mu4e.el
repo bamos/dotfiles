@@ -1,6 +1,7 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+(add-to-list 'load-path "/usr/local/Cellar/mu/1.10.0//share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
-(require 'org-mu4e)
+;; (require 'org-mu4e)
 
 (global-set-key (kbd "C-x C-m") 'mu4e)
 
