@@ -120,6 +120,12 @@
 
 (global-set-key (kbd "C-c d") 'redraw-display)
 
+; disable transposes
+(global-unset-key (kbd "M-t"))
+(global-unset-key (kbd "C-t"))
+(global-unset-key (kbd "C-x C-t"))
+
+
 (setq initial-scratch-message "")
 
 (setq custom-file "~/.emacs.d/custom.el")
