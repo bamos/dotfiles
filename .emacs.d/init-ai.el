@@ -17,6 +17,7 @@
       (indent-for-tab-command)))
 
 (define-key global-map (kbd "<tab>") #'copilot-tab)
+(define-key global-map (kbd "TAB") #'copilot-tab)
 
 (defun copilot-quit ()
   "Run `copilot-clear-overlay' or `keyboard-quit'. If copilot is
@@ -32,6 +33,6 @@ cleared, make sure the overlay doesn't come back too soon."
            nil
            (lambda ()
              (setq copilot-disable-predicates pre-copilot-disable-predicates)))))
-    (error handler)))
+    (error err)))
 
 (advice-add 'keyboard-quit :before #'copilot-quit)
