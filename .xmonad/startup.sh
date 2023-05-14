@@ -12,6 +12,8 @@ xinput set-prop 'pointer:ETPS/2 Elantech Touchpad' \
        'libinput Natural Scrolling Enabled' 1
 xinput set-prop 'pointer:Magic Mouse 2' \
        'libinput Natural Scrolling Enabled' 1
+xinput set-prop 'pointer:MX Master' \
+       'libinput Natural Scrolling Enabled' 1
 
 setxkbmap dvorak
 xmodmap ~/.Xmodmap
