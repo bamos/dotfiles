@@ -1,4 +1,4 @@
-personal_ws-1.1 en 2800 
+personal_ws-1.1 en 2847 
 ACM
 ADMM
 AED
@@ -36,6 +36,7 @@ Aram
 Argenteuil
 ArgumentParser
 Armijo
+Arnaud
 AssertionsForJUnit
 AssertionsForJunit
 Atcold
@@ -47,7 +48,6 @@ Azkaban
 BFGS
 BICNN
 BLK
-Arnaud
 BPC
 BPTT
 Babu
@@ -77,11 +77,10 @@ Bokanovsky's
 Boldrin
 Borel
 Bregman
+Brenier
 Brenier's
 Brightwell
 Broyden
-Brenier
-Brenier's
 Broyden's
 Bujold
 BundleEntropyMethod
@@ -98,6 +97,7 @@ CEM
 CFLAGS
 CIC
 CIFAR
+CISE's
 CLI
 CMU's
 CMake
@@ -112,9 +112,6 @@ CSV
 CTAN
 CVPR
 CVXOPT
-CISE's
-CP
-CPUs
 CVXPY
 CXX
 Cabi
@@ -203,7 +200,6 @@ Deligne
 Denil
 DenseNet
 DiamondAndroid
-DeepMind
 DiffOpt
 Dinh
 Dinion
@@ -235,6 +231,7 @@ Errorf
 EvalExprTest
 ExamplePreproc
 ExistingFile
+FAIR's
 FC
 FCN
 FCNN
@@ -243,7 +240,6 @@ FFNN
 FFmpeg
 FICNN's
 FICNNs
-FAIR's
 FISTA
 FLEXlm
 FP
@@ -253,6 +249,7 @@ FaceNet
 FaceNet's
 FaceScrub
 Fenchel
+Fickinger
 FileWriter
 Flesch
 Flg
@@ -281,6 +278,7 @@ GPUs
 GRFP
 GRO
 GRU
+GRUs
 GSO
 GSO's
 GStreamer
@@ -289,12 +287,6 @@ Gabor
 Gabriel's
 GammaRay
 GammaRay's
-Fickinger
-GN
-GNs
-GPUs
-GRU
-GRUs
 Gaussians
 Gbps
 GeForce
@@ -333,11 +325,11 @@ HTMLParser
 HTTPHeader
 HTTPHeaderValue
 HTTPS
+HVAC
 Haar
 Haardt
 Hadamard
 HalfCheetah
-HVAC
 Hane
 Harkes
 Haskell
@@ -396,6 +388,7 @@ IsCumulative
 Isaacson
 Iter
 Iverson
+Izzatullah
 JARSIGNER
 JAX
 JNI
@@ -422,9 +415,9 @@ KHTML
 KKT
 KVM's
 Kadekodi
+Kahneman's
 Kaku
 Kalenichenko
-Kahneman's
 Kantorovich
 Karlsruhe
 Karuki
@@ -456,15 +449,18 @@ LLVM
 LM
 LOC
 LPs
+LQR
 LReLU
 LSTM
 LSTMS
+LSTMs
 LShift
 LTE
 LTS
 LVM
 LZMA
 LaTeX
+LatinX
 Layne
 LeCun
 LeNet
@@ -477,12 +473,9 @@ Linpack
 Lipman
 Lipschitz
 Lua's
+Luise
 Lyapunov
 Lyerly
-LQR
-LSTM
-LSTMs
-LatinX
 MAML
 MAML's
 MDP
@@ -495,7 +488,6 @@ MLP
 MLPs
 MMSP
 MMv
-MLPs
 MNIST
 MNIST's
 MPC
@@ -525,6 +517,7 @@ Masha
 Massie's
 Mathematica
 MathematicaScript
+Mathieu
 Matlab
 Matplotlib
 Matrox
@@ -537,8 +530,8 @@ McCallum
 McGhee
 Mecklenburg
 Mellanox
-Mergesort
 Mentorship
+Mergesort
 Meta's
 MetaOptNet
 MetaVar
@@ -550,6 +543,7 @@ Misha
 MobileAccHandler
 MobileResultHandler
 MobileVideoHandler
+Monge
 Monge's
 Monnet
 MotifNet
@@ -567,14 +561,13 @@ NULLs
 NUMA
 NUnit
 NVIDIA
+NYU
 NaNs
 Nando
 Narajanan
 NatashaTheRobot
 Nesterov
 NetPerf
-NYU
-Nesterov
 NeurIPS
 NeuralFP
 NeuralNMF
@@ -584,12 +577,12 @@ NoMachine
 NoSQL
 Northside
 NumPy
+Numerics
 OCaml
 OMP
 OS'es
 OSError
 OSGI
-Numerics
 OSQP
 OSX
 OT's
@@ -612,14 +605,14 @@ OpenReview
 OpenStack
 OpenStreetMap
 OptNet
+OptNet's
 Optiplex
 Orfeo
 Orson
 OverrideDefaultFromEnvar
-OptNet
-OptNet's
 PCA
 PCM
+PDE
 PDF's
 PDIPM
 PDIST
@@ -698,8 +691,8 @@ RCPM
 RDD's
 READMEs
 RESTful
-RFS
 REU
+RFS
 RGB
 RGSgN
 RHS
@@ -724,6 +717,7 @@ ReLUs
 Reacher
 ReadingList
 Redk
+Redko
 RegAmor
 Rei
 Reimplemented
@@ -771,6 +765,7 @@ SVI
 SVMs
 Sa
 Sambharya
+Satyanarayanan
 Saurabh
 Scala's
 ScalaDoc
@@ -781,7 +776,6 @@ Schroff
 ScrapeCountries
 ScrapeCountriesTest
 Sedaris
-Satyanarayanan
 Senecio
 Serhat
 Serkan
@@ -838,6 +832,7 @@ TBPTT's
 THArgCheck
 THDoubleTensor
 TODO
+TPUs
 TPx
 TQ
 TQz
@@ -848,7 +843,6 @@ Tanenbaum
 Tbps
 TemporaryFile
 TensorFlow
-TPUs
 Terenin
 TestCase
 TestHeapArray
@@ -967,6 +961,7 @@ Zico
 Zico's
 Ziyu
 Zoltán
+aalto
 abadi
 abbeel
 abbrv
@@ -1004,6 +999,7 @@ al
 alexis
 ali
 alizadeh
+allyship
 ami
 amongst
 amos
@@ -1059,7 +1055,6 @@ attrs
 au
 autoaccept
 autodetect
-allyship
 autodiff
 autodifferentiation
 autoencoder
@@ -1188,6 +1183,7 @@ cdef
 cdf
 cdot
 centos
+centroids
 changepoints
 charset
 charsets
@@ -1240,6 +1236,7 @@ compositional
 compressibility
 computable
 computermacgyver
+concretise
 conf
 config
 conjugate's
@@ -1247,7 +1244,6 @@ consoleQuick
 const
 conv
 convnet
-concretise
 convolutional
 convos
 coreutil's
@@ -1435,6 +1431,7 @@ eps
 eq
 eqn
 equilibrated
+equitability
 erez
 erosions
 escapeinside
@@ -1455,15 +1452,15 @@ expP
 exploid
 expr
 expressibility
+expressivity
 extensibility
 extractedData
 extractionMap
 facebook
 facenet
 facto
-equitability
-expressivity
 factorizations
+fairgen
 fallbackLfw
 farquhar
 fastboot
@@ -1488,13 +1485,13 @@ filesystem
 filesystems
 findMedian
 findPivot
+finetuning
 finn
 flickr
 floordiv
 fluxbox
 fmt
 foerster
-filesystems
 footnotesize
 fopenmp
 formalisms
@@ -1632,8 +1629,8 @@ hoburg
 hochreiter
 holeVar
 homedir
-homogenous
 homeworks
+homogenous
 homotopy
 hostname
 hostnames
@@ -1644,6 +1641,7 @@ htmlContent
 http
 hu
 huang
+huawei
 hw
 hypercube
 hypergradients
@@ -1694,13 +1692,13 @@ impl
 inEvent
 inH
 inW
+inclusivity
 indices
 ineqs
 infeasibilty
 infeasible
 ingraham
 ini
-inclusivity
 init
 initializations
 initializeCamera
@@ -1935,6 +1933,8 @@ mem
 memtables
 mena
 ment
+mentee
+mentees
 mergeSort
 mesos
 metadata
@@ -1994,6 +1994,7 @@ mpvnova
 mpvp
 mpvshuf
 msg
+msr
 mujoco
 mul
 mulan
@@ -2055,8 +2056,6 @@ nineq
 nk
 nl
 nlp
-mentee
-mentees
 nn
 nngraph
 nngraph's
@@ -2479,6 +2478,7 @@ spanish
 sparsegps
 sparsemap
 sparsemax
+sparsified
 splinePlot
 spmat
 spotrf
@@ -2528,6 +2528,7 @@ subdifferentiable
 subdifferential
 subdirectories
 subdirectory
+subfield
 subgradient
 submodular
 submodule
@@ -2541,12 +2542,6 @@ subproblems
 subprocess
 subsampling
 subsecond
-subfield
-submodule
-suboptimal
-suboptimality
-suboptimally
-subproblems
 subsequences
 subshell
 subspaces
@@ -2692,6 +2687,7 @@ u'sensor
 u'type
 ubicomp
 ubuntu
+ucl
 ucomm
 udell
 uhlenbeck
@@ -2702,7 +2698,6 @@ ulyanov
 umount
 uname
 unary
-transformative
 unbias
 unblurred
 uncomment
@@ -2717,9 +2712,9 @@ uninterpretable
 unittest
 univariate
 unnormalized
+unobservable
 unrealizable
 unregister
-unobservable
 unregularized
 unrevertible
 unsortedList
@@ -2727,6 +2722,7 @@ updateDataEntry
 uplink
 upnp
 upquote
+upscaled
 url
 urlDict
 urlcolor
