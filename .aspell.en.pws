@@ -1,4 +1,4 @@
-personal_ws-1.1 en 2847 
+personal_ws-1.1 en 2865
 ACM
 ADMM
 AED
@@ -15,6 +15,7 @@ ActNorm
 AdaGrad
 AdaGrad's
 Adact
+AdamW
 AirArrays
 Ajc
 Akka
@@ -460,6 +461,7 @@ LTS
 LVM
 LZMA
 LaTeX
+Lagrangians
 LatinX
 Layne
 LeCun
@@ -711,6 +713,7 @@ Rajen
 Rajiv
 Ramstedt's
 Ranftl
+Rao
 Ravindran
 ReLU
 ReLUs
@@ -738,6 +741,9 @@ SAS
 SAVAE
 SAVAEs
 SAVEHIST
+SBP
+SDE
+SDEs
 SDPs
 SEI
 SETUPFILE
@@ -772,6 +778,7 @@ ScalaDoc
 ScalaIDE
 ScalaTest
 ScalaTest's
+Schr
 Schroff
 ScrapeCountries
 ScrapeCountriesTest
@@ -1357,6 +1364,7 @@ differentiability
 differentiable
 dilations
 dimensionality
+dinger
 dini
 dir
 dirs
@@ -1431,6 +1439,7 @@ eps
 eq
 eqn
 equilibrated
+equispaced
 equitability
 erez
 erosions
@@ -1516,6 +1525,7 @@ frontend
 fu
 func
 functionalities
+functionals
 functorch
 fw
 gModule
@@ -1530,6 +1540,7 @@ gcc
 gclo
 ge
 genPickle
+generalizable
 genomics
 geo
 geoff
@@ -1697,6 +1708,7 @@ indices
 ineqs
 infeasibilty
 infeasible
+infimum
 ingraham
 ini
 init
@@ -1923,6 +1935,7 @@ mattingley
 maxDate
 maxItem
 maximin
+maximizer
 mb
 mbmf
 mbox
@@ -1955,6 +1968,7 @@ minibatch
 minibatchSz
 minibatches
 minimizer
+minimizers
 minipage
 minispiral
 mip
@@ -2097,12 +2111,14 @@ numberstyle
 numdifftools
 numpy
 numpy's
+nyu
 nz
 oH
 oW
 ocaml
 octahedron
 octetStream
+odeint
 odonoghue
 ok
 okada
@@ -2326,6 +2342,7 @@ relu
 remoteFiles
 renewcommand
 reparameterization
+reparameterize
 repo
 repos
 reposJson
@@ -2417,6 +2434,7 @@ sdcard
 sdk
 sdp
 sed
+semicontinuous
 semidefinite
 semiseparable
 semismooth
@@ -2553,6 +2571,7 @@ sukhbaatar
 summarizations
 sunf
 supersu
+supremum
 sur
 surveilled
 susitna
