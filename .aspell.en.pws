@@ -1,4 +1,4 @@
-personal_ws-1.1 en 2927 
+personal_ws-1.1 en 2939 
 ACADO
 ACM
 ADMM
@@ -117,6 +117,7 @@ CRF
 CSD
 CSV
 CTAN
+CTRs
 CVPR
 CVXOPT
 CVXPY
@@ -130,6 +131,7 @@ Caml
 Candyth
 Canziani
 Carles
+CartPole
 CelebA
 CentOS
 CenterLink
@@ -179,6 +181,7 @@ DEI
 DEQ
 DEQs
 DEVNULL
+DFL
 DGE
 DHCP
 DHT
@@ -295,6 +298,7 @@ GSO
 GSO's
 GStreamer
 GTX
+GV
 Gabor
 Gabriel's
 Galilei
@@ -464,6 +468,7 @@ LISTA
 LLVM
 LM
 LOC
+LODL
 LPs
 LQR
 LReLU
@@ -503,6 +508,7 @@ MGA
 MIP
 MITM
 MJPEG
+MLE
 MLP
 MLPs
 MMSP
@@ -604,6 +610,7 @@ Numerics
 OC
 OCaml
 ODEs
+OMD
 OMP
 OS'es
 OSError
@@ -1145,6 +1152,7 @@ baseUrl
 bashrc
 basicstyle
 batchSz
+batchsize
 battaglia
 bauschke
 bb
@@ -1422,6 +1430,7 @@ discretized
 discretizes
 discretizing
 discriminative
+distractor
 dists
 divad
 djolonga
@@ -2004,6 +2013,7 @@ mesos
 metadata
 metatable
 metavar
+metric's
 metz
 mf
 mfloat
@@ -2707,6 +2717,7 @@ timesheet
 timesheets
 timestamp
 timestamps
+timestep
 timesteps
 timezones
 tmicon
@@ -2743,6 +2754,7 @@ trajax
 transcoding
 transformative
 treeqn
+tri
 tridiagonal
 trpogae
 truediv
