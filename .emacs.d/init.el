@@ -69,7 +69,7 @@
 (setq shell-prompt-pattern ".*» *")
 ;; (setq dired-use-ls-dired nil)
 
-(setq-default show-trailing-whitespace t)
+(setq show-trailing-whitespace t)
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (defun save-buffer-without-dtw () ; http://stackoverflow.com/questions/14913398
   (interactive)
@@ -83,12 +83,12 @@
 
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace.el") )
-(setq-default save-place t)
+(setq save-place t)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(setq-default mode-line-format nil)
+(setq mode-line-format nil)
 
 (transient-mark-mode 1)
 
@@ -100,10 +100,10 @@
 (setq compilation-scroll-output 'first-error)
 
 ;; default tab width to 2 except for python
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
+(setq indent-tabs-mode nil)
+(setq tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
 (add-hook 'python-mode-hook (lambda() (
-  (setq-default tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
+  (setq tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
 (require 'yasnippet)
 (setq yas-snippet-dirs
