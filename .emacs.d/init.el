@@ -47,6 +47,8 @@
 (setq magit-push-always-verify nil
       magit-last-seen-setup-instructions "1.4.0")
 
+(setq ring-bell-function 'ignore)
+
 (unless window-system
   (require 'mouse)
   (xterm-mouse-mode t)
