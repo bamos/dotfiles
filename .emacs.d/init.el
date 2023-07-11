@@ -101,9 +101,9 @@
 
 ;; default tab width to 2 except for python
 (setq indent-tabs-mode nil)
-(setq tab-width 2)(setq sh-basic-offset 2)(setq sh-indentation 2)
-(add-hook 'python-mode-hook (lambda() (
-  (setq tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
+(setq tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4)
+;; (add-hook 'python-mode-hook (lambda() (
+;;   (setq tab-width 4)(setq sh-basic-offset 4)(setq sh-indentation 4))))
 
 (require 'yasnippet)
 (setq yas-snippet-dirs
