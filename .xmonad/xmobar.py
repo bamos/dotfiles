@@ -13,7 +13,7 @@ args = parser.parse_args()
 status = ''
 
 deadlines = {
-    'ICML': date(2023, 7, 22),
+    # 'ICML': date(2023, 7, 22),
 }
 
 if args.direction == 'left':
