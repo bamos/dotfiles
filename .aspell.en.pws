@@ -1,4 +1,4 @@
-personal_ws-1.1 en 3120 
+personal_ws-1.1 en 3159
 AAAI
 ACADO
 ACM
@@ -10,6 +10,7 @@ ALLOCATABLE
 AMD's
 API
 APIs
+APMonitor
 AREs
 ASF
 AWS
@@ -92,6 +93,7 @@ BitXor
 Blacksburg
 Bokanovsky's
 Boldrin
+Bolza
 Borel
 Brachistochrone
 Bregman
@@ -124,6 +126,7 @@ CNF
 CNF's
 CNFs
 CODECs
+CONOPT
 CP
 CPLEX
 CPUs
@@ -150,6 +153,7 @@ Canziani
 Cao
 Carles
 CartPole
+CasADi
 CelebA
 CentOS
 CenterLink
@@ -222,6 +226,7 @@ DTEND
 DTSTART
 DTW
 Daines
+Daniele
 Danskin's
 Dantzig
 Das
@@ -233,6 +238,7 @@ DeepFace
 DeepFace's
 DeepMind
 DeepRL
+Deepnote
 Delaunay
 Deligne
 Denil
@@ -243,6 +249,7 @@ Dilkina
 Dinh
 Dinion
 Dinion's
+Discretize
 Dishank
 DistBelief
 Dmitry
@@ -252,6 +259,7 @@ DoubleTensor
 Douwe
 Dragonet
 Duan
+Dymos
 Dyna
 ECC
 ECDF
@@ -314,6 +322,7 @@ GAN
 GANs
 GDTW
 GECO
+GEKKO
 GFS
 GG
 GHC
@@ -339,6 +348,7 @@ Gabriel's
 Galilei
 GammaRay
 GammaRay's
+Gammelli
 Gaussians
 Gbps
 GeForce
@@ -430,6 +440,7 @@ ILPs
 IMAP
 INACC
 IPList
+IPOPT
 ISP
 ISPs
 ISTA
@@ -466,6 +477,7 @@ JWR
 Jacobian
 Jacobians
 Jakob
+Janner's
 JavaCameraSizeAccessor
 Jax
 Jax's
@@ -483,6 +495,7 @@ KCPO
 KDD
 KHTML
 KKT
+KUKA
 KVM's
 Kadekodi
 Kahneman's
@@ -523,6 +536,7 @@ LBFGS
 LDFLAGS
 LDL
 LISTA
+LLMs
 LLVM
 LM
 LOC
@@ -571,6 +585,7 @@ MITM
 MJPEG
 MLCB
 MLE
+MLOC
 MLP
 MLPs
 MMSP
@@ -730,7 +745,9 @@ PHP
 PICNN
 PICNN's
 PICNNs
+PID
 PILCO
+PMP
 POSIX
 PPD
 PRObE
@@ -765,6 +782,7 @@ PlaceHolder
 PlotLabel
 PlotRange
 Pontryagin
+Pontryagin's
 Pooladian
 PotentialNN
 PowerEdge
@@ -783,7 +801,9 @@ PyKoopman
 PyPDF
 PyTorch
 PyTorch's
+Pybullet
 Pylearn
+Pymunk
 PythonScripts
 QEMU's
 QNSTOP
@@ -872,6 +892,7 @@ SDE
 SDEs
 SDPs
 SEI
+SEIR
 SETUPFILE
 SG
 SHA
@@ -879,6 +900,7 @@ SIGOPS
 SLAC
 SMTP
 SNE
+SNOPT
 SNrNtg
 SOCP
 SPCL
@@ -1137,6 +1159,7 @@ ZWE
 Zac
 Zeming
 Zhang
+Zhaoyuan
 Zhu
 Zhuo
 Zico
@@ -1148,11 +1171,14 @@ abadi
 abbeel
 abbrv
 abi
+abstractive
+acados
 acc
 accelerometer
 accelerometers
 acck
 accuracies
+acrobot
 activations
 actnorm
 actualY
@@ -1185,6 +1211,7 @@ alizadeh
 allyship
 ami
 amongst
+amor
 amos
 analisi
 analytical
@@ -1325,6 +1352,7 @@ bottlenecked
 bouffard
 boyd
 br
+brachistochrone
 brakel
 brandon
 brandondamos
@@ -1482,6 +1510,7 @@ cvzf
 cyber
 cyberattacks
 cybersecurity
+cycloid
 czos
 dH
 dSpec
@@ -1560,6 +1589,7 @@ dir
 dirs
 discretization
 discretizations
+discretize
 discretized
 discretizes
 discretizing
@@ -1593,6 +1623,7 @@ duchi
 durations
 dvipsnames
 dx
+dymos
 dynamicnot
 eW
 eabi
@@ -1615,6 +1646,7 @@ elseif
 emacs
 embeddings
 empc
+emphcolor
 emptyList
 enableLinkTracking
 encodings
@@ -1652,6 +1684,7 @@ exitflag
 expDir
 expP
 exploid
+exploitability
 expr
 expressibility
 expressivity
@@ -1797,6 +1830,7 @@ griewank
 groupByKey
 gu
 gulcehre
+gumbel
 gurobi
 gzip
 hCD
@@ -2335,6 +2369,7 @@ ocaml
 octahedron
 octetStream
 odeint
+odinger
 odonoghue
 ok
 okada
@@ -2663,6 +2698,7 @@ screenshots
 scs
 sda
 sdcard
+sde
 sdk
 sdp
 sed
@@ -2878,6 +2914,8 @@ theseus
 thresholded
 thresholding
 throughline
+thruster
+thrusters
 tieleman
 tikz
 timePicker
@@ -2925,6 +2963,7 @@ trainY
 trainability
 trainlinear
 trajax
+trajopt
 transcoding
 transformative
 treeqn
