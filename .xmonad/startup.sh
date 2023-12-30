@@ -15,7 +15,7 @@ xinput set-prop 'pointer:Magic Mouse 2' \
 xinput set-prop 'pointer:MX Master' \
        'libinput Natural Scrolling Enabled' 1
 
-setxkbmap dvorak
+setxkbmap dvorak -option compose:ralt
 xmodmap ~/.Xmodmap
 xset r 66 # Make the remapped capslock repeat
 
