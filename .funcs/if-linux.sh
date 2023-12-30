@@ -10,7 +10,9 @@
 
 alias m="make -j$(cat /proc/cpuinfo | grep -c processor)"
 alias za='zathura'
-alias less='/usr/share/vim/vim74/macros/less.sh'
+
+VIM_LESS_CMD=`find /usr/share/vim -name less.sh | tail -n 1`
+alias less=$VIM_LESS_CMD
 alias vim='vim -p'
 
 
