@@ -51,3 +51,9 @@ for DOTFILE in $(find . -maxdepth 1 ! -path .); do
 done
 
 vim +BundleInstall +qall
+
+if $(uname -s | grep -q "Darwin"); then
+    rm -rf "$HOME/Library/Application Support/xbar/plugins"
+    mkdir -p "$HOME/Library/Application Support/xbar"
+    ln -s "$PWD/.xbar" "$HOME/Library/Application Support/xbar/plugins"
+fi
