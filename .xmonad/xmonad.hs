@@ -55,6 +55,8 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((0, xF86XK_AudioPrev), spotify "Prev")
     , ((0, xF86XK_AudioNext), spotify "Next")
     , ((0, xF86XK_AudioPlay), spotify "PlayPause")
+    , ((0, xK_F5), spawn "lux -s 10%")
+    , ((0, xK_F6), spawn "lux -a 10%")
 
     , ((mod .|. shiftMask, xK_k), setkbmap "dvorak")
     , ((mod, xK_grave), spawn "sleep 0.2; xdotool key Multi_key &> /tmp/t")
