@@ -1,4 +1,4 @@
 [default]
 # mpv master, commit 2279f71
 #ao=alsa,pulse,oss
-msg-level=demux=no:ad=no:ffmpeg=no:ao=no
+#msg-level=demux=no:ad=no:ffmpeg=no:ao=no
