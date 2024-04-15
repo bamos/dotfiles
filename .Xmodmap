@@ -1,5 +1,5 @@
 remove Lock = Caps_Lock
 keycode 66 = Escape
 remove mod4 = Super_L Super_R
-add control = Super_L Super_R
+! add control = Super_L Super_R
 ! pointer = 1 2 3 5 4 7 6 8 9 10 11 12
