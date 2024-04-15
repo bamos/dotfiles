@@ -66,7 +66,7 @@ zstyle ':completion:most-recent-file:*' completer _files
 zle -C most-recent-file menu-complete _generic
 bindkey "^w" most-recent-file
 
-bindkey '^e' edit-command-line
+bindkey '^d' edit-command-line
 
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO=$HOME/.gnupg/S.gpg-agent
