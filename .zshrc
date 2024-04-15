@@ -19,7 +19,7 @@ pathadd $HOME/.local/bin
 
 autoload -U zmv
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+source $HOME/.zsh-autosuggestions.ai/zsh-autosuggestions.plugin.zsh
 
 # Initialize oh-my-zsh.
 DISABLE_AUTO_UPDATE='true'
