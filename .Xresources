@@ -15,11 +15,7 @@ xterm.foreground: #ffffff
 URxvt.background: #262626
 URxvt.foreground: #ffffff
 URxvt.xftAntialias: true
-#ifdef derecho
-URxvt.font: xft:terminus:pixelsize=18:hinting=true
-#else
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
-#endif
 URxvt.scrollBar: False
 URxvt.scrollstyle: plain
 URxvt.perl-ext-common: default,matcher,resize-font
