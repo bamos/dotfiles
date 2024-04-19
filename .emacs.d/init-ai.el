@@ -1,13 +1,20 @@
 (require 'gptel)
 (when (file-exists-p "~/.gptel-key")
   (setq gptel-api-key (with-temp-buffer (insert-file-contents "~/.gptel-key") (buffer-string))))
+(when (file-exists-p "~/.gptel-key-gemini")
+   gptel-model "gemini-pro"
+   gptel-backend (gptel-make-gemini "Gemini"
+                   :key (with-temp-buffer (insert-file-contents "~/.gptel-key-gemini") (buffer-string))
+                   :stream t)))
+
 (define-key gptel-mode-map (kbd "C-c C-c") #'gptel-send)
+
 
 (use-package copilot
   :quelpa (copilot.el :fetcher github
-                      :repo "zerolfx/copilot.el"
+                      :repo "copilot-emacs/copilot.el"
                       :branch "main"
-                      :files ("dist" "*.el")))
+                      :files ("*.el")))
 
 (add-hook 'prog-mode-hook 'copilot-mode)
 
