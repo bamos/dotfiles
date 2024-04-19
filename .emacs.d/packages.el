@@ -18,6 +18,7 @@
     evil-nerd-commenter
     evil-numbers
     evil-surround
+    f
     flycheck
     free-keys
     git-messenger
