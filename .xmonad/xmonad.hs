@@ -49,6 +49,8 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod, xK_e), spawn "emacsclient -a '' -c")
     , ((mod, xK_u), spawn "slack")
 
+    , ((mod, xK_Down), spawn "amixer set Master 2%-")
+    , ((mod, xK_Up), spawn "amixer set Master 2%+")
     , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 2%-")
     , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2%+")
     , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle")
