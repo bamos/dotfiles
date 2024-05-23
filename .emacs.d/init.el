@@ -58,7 +58,7 @@
   (setq-default mouse-sel-mode t)
 )
 
-(add-hook 'find-file-hook (lambda () (linum-mode 0))) ; Line numbers.
+; (add-hook 'find-file-hook (lambda () (linum-mode 0))) ; Line numbers.
 (set-face-foreground 'minibuffer-prompt "white") ; White miniprompt.
 (fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
 (setq-default vc-follow-symlinks t) ; Always follow symlinks.
