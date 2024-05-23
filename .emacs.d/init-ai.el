@@ -5,7 +5,7 @@
    gptel-model "gemini-pro"
    gptel-backend (gptel-make-gemini "Gemini"
                    :key (with-temp-buffer (insert-file-contents "~/.gptel-key-gemini") (buffer-string))
-                   :stream t)))
+                   :stream t))
 
 (define-key gptel-mode-map (kbd "C-c C-c") #'gptel-send)
 
