@@ -103,7 +103,7 @@
 ;; default tab width to 2 except for python
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4)
-;; (add-hook 'python-mode-hook (lambda() (
+;; (add-hook 'python-mode-hook 'blacken-mode)
 ;;   (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4))))
 
 (require 'yasnippet)

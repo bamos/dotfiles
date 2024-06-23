@@ -8,6 +8,7 @@
 
 (defvar required-packages '(
     auctex
+    blacken
     color-theme-modern
     darkroom
     dash
