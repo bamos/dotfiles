@@ -3,7 +3,7 @@
 import datetime
 
 events = [
-    ('NeurIPS', (2024, 5, 22)),
+    ('ICLR', (2024, 9, 23)), # ?
 ]
 
 today = datetime.date.today()
@@ -11,5 +11,5 @@ today = datetime.date.today()
 s = []
 for event_name, date in events:
     n_days = (datetime.date(*date) - today).days
-    s.append(f'{event_name} {n_days} days')
+    s.append(f'{event_name} {n_days} days?')
 print(' │ '.join(s))
