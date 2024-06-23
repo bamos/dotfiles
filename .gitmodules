@@ -13,6 +13,3 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/syl20bnr/spacemacs
-[submodule ".zsh-autosuggestions.ai"]
-	path = .zsh-autosuggestions.ai
-	url = git@github.com:bamos/zsh-autosuggestions.ai
