@@ -20,6 +20,8 @@ setxkbmap dvorak -option compose:ralt
 xmodmap ~/.Xmodmap
 xset r 66 # Make the remapped capslock repeat
 
+amixer set Capture 70%
+
 xrandr --auto
 xrandr --output eDP-1 --mode 1280x720
 
