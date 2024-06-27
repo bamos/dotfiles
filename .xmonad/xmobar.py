@@ -1,9 +1,18 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+
+import sys
+def handle_exception(exc_type, exc_value, exc_traceback):
+    # Makes debugging any Python errors much easier.
+    # Otherwise on return != 0, xmobar only displays "Could not execute command"
+    # Keep at the very beginning in case of other import errors.
+    print(f'xmobar.py error: {exc_value}')
+    sys.exit(0)
+
+sys.excepthook = handle_exception
 
 from datetime import datetime, date
-import psutil
-import sys
 import argparse
+import psutil
 
 parser = argparse.ArgumentParser()
 parser.add_argument('direction', type=str,
