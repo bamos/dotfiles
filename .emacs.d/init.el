@@ -37,6 +37,29 @@
 (load-user-file "init-web-mode.el")
 (load-user-file "init-spell.el")
 
+
+; from https://www.reddit.com/r/emacs/comments/mpbgx7/comment/gu9opv1
+(setq mac-opt-keymap (make-sparse-keymap))
+
+;; equivalent to C-M-x with mac-opt-chars-mode on
+(define-key mac-opt-keymap (kbd "C-≈") 'execute-extended-command)
+
+
+(defun mac-toggle-ns-alt-modifier ()
+  (if (not mac-opt-chars-mode)
+      (setq ns-alternate-modifier 'meta)
+    (setq ns-alternate-modifier nil)))
+
+(define-minor-mode mac-opt-chars-mode
+  "Type characters with option as in other Mac applications."
+  :global t
+  :lighter " mac-opt-chars"
+  :keymap mac-opt-keymap
+  (mac-toggle-ns-alt-modifier))
+
+(define-key mac-opt-keymap (kbd "C-÷") 'mac-opt-chars-mode)
+
+
 (load-theme 'zenburn t)
 (require 'color-theme-modern)
 (load-theme 'charcoal-black t t)
@@ -103,8 +126,8 @@
 ;; default tab width to 2 except for python
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4)
-;; (add-hook 'python-mode-hook 'blacken-mode)
-;;   (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4))))
+(add-hook 'python-mode-hook (lambda() (
+  (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4))))
 
 (require 'yasnippet)
 (setq-default yas-snippet-dirs
@@ -149,7 +172,7 @@
 (put 'downcase-region 'disabled nil)
 
 ;; most likely to fail:
-(load-user-file "init-ai.el")
-(when (file-exists-p "~/.mbsyncrc")
-  (load-user-file "init-mu4e.el")
-)
+;; (load-user-file "init-ai.el")
+;; (when (file-exists-p "~/.mbsyncrc")
+;;   (load-user-file "init-mu4e.el")
+;; )
