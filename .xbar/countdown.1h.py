@@ -3,7 +3,7 @@
 import datetime
 
 events = [
-    ('ICLR', (2024, 9, 23)), # ?
+    ('ICLR', (2024, 10, 13)),
 ]
 
 today = datetime.date.today()
