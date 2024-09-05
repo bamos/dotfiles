@@ -39,6 +39,7 @@
 
 
 ; from https://www.reddit.com/r/emacs/comments/mpbgx7/comment/gu9opv1
+; C-<option>-x key sequence to M-x and C-÷ (i.e. C-<option>-? in this mode) to turn this mode off.
 (setq mac-opt-keymap (make-sparse-keymap))
 
 ;; equivalent to C-M-x with mac-opt-chars-mode on
