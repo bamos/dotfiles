@@ -46,7 +46,7 @@ ks conf@(XConfig {XMonad.modMask = mod}) = M.fromList $
     , ((mod .|. shiftMask, xK_apostrophe), io exitSuccess)
 
     , ((mod, xK_o), spawn "google-chrome")
-    , ((mod, xK_e), spawn "emacsclient -a '' -c")
+    , ((mod, xK_e), spawn "XMODIFIERS=@im=none emacsclient -a '' -c")
     , ((mod, xK_u), spawn "slack")
 
     , ((mod, xK_Down), spawn "amixer set Master 2%-")
