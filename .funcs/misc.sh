@@ -160,3 +160,5 @@ alias add-tags='picard'
 alias get-tags='exiftool -json'
 
 alias mcm='make clean; make'
+
+alias recreate-tmux-sockets='pgrep tmux | xargs -I {} kill -SIGUSR1 {}'
