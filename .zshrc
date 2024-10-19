@@ -20,6 +20,7 @@ pathadd $HOME/.local/bin
 autoload -U zmv
 
 source $HOME/.zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+bindkey '^n' forward-word
 
 # Initialize oh-my-zsh.
 DISABLE_AUTO_UPDATE='true'
@@ -41,7 +42,8 @@ export LSCOLORS='ExGxFxdxCxEgEdHbagacad'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 export MAILDIR=$HOME/mbsync
-export EDITOR="emacsclient"
+export EDITOR="vim"
+# export EDITOR="emacsclient"
 #export ALTERNATE_EDITOR="vim"
 export GIT_EDITOR=$EDITOR
 export HISTSIZE=1000000000
