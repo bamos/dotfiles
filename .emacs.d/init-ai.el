@@ -9,12 +9,13 @@
 
 (define-key gptel-mode-map (kbd "C-c C-c") #'gptel-send)
 
-
-(use-package copilot
-  :quelpa (copilot.el :fetcher github
-                      :repo "copilot-emacs/copilot.el"
-                      :branch "main"
-                      :files ("*.el")))
+(add-to-list 'load-path "~/src/copilot.el")
+(require 'copilot)
+; (use-package copilot
+;   :quelpa (copilot.el :fetcher github
+;                       :repo "zerolfx/copilot.el"
+;                       :branch "main"
+;                       :files ("dist" "*.el")))
 
 (add-hook 'prog-mode-hook 'copilot-mode)
 
