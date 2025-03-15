@@ -3,7 +3,7 @@
 import datetime
 
 events = [
-    ('ICLR', (2024, 9, 16)),
+    ('NeurIPS', (2025, 5, 15)),
 ]
 
 today = datetime.date.today()
