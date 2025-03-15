@@ -1,4 +1,4 @@
-personal_ws-1.1 en 3451 
+personal_ws-1.1 en 3452 
 AAAI
 ACADO
 ACM
@@ -66,7 +66,9 @@ BICNN
 BLK
 BMI
 BPC
+BPE
 BPTT
+BTR
 Babu
 Backpropping
 Bai
@@ -186,6 +188,7 @@ CloneCloud
 CloudCom
 Cloudera
 CocoaDialog
+CodeLlama
 Coeff
 Cohe
 Colmenarejo
@@ -300,6 +303,7 @@ EMNIST
 ENDDO
 ENDER
 EOF
+EOS
 Easterling
 Eiszler
 ElementTree
@@ -326,6 +330,7 @@ FFNN
 FFmpeg
 FICNN's
 FICNNs
+FIM
 FISTA
 FLEXlm
 FP
@@ -377,6 +382,7 @@ GNNs
 GNs
 GPS
 GPT
+GPTs
 GPU
 GPUs
 GRFP
@@ -553,6 +559,7 @@ KDE
 KHTML
 KKT
 KUKA
+KV
 KVM's
 Kadekodi
 Kaggle
@@ -609,6 +616,7 @@ LLVM
 LLaMA
 LM
 LMS
+LMs
 LOC
 LODL
 LPs
@@ -672,6 +680,7 @@ MNIST
 MNIST's
 MPC
 MPCstep
+MPE
 MPI
 MRFs
 MSA
@@ -1016,6 +1025,7 @@ SPD
 SPEN
 SPENs
 SPG
+SPM
 SPN
 SPNs
 SPO
@@ -1278,6 +1288,7 @@ Yann
 Yannik
 Yarats
 Yaron
+Yi
 Yidx
 Ying
 Yoshihisa
@@ -1311,6 +1322,7 @@ accelerometer
 accelerometers
 acck
 accuracies
+acknowledgements
 acrobot
 activations
 actnorm
@@ -1340,6 +1352,7 @@ aircrafts
 al
 alexis
 alexnet
+algocommentcolor
 ali
 alizadeh
 allyship
@@ -1412,6 +1425,8 @@ autograd
 autograder
 autolab
 autoreconf
+autoregressive
+autoregressively
 availableTimes
 avctx
 averagesecurityguy
@@ -1465,6 +1480,7 @@ bibi
 bibintoc
 bibtexparser
 biggio
+bijective
 bilevel
 bilinear
 binoy
@@ -1829,6 +1845,7 @@ endl
 endswith
 endtag
 enricher
+ensembled
 ensembling
 entropic
 env
@@ -2258,7 +2275,6 @@ kvm
 kwargs
 l'H
 lType
-labelled
 lafferty
 lambd
 lambert
@@ -2750,6 +2766,7 @@ prebuilt
 precached
 precollected
 precompute
+precomputed
 pred
 predictron
 prefetching
@@ -2852,6 +2869,8 @@ regularizers
 relu
 remoteFiles
 renewcommand
+renormalization
+renormalize
 reparameterization
 reparameterize
 repo
@@ -3093,10 +3112,12 @@ subsequence
 subsequences
 subshell
 subspaces
+substring
 subsubsection
 subsubsub
 subsubsubsection
 subtree
+subwords
 succ
 sudo
 sukhbaatar
@@ -3200,6 +3221,11 @@ toc
 todayEpoch
 todo
 todorov
+tokenization
+tokenize
+tokenized
+tokenizer
+tokenizers
 tonumber
 tooWordy
 toolchain
@@ -3271,7 +3297,6 @@ unet
 uninterpretable
 unittest
 univariate
-unlabelled
 unnormalized
 unobservable
 unrealizable
@@ -3280,6 +3305,7 @@ unregularized
 unrevertible
 unsimplified
 unsortedList
+untokenized
 upbeta
 updateDataEntry
 uplink
@@ -3355,6 +3381,7 @@ weka
 wfm
 wg
 wget
+whitespace
 whynot
 wikia
 wildcard
@@ -3424,3 +3451,13 @@ zsh
 zsh's
 zshrc
 zu
+MDS
+TSNE
+Naïve
+CQA
+majorization
+SMACOF
+PCA's
+setosa
+fasttext
+GloVe
