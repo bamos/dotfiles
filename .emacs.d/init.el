@@ -174,6 +174,7 @@
 
 ;; most likely to fail:
 ;; (load-user-file "init-ai.el")
+
 (when (file-exists-p "~/.mbsyncrc")
   (load-user-file "init-mu4e.el")
 )
