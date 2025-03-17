@@ -1,3 +1,5 @@
+cache
+
 !.config/onedrive/config
 !.gnupg/gpg.conf
 !.sbt/0.13/plugins/plugins.sbt
