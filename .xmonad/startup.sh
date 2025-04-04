@@ -14,6 +14,8 @@ xinput set-prop 'pointer:Magic Mouse 2' \
        'libinput Natural Scrolling Enabled' 1
 xinput set-prop 'pointer:MX Master' \
        'libinput Natural Scrolling Enabled' 1
+xinput set-prop 'pointer:Logitech MX Master 3S' \
+       'libinput Natural Scrolling Enabled' 1
 
 localectl set-x11-keymap us pc105 dvorak compose:ralt,caps:escape
 setxkbmap dvorak -option compose:ralt
