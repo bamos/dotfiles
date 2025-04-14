@@ -15,3 +15,11 @@ __pycache__
 *.ipynb_checkpoints
 *.fdb_latexmk
 *.fls
+
+t.py
+t0.py
+t1.py
+t2.py
+t3.py
+t4.py
+t5.py
