@@ -15,3 +15,7 @@
 	helper = store
 [init]
 	defaultBranch = main
+[oh-my-zsh]
+	hide-info = 0
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
