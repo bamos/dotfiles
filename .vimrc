@@ -18,6 +18,7 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
   " Don't load a color scheme.
 endtry
+highlight Normal ctermbg=235 guibg=#262626
 filetype plugin indent on
 
 runtime macros.vim
