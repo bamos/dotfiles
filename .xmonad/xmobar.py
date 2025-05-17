@@ -22,7 +22,7 @@ args = parser.parse_args()
 status = ''
 
 deadlines = {
-    'NeurIPS': date(2025, 5, 15),
+    'ICLR': date(2025, 10, 1),
 }
 
 if args.direction == 'left':
@@ -32,7 +32,7 @@ elif args.direction == 'right':
     for tag,tag_date in deadlines.items():
         n_days = (tag_date-today_date).days
         day_str = 'day' if n_days == 1 else 'days'
-        status += f'<fc=#ABABAB>{tag}: {n_days} {day_str} | </fc>'
+        status += f'<fc=#ABABAB>{tag}: {n_days} {day_str}? | </fc>'
 
     now = datetime.now()
     time_str = now.strftime('%Y.%m.%d %-I:%M%p')
