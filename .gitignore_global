@@ -9,6 +9,7 @@ _region_.tex
 auto
 __pycache__
 *.egg-info
+*.so
 
 .env
 .mypy_cache
@@ -25,3 +26,7 @@ t2.py
 t3.py
 t4.py
 t5.py
+t6.py
+t7.py
+t8.py
+t9.py
