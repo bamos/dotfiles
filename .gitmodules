@@ -16,3 +16,6 @@
 [submodule ".zsh-autosuggestions"]
 	path = .zsh-autosuggestions
 	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule ".autoenv"]
+	path = .autoenv
+	url = git@github.com:hyperupcall/autoenv.git
