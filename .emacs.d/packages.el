@@ -7,10 +7,9 @@
 (when (< emacs-major-version 27) (package-initialize))
 
 (defvar required-packages '(
-    auctex
     blacken
     color-theme-modern
-    darkroom
+    ;darkroom
     dash
     editorconfig
     evil
@@ -23,18 +22,18 @@
     flycheck
     free-keys
     git-messenger
-    gptel
-    haskell-mode
-    helm
+    ;gptel
+    ;haskell-mode
+    ;helm
     helm-descbinds
     htmlize
     json-mode
     lua-mode
     magit
-    markdown-mode
-    multiple-cursors
+    ;markdown-mode
+    ;multiple-cursors
     org
-    pdf-tools
+    ;pdf-tools
     popup
     powerline
     projectile
@@ -47,7 +46,7 @@
     smooth-scroll
     undo-tree
     use-package
-    w3m
+    ;w3m
     web-mode
     xclip
     yasnippet
@@ -57,9 +56,10 @@
   "Packages which should be installed upon launch"
 )
 
+(setq package-check-signature nil)
 (dolist (p required-packages)
   (when (not (package-installed-p p))
-    (package-refresh-contents)
+    ;(package-refresh-contents)
     (package-install p)))
 
 (use-package quelpa
