@@ -126,9 +126,9 @@
 
 ;; default tab width to 2 except for python
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4)
-(add-hook 'python-mode-hook (lambda() (
-  (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4))))
+;; (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4)
+;; (add-hook 'python-mode-hook (lambda() (
+;;   (setq-default tab-width 4)(setq-default sh-basic-offset 4)(setq-default sh-indentation 4))))
 
 (require 'yasnippet)
 (setq-default yas-snippet-dirs
@@ -173,7 +173,7 @@
 (put 'downcase-region 'disabled nil)
 
 ;; most likely to fail:
-;; (load-user-file "init-ai.el")
+(load-user-file "init-ai.el")
 
 (when (file-exists-p "~/.mbsyncrc")
   (load-user-file "init-mu4e.el")
