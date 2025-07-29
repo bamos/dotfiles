@@ -87,5 +87,5 @@ alias guppy='gup;gp'
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-source ~/.autoenv/activate.sh
 export AUTOENV_ASSUME_YES=true
+source $HOME/.autoenv/activate.sh
