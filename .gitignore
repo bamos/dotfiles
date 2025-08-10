@@ -11,6 +11,7 @@ cache
 .config/qutebrowser/quickmarks
 .emacs.d*/*cache
 .emacs.d*/.org-id-locations
+.emacs.d*/org-persist
 .emacs.d*/SessionDesktop.el
 .emacs.d*/abbrev_defs
 .emacs.d*/auto-save-list
