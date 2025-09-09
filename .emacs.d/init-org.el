@@ -168,3 +168,6 @@ reference consists of alphanumeric characters only."
 	  reference-string))))
 
 (advice-add #'org-export-get-reference :override #'custom-org-export-get-reference)
+
+; https://christiantietze.de/posts/2019/03/sync-emacs-org-files/
+(add-hook 'auto-save-hook 'org-save-all-org-buffers)
