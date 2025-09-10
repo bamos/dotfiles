@@ -22,6 +22,7 @@ cache
 .emacs.d*/eshell
 .emacs.d*/helm-adaptive-history
 .emacs.d*/network-security.data
+.emacs.d*/projects
 .emacs.d*/quelpa
 .emacs.d*/recentf
 .emacs.d*/request
