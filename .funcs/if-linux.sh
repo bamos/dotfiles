@@ -15,6 +15,7 @@ VIM_LESS_CMD=`find /usr/share/vim -name less.sh | tail -n 1`
 alias less=$VIM_LESS_CMD
 alias vim='vim -p'
 
+alias ns='nvidia-smi'
 
 # http://stackoverflow.com/questions/6918057
 list-subdir-by-files() {
