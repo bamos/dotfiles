@@ -29,6 +29,7 @@ ZSH_THEME=sammy; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
 plugins=(vi-mode git history-substring-search fabric z)
 source $ZSH/oh-my-zsh.sh
+unalias gcm 2>/dev/null  # let custom gcm() override the git plugin alias
 
 # Source external files.
 # After oh-my-zsh initialization to override defaults.
