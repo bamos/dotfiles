@@ -140,7 +140,7 @@
 (yas-global-mode 1)
 (global-set-key (kbd "M-/") 'yas-expand)
 
-(require 'multiple-cursors)
+;(require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
 (global-set-key (kbd "C-c d") 'redraw-display)
@@ -156,8 +156,8 @@
 (setq-default custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
-(require 'darkroom)
-(setq-default darkroom-margins 0.1)
+;(require 'darkroom)
+;(setq-default darkroom-margins 0.1)
 ;; (add-hook 'LaTeX-mode-hook 'darkroom-mode)
 
 ;; OSX-specific:
@@ -173,8 +173,8 @@
 (put 'downcase-region 'disabled nil)
 
 ;; most likely to fail:
-(load-user-file "init-ai.el")
+; (load-user-file "init-ai.el")
 
-(when (file-exists-p "~/.mbsyncrc")
-  (load-user-file "init-mu4e.el")
-)
+; (when (file-exists-p "~/.mbsyncrc")
+;   (load-user-file "init-mu4e.el")
+; )

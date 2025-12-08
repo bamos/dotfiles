@@ -7,8 +7,11 @@
     ;; (setq TeX-view-program-list '(("open" "open %o")))
     ;; (setq TeX-view-program-selection '((output-pdf "open")))
     (setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
+    ;; (setq TeX-view-program-list
+    ;;  '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
     (setq TeX-view-program-list
-     '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
+          '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")
+            ("open" "open %o")))
     (setenv "PATH" (concat (getenv "PATH") "/Library/TeX/texbin:/usr/local/bin"))
     (setq exec-path (append exec-path '("/Library/TeX/texbin" "/usr/local/bin"))))
   (progn

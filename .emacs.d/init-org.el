@@ -22,7 +22,7 @@
 ))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
+;; (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-startup-with-inline-images t
       org-startup-folded nil
@@ -31,6 +31,7 @@
       org-image-actual-width 600
       org-agenda-skip-scheduled-if-done t
       org-agenda-files '("~/org")
+      ; org-agenda-files '("~/Library/CloudStorage/OneDrive-Personal/org")
       org-capture-templates '())
 
 ; (org-babel-do-load-languages
