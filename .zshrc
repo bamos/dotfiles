@@ -27,7 +27,7 @@ DISABLE_AUTO_UPDATE='true'
 ZSH_DISIBLE_COMPFIX='true'
 ZSH_THEME=sammy; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
-plugins=(vi-mode git history-substring-search fabric z)
+plugins=(vi-mode git history-substring-search fabric z fzf)
 source $ZSH/oh-my-zsh.sh
 unalias gcm 2>/dev/null  # let custom gcm() override the git plugin alias
 
