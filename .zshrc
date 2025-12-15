@@ -2,8 +2,11 @@
 pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
+pathaddfront() {
+  [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="$1${PATH:+":$PATH"}"
+}
 
-PATH=/usr/local/bin":$PATH" # Prefer brew packages.
+pathaddfront /usr/local/bin # Prefer brew packages.
 pathadd /opt/local/bin
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
