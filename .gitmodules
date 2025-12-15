@@ -19,3 +19,6 @@
 [submodule ".autoenv"]
 	path = .autoenv
 	url = git@github.com:hyperupcall/autoenv.git
+[submodule ".zsh-custom/plugins/zsh-ai"]
+	path = .zsh-custom/plugins/zsh-ai
+	url = https://github.com/matheusml/zsh-ai
