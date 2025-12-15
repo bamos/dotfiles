@@ -42,6 +42,7 @@ unalias gcm 2>/dev/null  # let custom gcm() override the git plugin alias
 # Load zsh-ai plugin after .private is sourced (requires API keys)
 [[ -n "$OPENAI_API_KEY" ]] && \
   [[ -a ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-ai/zsh-ai.plugin.zsh ]] && \
+  export ZSH_AI_PROVIDER=openai && \
   source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-ai/zsh-ai.plugin.zsh
 # [[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
 
