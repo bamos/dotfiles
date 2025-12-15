@@ -7,6 +7,7 @@
 (when (< emacs-major-version 27) (package-initialize))
 
 (defvar required-packages '(
+    auctex
     blacken
     color-theme-modern
     ;darkroom
@@ -71,4 +72,3 @@
 (require 'use-package)
 (require 'quelpa-use-package)
 (setq use-package-always-ensure t)
-
