@@ -29,9 +29,8 @@ bindkey '^n' forward-word
 DISABLE_AUTO_UPDATE='true'
 ZSH_DISIBLE_COMPFIX='true'
 ZSH_THEME=sammy; ZSH=~/.oh-my-zsh; ZSH_CUSTOM=~/.zsh-custom
-export ZSH_AI_PROVIDER=openai
 # zsh options: http://www.cs.elte.hu/zsh-manual/zsh_16.html
-plugins=(vi-mode git history-substring-search fabric z fzf zsh-ai)
+plugins=(vi-mode git history-substring-search fabric z fzf)
 source $ZSH/oh-my-zsh.sh
 unalias gcm 2>/dev/null  # let custom gcm() override the git plugin alias
 
@@ -39,6 +38,11 @@ unalias gcm 2>/dev/null  # let custom gcm() override the git plugin alias
 # After oh-my-zsh initialization to override defaults.
 [[ -a ~/.funcs/env.sh ]] && source ~/.funcs/env.sh
 [[ -a ~/.private ]] && source ~/.private
+
+# Load zsh-ai plugin after .private is sourced (requires API keys)
+[[ -n "$OPENAI_API_KEY" ]] && \
+  [[ -a ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-ai/zsh-ai.plugin.zsh ]] && \
+  source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-ai/zsh-ai.plugin.zsh
 # [[ -a ~/.mpv/shellrc.sh ]] && source ~/.mpv/shellrc.sh
 
 # https://github.com/ohmyzsh/ohmyzsh/issues/1563
