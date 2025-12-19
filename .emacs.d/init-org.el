@@ -61,20 +61,29 @@
 ;;         (mm-url-decode-entities-string
 ;;         (buffer-substring-no-properties title-start title-end)))))))
 
+
 ;; https://github.com/jmn/dotfiles/blob/c84bba70fbcf52126b4d9b34e2794b73327048b3/tag-emacs/emacs.d/config-jmn-functions.el
 (defun url-get-title (url &optional descr)
   "Takes a URL and returns the value of the <title> HTML tag,
    Thanks to https://frozenlock.org/tag/url-retrieve/ for documenting url-retrieve
    customize org-make-link-description-function."
-  (let ((buffer (url-retrieve-synchronously url))
-        (title nil))
-    (save-excursion
-      (set-buffer buffer)
-      (goto-char (point-min))
-      (search-forward-regexp "<title>\\([^<]+?\\)</title>")
-      (setq title (match-string 1 ) )
-      (kill-buffer (current-buffer)))
-    title))
+  ;; Skip URLs that are known to require authentication
+  (if (or (string-match-p "docs\\.google\\.com" url)
+          (string-match-p "slack\\.com" url)
+          (string-match-p "accounts\\.google\\.com" url))
+      nil
+    (condition-case nil
+        (let ((buffer (url-retrieve-synchronously url t nil 5))
+              (title nil))
+          (when buffer
+            (save-excursion
+              (set-buffer buffer)
+              (goto-char (point-min))
+              (when (search-forward-regexp "<title>\\([^<]+?\\)</title>" nil t)
+                (setq title (match-string 1)))
+              (kill-buffer (current-buffer)))
+            title))
+      (error nil))))
 
 (defun my-org-toggle-auto-link-description ()
 "Toggle automatically downloading link descriptions."
