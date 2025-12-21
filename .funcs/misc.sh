@@ -236,3 +236,5 @@ Please generate a concise, one-line commit message for these changes."
         esac
     done
 }
+
+alias gdw='git diff --word-diff=color'
