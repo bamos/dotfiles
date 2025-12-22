@@ -181,3 +181,50 @@ reference consists of alphanumeric characters only."
 
 ; https://christiantietze.de/posts/2019/03/sync-emacs-org-files/
 (add-hook 'auto-save-hook 'org-save-all-org-buffers)
+
+;; Auto-sync org file to git on save (with pull/push)
+(defun my-org-auto-git-sync ()
+  "Automatically commit and push org files that are in git repositories.
+Handles remote changes by pulling before pushing."
+  (interactive)  ;; Make it callable with M-x for debugging
+  (if (not (buffer-file-name))
+      (message "DEBUG: No buffer-file-name")
+    (let* ((file-path (buffer-file-name))
+           (real-path (file-truename file-path))
+           (default-directory (file-name-directory real-path))
+           (filename (file-name-nondirectory real-path))
+           ;; Check if the file is in a git repository
+           (in-git-repo (locate-dominating-file default-directory ".git")))
+      (message "DEBUG: file-path=%s real-path=%s in-git-repo=%s"
+               file-path real-path in-git-repo)
+      ;; Only proceed if in a git repo
+      (if (not in-git-repo)
+          (message "DEBUG: Not in a git repository")
+        (condition-case err
+            (let ((sync-script
+                   (format "git fetch && \
+git pull --rebase --autostash && \
+git add %s && \
+(git diff --cached --quiet || git commit -m 'Auto-sync: %s') && \
+git push"
+                           filename
+                           (format-time-string "%Y-%m-%d %H:%M:%S"))))
+              (message "DEBUG: Running git sync in %s: %s" default-directory sync-script)
+              ;; Run silently in background without showing output buffer
+              (let* ((fname filename)  ;; Capture filename in closure
+                     (proc (start-process-shell-command
+                            "org-git-sync" nil sync-script)))
+                ;; Add a sentinel to report when sync completes
+                (set-process-sentinel
+                 proc
+                 `(lambda (process event)
+                    (when (memq (process-status process) '(exit signal))
+                      (if (= 0 (process-exit-status process))
+                          (message "Git sync successful: %s" ,fname)
+                        (message "Git sync failed for %s (exit code %d)"
+                                 ,fname (process-exit-status process)))))))
+              (message "Syncing %s to git..." filename))
+          (error
+           (message "Git sync failed: %s (check for conflicts)" (error-message-string err))))))))
+
+(add-hook 'after-save-hook #'my-org-auto-git-sync)
