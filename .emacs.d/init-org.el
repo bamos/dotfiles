@@ -255,6 +255,9 @@ git push"
        (lambda (filename _real-path)
          (message "Git sync successful: %s" filename))))))
 
-(add-hook 'after-save-hook #'my-org-auto-git-sync)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (add-hook 'after-save-hook #'my-org-auto-git-sync nil t)))
+
 (add-hook 'window-buffer-change-functions
           (lambda (_) (my-org-pull-on-buffer-switch)))
