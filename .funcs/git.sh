@@ -25,6 +25,12 @@ alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
 alias gu="git reset --soft 'HEAD^'"
 
+# Add a new worktree with auto-naming: ../reponame-branch with username/branch
+gwa() {
+  local REPO=$(basename $(git rev-parse --show-toplevel))
+  git worktree add "../$REPO-$1" -b "$(whoami)/$1"
+}
+
 # https://github.com/matthewmccullough/scripts/blob/master/git-finddirty
 git-dirty() {
   OLDIFS=$IFS; IFS=$'\n'
