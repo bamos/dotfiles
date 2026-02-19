@@ -10,6 +10,8 @@ pathaddfront /usr/local/bin # Prefer brew packages.
 pathadd /opt/local/bin
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
+pathaddfront $HOME/.fzf/bin
+[[ -d "$HOME/.fzf" ]] && export FZF_BASE="$HOME/.fzf"
 
 # pathadd $HOME/.cabal/bin
 # REPOS=$HOME/repos

@@ -9,6 +9,8 @@
 #	gpgsign = true
 [pull]
 	rebase = true
+[submodule]
+	recurse = true
 [http]
 	cookiefile = /Users/bamos/.gitcookies
 [credential]

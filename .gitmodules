@@ -22,3 +22,6 @@
 [submodule ".zsh-custom/plugins/zsh-ai"]
 	path = .zsh-custom/plugins/zsh-ai
 	url = https://github.com/matheusml/zsh-ai
+[submodule ".fzf"]
+	path = .fzf
+	url = https://github.com/junegunn/fzf.git

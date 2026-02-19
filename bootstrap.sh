@@ -32,6 +32,17 @@ fi
 
 cd "$(dirname "${BASH_SOURCE}")"
 
+echo "Updating submodules..."
+git submodule sync --recursive
+git submodule update --init --recursive
+
+if [[ -d ".fzf" ]]; then
+  if [[ ! -x ".fzf/bin/fzf" ]]; then
+    echo "Installing fzf..."
+    (cd .fzf && ./install --bin --no-update-rc)
+  fi
+fi
+
 echo "Symlinking..."
 
 for DOTFILE in $(find . -maxdepth 1 -name '.?*'); do
