@@ -15,10 +15,10 @@
 	url = https://github.com/syl20bnr/spacemacs
 [submodule ".zsh-autosuggestions"]
 	path = .zsh-autosuggestions
-	url = git@github.com:zsh-users/zsh-autosuggestions.git
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule ".autoenv"]
 	path = .autoenv
-	url = git@github.com:hyperupcall/autoenv.git
+	url = https://github.com/hyperupcall/autoenv.git
 [submodule ".zsh-custom/plugins/zsh-ai"]
 	path = .zsh-custom/plugins/zsh-ai
 	url = https://github.com/matheusml/zsh-ai
