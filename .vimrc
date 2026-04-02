@@ -91,3 +91,11 @@ noremap s <right>
 
 let g:go_version_warning = 0
 let g:snipMate = { 'snippet_version' : 1 }
+
+# handle indents in pastes from tmux
+if &term =~ "tmux"
+    let &t_BE = "\e[?2004h"
+    let &t_BD = "\e[?2004l"
+    exec "set t_PS=\e[200~"
+    exec "set t_PE=\e[201~"
+endif
