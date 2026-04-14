@@ -66,7 +66,8 @@ setopt nohashdirs
 
 set -o CSH_NULL_GLOB
 
-bindkey "^g" pound-insert
+bindkey "^d" pound-insert
+bindkey '^g' edit-command-line
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^t' history-substring-search-up
@@ -79,8 +80,6 @@ zstyle ':completion:most-recent-file:*' hidden all
 zstyle ':completion:most-recent-file:*' completer _files
 zle -C most-recent-file menu-complete _generic
 bindkey "^w" most-recent-file
-
-bindkey '^d' edit-command-line
 
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO=$HOME/.gnupg/S.gpg-agent
