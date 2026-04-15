@@ -24,6 +24,9 @@ alias gpsuom='git push --set-upstream origin master'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
 alias gu="git reset --soft 'HEAD^'"
+alias guppy='gup;gp'
+alias glg='git lg'
+
 
 # Add a new worktree with auto-naming: ../reponame-branch with username/branch
 gwa() {
