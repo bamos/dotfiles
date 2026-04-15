@@ -20,7 +20,7 @@
 [oh-my-zsh]
 	hide-info = 0
 [alias]
-	lg = "log --color --graph --pretty=format:'%C(74)%h%Creset -%C(150)%d%Creset %s %C(245)(%cr) %C(182)<%an>%Creset' --abbrev-commit --"
+	lg = "log --color --graph --pretty=format:'%C(74)%h%C(150)%d%Creset %s %C(245)(%cr) %C(182)<%an>%Creset' --abbrev-commit --"
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
