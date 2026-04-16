@@ -28,6 +28,12 @@
           (set-buffer-modified-p nil))))))
 (global-set-key (kbd "C-c C-r") 'rename-file-and-buffer)
 
+;; Insert current date as YYYY.MM.DD
+(defun insert-current-date-ymd ()
+  (interactive)
+  (insert (format-time-string "%Y.%m.%d")))
+(global-set-key (kbd "C-c /") 'insert-current-date-ymd)
+
 ;; http://emacsredux.com/blog/2013/04/03/delete-file-and-buffer/
 (defun delete-file-and-buffer ()
   "Kill the current buffer and deletes the file it is visiting."

@@ -24,6 +24,10 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 ;; (global-set-key (kbd "C-c c") 'org-capture)
 
+;; Override org sparse tree binding for date insertion.
+(with-eval-after-load 'org
+  (define-key org-mode-map (kbd "C-c /") 'insert-current-date-ymd))
+
 (setq org-startup-with-inline-images t
       org-startup-folded nil
       org-src-fontify-natively t
