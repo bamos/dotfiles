@@ -67,4 +67,8 @@ if $(uname -s | grep -q "Darwin"); then
     rm -rf "$HOME/Library/Application Support/xbar/plugins"
     mkdir -p "$HOME/Library/Application Support/xbar"
     ln -s "$PWD/.xbar" "$HOME/Library/Application Support/xbar/plugins"
+
+    mkdir -p "$HOME/Library/Application Support/com.mitchellh.ghostty"
+    ln -sf "$HOME/.config/ghostty/config.ghostty" \
+      "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
 fi
