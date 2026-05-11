@@ -4,6 +4,10 @@ term = xterm-256color
 macos-titlebar-style = tabs
 
 bell-features = no-system,no-audio
+desktop-notifications = false
+app-notifications = false
+auto-update = off
+notify-on-command-finish = never
 notify-on-command-finish-action = no-bell
 
 background = 262626
