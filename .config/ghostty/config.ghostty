@@ -2,6 +2,8 @@ font-family = "Monaco"
 font-size = 12
 term = xterm-256color
 macos-titlebar-style = tabs
+macos-icon = custom
+macos-custom-icon = ~/.config/ghostty/ghostty-theme-icons/icons/gruvbox-dark-hard/gruvbox-dark-hard.icns
 
 bell-features = no-system,no-audio
 desktop-notifications = false

@@ -25,3 +25,6 @@
 [submodule ".fzf"]
 	path = .fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule ".config/ghostty/ghostty-theme-icons"]
+	path = .config/ghostty/ghostty-theme-icons
+	url = git@github.com:jasonlong/ghostty-theme-icons.git
