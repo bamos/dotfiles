@@ -3,6 +3,7 @@ local grid = require "hs.grid"
 local mash      = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
 local funkymash = {"cmd", "ctrl", "shift"}
+local fineAdjustment = {"cmd"}
 
 hs.grid.GRIDWIDTH  = 12
 hs.grid.GRIDHEIGHT = 12
@@ -10,6 +11,73 @@ hs.grid.MARGINX    = 0
 hs.grid.MARGINY    = 0
 hs.window.animationDuration = 0
 local volumeIncrement = 5
+
+-- Media controls for the PC keyboard's Print Screen / Scroll Lock / Pause keys.
+-- macOS reports those keys as F13 / F14 / F15 respectively.
+local function postSystemKey(key, modifiers)
+  local down = hs.eventtap.event.newSystemKeyEvent(key, true)
+  local up = hs.eventtap.event.newSystemKeyEvent(key, false)
+
+  if modifiers then
+    down:setFlags(modifiers)
+    up:setFlags(modifiers)
+  end
+
+  down:post()
+  up:post()
+end
+
+local function bindMediaKey(modifiers, key, systemKey, systemModifiers)
+  local function press()
+    postSystemKey(systemKey, systemModifiers)
+  end
+
+  hs.hotkey.bind(modifiers, key, press, nil, press)
+end
+
+local function bindRepeatingKey(modifiers, key, press)
+  hs.hotkey.bind(modifiers, key, press, nil, press)
+end
+
+local function clamp(value, minimum, maximum)
+  return math.max(minimum, math.min(maximum, value))
+end
+
+local fineStep = 100 / 64
+local adjustmentAlert
+
+local function showAdjustment(message)
+  if adjustmentAlert then
+    hs.alert.closeSpecific(adjustmentAlert, 0)
+  end
+
+  adjustmentAlert = hs.alert.show(message, nil, hs.screen.primaryScreen(), 0.6)
+end
+
+local function adjustVolume(delta)
+  local device = hs.audiodevice.defaultOutputDevice()
+  local volume = device and device:volume()
+
+  if volume then
+    local newVolume = clamp(volume + delta, 0, 100)
+    device:setVolume(newVolume)
+    device:setMuted(newVolume == 0)
+
+    local label = string.format("Volume: %d%%", math.floor(newVolume + 0.5))
+    if newVolume == 0 then label = label .. " (muted)" end
+    showAdjustment(label)
+  end
+end
+
+bindMediaKey({}, "f13", "MUTE")
+bindMediaKey({}, "f14", "SOUND_DOWN")
+bindMediaKey({}, "f15", "SOUND_UP")
+
+bindRepeatingKey(fineAdjustment, "f14", function() adjustVolume(-fineStep) end)
+bindRepeatingKey(fineAdjustment, "f15", function() adjustVolume(fineStep) end)
+
+bindMediaKey({}, "f2", "BRIGHTNESS_DOWN")
+bindMediaKey({}, "f3", "BRIGHTNESS_UP")
 
 hs.hotkey.bind(mash, '-', function() hs.grid.snap(hs.window.focusedWindow()) end)
 hs.hotkey.bind(mash, "z", function() hs.fnutils.map(hs.window.visibleWindows(), hs.grid.snap) end)
