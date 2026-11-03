@@ -7,7 +7,7 @@ tmux_conf_new_session_prompt=false
 
 # Colors by operating system (macOS also serves as the fallback).
 tmux_conf_theme_linux_color='#6E9171'
-tmux_conf_theme_macos_color='#B27AEB'
+tmux_conf_theme_macos_color='#b8d3e0'
 
 if-shell 'test "$(uname -s)" = Linux' \
   'set-environment -g -F tmux_conf_theme_host_color "#{tmux_conf_theme_linux_color}"' \
