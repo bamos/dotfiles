@@ -27,5 +27,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [fetch]
-	parallel = 4
+	parallel = 8
 	recurseSubmodules = on-demand
