@@ -186,82 +186,137 @@ reference consists of alphanumeric characters only."
 ; https://christiantietze.de/posts/2019/03/sync-emacs-org-files/
 (add-hook 'auto-save-hook 'org-save-all-org-buffers)
 
-;; Helper function to run git commands for org files
-(defun my-org-run-git-command (script process-name on-success-fn)
-  "Run a git SCRIPT for current buffer file if in git repo.
-PROCESS-NAME is the name for the background process.
-ON-SUCCESS-FN is called with filename and real-path when git command succeeds."
-  (when (buffer-file-name)
-    (let* ((file-path (buffer-file-name))
-           (real-path (file-truename file-path))
-           (default-directory (file-name-directory real-path))
-           (filename (file-name-nondirectory real-path))
-           (in-git-repo (locate-dominating-file default-directory ".git")))
-      (when in-git-repo
-        (condition-case err
-            (let ((proc (start-process-shell-command process-name nil script)))
-              (set-process-sentinel
-               proc
-               `(lambda (process event)
-                  (when (memq (process-status process) '(exit signal))
-                    (if (= 0 (process-exit-status process))
-                        (funcall ,on-success-fn ,filename ,real-path)
-                      (message "%s failed for %s (exit code %d)"
-                               ,process-name ,filename (process-exit-status process)))))))
-          (error
-           (message "%s failed: %s" process-name (error-message-string err))))))))
+(require 'seq)
 
-;; Track last pull time per buffer to avoid too frequent pulls
-(defvar my-org-last-pull-times (make-hash-table :test 'equal)
-  "Hash table tracking last pull time for each file path.")
+;; Keep Git operations serialized per repository, including saves during a pull.
+(defvar my-org-git-processes (make-hash-table :test 'equal))
+(defvar my-org-git-pending-files (make-hash-table :test 'equal))
+(defvar my-org-last-pull-times (make-hash-table :test 'equal))
+(defvar my-org-git-timer nil)
 
-;; Pull updates when switching to an org buffer
-(defun my-org-pull-on-buffer-switch ()
-  "Pull git updates when switching to an org-mode buffer.
-Only pulls once every 60 seconds per file to avoid excessive network calls."
-  (when (and (eq major-mode 'org-mode)
-             (buffer-file-name))
-    (let* ((real-path (file-truename (buffer-file-name)))
-           (last-pull (gethash real-path my-org-last-pull-times 0))
-           (time-since-pull (- (float-time) last-pull)))
-      ;; Only pull if haven't pulled in last 60 seconds
-      (when (> time-since-pull 60)
-        (puthash real-path (float-time) my-org-last-pull-times)
-        (message "Pulling updates for %s..." (file-name-nondirectory real-path))
-        (my-org-run-git-command
-         "git fetch && git pull --rebase --autostash"
-         "org-git-pull"
-         (lambda (filename real-path)
-           (message "Git pull successful: %s" filename)
-           ;; Revert buffer if file changed on disk
-           (when (get-file-buffer real-path)
-             (with-current-buffer (get-file-buffer real-path)
-               (revert-buffer t t t)))))))))
+(defun my-org-git-root ()
+  "Return the current Org file's repository, resolving symlinks."
+  (when (and (derived-mode-p 'org-mode) buffer-file-name
+             (not (file-remote-p buffer-file-name)))
+    (locate-dominating-file (file-truename buffer-file-name) ".git")))
 
-;; Auto-sync org file to git on save (with pull/push)
+(defun my-org-git-buffers (root)
+  "Return open Org buffers belonging to ROOT."
+  (let (buffers)
+    (dolist (buffer (buffer-list))
+      (with-current-buffer buffer
+        (when (equal root (my-org-git-root))
+          (push buffer buffers))))
+    buffers))
+
+(defun my-org-git-refresh (root)
+  "Refresh changed files in ROOT without discarding unsaved edits."
+  (dolist (buffer (my-org-git-buffers root))
+    (with-current-buffer buffer
+      (unless (verify-visited-file-modtime buffer)
+        (if (buffer-modified-p)
+            (message "Org sync: remote changes in %s; keeping your unsaved edits"
+                     (buffer-name))
+          (let ((position (point))
+                (windows (mapcar (lambda (window)
+                                   (list window (window-start window)
+                                         (window-point window)))
+                                 (get-buffer-window-list buffer nil t))))
+            (revert-buffer t t t)
+            (goto-char (min position (point-max)))
+            (dolist (state windows)
+              (when (window-live-p (car state))
+                (set-window-start (car state) (nth 1 state) t)
+                (set-window-point (car state)
+                                  (min (nth 2 state) (point-max)))))))))))
+
+(defun my-org-git-finished (process _event)
+  "Refresh buffers and service queued saves after PROCESS finishes."
+  (when (memq (process-status process) '(exit signal))
+    (let ((root (process-get process 'org-root)))
+      (remhash root my-org-git-processes)
+      (if (= 0 (process-exit-status process))
+          (progn
+            (my-org-git-refresh root)
+            (my-org-git-start root))
+        ;; Keep failed and pending saves for a later attempt, without a retry loop.
+        (puthash root
+                 (delete-dups (append (process-get process 'org-files)
+                                      (gethash root my-org-git-pending-files)))
+                 my-org-git-pending-files)
+        (message "Org Git sync failed; see %s" (buffer-name (process-buffer process)))))))
+
+(defun my-org-git-start (root &optional pull)
+  "Sync queued saved files in ROOT, or PULL if no saves are pending."
+  (unless (gethash root my-org-git-processes)
+    (let* ((files (gethash root my-org-git-pending-files))
+           (dirty (seq-some (lambda (buffer)
+                              (buffer-modified-p buffer))
+                            (my-org-git-buffers root)))
+           (do-pull (and pull (not dirty)))
+           (default-directory root))
+      (when (or files do-pull)
+        (let* ((paths (mapconcat #'shell-quote-argument files " "))
+               ;; Commit saved changes before pulling, so rebase can merge them.
+               ;; --only avoids committing unrelated staged changes.
+               (script (if files
+                           (format "git add -- %s && (git diff --cached --quiet -- %s || git commit --only -m %s -- %s) && git pull --rebase --autostash && git push"
+                                   paths paths
+                                   (shell-quote-argument
+                                    (format-time-string "Auto-sync: %Y-%m-%d %H:%M:%S"))
+                                   paths)
+                         "git pull --rebase --autostash"))
+               (process (start-process-shell-command
+                         "org-git-sync"
+                         (get-buffer-create (format "*Org Git: %s*" root))
+                         script)))
+          (remhash root my-org-git-pending-files)
+          (puthash root (float-time) my-org-last-pull-times)
+          (puthash root process my-org-git-processes)
+          (process-put process 'org-root root)
+          (process-put process 'org-files files)
+          (set-process-query-on-exit-flag process nil)
+          (set-process-sentinel process #'my-org-git-finished))))))
+
 (defun my-org-auto-git-sync ()
-  "Automatically commit and push org files that are in git repositories.
-Handles remote changes by pulling before pushing."
+  "Queue the saved Org file for automatic commit, pull, and push."
   (interactive)
-  (when (buffer-file-name)
-    (let* ((filename (file-name-nondirectory (file-truename (buffer-file-name))))
-           (sync-script (format "git fetch && \
-git pull --rebase --autostash && \
-git add %s && \
-(git diff --cached --quiet || git commit -m 'Auto-sync: %s') && \
-git push"
-                                filename
-                                (format-time-string "%Y-%m-%d %H:%M:%S"))))
-      (message "Syncing %s to git..." filename)
-      (my-org-run-git-command
-       sync-script
-       "org-git-sync"
-       (lambda (filename _real-path)
-         (message "Git sync successful: %s" filename))))))
+  (let ((root (my-org-git-root)))
+    (when root
+      (let ((file (file-relative-name (file-truename buffer-file-name) root)))
+        (puthash root (cons file (delete file (gethash root my-org-git-pending-files)))
+                 my-org-git-pending-files))
+      (my-org-git-start root))))
 
-(add-hook 'org-mode-hook
-          (lambda ()
-            (add-hook 'after-save-hook #'my-org-auto-git-sync nil t)))
+(defun my-org-pull-on-buffer-switch ()
+  "Refresh safely and request a pull at most once a minute per repository."
+  (let ((root (my-org-git-root)))
+    (when root
+      (my-org-git-refresh root)
+      (when (> (- (float-time) (gethash root my-org-last-pull-times 0)) 60)
+        (my-org-git-start root t)))))
 
+(defun my-org-git-background-pull ()
+  "Keep repositories of open Org buffers up to date in the background."
+  (dolist (buffer (buffer-list))
+    (with-current-buffer buffer
+      (my-org-pull-on-buffer-switch))))
+
+(defun my-org-git-check-before-save ()
+  "Prevent auto-save from overwriting remote changes under unsaved edits."
+  (when (and (my-org-git-root) (buffer-modified-p)
+             (not (verify-visited-file-modtime (current-buffer))))
+    (user-error "Org file changed on disk; reconcile with M-x diff-buffer-with-file before saving")))
+
+(defun my-org-git-setup ()
+  "Enable automatic Git sync for this Org buffer."
+  (add-hook 'before-save-hook #'my-org-git-check-before-save nil t)
+  (add-hook 'after-save-hook #'my-org-auto-git-sync nil t))
+
+(add-hook 'org-mode-hook #'my-org-git-setup)
 (add-hook 'window-buffer-change-functions
           (lambda (_) (my-org-pull-on-buffer-switch)))
+
+(when (timerp my-org-git-timer)
+  (cancel-timer my-org-git-timer))
+(setq my-org-git-timer (run-with-timer 5 60 #'my-org-git-background-pull))
