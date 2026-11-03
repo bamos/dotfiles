@@ -5,9 +5,17 @@ tmux_conf_new_window_retain_current_path=false
 tmux_conf_new_pane_retain_current_path=true
 tmux_conf_new_session_prompt=false
 
-tmux_conf_theme_window_status_current_bg='#B27AEB'
-tmux_conf_theme_window_status_fg="#B27AEB"
-tmux_conf_theme_window_status_last_fg='#B27AEB'
+# Colors by operating system (macOS also serves as the fallback).
+tmux_conf_theme_linux_color='#6E9171'
+tmux_conf_theme_macos_color='#B27AEB'
+
+if-shell 'test "$(uname -s)" = Linux' \
+  'set-environment -g -F tmux_conf_theme_host_color "#{tmux_conf_theme_linux_color}"' \
+  'set-environment -g -F tmux_conf_theme_host_color "#{tmux_conf_theme_macos_color}"'
+
+set-environment -g -F tmux_conf_theme_window_status_current_bg '#{tmux_conf_theme_host_color}'
+set-environment -g -F tmux_conf_theme_window_status_fg '#{tmux_conf_theme_host_color}'
+set-environment -g -F tmux_conf_theme_window_status_last_fg '#{tmux_conf_theme_host_color}'
 
 tmux_conf_theme_status_bg='default'
 tmux_conf_theme_window_status_bg="default"
