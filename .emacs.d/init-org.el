@@ -1,6 +1,18 @@
 (require 'org)
 (require 'htmlize)
 
+(load (expand-file-name "org-html-paste.el"
+                        (file-name-directory (or load-file-name buffer-file-name))))
+(my-org-html-paste-mode 1)
+
+(load (expand-file-name "org-rich-copy.el"
+                        (file-name-directory (or load-file-name buffer-file-name))))
+(my-org-rich-copy-mode 1)
+
+(load (expand-file-name "org-image-paste.el"
+                        (file-name-directory (or load-file-name buffer-file-name))))
+(my-org-image-paste-mode 1)
+
 ; (add-to-list 'load-path "~/repos/ox-ipynb")
 ; (require 'ox-ipynb)
 
