@@ -1,6 +1,7 @@
 ;;; org-clipboard-roundtrip-test.el --- Simulated app round trips -*- lexical-binding: t; -*-
 
 (load (expand-file-name "org-rich-copy-test.el" (file-name-directory load-file-name)))
+(load (expand-file-name "org-image-resize-test.el" (file-name-directory load-file-name)))
 
 (defun org-clipboard-roundtrip-native-formats (data source)
   "Use the native codec, without accessing the user's real clipboard."
@@ -19,7 +20,7 @@
   "Copy KIND through FORMAT, then paste using each command.
 Simulate another app by publishing only the selected representation and
 removing Emacs's ownership marker.  No installed app or real clipboard is
-used.  GRAPHICAL also checks rendered image glyphs."
+used.  GRAPHICAL also checks rendered image glyphs and hidden metadata."
   (org-rich-copy-test-with-image
     (let* ((source (pcase kind
                      ('text "Read [[https://example.com/one][café 🌎]].\n\nSecond paragraph.\n")
@@ -93,7 +94,10 @@ used.  GRAPHICAL also checks rendered image glyphs."
                           (should (= (length org-inline-image-overlays) 1))
                           (should (cl-loop for y from 5 below (window-body-height nil t) by 5
                                            thereis (eq (car-safe (posn-object (posn-at-x-y 40 y (selected-window)))) 'image)))
-)))))))))))))
+                          (when (eq format 'internal)
+                            (goto-char (point-min))
+                            (search-forward "#+ATTR_ORG:")
+                            (should (equal (get-char-property (line-beginning-position) 'display) ""))))))))))))))))
 
 (ert-deftest org-clipboard-roundtrip-internal-matrix ()
   (dolist (kind '(text image mixed)) (org-clipboard-roundtrip-matrix kind 'internal)))

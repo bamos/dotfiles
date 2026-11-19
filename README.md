@@ -43,6 +43,15 @@ Repasting existing local image links also refreshes their previews, including
 pastes from history or registers.
 Embedded image data in incoming HTML is saved there as well.
 
+Inline images default to at most half the current window's width, without
+enlarging small images. Drag an image's right edge to resize it, keeping its
+aspect ratio. Resizing applies to images in their own paragraphs. Widths are
+saved as `#+ATTR_ORG` metadata, hidden while previews are displayed. Toggle
+inline images to see the metadata. Image hover text is suppressed.
+
+Press `C-g` to cancel a resize; ordinary undo reverses a completed resize.
+Toggle with `M-x my-org-image-resize-mode`.
+
 The text and image modules share clipboard format checks in
 `.emacs.d/org-paste-common.el`. Copies made inside Emacs retain their original
 text and Evil's line/rectangle paste behavior. Toggle the modules with
@@ -55,7 +64,7 @@ emacs --batch -Q -l .emacs.d/tests/org-clipboard-roundtrip-test.el \
   -f ert-run-tests-batch-and-exit
 ```
 
-The round-trip suite loads all clipboard regressions. Its simulated
+The round-trip suite loads all clipboard and resize regressions. Its simulated
 app matrix covers standard copy, Evil character and line copies, and each paste
 command, across internal copies, HTML/RTF text, PNG/TIFF images, and HTML with
 embedded images. Native format checks use a separate test pasteboard. Graphical

@@ -13,6 +13,10 @@
                         (file-name-directory (or load-file-name buffer-file-name))))
 (my-org-image-paste-mode 1)
 
+(load (expand-file-name "org-image-resize.el"
+                        (file-name-directory (or load-file-name buffer-file-name))))
+(my-org-image-resize-mode 1)
+
 ; (add-to-list 'load-path "~/repos/ox-ipynb")
 ; (require 'ox-ipynb)
 
@@ -44,7 +48,9 @@
       org-startup-folded nil
       org-src-fontify-natively t
       org-latex-to-pdf-process (list "latexmk -pdf %f")
-      org-image-actual-width 600
+      ;; Honor per-image widths; otherwise shrink large previews to half a pane.
+      org-image-actual-width nil
+      org-image-max-width 0.5
       org-agenda-skip-scheduled-if-done t
       org-agenda-files '("~/org")
       ; org-agenda-files '("~/Library/CloudStorage/OneDrive-Personal/org")
